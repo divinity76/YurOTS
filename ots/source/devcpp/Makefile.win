@@ -1,0 +1,177 @@
+# Project: otserv
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = obj/otserv_private.res
+OBJ  = obj/aac.o obj/account.o obj/actions.o obj/allocator.o obj/builtinaac.o obj/chat.o obj/commands.o obj/container.o obj/creature.o obj/exception.o obj/fileloader.o obj/game.o obj/guilds.o obj/houses.o obj/ioaccount.o obj/ioaccountxml.o obj/iomapbin.o obj/iomapotbm.o obj/iomapxml.o obj/ioplayer.o obj/ioplayerxml.o obj/item.o obj/itemloader.o obj/items.o obj/logger.o obj/loginqueue.o obj/luascript.o obj/magic.o obj/map.o obj/md5.o obj/monster.o obj/monsters.o obj/networkmessage.o obj/npc.o obj/otserv.o obj/player.o obj/position.o obj/protocol.o obj/protocol76.o obj/pvparena.o obj/readables.o obj/scheduler.o obj/spawn.o obj/spells.o obj/status.o obj/summons.o obj/thing.o obj/tile.o obj/tools.o $(RES)
+LINKOBJ  = obj/aac.o obj/account.o obj/actions.o obj/allocator.o obj/builtinaac.o obj/chat.o obj/commands.o obj/container.o obj/creature.o obj/exception.o obj/fileloader.o obj/game.o obj/guilds.o obj/houses.o obj/ioaccount.o obj/ioaccountxml.o obj/iomapbin.o obj/iomapotbm.o obj/iomapxml.o obj/ioplayer.o obj/ioplayerxml.o obj/item.o obj/itemloader.o obj/items.o obj/logger.o obj/loginqueue.o obj/luascript.o obj/magic.o obj/map.o obj/md5.o obj/monster.o obj/monsters.o obj/networkmessage.o obj/npc.o obj/otserv.o obj/player.o obj/position.o obj/protocol.o obj/protocol76.o obj/pvparena.o obj/readables.o obj/scheduler.o obj/spawn.o obj/spells.o obj/status.o obj/summons.o obj/thing.o obj/tile.o obj/tools.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/lib" -lwsock32 -s -Wl,-Map=otserv.map -llibboost_regex-mgw-mt-s-1_33_1 C:/Dev-Cpp/bin/libxml2.dll C:/Dev-Cpp/bin/lua5.dll C:/Dev-Cpp/bin/lualib5.dll  
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = YurOTS.exe
+CXXFLAGS = $(CXXINCS) -DEXCEPTION_TRACER -DTLM_BUY_SELL -DTLM_SERVER_SAVE -DTLM_HOUSE_SYSTEM -DBDB_UTEVO_LUX -DWOLV_LOAD_NPC -DBD_HOUSE_WINDOW -DTR_ANTI_AFK -DELEM_VIP_LIST -DTR_SUMMONS -DTRS_GM_INVISIBLE -DTLM_SKULLS_PARTY -DBRN_EXIVA -DSD_BURST_ARROW -DBDB_REPLACE_SPEARS -DBD_ITEM_LOOK -DSM_RELOAD_CONFIG -DJD_DEATH_LIST -DCT_EXANI_TERA -DCVS_DAY_CYCLE -DTJ_MONSTER_BLOOD -DJD_WANDS -D__DEBUG_PLAYERS__ -DYUR_CVS_MODS -DYUR_ICE_RAPIER -DYUR_AOL -DYUR_LOGIN_QUEUE -DYUR_MULTIPLIERS -DYUR_BOH -DYUR_NPC_EXT -DYUR_GUILD_SYSTEM -DYUR_CMD_EXT -DYUR_ITEM_EXT -DYUR_ACT_EXT -DYUR_NO_MONSTER_HEAL -DYUR_PVP_ARENA -DYUR_RINGS_AMULETS -DYUR_CONFIG_CAP -DYUR_FIGHT_MODE -DYUR_READABLES -DYUR_LEARN_SPELLS -DYUR_HEAL_EXHAUST -DYUR_SHUTDOWN -DYUR_ROOKGARD -DYUR_LIGHT_ITEM -DYUR_CLEAN_MAP -DYUR_GM_LOOK -DYUR_HIGH_LEVELS -DYUR_PREMIUM_PROMOTION -DYUR_INVISIBLE -DYUR_DRAINS -DYUR_BUILTIN_AAC   -fexpensive-optimizations -O3
+CFLAGS = $(INCS)   -fexpensive-optimizations -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before YurOTS.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "YurOTS.exe" $(LIBS)
+
+obj/aac.o: ../aac.cpp
+	$(CPP) -c ../aac.cpp -o obj/aac.o $(CXXFLAGS)
+
+obj/account.o: ../account.cpp
+	$(CPP) -c ../account.cpp -o obj/account.o $(CXXFLAGS)
+
+obj/actions.o: ../actions.cpp
+	$(CPP) -c ../actions.cpp -o obj/actions.o $(CXXFLAGS)
+
+obj/allocator.o: ../allocator.cpp
+	$(CPP) -c ../allocator.cpp -o obj/allocator.o $(CXXFLAGS)
+
+obj/builtinaac.o: ../builtinaac.cpp
+	$(CPP) -c ../builtinaac.cpp -o obj/builtinaac.o $(CXXFLAGS)
+
+obj/chat.o: ../chat.cpp
+	$(CPP) -c ../chat.cpp -o obj/chat.o $(CXXFLAGS)
+
+obj/commands.o: ../commands.cpp
+	$(CPP) -c ../commands.cpp -o obj/commands.o $(CXXFLAGS)
+
+obj/container.o: ../container.cpp
+	$(CPP) -c ../container.cpp -o obj/container.o $(CXXFLAGS)
+
+obj/creature.o: ../creature.cpp
+	$(CPP) -c ../creature.cpp -o obj/creature.o $(CXXFLAGS)
+
+obj/exception.o: ../exception.cpp
+	$(CPP) -c ../exception.cpp -o obj/exception.o $(CXXFLAGS)
+
+obj/fileloader.o: ../fileloader.cpp
+	$(CPP) -c ../fileloader.cpp -o obj/fileloader.o $(CXXFLAGS)
+
+obj/game.o: ../game.cpp
+	$(CPP) -c ../game.cpp -o obj/game.o $(CXXFLAGS)
+
+obj/guilds.o: ../guilds.cpp
+	$(CPP) -c ../guilds.cpp -o obj/guilds.o $(CXXFLAGS)
+
+obj/houses.o: ../houses.cpp
+	$(CPP) -c ../houses.cpp -o obj/houses.o $(CXXFLAGS)
+
+obj/ioaccount.o: ../ioaccount.cpp
+	$(CPP) -c ../ioaccount.cpp -o obj/ioaccount.o $(CXXFLAGS)
+
+obj/ioaccountxml.o: ../ioaccountxml.cpp
+	$(CPP) -c ../ioaccountxml.cpp -o obj/ioaccountxml.o $(CXXFLAGS)
+
+obj/iomapbin.o: ../iomapbin.cpp
+	$(CPP) -c ../iomapbin.cpp -o obj/iomapbin.o $(CXXFLAGS)
+
+obj/iomapotbm.o: ../iomapotbm.cpp
+	$(CPP) -c ../iomapotbm.cpp -o obj/iomapotbm.o $(CXXFLAGS)
+
+obj/iomapxml.o: ../iomapxml.cpp
+	$(CPP) -c ../iomapxml.cpp -o obj/iomapxml.o $(CXXFLAGS)
+
+obj/ioplayer.o: ../ioplayer.cpp
+	$(CPP) -c ../ioplayer.cpp -o obj/ioplayer.o $(CXXFLAGS)
+
+obj/ioplayerxml.o: ../ioplayerxml.cpp
+	$(CPP) -c ../ioplayerxml.cpp -o obj/ioplayerxml.o $(CXXFLAGS)
+
+obj/item.o: ../item.cpp
+	$(CPP) -c ../item.cpp -o obj/item.o $(CXXFLAGS)
+
+obj/itemloader.o: ../itemloader.cpp
+	$(CPP) -c ../itemloader.cpp -o obj/itemloader.o $(CXXFLAGS)
+
+obj/items.o: ../items.cpp
+	$(CPP) -c ../items.cpp -o obj/items.o $(CXXFLAGS)
+
+obj/logger.o: ../logger.cpp
+	$(CPP) -c ../logger.cpp -o obj/logger.o $(CXXFLAGS)
+
+obj/loginqueue.o: ../loginqueue.cpp
+	$(CPP) -c ../loginqueue.cpp -o obj/loginqueue.o $(CXXFLAGS)
+
+obj/luascript.o: ../luascript.cpp
+	$(CPP) -c ../luascript.cpp -o obj/luascript.o $(CXXFLAGS)
+
+obj/magic.o: ../magic.cpp
+	$(CPP) -c ../magic.cpp -o obj/magic.o $(CXXFLAGS)
+
+obj/map.o: ../map.cpp
+	$(CPP) -c ../map.cpp -o obj/map.o $(CXXFLAGS)
+
+obj/md5.o: ../md5.cpp
+	$(CPP) -c ../md5.cpp -o obj/md5.o $(CXXFLAGS)
+
+obj/monster.o: ../monster.cpp
+	$(CPP) -c ../monster.cpp -o obj/monster.o $(CXXFLAGS)
+
+obj/monsters.o: ../monsters.cpp
+	$(CPP) -c ../monsters.cpp -o obj/monsters.o $(CXXFLAGS)
+
+obj/networkmessage.o: ../networkmessage.cpp
+	$(CPP) -c ../networkmessage.cpp -o obj/networkmessage.o $(CXXFLAGS)
+
+obj/npc.o: ../npc.cpp
+	$(CPP) -c ../npc.cpp -o obj/npc.o $(CXXFLAGS)
+
+obj/otserv.o: ../otserv.cpp
+	$(CPP) -c ../otserv.cpp -o obj/otserv.o $(CXXFLAGS)
+
+obj/player.o: ../player.cpp
+	$(CPP) -c ../player.cpp -o obj/player.o $(CXXFLAGS)
+
+obj/position.o: ../position.cpp
+	$(CPP) -c ../position.cpp -o obj/position.o $(CXXFLAGS)
+
+obj/protocol.o: ../protocol.cpp
+	$(CPP) -c ../protocol.cpp -o obj/protocol.o $(CXXFLAGS)
+
+obj/protocol76.o: ../protocol76.cpp
+	$(CPP) -c ../protocol76.cpp -o obj/protocol76.o $(CXXFLAGS)
+
+obj/pvparena.o: ../pvparena.cpp
+	$(CPP) -c ../pvparena.cpp -o obj/pvparena.o $(CXXFLAGS)
+
+obj/readables.o: ../readables.cpp
+	$(CPP) -c ../readables.cpp -o obj/readables.o $(CXXFLAGS)
+
+obj/scheduler.o: ../scheduler.cpp
+	$(CPP) -c ../scheduler.cpp -o obj/scheduler.o $(CXXFLAGS)
+
+obj/spawn.o: ../spawn.cpp
+	$(CPP) -c ../spawn.cpp -o obj/spawn.o $(CXXFLAGS)
+
+obj/spells.o: ../spells.cpp
+	$(CPP) -c ../spells.cpp -o obj/spells.o $(CXXFLAGS)
+
+obj/status.o: ../status.cpp
+	$(CPP) -c ../status.cpp -o obj/status.o $(CXXFLAGS)
+
+obj/summons.o: ../summons.cpp
+	$(CPP) -c ../summons.cpp -o obj/summons.o $(CXXFLAGS)
+
+obj/thing.o: ../thing.cpp
+	$(CPP) -c ../thing.cpp -o obj/thing.o $(CXXFLAGS)
+
+obj/tile.o: ../tile.cpp
+	$(CPP) -c ../tile.cpp -o obj/tile.o $(CXXFLAGS)
+
+obj/tools.o: ../tools.cpp
+	$(CPP) -c ../tools.cpp -o obj/tools.o $(CXXFLAGS)
+
+obj/otserv_private.res: otserv_private.rc 
+	$(WINDRES) -i otserv_private.rc --input-format=rc -o obj/otserv_private.res -O coff 
