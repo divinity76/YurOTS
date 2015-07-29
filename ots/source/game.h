@@ -7,7 +7,7 @@
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -131,7 +131,7 @@ class Game {
 public:
 	Game();
   ~Game();
-	
+
 	/**
 	  * Load a map.
 	  * \param filename Mapfile to load
@@ -139,18 +139,18 @@ public:
 	  * \returns Int 0 built-in spawns, 1 needs xml spawns, 2 needs sql spawns, -1 if got error
 	  */
     int loadMap(std::string filename, std::string filekind);
-	
+
 	/**
 	  * Get the map size - info purpose only
 	  * \param a the referenced witdh var
 	  * \param b the referenced height var
 	  */
 	void getMapDimensions(int& a, int& b) {
-     a = map->mapwidth;  
-     b = map->mapheight;  
+     a = map->mapwidth;
+     b = map->mapheight;
      return;
   }
-  
+
 	void setWorldType(enum_world_type type);
   enum_world_type getWorldType() const {return worldType;}
 	const std::string& getSpawnFile() {return map->spawnfile;}
@@ -209,7 +209,7 @@ public:
 			const Position& fromPos, unsigned char stackPos, unsigned short itemid,
 			unsigned char to_cid, unsigned char to_slotid,
 			bool isInventory, unsigned char count);
-	
+
 	//ground to ground
 	void thingMove(Creature *creature,
 			unsigned short from_x, unsigned short from_y, unsigned char from_z,
@@ -258,7 +258,7 @@ public:
 	void playerCloseTrade(Player* player);
 	void autoCloseTrade(const Item* item, bool itemMoved = false);
   void autoCloseAttack(Player* player, Creature* target);
-	
+
 	void playerSetAttackedCreature(Player* player, unsigned long creatureid);
 
   void changeOutfitAfter(unsigned long id, int looktype, long time);
@@ -268,23 +268,23 @@ public:
 
 	//void creatureBroadcastTileUpdated(const Position& pos);
 	void teleport(Thing *thing, const Position& newPos);
-      
-  std::vector<Player*> BufferedPlayers;   
+
+  std::vector<Player*> BufferedPlayers;
   void flushSendBuffers();
   void addPlayerBuffer(Player* p);
-  
-  std::vector<Thing*> ToReleaseThings;   
+
+  std::vector<Thing*> ToReleaseThings;
   void FreeThing(Thing* thing);
 
   Thing* getThing(const Position &pos,unsigned char stack,Player* player = NULL);
   void addThing(Player* player,const Position &pos,Thing* thing);
   bool removeThing(Player* player,const Position &pos,Thing* thing, bool setRemoved = true);
   Position getThingMapPos(Player *player, const Position &pos);
-  
+
   void sendAddThing(Player* player,const Position &pos,const Thing* thing);
   void sendRemoveThing(Player* player,const Position &pos,const Thing* thing,const unsigned char stackpos = 1,const bool autoclose = false);
   void sendUpdateThing(Player* player,const Position &pos,const Thing* thing,const unsigned char stackpos = 1);
-		
+
 	Creature* getCreatureByID(unsigned long id);
 	Player* getPlayerByID(unsigned long id);
 
@@ -292,14 +292,14 @@ public:
 	Player* getPlayerByName(const std::string &s);
 
 	std::list<Position> getPathTo(Creature *creature, Position start, Position to, bool creaturesBlock=true);
-	
+
 	enum_game_state getGameState();
 	void setGameState(enum_game_state newstate){game_state = newstate;}
-	
+
 	bool requestAddVip(Player* player, const std::string &vip_name);
 
 	/** Lockvar for Game. */
-  OTSYS_THREAD_LOCKVAR gameLock; 
+  OTSYS_THREAD_LOCKVAR gameLock;
 
 #ifdef CVS_DAY_CYCLE
 	void creatureChangeLight(Player* player, int time, unsigned char lightlevel, unsigned char lightcolor);
@@ -362,11 +362,11 @@ public:
 	void useWand(Creature *creature, Creature *attackedCreature, int wandid);
 #endif //JD_WANDS
 
-	void checkSpell(Player* player, SpeakClasses type, std::string text);
+	void checkSpell(Player* player, SpeakClasses& type, std::string text);
 
 protected:
 	std::map<Item*, unsigned long> tradeItems; //list of items that are in trading state, mapped to the player
-	
+
 	AutoList<Creature> listCreature;
 
 	/*ground -> ground*/
@@ -407,8 +407,8 @@ protected:
 
 	//container/inventory to container/inventory
 	void thingMoveInternal(Player *player,
-			unsigned char from_cid, unsigned char from_slotid, unsigned short itemid, 
-			bool fromInventory,unsigned char to_cid, unsigned char to_slotid, 
+			unsigned char from_cid, unsigned char from_slotid, unsigned short itemid,
+			bool fromInventory,unsigned char to_cid, unsigned char to_slotid,
 			bool toInventory,unsigned char count);
 
 	//container/inventory to ground
@@ -470,7 +470,7 @@ protected:
 	void checkCreature(unsigned long id);
 	void checkCreatureAttacking(unsigned long id);
 	void checkDecay(int t);
-	
+
 	#define DECAY_INTERVAL  10000
 	void startDecay(Item* item);
 	struct decayBlock{
@@ -478,7 +478,7 @@ protected:
 		std::list<Item*> decayItems;
 	};
 	std::list<decayBlock*> decayVector;
-	
+
 #ifdef CVS_DAY_CYCLE
 	static const unsigned char LIGHT_LEVEL_DAY = 220;
 	static const unsigned char LIGHT_LEVEL_NIGHT = 25;
@@ -501,11 +501,11 @@ protected:
 	enum_world_type worldType;
 
 	Map* map;
-	
+
 	std::vector<std::string> commandTags;
 	void addCommandTag(std::string tag);
 	void resetCommandTag();
-	
+
 	enum_game_state game_state;
 
 	friend class Commands;
@@ -523,7 +523,7 @@ public:
 	TCallList(boost::function<int(Game*, ArgType)> f1, boost::function<bool(Game*)> f2, std::list<ArgType>& call_list, __int64 interval) :
 	_f1(f1), _f2(f2), _list(call_list), _interval(interval) {
 	}
-	
+
 	void operator()(Game* arg) {
 		if(_eventid != 0 && !_f2(arg)) {
 			int ret = _f1(arg, _list.front());

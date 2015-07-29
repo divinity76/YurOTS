@@ -5398,7 +5398,7 @@ bool Game::isPlayer(std::string name)
 }
 #endif //ELEM_VIP_LIST
 
-void Game::checkSpell(Player* player, SpeakClasses type, std::string text)
+void Game::checkSpell(Player* player, SpeakClasses& type, std::string text)
 {
 	OTSYS_THREAD_LOCK_CLASS lockClass(gameLock, "Game::checkSpell()");
 
@@ -5588,27 +5588,46 @@ void Game::checkSpell(Player* player, SpeakClasses type, std::string text)
     #ifdef MAGICLEVEL_TEST
     else if(text=="mlvltest1"){
         player->addManaSpent(0xFF);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest2"){
         player->addManaSpent(0xFFFF);
+        type=SPEAK_MONSTER2;
+    }
+    else if(text=="mlvltest2.5"){
+        player->addManaSpent(0xFFFFF);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest3"){
         player->addManaSpent(0xFFFFFF);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest4"){
         player->addManaSpent(0xFFFFFFFF);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest5"){
         player->addManaSpent(0xFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest6"){
         player->addManaSpent(0xFFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest7"){
         player->addManaSpent(0xFFFFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest8"){
         player->addManaSpent(0xFFFFFFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
+    }
+    else if(text=="mlvlreset"){
+        player->maglevel=0;
+    }
+    else if(text.substr(0,12)=="setvocation="){
+        player->vocation=(playervoc_t)atoi(text.substr(12,1).c_str());
+        std::cout << "set vocation! " << (playervoc_t)atoi(text.substr(12,1).c_str());
     }
     #endif//MAGICLEVEL_TEST
 #ifdef BRN_EXIVA
