@@ -75,8 +75,8 @@
 			<Add option="C:/Dev-Cpp/bin/libxml2.dll" />
 			<Add option="C:/Dev-Cpp/bin/lua5.dll" />
 			<Add option="C:/Dev-Cpp/bin/lualib5.dll" />
+			<Add option="-llibboost_regex-mgw-mt-s-1_33_1" />
 			<Add library="wsock32" />
-			<Add library="libboost_regex-mgw-mt-s-1_33_1" />
 			<Add directory="C:/Dev-Cpp/lib" />
 		</Linker>
 		<Unit filename="../aac.cpp" />
