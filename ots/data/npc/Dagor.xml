@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Dagor" script="data/npc/scripts/spells_knight.lua" access="3">
+ 	<look type="131" head="57" body="57" legs="57" feet="57"/>
+</npc>

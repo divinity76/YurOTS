@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Pirate Jack" script="data/npc/scripts/jack.lua" access="3">
+ 	<look type="134" head="2" body="95" legs="60" feet="132"/>
+</npc>

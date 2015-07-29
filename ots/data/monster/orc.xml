@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<monster name="Orc" level="50" maglevel="10" experience="25" pushable="1" armor="5" defense="3" canpushitems="0" staticattack="50" changetarget="200" speed="150">
+	<health now="70" max="70"/>
+	<look type="5" corpse="2820"/>
+	<combat targetdistance="1" runonhealth="7"/>
+
+<attacks>
+	<attack type="melee" maxdamage="25" probability="100"/>
+</attacks>
+
+<defenses>
+
+</defenses>
+
+<voices>
+	<voice sentence="'Grow truk grrrrr..."/>
+</voices>
+
+<loot>
+ 	<item id="2148" countmax="10" chance1="100000" chancemax="0"/>
+ 	<item id="2666" countmax="2" chance1="33333" chancemax="0"/>
+ 	<item id="2484" chance="10000"/>
+ 	<item id="2480" chance="10000"/>
+ 	<item id="2385" chance="10000"/>
+
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="2526" chance="10000"/>
+ 	<item id="2386" chance="10000"/>
+ 	</inside>
+ 	</item>
+</loot>
+</monster>

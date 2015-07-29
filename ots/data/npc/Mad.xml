@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Mad" script="data/npc/scripts/loot.lua" access="3">
+ 	<look type="129" head="76" body="114" legs="124" feet="86"/>
+</npc>

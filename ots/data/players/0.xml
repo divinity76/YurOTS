@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- no vocation template for builtin account creator -->
+<player name="0" account="1" sex="1" lookdir="1" exp="0" voc="0" level="1" access="0" cap="300" maglevel="0" lastlogin="0">
+<spawn x="85" y="211" z="7"/>
+<temple x="85" y="211" z="7"/>
+<health now="150" max="150" food="0"/>
+<mana now="0" max="0" spent="0"/>
+<look type="130" head="20" body="30" legs="40" feet="50"/>
+<skills>
+<skill skillid="0" level="10" tries="0"/>
+<skill skillid="1" level="10" tries="0"/>
+<skill skillid="2" level="10" tries="0"/>
+<skill skillid="3" level="10" tries="0"/>
+<skill skillid="4" level="10" tries="0"/>
+<skill skillid="5" level="10" tries="0"/>
+<skill skillid="6" level="10" tries="0"/>
+</skills>
+<inventory><slot slotid="3"><item id="1988"><inside><item id="2674" count="1"/></inside></item></slot>
+<slot slotid="4"><item id="2467"/></slot>
+<slot slotid="6"><item id="2382"/></slot>
+</inventory>
+<depots><depot depotid="1"><item id="2590"><inside><item id="2594"/></inside></item></depot></depots>
+<storage/>
+</player>

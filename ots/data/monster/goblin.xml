@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<monster name="Goblin" level="20" maglevel="30" experience="25" pushable="1" armor="9" defense="5" canpushitems="0" staticattack="50" changetarget="120">
+	<health now="50" max="50"/>
+	<look type="61" head="20" body="30" legs="40" feet="50" corpse="2940"/>
+	<combat targetdistance="1" runonhealth="5"/>
+
+<attacks>
+	<attack type="melee" maxdamage="25" probability="100"/>
+	<attack type="distance" name="smallstone" maxdamage="35" probability="85"/>
+</attacks>
+
+<defenses>
+
+</defenses>
+
+<voices>
+	<voice sentence="Bugga! Bugga!"/>
+	<voice sentence="Zig Zag! Gobo attack!"/>
+	<voice sentence="Help! Goblinkiller!"/>
+	<voice sentence="Me green, me mean!"/>
+</voices>
+
+<loot>
+ 	<item id="2148" countmax="10" chance1="100000" chancemax="0"/>
+ 	<item id="2420" chance="10000"/>
+ 	<item id="2461" chance="10000"/>
+ 	<item id="2406" chance="10000"/>
+ 	<item id="2467" chance="10000"/>
+ 	<item id="2379" chance="20000"/>
+
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="2559" chance="10000"/>
+	<item id="1294" countmax="3" chance1="20000" chancemax="0"/>
+	<item id="2667" countmax="2" chance1="20000" chancemax="0"/>
+ 	<item id="2230" chance="10000"/>
+ 	<item id="2235" chance="10000"/>
+ 	<item id="2449" chance="10000"/>
+ 	</inside>
+ 	</item>
+</loot>
+</monster>

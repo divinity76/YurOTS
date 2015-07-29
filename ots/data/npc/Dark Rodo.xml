@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Dark Rodo" script="data/npc/scripts/runes.lua" access="3">
+	<look type="128" head="78" body="71" legs="82" feet="114"/>
+</npc>

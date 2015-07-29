@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<summons>
+<summon name="Dog" mana="220"/>
+<summon name="Rabbit" mana="220"/>
+<summon name="Deer" mana="260"/>
+<summon name="Pig" mana="255"/>
+<summon name="Sheep" mana="250"/>
+<summon name="Black Sheep" mana="250"/>
+<summon name="Skunk" mana="200"/>
+<summon name="Badger" mana="200"/>
+<summon name="Rat" mana="200"/>
+<summon name="Cave Rat" mana="200"/>
+<summon name="Snake" mana="205"/>
+<summon name="Spider" mana="210"/>
+<summon name="Bug" mana="250"/>
+<summon name="Wolf" mana="225"/>
+<summon name="Troll" mana="290"/>
+<summon name="Winter Wolf" mana="260"/>
+<summon name="Hyaena" mana="275"/>
+<summon name="Poison Spider" mana="270"/>
+<summon name="Bear" mana="300"/>
+<summon name="Frost Troll" mana="300"/>
+<summon name="Wasp" mana="280"/>
+<summon name="Orc" mana="300"/>
+<summon name="Goblin" mana="290"/>
+<summon name="Swamp Troll" mana="320"/>
+<summon name="Polar Bear" mana="315"/>
+<summon name="Lion" mana="320"/>
+<summon name="Cobra" mana="275"/>
+<summon name="Skeleton" mana="300"/>
+<summon name="Orc Spearman" mana="310"/>
+<summon name="Elf" mana="320"/>
+<summon name="Larva" mana="355"/>
+<summon name="Dwarf" mana="320"/>
+<summon name="Scorpion" mana="310"/>
+<summon name="Orc Warrior" mana="360"/>
+<summon name="Minotaur" mana="330"/>
+<summon name="Amazon" mana="390"/>
+<summon name="Wild Warrior" mana="420"/>
+<summon name="Minotaur Archer" mana="390"/>
+<summon name="Dwarf Soldier" mana="360"/>
+<summon name="Elf Scout" mana="360"/>
+<summon name="Ghoul" mana="450"/>
+<summon name="Valkyrie" mana="450"/>
+<summon name="Fire Devil" mana="530"/>
+<summon name="Scarab" mana="395"/>
+<summon name="Cyclops" mana="490"/>
+<summon name="Minotaur Guard" mana="550"/>
+<summon name="Stone Golem" mana="590"/>
+<summon name="Dwarf Guard" mana="650"/>
+<summon name="Orc Berserker" mana="590"/>
+<summon name="Monk" mana="600"/>
+<summon name="Fire Elemental" mana="690"/>
+<summon name="Demon Skeleton" mana="620"/>
+<summon name="Orc Leader" mana="640"/>
+<summon name="Centipede" mana="335"/>
+<summon name="Chicken" mana="220"/>
+<summon name="Crab" mana="305"/>
+<summon name="Crocodile" mana="350"/>
+<summon name="Elephant" mana="500"/>
+<summon name="Flamingo" mana="250"/>
+<summon name="Panda" mana="300"/>
+<summon name="Parrot" mana="250"/>
+</summons>

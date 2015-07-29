@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<monster name="Dwarf Geomancer" level="40" maglevel="80" experience="245" pushable="0" armor="15" defense="19" canpushitems="1" staticattack="50" changetarget="200" speed="200">
+	<health now="380" max="380"/>
+	<look type="66" head="20" body="30" legs="40" feet="50" corpse="2987"/>
+	<combat targetdistance="4" runonhealth="100"/>
+
+<attacks>
+	<attack type="melee" mindamage="27" maxdamage="54"/>
+	<attack type="distance" name="largerock" mindamage="41" maxdamage="120" cycleticks="3000" probability="50"/>
+	<attack type="instant" name="exura" exhaustion="500" cycleticks="2000" probability="60"/>
+	<attack type="rune" name="dwarfgeo_manadrain" exhaustion="100" cycleticks="4000" probability="30"/>
+</attacks>
+
+<defenses>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="invisible"/>
+</defenses>
+
+<loot>
+ 	<item id="2148" countmax="20" chance1="100000" chancemax="0"/>
+ 	<item id="2673" countmax="3" chance1="6666" chancemax="0"/>
+ 	<item id="2260" chance="4000"/>
+ 	<item id="2649" chance="10000"/>
+ 	<item id="2643" chance="20000"/>
+
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="2162" chance="2500"/>
+	<item id="2787" countmax="3" chance1="20000" chancemax="0"/>
+ 	</inside>
+ 	</item>
+</loot>
+</monster>

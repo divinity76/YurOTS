@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- paladin template for builtin account creator -->
+<player name="3" account="1" sex="1" lookdir="1" exp="9300" voc="3" level="10" access="0" cap="300" maglevel="12" lastlogin="0">
+<spawn x="160" y="54" z="7"/>
+<temple x="160" y="54" z="7"/>
+<health now="205" max="205" food="0"/>
+<mana now="65" max="65" spent="0"/>
+<look type="129" head="20" body="30" legs="40" feet="50"/>
+<skills>
+<skill skillid="0" level="10" tries="0"/>
+<skill skillid="1" level="10" tries="0"/>
+<skill skillid="2" level="10" tries="0"/>
+<skill skillid="3" level="10" tries="0"/>
+<skill skillid="4" level="71" tries="0"/>
+<skill skillid="5" level="41" tries="0"/>
+<skill skillid="6" level="10" tries="0"/>
+</skills>
+<inventory><slot slotid="1"><item id="2490"/></slot>
+<slot slotid="2"><item id="2129"/></slot>
+<slot slotid="3"><item id="1988"><inside><item id="2152" count="2"/><item id="2543" count="10"/></inside></item></slot>
+<slot slotid="4"><item id="2463"/></slot>
+<slot slotid="5"><item id="2455"/></slot>
+<slot slotid="7"><item id="2468"/></slot>
+<slot slotid="8"><item id="2643"/></slot>
+<slot slotid="9"><item id="2164"/></slot>
+</inventory>
+<depots><depot depotid="1"><item id="2590"><inside><item id="2594"/></inside></item></depot></depots>
+<storage/>
+</player>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<npclist>
+<npc name="Seller" x="145" y="50" z="7" dir="3"/>
+<npc name="Dark Rodo" x="129" y="50" z="6" dir="0"/>
+<npc name="Mad" x="145" y="51" z="6" dir="3"/>
+<npc name="Lector" x="127" y="49" z="7" dir="1"/>
+<npc name="Perac" x="144" y="54" z="5" dir="0"/>
+<npc name="Dufi" x="128" y="55" z="7" dir="1"/><npc name="Seller" x="208" y="80" z="7" dir="3"/><npc name="Dark Rodo" x="207" y="71" z="7" dir="2"/>
+<npc name="Cody" x="129" y="30" z="7" dir="2"/>
+<npc name="Pirate Jack" x="177" y="64" z="7" dir="1"/><npc name="Guild Master" x="129" y="51" z="5" dir="0"/>
+<npc name="Obi" x="173" y="46" z="7" dir="1"/>
+
+<npc name="Fargum" x="171" y="64" z="7" dir="1"/>
+<npc name="Nimral" x="122" y="117" z="7" dir="3"/>
+
+<npc name="Dagor" x="132" y="29" z="7" dir="2"/>
+<npc name="Diamati" x="132" y="29" z="6" dir="2"/>
+<npc name="Azemor" x="132" y="29" z="5" dir="2"/>
+<npc name="Shanti" x="132" y="29" z="4" dir="2"/>
+
+<npc name="Orlan" x="127" y="49" z="4" dir="1"/>
+<npc name="The Oracle" x="96" y="207" z="6"/>
+<npc name="Sally" x="74" y="220" z="7" dir="1"/>
+</npclist>

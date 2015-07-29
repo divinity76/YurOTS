@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<monster name="Cave Rat" level="20" maglevel="30" experience="10" pushable="1" armor="2" defense="4" canpushitems="0" staticattack="50" changetarget="200" speed="150">
+	<health now="30" max="30"/>
+	<look type="56" head="20" body="30" legs="40" feet="50" corpse="2813"/>
+	<combat targetdistance="1" runonhealth="3"/>
+
+<attacks>
+	<attack type="melee" maxdamage="15"/>
+</attacks>
+
+<defenses>
+
+</defenses>
+
+<loot>
+ 	<item id="2687" countmax="1" chance1="3333" chancemax="0"/>
+	<item id="2148" countmax="9" chance1="100000" chancemax="0"/>
+ 	<item id="2696" chance="50000"/>
+	<item id="2467" chance="5000" />
+	<item id="2651" chance="5000" />
+	<item id="3976" countmax="4" chance1="5000" chancemax="0"/>
+</loot>
+</monster>

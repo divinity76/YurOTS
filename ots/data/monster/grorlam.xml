@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<monster name="Grorlam" level="40" maglevel="40" experience="1600" pushable="0" armor="30" defense="31" canpushitems="1" staticattack="50" changetarget="200" speed="220">
+	<health now="2750" max="2750"/>
+	<look type="67" head="20" body="30" legs="40" feet="50" corpse="2952"/>
+	<combat targetdistance="1" runonhealth="0"/>
+	<blood color="86" effect="9" splash="255"/>
+
+<attacks>
+	<attack type="melee" mindamage="50" maxdamage="220"/>
+	<attack type="instant" name="ass_haste" cycleticks="3000" probability="25"/>
+	<attack type="instant" name="exura" cycleticks="7000" probability="60"/>
+	<attack type="distance" name="largestone" mindamage="50" maxdamage="150" cycleticks="2000" probability="100"/>
+</attacks>
+
+<defenses>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="paralyze"/>
+	<defense immunity="drunk"/>
+	<defense immunity="invisible"/>
+</defenses>
+
+<loot>
+ 	<item id="2148" countmax="20" chance1="100000" chancemax="0"/>
+ 	<item id="2483" chance="10000"/>
+
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="1295" chance="10000"/>
+	<item id="1294" countmax="5" chance1="20000" chancemax="0"/>
+ 	<item id="2395" chance="2500"/>
+ 	<item id="2050" chance="20000"/>
+ 	<item id="2580" chance="5000"/>
+ 	</inside>
+ 	</item>
+</loot>
+
+<summons maxSummons="2">
+ 	<summon name="Stone Golem" chance="1857"/>
+</summons>
+
+</monster>

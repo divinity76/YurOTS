@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<houses>
+<house name="Small Street I">
+<tiles fromx="143" fromy="43" fromz="7" tox="144" toy="45" toz="7"/>
+</house>
+<house name="Small Street II">
+<tile x="146" y="43" z="7"/>
+<tile x="146" y="44" z="7"/>
+<tile x="146" y="45" z="7"/>
+</house>
+<house name="Small Street III">
+<tiles fromx="143" fromy="43" fromz="6" tox="144" toy="45" toz="6"/>
+</house>
+<house name="Small Street IV">
+<tile x="146" y="43" z="6"/>
+<tile x="146" y="44" z="6"/>
+<tile x="146" y="45" z="6"/>
+</house>
+<house name="Small Street V">
+<tiles fromx="143" fromy="43" fromz="5" tox="144" toy="45" toz="5"/>
+</house><house name="Small Street VI">
+<tile x="146" y="43" z="5"/>
+<tile x="146" y="44" z="5"/>
+<tile x="146" y="45" z="5"/>
+</house>
+<house name="Great Street I">
+<tiles fromx="137" fromy="29" fromz="7" tox="143" toy="31" toz="6"/>
+</house>
+<house name="Great Street II">
+<tiles fromx="145" fromy="29" fromz="7" tox="151" toy="31" toz="7"/>
+</house>
+<house name="Great Street III">
+<tiles fromx="155" fromy="29" fromz="7" tox="159" toy="32" toz="7"/>
+</house>
+<house name="Great Street IV"><tiles fromx="165" fromy="33" fromz="7" tox="169" toy="39" toz="7"/>
+</house>
+<house name="Upper Street I">
+<tiles fromx="155" fromy="29" fromz="6" tox="163" toy="33" toz="6"/>
+</house>
+<house name="Upper Street II"><tiles fromx="165" fromy="37" fromz="6" tox="169" toy="39" toz="6"/>
+</house><house name="Upper Street III"><tiles fromx="167" fromy="32" fromz="6" tox="169" toy="35" toz="6"/></house><house name="Upper Street IV"><tiles fromx="161" fromy="29" fromz="5" tox="166" toy="33" toz="5"/></house><house name="Upper Street V"><tiles fromx="165" fromy="35" fromz="5" tox="169" toy="39" toz="5"/></house><house name="Green Street I"><tiles fromx="172" fromy="35" fromz="7" tox="177" toy="37" toz="7"/></house><house name="Green Street II"><tiles fromx="179" fromy="29" fromz="7" tox="183" toy="32" toz="7"/></house><house name="Green Street III"><tiles fromx="172" fromy="29" fromz="7" tox="176" toy="32" toz="7"/></house><house name="Pirate Street">
+<tiles fromx="173" fromy="52" fromz="7" tox="178" toy="55" toz="6"/></house><house name="River Street I"><tiles fromx="128" fromy="62" fromz="7" tox="130" toy="65" toz="7"/></house><house name="River Street II"><tiles fromx="133" fromy="62" fromz="7" tox="135" toy="65" toz="7"/></house><house name="River Street III"><tiles fromx="147" fromy="60" fromz="7" tox="149" toy="64" toz="7"/></house><house name="River Street IV"><tiles fromx="152" fromy="60" fromz="7" tox="154" toy="64" toz="7"/></house><house name="River Street V"><tiles fromx="157" fromy="60" fromz="7" tox="159" toy="64" toz="7"/></house><house name="Desert Street I"><tiles fromx="213" fromy="76" fromz="7" tox="218" toy="78" toz="7"/></house><house name="Desert Street II"><tiles fromx="213" fromy="72" fromz="7" tox="218" toy="74" toz="7"/></house><house name="Desert Street III"><tiles fromx="213" fromy="72" fromz="6" tox="218" toy="74" toz="6"/></house><house name="Desert Street IV"><tiles fromx="211" fromy="75" fromz="6" tox="218" toy="78" toz="6"/>
+<tiles fromx="211" fromy="79" fromz="6" tox="213" toy="82" toz="6"/></house><house name="Desert Street V"><tiles fromx="204" fromy="70" fromz="6" tox="208" toy="72" toz="6"/>
+<tiles fromx="206" fromy="73" fromz="6" tox="208" toy="75" toz="6"/></house><house name="Desert Street VI"><tiles fromx="204" fromy="76" fromz="6" tox="209" toy="82" toz="6"/></house><house name="The Tibianic">
+<tiles fromx="201" fromy="43" fromz="7" tox="210" toy="58" toz="7"/>
+<tiles fromx="202" fromy="40" fromz="7" tox="209" toy="42" toz="7"/>
+<tiles fromx="205" fromy="39" fromz="7" tox="207" toy="39" toz="7"/>
+<tiles fromx="202" fromy="59" fromz="7" tox="209" toy="63" toz="7"/>
+<tiles fromx="201" fromy="43" fromz="6" tox="211" toy="58" toz="6"/>
+<tiles fromx="202" fromy="40" fromz="6" tox="210" toy="42" toz="6"/>
+<tiles fromx="205" fromy="39" fromz="6" tox="207" toy="39" toz="6"/>
+<tiles fromx="202" fromy="59" fromz="6" tox="209" toy="62" toz="6"/>
+<tiles fromx="202" fromy="55" fromz="5" tox="210" toy="57" toz="5"/>
+<tiles fromx="203" fromy="58" fromz="5" tox="209" toy="62" toz="5"/></house>
+<house name="Castle of the Snakes"><tiles fromx="92" fromy="26" fromz="7" tox="98" toy="33" toz="6"/>
+<tiles fromx="96" fromy="34" fromz="7" tox="100" toy="38" toz="6"/>
+<tiles fromx="99" fromy="26" fromz="7" tox="107" toy="29" toz="6"/>
+<tiles fromx="108" fromy="26" fromz="7" tox="115" toy="33" toz="6"/>
+<tiles fromx="106" fromy="34" fromz="7" tox="111" toy="38" toz="6"/>
+</house>
+<house name="Sand Mansion">
+<tiles fromx="213" fromy="102" fromz="7" tox="223" toy="110" toz="7"/>
+</house>
+<house name="Bamboo Camp I"><tiles fromx="178" fromy="99" fromz="7" tox="183" toy="104" toz="7"/>
+</house>
+<house name="Bamboo Camp II"><tiles fromx="169" fromy="98" fromz="7" tox="173" toy="101" toz="7"/></house><house name="Bamboo Camp III">
+<tiles fromx="174" fromy="93" fromz="7" tox="178" toy="96" toz="7"/></house><house name="Bamboo Camp IV"><tiles fromx="183" fromy="93" fromz="7" tox="186" toy="96" toz="7"/></house>
+<house name="Bamboo Camp V"><tiles fromx="186" fromy="99" fromz="7" tox="189" toy="102" toz="7"/></house><house name="Bamboo Camp VI"><tiles fromx="183" fromy="106" fromz="7" tox="187" toy="109" toz="7"/></house>
+</houses>

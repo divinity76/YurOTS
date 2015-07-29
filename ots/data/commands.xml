@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- commands are described in readme.txt -->
+
+<commands>
+<command cmd="/a"			access="3" />
+<command cmd="/B"			access="1" />
+<command cmd="/b"			access="3" />
+<command cmd="/c"			access="3" />
+<command cmd="/i"			access="3" />
+<command cmd="/m"			access="2" />
+<command cmd="/q"			access="3" />
+<command cmd="/reload"		access="3" />
+<command cmd="/s"			access="3" />
+<command cmd="/t"			access="2" />
+<command cmd="/z"			access="1" />
+<command cmd="/goto"		access="3" />
+<command cmd="/info"		access="2" />
+<command cmd="/closeserver"	access="3" />
+<command cmd="/openserver"	access="3" />
+<command cmd="/getonline"	access="2" />
+<command cmd="/summon"		access="3" />
+<command cmd="/kick"		access="2" />
+
+<command cmd="/up"			access="3" />
+<command cmd="/down"		access="3" />
+<command cmd="/invisible"	access="3" />
+<command cmd="/owner"		access="3" />
+<command cmd="/send"		access="3" />
+<command cmd="/pvp"			access="3" />
+<command cmd="/ban"			access="3" />
+<command cmd="/save"		access="2" />
+<command cmd="/pos"			access="1" />
+<command cmd="/shutdown"	access="3" />
+<command cmd="/max"			access="3" />
+<command cmd="/clean"		access="2" />
+<command cmd="/premmy"		access="3" />
+<command cmd="/promote"		access="3" />
+
+<command cmd="!exp"			access="0" />
+<command cmd="!mana"		access="0" />
+<command cmd="!report"		access="0" />
+<command cmd="!online"		access="0" />
+<command cmd="!house"		access="0" />
+<command cmd="!frags"		access="0" />
+<command cmd="!uptime"		access="0" />
+<command cmd="!premmy"		access="0" />
+</commands>

@@ -1,0 +1,72 @@
+0.9.4f vs 0.9.4e
+* exe
+
+0.9.4e vs 0.9.4d
+* exe
+* config.lua
+* fluids.lua
+* shovel.lua
++ msvcr80.dll
++ msvcp80.dll
++ accounts/1.xml
++ players/0-4.xml
++ vip/1.xml
+
+0.9.4d vs 0.9.4c
+* exe
+* items.otb
+* promote.lua
++ dbghelp.dll
+
+0.9.4c vs 0.9.4b
+* promote.lua
+* dragon lord.xml
+* exe, map
+
+0.9.4b vs 0.9.4a
+* items.otb
+* exe
+
+0.9.4a vs 0.9.4
+* config.lua
+* quest.lua
+* mapeditor
+* howto
+* exe
+
+0.9.4 vs 0.9.3
+* all monsters
+* all scripts
+* all spells
+* all npcs
+* updated dlls
+
+0.9.3 vs 0.9.2
+* exe, map
+* config.lua
+* actions.xml
+* commands.xml
+* items.xml
+* spells.xml
+* door.lua
+* guild.lua
+* spell sellers
+* rook monsters
++ key scripts
++ oracle.lua
++ rookeq.lua
++ The Oracle.xml
++ Sally.xml
++ light spells luas
+
+0.9.2 vs 0.9.1
+* exe, map
+* config.lua
+* actions.xml
+* Demodras.xml
+* all npc scripts
++ new npcs
+* exura vita.lua
+* ultimate healing.lua
+* commands.xml
+* houses.xml

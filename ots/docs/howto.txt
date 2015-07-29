@@ -1,0 +1,90 @@
+How to start?
+~~~~~~~~~~~~~
+
+First, change password to default account:
+- go to accounts folder
+- open 111111.xml
+- replace "tibia" with your password
+
+To make your server public:
+- go to main foler
+- open config.lua
+- change ip="127.0.0.1" to your ip address
+
+To connect to server:
+- start Tibia,
+- do NOT check 'Test Server Login'
+- start IP Changer
+- click 'Change IP'
+- log in to your account
+
+
+How to configure account maker?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With rookgard:
+- open config.lua
+- set accmaker to "rook"
+- go to players folder
+- edit file 0.xml
+
+Without rookgard:
+- open config.lua
+- set accmaker to "main"
+- go to players folder
+- edit files 1.xml to 4.xml
+
+Turning off accmaker:
+- open config.lua
+- set accmaker to "none"
+
+
+How to change map?
+~~~~~~~~~~~~~~~~~~
+
+You need to clear several files:
+- go to data folder
+- open houseitems.xml
+- replace it with
+<?xml version="1.0"?><houseitems/>
+- open houses.xml
+- replace it with:
+<?xml version="1.0"?><houses/> 
+- open pvparenas.xml
+- replace it with:
+<?xml version="1.0"?><pvparenas/>
+- open readables.xml
+- replace it with:
+<?xml version="1.0"?><readables/>
+- go to world folder
+- open npc.xml
+- replace it with
+<?xml version="1.0"?><npclist/>
+
+Finally:
+- go to main folder
+- open config.lua
+- change map="data/world/test.otbm" to your map
+
+
+
+How to make simple quest?
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open map in mapeditor:
+- scroll to place where your quest should be
+- create a chest box (ids 1740,1747,1748,1749)
+- right click on it and select 'Properties'
+- set 'uniqueId' field to id of quest item
+- save map
+
+
+How to make level door for level x?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open map in mapeditor:
+- scroll to place when you want a level door
+- create level door (ids 1227,1229,1245,1247,1256,1261,3540,3549)
+- right click on it and select 'Properties'
+- set 'actionId' field to x+1000
+- save map

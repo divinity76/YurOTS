@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<items>
+<item id="2132" charges="200"/>		-- silver amulet
+<item id="2126" charges="200"/>		-- bronze amulet
+<item id="2161" charges="200"/>		-- strange talisman
+<item id="2164" charges="20"/>		-- might ring
+<item id="2166" time="1800000"/>	-- power ring
+<item id="2167" time="600000"/>		-- energy ring
+<item id="2169" time="600000"/>		-- time ring
+<item id="2197" charges="5"/>		-- stone skin amulet
+<item id="2198" charges="50"/>		-- elven amulet
+<item id="2199" charges="150"/>		-- garlic necklace
+<item id="2200" charges="250"/>		-- protection amulet
+<item id="2201" charges="200"/>		-- dragon necklace
+<item id="2207" time="1800000"/>	-- sword ring
+<item id="2208" time="1800000"/>	-- axe ring
+<item id="2209" time="1800000"/>	-- club ring
+<item id="2165" time="600000"/>		-- stealth ring
+<item id="1740" questbox="1" />		-- unmovables
+<item id="1747" questbox="1" />
+<item id="1748" questbox="1" />
+<item id="1749" questbox="1" />
+<item id="1770" questbox="1" />
+<item id="1209" door="1"/>
+<item id="1210" door="1"/>
+<item id="1211" door="1"/>
+<item id="1212" door="1"/>
+<item id="1213" door="1"/>
+<item id="1214" door="1"/>
+<item id="1219" door="1"/>
+<item id="1220" door="1"/>
+<item id="1221" door="1"/>
+<item id="1222" door="1"/>
+<item id="1223" door="1"/>
+<item id="1224" door="1"/>
+<item id="1225" door="1"/>
+<item id="1226" door="1"/>
+<item id="1227" door="1"/>
+<item id="1228" door="1"/>
+<item id="1229" door="1"/>
+<item id="1230" door="1"/>
+<item id="1231" door="1"/>
+<item id="1232" door="1"/>
+<item id="1233" door="1"/>
+<item id="1234" door="1"/>
+<item id="1235" door="1"/>
+<item id="1236" door="1"/>
+<item id="1237" door="1"/>
+<item id="1238" door="1"/>
+<item id="1239" door="1"/>
+<item id="1240" door="1"/>
+<item id="1241" door="1"/>
+<item id="1242" door="1"/>
+<item id="1243" door="1"/>
+<item id="1244" door="1"/>
+<item id="1245" door="1"/>
+<item id="1246" door="1"/>
+<item id="1247" door="1"/>
+<item id="1248" door="1"/>
+<item id="1249" door="1"/>
+<item id="1250" door="1"/>
+<item id="1251" door="1"/>
+<item id="1252" door="1"/>
+<item id="1253" door="1"/>
+<item id="1254" door="1"/>
+<item id="1255" door="1"/>
+<item id="1256" door="1"/>
+<item id="1257" door="1"/>
+<item id="1258" door="1"/>
+<item id="1259" door="1"/>
+<item id="1260" door="1"/>
+<item id="1261" door="1"/>
+<item id="1262" door="1"/>
+<item id="3535" door="1"/>
+<item id="3536" door="1"/>
+<item id="3537" door="1"/>
+<item id="3538" door="1"/>
+<item id="3539" door="1"/>
+<item id="3540" door="1"/>
+<item id="3541" door="1"/>
+<item id="3542" door="1"/>
+<item id="3543" door="1"/>
+<item id="3544" door="1"/>
+<item id="3545" door="1"/>
+<item id="3546" door="1"/>
+<item id="3547" door="1"/>
+<item id="3548" door="1"/>
+<item id="3549" door="1"/>
+<item id="3550" door="1"/>
+<item id="3551" door="1"/>
+<item id="3552" door="1"/>
+<item id="1634" door="1"/>
+<item id="1635" door="1"/>
+<item id="1636" door="1"/>
+<item id="1637" door="1"/>
+<item id="1638" door="1"/>
+<item id="1639" door="1"/>
+<item id="1640" door="1"/>
+<item id="1641" door="1"/>
+</items>

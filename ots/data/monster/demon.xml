@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<monster name="Demon" level="20" maglevel="20" experience="6000" pushable="0" armor="49" defense="51" canpushitems="1" staticattack="40" changetarget="200" speed="210">
+	<health now="8200" max="8200"/>
+	<look type="35" head="20" body="30" legs="40" feet="50" corpse="2916"/>
+	<combat targetdistance="1" runonhealth="0"/>
+      <blood color="199" effect="0" splash="255"/>
+
+<attacks>
+	<attack type="melee" mindamage="192" maxdamage="510" probability="100"/>
+	<attack type="instant" name="exura" cycleticks="5000" probability="50"/>
+	<attack type="rune" name="firefield" cycleticks="3000" probability="40"/>
+	<attack type="instant" name="d exevo gran vis lux" exhaustion="500" cycleticks="7000" probability="60"/>
+	<attack type="instant" name="demon_manadrain" exhaustion="100" cycleticks="4000" probability="30"/>
+	<attack type="rune" name="demon fireball" exhaustion="500" cycleticks="3500" probability="60"/>
+</attacks>
+
+<defenses>
+	<defense immunity="energy"/>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="paralyze"/>
+	<defense immunity="invisible"/>
+	<defense immunity="drunk"/>
+</defenses>
+
+<voices>
+	<voice sentence="Your soul will be mine!"/>
+	<voice sentence="Your resistance is futile!"/>
+	<voice sentence="MWA HA HA HA HA!"/>
+	<voice sentence="I SMELLLL FEARRR!"/>
+</voices>
+
+<loot>
+ 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+ 	<item id="2148" countmax="25" chance1="100000" chancemax="0"/>
+ 	<item id="2393" chance="1000"/>
+ 	<item id="2514" chance="500"/>
+ 	<item id="2432" chance="1538"/>
+ 	<item id="2472" chance="433"/>
+
+ 	<item id="1987" chance="33333">
+ 	<inside>
+  	<item id="2678" countmax="3" chance1="10000" chancemax="0"/>
+ 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+ 	<item id="2151" countmax="4" chance1="4000" chancemax="0"/>
+ 	<item id="2462" chance="1055"/>
+	<item id="2149" countmax="3" chance1="1428" chancemax="0"/>
+ 	<item id="2171" chance="1333"/>
+ 	<item id="2387" chance="6666"/>
+ 	<item id="2470" chance="600"/>
+ 	<item id="2520" chance="866"/>
+ 	<item id="2418" chance="1033"/>
+ 	<item id="2377" chance="3333"/>
+ 	</inside>
+ 	</item>
+</loot>
+
+<summons maxSummons="2">
+ 	<summon name="Fire Elemental" chance="1333"/>
+</summons>
+
+</monster>

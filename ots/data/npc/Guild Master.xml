@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Guild Master" script="data/npc/scripts/guild.lua" access="3">
+	<look type="57" head="20" body="30" legs="40" feet="50"/>
+</npc>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<readables>
+<readable x="159" y="36" z="7" text="depots and shops"/>
+<readable x="131" y="53" z="7" text="depots are upstairs"/>
+<readable x="141" y="51" z="6" text="some\nmulti\nline\ntext"/>
+</readables>

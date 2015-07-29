@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+  <monster name="Dipthrah" level="70" maglevel="30" experience="2900" pushable="0" armor="45" defense="46" canpushitems="1" staticattack="50" changetarget="200" speed="240">
+     	<health now="3500" max="3500"/>
+     	<look type="87" head="20" body="30" legs="40" feet="50" corpse="3034"/>
+     	<combat targetdistance="1" runonhealth="100"/>
+	<blood color="86" effect="9" splash="255"/>
+  
+  <attacks>
+   	<attack type="melee" mindamage="310" maxdamage="800"/>
+   	<attack type="instant" name="dip atk" exhaustion="250" cycleticks="5000" probability="70"/>
+   	<attack type="instant" name="exura vita" exhaustion="250" cycleticks="6000" probability="60"/>
+   </attacks>
+  
+  <defenses>
+	<defense immunity="physical"/>
+     	<defense immunity="paralyze"/>
+     	<defense immunity="drunk"/>
+	<defense immunity="invisible"/>
+  </defenses>
+  
+  <voices>
+     	<voice sentence="MY TRESURE! DON'T TAKE IT!!"/>
+     	<voice sentence="HOOOOOOHHHSSSS!"/>
+  </voices>
+  
+  <loot>
+  </loot>
+
+<summons maxSummons="5">
+ 	<summon name="Priestess" chance="1000"/>
+</summons>
+
+  </monster>

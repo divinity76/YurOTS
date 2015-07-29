@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<monster name="Priestess" level="20" maglevel="40" experience="420" pushable="0" armor="11" defense="12" canpushitems="1" staticattack="50" changetarget="200" speed="170">
+	<health now="390" max="390"/>
+	<look type="58" head="20" body="30" legs="40" feet="50" corpse="3065"/>
+	<combat targetdistance="5" runonhealth="0"/>
+
+<attacks>
+	<attack type="melee" maxdamage="70"/>
+	<attack type="rune" name="p sd" exhaustion="500" cycleticks="3000" probability="70"/>
+	<attack type="rune" name="p sd" exhaustion="500" cycleticks="6000" probability="90"/>
+	<attack type="rune" name="p missile" exhaustion="500" cycleticks="2000" probability="45"/>
+	<attack type="rune" name="p missile" exhaustion="500" cycleticks="4000" probability="90"/>
+	<attack type="instant" name="exura" exhaustion="500" cycleticks="3000" probability="100"/>
+	<attack type="rune" name="priestess_manadrain" exhaustion="100" cycleticks="4000" probability="30"/>
+</attacks>
+
+<defenses>
+	<defense immunity="energy"/>
+	<defense immunity="fire"/>
+	<defense immunity="invisible"/>
+	<defense immunity="poison"/>
+	<defense immunity="paralyze"/>
+	<defense immunity="drunk"/>
+</defenses>
+
+<voices>
+	<voice sentence="Your energy is mine."/>
+	<voice sentence="Now your life has come to the end, hahahaha!"/>
+</voices>
+
+<loot>
+ 	<item id="2148" countmax="10" chance1="100000" chancemax="0"/>
+ 	<item id="2032" chance="10000"/>
+ 	<item id="2070" chance="3333"/>
+ 	<item id="2529" chance="1818"/>
+
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="2420" chance="10000"/>
+	<item id="2143" countmax="2" chance1="5000" chancemax="0"/>
+ 	<item id="2760" chance="5000"/>
+
+ 	<item id="2192" chance="2500"/>
+ 	<item id="2114" chance="2857"/>
+ 	<item id="2134" chance="3333"/>
+	<item id="2151" countmax="2" chance1="4000" chancemax="0"/>
+	<item id="2145" countmax="2" chance1="1666" chancemax="0"/>
+ 	</inside>
+ 	</item>
+</loot>
+
+<summons maxSummons="5">
+	<summon name="Ghoul" chance="2000"/>
+</summons>
+
+</monster>

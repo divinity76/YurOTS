@@ -1,0 +1,90 @@
+Jak zacz¹æ?
+~~~~~~~~~~~
+
+Po pierwsze, zmieñ has³o do domyœlnego konta:
+- wejdŸ do katalogu accounts
+- otwórz plik 111111.xml
+- zamieæ "tibia" na Twoje has³o
+
+Aby inni mogli wejœæ na Twój serwer:
+- wejdŸ do katalogu g³ównego
+- otwóz plik config.lua
+- zamieñ ip="127.0.0.1" na Twój adres IP
+
+WejdŸ na serwer:
+- uruchom Tibie
+- NIE zaznaczaj 'Test Server Login'
+- uruchom IP Changer
+- kliknij 'Change IP'
+- zaloguj siê na swoje konto
+
+
+Jak skonfigurowaæ kreatora kont?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Z rookiem:
+- otwórz config.lua
+- ustaw accmaker na "rook"
+- wejdŸ do katalogu players
+- edytuj plik 0.xml
+
+Bez rooka:
+- otwórz config.lua
+- ustaw accmaker na "main"
+- wejdŸ do katalogu players
+- edytuj pliki 1.xml do 4.xml
+
+Wy³¹czenie kreatora:
+- otwórz config.lua
+- ustaw accmaker na "none"
+
+
+Jak zmieniæ mapê na inn¹?
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Musisz wyczyœciæ kilka plików:
+- wejdŸ do katalogu data
+- otwóz plik houseitems.xml
+- zamieñ jego zawaroœæ na:
+<?xml version="1.0"?><houseitems/>
+- otwórz plik houses.xml
+- zamieñ jego zawaroœæ na:
+<?xml version="1.0"?><houses/> 
+- otwórz plik pvparenas.xml
+- zamieñ jego zawaroœæ na:
+<?xml version="1.0"?><pvparenas/>
+- otwórz plik readables.xml
+- zamieñ jego zawaroœæ na:
+<?xml version="1.0"?><readables/>
+- wejdŸ do katalogu world
+- otwórz plik npc.xml
+- zamieñ jego zawaroœæ na:
+<?xml version="1.0"?><npclist/>
+
+Wreszcie:
+- wejdŸ do katalogu g³ównego
+- otwórz plik config.lua
+- zamieñ map="data/world/test.otbm" na œcie¿ke nowej mapy
+
+
+
+Jak zrobiæ prosty quest?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Otwórz mapê w mapedytorze:
+- przewiñ do miejsca gdzie chcesz zrobiæ quest
+- postaw skrzynke (ids 1740,1747,1748,1749)
+- kliknij j¹ prawym i wybierz 'Properties'
+- ustaw pole 'uniqueId' na id nagrody
+- zapisz mapê
+
+
+Jak zrobiæ drzwi na level x?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Otwórz mapê w mapedytorze:
+- przewiñ do miejsca gdzie chcesz mieæ drzwi
+- postaw drzwi levelowe (ids 1227,1229,1245,1247,1256,1261,3540,3549)
+- kliknij je prawym i wybierz 'Properties'
+- ustaw pole 'actionId' na x+1000 (wymagany level plus 1000)
+- zapisz mapê

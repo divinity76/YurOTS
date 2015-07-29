@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Sally" script="data/npc/scripts/rookeq.lua" access="3">
+ 	<look type="136" head="79" body="81" legs="0" feet="0"/>
+</npc>

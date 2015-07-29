@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Shanti" script="data/npc/scripts/spells_druid.lua" access="3">
+ 	<look type="130" head="85" body="62" legs="102" feet="126"/>
+</npc>

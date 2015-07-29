@@ -1,0 +1,1567 @@
+<?xml version="1.0"?>
+<spawns>
+<spawn centerx="126" centery="102" centerz="7" radius="20">
+<monster name="Troll" direction="2" spawntime="60" x="17" y="-10"/>
+<monster name="Goblin" direction="2" spawntime="60" x="20" y="0"/>
+<monster name="Dragon" direction="2" spawntime="60" x="-16" y="0"/>
+<monster name="Ghoul" direction="2" spawntime="25" x="-2" y="2"/>
+<monster name="Ghoul" direction="2" spawntime="25" x="0" y="2"/>
+<monster name="Ghoul" direction="2" spawntime="25" x="3" y="0"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="2" y="-3"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Flamingo" direction="2" spawntime="60" x="6" y="15"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-18" y="-3"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-9" y="-5"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-3" y="-10"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-4" y="-18"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-11" y="-13"/>
+</spawn>
+<spawn centerx="151" centery="126" centerz="9" radius="10">
+<monster name="Necromancer" direction="2" spawntime="20" x="-7" y="-4"/>
+<monster name="Necromancer" direction="2" spawntime="25" x="1" y="0"/>
+<monster name="Priestess" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-3" y="9"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-1" y="8"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="1" y="5"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-2" y="-5"/>
+<monster name="Necromancer" direction="2" spawntime="250" x="-9" y="0"/>
+<monster name="Hero" direction="2" spawntime="60" x="-7" y="-6"/>
+</spawn>
+<spawn centerx="141" centery="126" centerz="9" radius="10">
+<monster name="Necromancer" direction="2" spawntime="250" x="1" y="-2"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="2" y="9"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="-9" y="1"/>
+</spawn>
+<spawn centerx="145" centery="120" centerz="9" radius="10">
+<monster name="Hero" direction="2" spawntime="60" x="1" y="0"/>
+</spawn>
+<spawn centerx="89" centery="150" centerz="7" radius="5">
+<monster name="Dragon" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Dragon" direction="2" spawntime="60" x="-2" y="0"/>
+</spawn>
+<spawn centerx="93" centery="140" centerz="7" radius="13">
+<monster name="Dragon" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Dragon" direction="2" spawntime="60" x="-12" y="3"/>
+<monster name="Dragon" direction="2" spawntime="60" x="3" y="8"/>
+</spawn>
+<spawn centerx="103" centery="131" centerz="7" radius="5">
+<monster name="Dragon" direction="2" spawntime="25" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="38" centery="40" centerz="7" radius="5">
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="0" y="4"/>
+</spawn>
+<spawn centerx="106" centery="120" centerz="7" radius="10">
+<monster name="Dragon" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Dragon" direction="2" spawntime="60" x="3" y="-7"/>
+</spawn>
+<spawn centerx="107" centery="36" centerz="7" radius="14">
+<monster name="Minotaur" direction="2" spawntime="60" x="-9" y="5"/>
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="-5" y="8"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="2" y="5"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="6" y="9"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="-1" y="6"/>
+</spawn>
+<spawn centerx="64" centery="68" centerz="7" radius="12">
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="8" y="-8"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="5" y="8"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-8" y="8"/>
+<monster name="Demon Skeleton" direction="2" spawntime="40" x="-11" y="-2"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-3" y="-9"/>
+</spawn>
+<spawn centerx="61" centery="58" centerz="6" radius="7">
+<monster name="Witch" direction="2" spawntime="20" x="-2" y="0"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-3" y="5"/>
+</spawn>
+<spawn centerx="122" centery="85" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="15" x="-2" y="3"/>
+</spawn>
+<spawn centerx="116" centery="100" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="10" x="0" y="0"/>
+</spawn>
+<spawn centerx="150" centery="86" centerz="6" radius="16">
+<monster name="Troll" direction="2" spawntime="10" x="0" y="3"/>
+<monster name="Troll" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Troll" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Troll" direction="2" spawntime="10" x="-4" y="-2"/>
+<monster name="Troll" direction="2" spawntime="10" x="-2" y="-1"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="10" y="-5"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="4" y="-5"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="2" y="-6"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="12" y="-6"/>
+<monster name="Swamp Troll" direction="2" spawntime="60" x="10" y="-1"/>
+<monster name="Swamp Troll" direction="2" spawntime="60" x="8" y="-6"/>
+<monster name="Swamp Troll" direction="2" spawntime="60" x="3" y="-2"/>
+<monster name="Stone Golem" direction="2" spawntime="60" x="-5" y="6"/>
+<monster name="Minotaur Mage" direction="2" spawntime="60" x="-4" y="4"/>
+<monster name="Minotaur Mage" direction="2" spawntime="60" x="-10" y="5"/>
+<monster name="Minotaur Archer" direction="2" spawntime="60" x="-9" y="3"/>
+<monster name="Troll" direction="2" spawntime="10" x="-2" y="-2"/>
+<monster name="Troll" direction="2" spawntime="60" x="-5" y="-5"/>
+<monster name="Troll" direction="2" spawntime="60" x="-8" y="-4"/>
+<monster name="Troll" direction="2" spawntime="60" x="-7" y="-3"/>
+<monster name="Troll" direction="2" spawntime="60" x="-6" y="-6"/>
+<monster name="Troll" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Troll" direction="2" spawntime="60" x="-1" y="-4"/>
+<monster name="Troll" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Troll" direction="2" spawntime="60" x="9" y="-5"/>
+<monster name="Troll" direction="2" spawntime="60" x="9" y="-4"/>
+<monster name="Troll" direction="2" spawntime="60" x="8" y="-1"/>
+<monster name="Troll" direction="2" spawntime="60" x="8" y="0"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="11" y="2"/>
+</spawn>
+<spawn centerx="146" centery="86" centerz="7" radius="16">
+<monster name="Troll" direction="2" spawntime="20" x="-2" y="-5"/>
+<monster name="Troll" direction="2" spawntime="20" x="-2" y="2"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="11" y="0"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="5" y="-1"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="4" y="-5"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="6" y="-4"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="11" y="-6"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="11" y="-3"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="13" y="-1"/>
+<monster name="Troll" direction="2" spawntime="20" x="5" y="1"/>
+<monster name="Troll" direction="2" spawntime="40" x="-1" y="2"/>
+<monster name="Troll" direction="2" spawntime="40" x="9" y="-1"/>
+</spawn>
+<spawn centerx="95" centery="120" centerz="7" radius="2">
+<monster name="Giant Spider" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="81" centery="108" centerz="7" radius="2">
+<monster name="Giant Spider" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="79" centery="133" centerz="7" radius="3">
+<monster name="Giant Spider" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="63" centery="133" centerz="7" radius="5">
+<monster name="Giant Spider" direction="2" spawntime="60" x="-2" y="2"/>
+</spawn>
+<spawn centerx="72" centery="70" centerz="8" radius="20">
+<monster name="Demon Skeleton" direction="2" spawntime="20" x="15" y="7"/>
+<monster name="Demon Skeleton" direction="2" spawntime="20" x="13" y="7"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="5" y="-7"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="16" y="-10"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-7" y="10"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="5" y="10"/>
+<monster name="Demon Skeleton" direction="2" spawntime="20" x="-4" y="10"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-12" y="7"/>
+<monster name="Demon Skeleton" direction="2" spawntime="20" x="-6" y="1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-12" y="-6"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="0" y="-7"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="3" y="-11"/>
+</spawn>
+<spawn centerx="140" centery="48" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Spider" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Spider" direction="2" spawntime="60" x="3" y="1"/>
+</spawn>
+<spawn centerx="138" centery="41" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Spider" direction="2" spawntime="60" x="1" y="-3"/>
+</spawn>
+<spawn centerx="128" centery="41" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Bug" direction="2" spawntime="60" x="3" y="1"/>
+<monster name="Bug" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="118" centery="41" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Bug" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Spider" direction="2" spawntime="60" x="0" y="-2"/>
+</spawn>
+<spawn centerx="118" centery="52" centerz="8" radius="4">
+<monster name="Slime" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Bug" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Spider" direction="2" spawntime="60" x="1" y="0"/>
+</spawn>
+<spawn centerx="126" centery="51" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Spider" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="118" centery="35" centerz="8" radius="4">
+<monster name="Bug" direction="2" spawntime="10" x="0" y="0"/>
+<monster name="Bug" direction="2" spawntime="10" x="1" y="0"/>
+</spawn>
+<spawn centerx="131" centery="142" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="-2" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-4" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-3" y="8"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="0" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-5" y="6"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-5" y="8"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-8" y="6"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="-8" y="-7"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="2" y="5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="-7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-4" y="11"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-10" y="11"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="11"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-10" y="-1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-5" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-11" y="-4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="9" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="12" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="10" y="-1"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="10" y="3"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="10" y="1"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="12" y="3"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-1" y="13"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-11" y="-8"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="13" y="-3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="12" y="-7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="10" y="-4"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="7" y="-4"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-13" y="-1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-13" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-13" y="6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-11" y="8"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="12" y="6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="11" y="10"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="10" y="6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="8"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="2" y="9"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="5" y="9"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="7" y="6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="4" y="7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="4" y="-5"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="10" y="-8"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-8" y="8"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-7" y="11"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-11" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-11" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-9" y="2"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-7" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-5" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-2" y="3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-9" y="-5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-2" y="-4"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="-4" y="-4"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="0" y="-6"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="7" y="13"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-7" y="13"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="7" y="1"/>
+</spawn>
+<spawn centerx="140" centery="150" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="60" x="5" y="-1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="8" y="-3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="9" y="-7"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="4" y="5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="7" y="2"/>
+</spawn>
+<spawn centerx="122" centery="151" centerz="6" radius="15">
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-5" y="2"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-7" y="-11"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-7" y="-2"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-7" y="-6"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-2" y="4"/>
+</spawn>
+<spawn centerx="146" centery="137" centerz="5" radius="15">
+<monster name="Orc Berserker" direction="2" spawntime="10" x="1" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-6" y="6"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-9" y="6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="2" y="14"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="13"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="10"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="8"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="4"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="3" y="6"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="-7" y="5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="2" y="-2"/>
+</spawn>
+<spawn centerx="115" centery="155" centerz="5" radius="15">
+<monster name="Orc Warlord" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="14" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-13"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="1" y="-8"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-9"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="0" y="-10"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="1" y="-11"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="3" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="10" x="1" y="-1"/>
+</spawn>
+<spawn centerx="140" centery="162" centerz="5" radius="15">
+<monster name="Orc Berserker" direction="2" spawntime="10" x="1" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="10" x="1" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="8" y="-8"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-6" y="-7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-3" y="-7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="2" y="-7"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="-9"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="8" y="-10"/>
+</spawn>
+<spawn centerx="123" centery="144" centerz="5" radius="15">
+<monster name="Orc Shaman" direction="2" spawntime="10" x="1" y="0"/>
+<monster name="Orc Leader" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Orc Leader" direction="2" spawntime="10" x="3" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-7" y="-5"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="-7" y="-8"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-8" y="-9"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-6" y="-9"/>
+</spawn>
+<spawn centerx="124" centery="144" centerz="4" radius="15">
+<monster name="Orc Berserker" direction="2" spawntime="10" x="1" y="0"/>
+<monster name="Orc Leader" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Orc Leader" direction="2" spawntime="10" x="3" y="1"/>
+</spawn>
+<spawn centerx="140" centery="143" centerz="4" radius="15">
+<monster name="Orc Leader" direction="2" spawntime="30" x="2" y="0"/>
+<monster name="Orc Leader" direction="2" spawntime="30" x="3" y="1"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="116" centery="155" centerz="6" radius="15">
+<monster name="Orc Shaman" direction="2" spawntime="10" x="1" y="0"/>
+</spawn>
+<spawn centerx="147" centery="155" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="0"/>
+</spawn>
+<spawn centerx="146" centery="137" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="3" y="1"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="1" y="-3"/>
+</spawn>
+<spawn centerx="115" centery="137" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="10" x="2" y="0"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="3" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="2" y="-3"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="5" y="-6"/>
+<monster name="Orc Warrior" direction="2" spawntime="60" x="4" y="-7"/>
+<monster name="Orc Shaman" direction="2" spawntime="10" x="0" y="-3"/>
+</spawn>
+<spawn centerx="128" centery="137" centerz="6" radius="15">
+<monster name="Orc Warrior" direction="2" spawntime="10" x="4" y="1"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-3" y="2"/>
+<monster name="Orc Warrior" direction="2" spawntime="10" x="-3" y="-2"/>
+</spawn>
+<spawn centerx="176" centery="85" centerz="8" radius="5">
+<monster name="Demon" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="-2"/>
+</spawn>
+<spawn centerx="108" centery="94" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="60" x="1" y="3"/>
+<monster name="Cyclops" direction="2" spawntime="60" x="3" y="-3"/>
+</spawn>
+<spawn centerx="113" centery="87" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Cyclops" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="153" centery="54" centerz="3" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="167" centery="54" centerz="3" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="153" centery="54" centerz="4" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="167" centery="54" centerz="4" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="153" centery="54" centerz="5" radius="8">
+<monster name="Monk" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Priestess" direction="2" spawntime="60" x="6" y="0"/>
+<monster name="Priestess" direction="2" spawntime="60" x="7" y="0"/>
+</spawn>
+<spawn centerx="167" centery="54" centerz="5" radius="8">
+<monster name="Monk" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="153" centery="54" centerz="6" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="167" centery="54" centerz="6" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="116" centery="80" centerz="7" radius="5">
+<monster name="Tarantula" direction="2" spawntime="60" x="-3" y="1"/>
+</spawn>
+<spawn centerx="115" centery="79" centerz="5" radius="8">
+<monster name="Stone Golem" direction="2" spawntime="60" x="3" y="4"/>
+<monster name="Stone Golem" direction="2" spawntime="60" x="-6" y="3"/>
+<monster name="Stone Golem" direction="2" spawntime="60" x="-6" y="-4"/>
+</spawn>
+<spawn centerx="59" centery="119" centerz="7" radius="5">
+<monster name="Giant Spider" direction="2" spawntime="60" x="-2" y="0"/>
+</spawn>
+<spawn centerx="161" centery="158" centerz="9" radius="10">
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-2" y="5"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-4" y="-4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="4" y="-3"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-1" y="3"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-5" y="3"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-4" y="2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="4" y="-1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="3" y="-6"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="2" y="5"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="4" y="-5"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="5" y="-4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-3" y="-6"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-1" y="-6"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="6" y="-3"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="6" y="3"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-7" y="5"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-5" y="6"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-2" y="6"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="1" y="6"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="4" y="6"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="6" y="5"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-6" y="-4"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-7" y="0"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="6" y="1"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="6" y="-6"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-2" y="-4"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="2" y="-4"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="1" y="3"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-7" y="2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-6" y="-2"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="2" y="2"/>
+</spawn>
+<spawn centerx="155" centery="160" centerz="8" radius="5">
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-4" y="-1"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="138" centery="167" centerz="8" radius="5">
+<monster name="Orc Berserker" direction="2" spawntime="60" x="0" y="4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="3" y="2"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-2" y="-2"/>
+</spawn>
+<spawn centerx="141" centery="152" centerz="8" radius="5">
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-3" y="-2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="4" y="2"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="3" y="-2"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-3" y="1"/>
+</spawn>
+<spawn centerx="124" centery="158" centerz="8" radius="5">
+<monster name="Orc Rider" direction="2" spawntime="60" x="-2" y="-1"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Orc Rider" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="2" y="-4"/>
+</spawn>
+<spawn centerx="122" centery="154" centerz="7" radius="5">
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="2" y="0"/>
+</spawn>
+<spawn centerx="129" centery="151" centerz="7" radius="5">
+<monster name="Orc Leader" direction="2" spawntime="60" x="0" y="-4"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="2" y="4"/>
+<monster name="Orc Warlord" direction="2" spawntime="60" x="-1" y="4"/>
+</spawn>
+<spawn centerx="128" centery="140" centerz="7" radius="5">
+<monster name="Orc Berserker" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Orc Shaman" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="5" y="0"/>
+</spawn>
+<spawn centerx="135" centery="149" centerz="7" radius="5">
+<monster name="Orc Leader" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Orc Leader" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Orc Berserker" direction="2" spawntime="60" x="0" y="4"/>
+</spawn>
+<spawn centerx="108" centery="66" centerz="4" radius="5">
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="-1" y="-3"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="-1" y="-2"/>
+</spawn>
+<spawn centerx="108" centery="65" centerz="5" radius="5">
+<monster name="Dworc Voodoomaster" direction="2" spawntime="60" x="-3" y="2"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="108" centery="65" centerz="6" radius="5">
+<monster name="Elf" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Elf" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Elf" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="113" centery="69" centerz="7" radius="5">
+<monster name="Elf" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Elf" direction="2" spawntime="60" x="-2" y="3"/>
+</spawn>
+<spawn centerx="105" centery="68" centerz="7" radius="5">
+<monster name="Elf" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Elf" direction="2" spawntime="60" x="0" y="5"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="2" y="0"/>
+</spawn>
+<spawn centerx="107" centery="61" centerz="7" radius="5">
+<monster name="Elf" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="-3" y="2"/>
+<monster name="Elf" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Elf" direction="2" spawntime="60" x="4" y="1"/>
+</spawn>
+<spawn centerx="114" centery="71" centerz="6" radius="5">
+<monster name="Elf Scout" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="-3" y="0"/>
+</spawn>
+<spawn centerx="102" centery="71" centerz="6" radius="5">
+<monster name="Elf Scout" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Elf Scout" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="149" centery="41" centerz="8" radius="5">
+<monster name="Bug" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Spider" direction="2" spawntime="60" x="-4" y="1"/>
+</spawn>
+<spawn centerx="151" centery="31" centerz="8" radius="5">
+<monster name="Bug" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Bug" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Spider" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Spider" direction="2" spawntime="60" x="-1" y="3"/>
+</spawn>
+<spawn centerx="161" centery="40" centerz="8" radius="5">
+<monster name="Bug" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Bug" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Spider" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="86" centery="150" centerz="5" radius="5">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="85" centery="149" centerz="6" radius="5">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Dragon" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="207" centery="160" centerz="9" radius="10">
+<monster name="Efreet" direction="2" spawntime="60" x="2" y="-6"/>
+<monster name="Marid" direction="2" spawntime="60" x="-5" y="-3"/>
+<monster name="Green Djinn" direction="2" spawntime="60" x="-5" y="1"/>
+<monster name="Green Djinn" direction="2" spawntime="60" x="5" y="-2"/>
+<monster name="Lich" direction="2" spawntime="60" x="6" y="3"/>
+<monster name="Lich" direction="2" spawntime="60" x="-6" y="4"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="-6" y="-6"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Mahrdis" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="7" y="-6"/>
+<monster name="Elf Arcanist" direction="2" spawntime="60" x="-7" y="7"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-7" y="0"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="8" y="0"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-4" y="-7"/>
+<monster name="Cobra" direction="2" spawntime="60" x="-1" y="3"/>
+<monster name="Cobra" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Cobra" direction="2" spawntime="60" x="-4" y="-3"/>
+<monster name="Cobra" direction="2" spawntime="60" x="6" y="-4"/>
+<monster name="Lich" direction="2" spawntime="60" x="5" y="4"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="-1" y="-6"/>
+<monster name="Green Djinn" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Lich" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Cobra" direction="2" spawntime="60" x="-4" y="2"/>
+</spawn>
+<spawn centerx="207" centery="136" centerz="9" radius="5">
+<monster name="Gargoyle" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Gargoyle" direction="2" spawntime="60" x="-1" y="3"/>
+<monster name="Deathslicer" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Deathslicer" direction="2" spawntime="60" x="2" y="-2"/>
+</spawn>
+<spawn centerx="217" centery="120" centerz="8" radius="5">
+<monster name="Bone Beast" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="222" centery="110" centerz="8" radius="5">
+<monster name="Bone Beast" direction="2" spawntime="60" x="0" y="3"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="1" y="-3"/>
+</spawn>
+<spawn centerx="232" centery="108" centerz="8" radius="5">
+<monster name="Bone Beast" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-1" y="-3"/>
+</spawn>
+<spawn centerx="238" centery="108" centerz="8" radius="5">
+<monster name="Bone Beast" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="250" centery="108" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-2" y="-1"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="0" y="4"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="236" centery="98" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-2" y="-1"/>
+</spawn>
+<spawn centerx="257" centery="97" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="5" y="0"/>
+</spawn>
+<spawn centerx="250" centery="97" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-3" y="1"/>
+</spawn>
+<spawn centerx="253" centery="88" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-3" y="3"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="266" centery="98" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="3" y="-2"/>
+</spawn>
+<spawn centerx="153" centery="45" centerz="6" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Monk" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="153" centery="46" centerz="5" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Monk" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="153" centery="46" centerz="4" radius="5">
+<monster name="Monk" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Dragon" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="102" centery="106" centerz="5" radius="5">
+<monster name="Giant Spider" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="104" centery="108" centerz="6" radius="10">
+<monster name="Cyclops" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Cyclops" direction="2" spawntime="60" x="-2" y="5"/>
+</spawn>
+<spawn centerx="166" centery="55" centerz="8" radius="8">
+<monster name="Wasp" direction="2" spawntime="60" x="-8" y="0"/>
+<monster name="Wasp" direction="2" spawntime="60" x="-4" y="-1"/>
+<monster name="Wasp" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Wasp" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Wasp" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Wasp" direction="2" spawntime="60" x="2" y="2"/>
+<monster name="Wasp" direction="2" spawntime="60" x="-3" y="-2"/>
+<monster name="Orc Spearman" direction="2" spawntime="60" x="0" y="-4"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="4"/>
+</spawn>
+<spawn centerx="134" centery="127" centerz="8" radius="5">
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="2" y="-1"/>
+</spawn>
+<spawn centerx="142" centery="125" centerz="8" radius="5">
+<monster name="Dwarf" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="-2" y="-1"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="3" y="-2"/>
+</spawn>
+<spawn centerx="151" centery="125" centerz="8" radius="5">
+<monster name="Dwarf" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="3" y="4"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="4" y="-2"/>
+</spawn>
+<spawn centerx="158" centery="132" centerz="8" radius="5">
+<monster name="Dwarf" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Dwarf" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="103" centery="115" centerz="9" radius="5">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="111" centery="120" centerz="9" radius="5">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-4" y="-1"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-2" y="4"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="2" y="0"/>
+</spawn>
+<spawn centerx="114" centery="125" centerz="9" radius="5">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="4" y="-1"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="2" y="4"/>
+</spawn>
+<spawn centerx="120" centery="127" centerz="9" radius="5">
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Dwarf Soldier" direction="2" spawntime="60" x="0" y="-5"/>
+</spawn>
+<spawn centerx="187" centery="72" centerz="8" radius="8">
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="-4"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="6" y="4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="6" y="-4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-6" y="3"/>
+</spawn>
+<spawn centerx="199" centery="73" centerz="8" radius="5">
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="3"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Banshee" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Banshee" direction="2" spawntime="60" x="4" y="0"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-1" y="0"/>
+</spawn>
+<spawn centerx="214" centery="73" centerz="8" radius="5">
+<monster name="Demon" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Demon" direction="2" spawntime="60" x="0" y="3"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="2" y="4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-3" y="0"/>
+<monster name="Demon" direction="2" spawntime="60" x="3" y="1"/>
+</spawn>
+<spawn centerx="181" centery="75" centerz="8" radius="8">
+<monster name="Fire Elemental" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="-3"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-6" y="-2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-4" y="-6"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-2" y="4"/>
+</spawn>
+<spawn centerx="188" centery="113" centerz="8" radius="5">
+<monster name="Behemoth" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Behemoth" direction="2" spawntime="60" x="-3" y="-2"/>
+<monster name="Behemoth" direction="2" spawntime="60" x="-2" y="3"/>
+</spawn>
+<spawn centerx="176" centery="132" centerz="8" radius="5">
+<monster name="Demon" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Demon" direction="2" spawntime="60" x="2" y="-4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="0" y="-5"/>
+</spawn>
+<spawn centerx="182" centery="129" centerz="9" radius="5">
+<monster name="Behemoth" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Behemoth" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Behemoth" direction="2" spawntime="60" x="-1" y="-3"/>
+</spawn>
+<spawn centerx="181" centery="127" centerz="9" radius="20">
+<monster name="Demon" direction="2" spawntime="60" x="1" y="-5"/>
+<monster name="Demon" direction="2" spawntime="60" x="5" y="-9"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="2" y="-7"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="3" y="-9"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="6" y="-9"/>
+</spawn>
+<spawn centerx="194" centery="118" centerz="10" radius="5">
+<monster name="Demon" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Demon" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Demon" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Demon" direction="2" spawntime="60" x="-3" y="-2"/>
+<monster name="Demon" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Demon" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Demon" direction="2" spawntime="60" x="2" y="0"/>
+</spawn>
+<spawn centerx="149" centery="37" centerz="9" radius="10">
+<monster name="Slime" direction="2" spawntime="60" x="4" y="5"/>
+<monster name="Slime" direction="2" spawntime="60" x="-2" y="-3"/>
+<monster name="Slime" direction="2" spawntime="60" x="2" y="-7"/>
+</spawn>
+<spawn centerx="238" centery="126" centerz="8" radius="10">
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-5" y="2"/>
+<monster name="Ghost" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Ghost" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Ghost" direction="2" spawntime="60" x="-5" y="-1"/>
+<monster name="Ghost" direction="2" spawntime="60" x="-5" y="1"/>
+<monster name="Skeleton" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Skeleton" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Bone Beast" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-3" y="0"/>
+</spawn>
+<spawn centerx="237" centery="125" centerz="9" radius="10">
+<monster name="Ghost" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Ghost" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Ghost" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Ghost" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Lich" direction="2" spawntime="60" x="-5" y="1"/>
+<monster name="Lich" direction="2" spawntime="60" x="-4" y="0"/>
+</spawn>
+<spawn centerx="237" centery="125" centerz="10" radius="5">
+<monster name="Skeleton" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Skeleton" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="1" y="1"/>
+</spawn>
+<spawn centerx="82" centery="36" centerz="7" radius="5">
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="-4" y="-1"/>
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="0" y="2"/>
+</spawn>
+<spawn centerx="253" centery="114" centerz="7" radius="5">
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="3" y="3"/>
+</spawn>
+<spawn centerx="91" centery="37" centerz="7" radius="5">
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Minotaur Guard" direction="2" spawntime="60" x="0" y="-2"/>
+</spawn>
+<spawn centerx="274" centery="97" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-3" y="2"/>
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="-1" y="-3"/>
+</spawn>
+<spawn centerx="274" centery="106" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="2" y="-1"/>
+</spawn>
+<spawn centerx="275" centery="88" centerz="8" radius="5">
+<monster name="Crypt Shambler" direction="2" spawntime="60" x="0" y="2"/>
+</spawn>
+<spawn centerx="93" centery="93" centerz="7" radius="5">
+<monster name="Giant Spider" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="90" centery="156" centerz="8" radius="10">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="3" y="3"/>
+<monster name="Rat" direction="2" spawntime="60" x="-6" y="6"/>
+</spawn>
+<spawn centerx="63" centery="157" centerz="8" radius="20">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-2" y="-18"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="12" y="-13"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-8" y="6"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-5" y="9"/>
+<monster name="Rat" direction="2" spawntime="60" x="10" y="3"/>
+<monster name="Rat" direction="2" spawntime="60" x="11" y="8"/>
+<monster name="Rat" direction="2" spawntime="60" x="16" y="3"/>
+<monster name="Rat" direction="2" spawntime="60" x="12" y="15"/>
+</spawn>
+<spawn centerx="64" centery="137" centerz="8" radius="5">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-3" y="0"/>
+</spawn>
+<spawn centerx="52" centery="184" centerz="9" radius="20">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="1" y="-18"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="5" y="-9"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="4" y="-7"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-8" y="-18"/>
+</spawn>
+<spawn centerx="63" centery="150" centerz="9" radius="20">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="15" y="13"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="5" y="14"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="4" y="0"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-5" y="4"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="2" y="14"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-2" y="3"/>
+</spawn>
+<spawn centerx="78" centery="166" centerz="9" radius="5">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="2" y="2"/>
+</spawn>
+<spawn centerx="34" centery="168" centerz="9" radius="10">
+<monster name="Dragon Lord" direction="2" spawntime="60" x="-1" y="4"/>
+<monster name="Dragon Lord" direction="2" spawntime="60" x="1" y="0"/>
+</spawn>
+<spawn centerx="48" centery="31" centerz="7" radius="5">
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="-4" y="0"/>
+</spawn>
+<spawn centerx="146" centery="113" centerz="8" radius="5">
+<monster name="Necromancer" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="2" y="-1"/>
+</spawn>
+<spawn centerx="145" centery="135" centerz="9" radius="5">
+<monster name="Fire Devil" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="102" centery="109" centerz="7" radius="5">
+<monster name="Dragon" direction="2" spawntime="60" x="-4" y="-1"/>
+</spawn>
+<spawn centerx="147" centery="100" centerz="9" radius="8">
+<monster name="Hero" direction="2" spawntime="60" x="-2" y="4"/>
+<monster name="Hero" direction="2" spawntime="60" x="2" y="4"/>
+</spawn>
+<spawn centerx="139" centery="82" centerz="9" radius="10">
+<monster name="Hero" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Hero" direction="2" spawntime="60" x="-2" y="-3"/>
+<monster name="Vampire" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-3" y="-8"/>
+</spawn>
+<spawn centerx="159" centery="82" centerz="9" radius="10">
+<monster name="Hero" direction="2" spawntime="60" x="3" y="-3"/>
+<monster name="Hero" direction="2" spawntime="60" x="1" y="-3"/>
+</spawn>
+<spawn centerx="81" centery="94" centerz="10" radius="10">
+<monster name="Banshee" direction="2" spawntime="60" x="-7" y="1"/>
+<monster name="Banshee" direction="2" spawntime="60" x="-8" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-7" y="5"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="7" y="0"/>
+<monster name="Dwarf Geomancer" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Dwarf Geomancer" direction="2" spawntime="60" x="-4" y="-1"/>
+</spawn>
+<spawn centerx="77" centery="123" centerz="10" radius="15">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-4" y="-5"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="10" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-3" y="-12"/>
+</spawn>
+<spawn centerx="111" centery="126" centerz="10" radius="15">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="0" y="-13"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="3" y="-8"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="0" y="-6"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-4" y="2"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-13" y="1"/>
+</spawn>
+<spawn centerx="109" centery="96" centerz="10" radius="15">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-9" y="-3"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="2" y="7"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="6" y="11"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-14" y="5"/>
+</spawn>
+<spawn centerx="94" centery="105" centerz="10" radius="15">
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-15" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="-8" y="0"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="0" y="-11"/>
+<monster name="Dwarf Guard" direction="2" spawntime="60" x="1" y="12"/>
+</spawn>
+<spawn centerx="130" centery="70" centerz="9" radius="6">
+<monster name="Vampire" direction="2" spawntime="60" x="-5" y="-2"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-6" y="0"/>
+</spawn>
+<spawn centerx="159" centery="67" centerz="9" radius="10">
+<monster name="Vampire" direction="2" spawntime="60" x="-6" y="0"/>
+<monster name="Vampire" direction="2" spawntime="60" x="-1" y="5"/>
+<monster name="Vampire" direction="2" spawntime="60" x="4" y="5"/>
+</spawn>
+<spawn centerx="221" centery="154" centerz="7" radius="10">
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-2" y="3"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-3" y="2"/>
+<monster name="Vashresamun" direction="2" spawntime="60" x="-3" y="-2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-5" y="3"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-5" y="2"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="-6" y="3"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-5" y="6"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-5" y="5"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-2" y="6"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-2" y="5"/>
+<monster name="Marid" direction="2" spawntime="60" x="0" y="3"/>
+<monster name="Efreet" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Marid" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Marid" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Efreet" direction="2" spawntime="60" x="-3" y="0"/>
+<monster name="Efreet" direction="2" spawntime="60" x="-6" y="-1"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-3" y="-3"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="-1" y="-3"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="2" y="-3"/>
+<monster name="Thalas" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Thalas" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Thalas" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Thalas" direction="2" spawntime="60" x="3" y="6"/>
+<monster name="Thalas" direction="2" spawntime="60" x="4" y="6"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="4" y="0"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="5" y="1"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="4" y="3"/>
+<monster name="Elephant" direction="2" spawntime="60" x="6" y="-7"/>
+<monster name="Elephant" direction="2" spawntime="60" x="2" y="-8"/>
+</spawn>
+<spawn centerx="221" centery="155" centerz="6" radius="10">
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-4" y="3"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Thalas" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="1" y="3"/>
+<monster name="Lich" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Lich" direction="2" spawntime="60" x="-1" y="3"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-4" y="1"/>
+<monster name="Omruc" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-3" y="-1"/>
+</spawn>
+<spawn centerx="221" centery="156" centerz="5" radius="10">
+<monster name="Lich" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Mahrdis" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="221" centery="156" centerz="8" radius="10">
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="4" y="-4"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="3" y="-6"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="2" y="-6"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="1" y="-5"/>
+<monster name="Marid" direction="2" spawntime="60" x="3" y="-8"/>
+<monster name="Marid" direction="2" spawntime="60" x="-1" y="-8"/>
+<monster name="Efreet" direction="2" spawntime="60" x="-2" y="-3"/>
+<monster name="Morguthis" direction="2" spawntime="60" x="-2" y="-1"/>
+<monster name="Ashmunrah" direction="2" spawntime="60" x="3" y="0"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="4" y="2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="1" y="5"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-1" y="3"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-6" y="-4"/>
+<monster name="Lich" direction="2" spawntime="60" x="-7" y="3"/>
+<monster name="Lich" direction="2" spawntime="60" x="-7" y="1"/>
+<monster name="Lich" direction="2" spawntime="60" x="-7" y="0"/>
+<monster name="Lich" direction="2" spawntime="60" x="-7" y="-2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="3" y="-4"/>
+<monster name="Mahrdis" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Omruc" direction="2" spawntime="60" x="0" y="-3"/>
+<monster name="Ashmunrah" direction="2" spawntime="60" x="3" y="-2"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Omruc" direction="2" spawntime="60" x="6" y="-4"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="7" y="-4"/>
+<monster name="Marid" direction="2" spawntime="60" x="2" y="-8"/>
+<monster name="Efreet" direction="2" spawntime="60" x="-2" y="-8"/>
+<monster name="Efreet" direction="2" spawntime="60" x="-2" y="-4"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Thalas" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Omruc" direction="2" spawntime="60" x="7" y="0"/>
+<monster name="Ashmunrah" direction="2" spawntime="60" x="6" y="0"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="7" y="1"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="5" y="2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="2" y="5"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-5" y="2"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-5" y="3"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-7" y="5"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-2" y="5"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-3" y="5"/>
+<monster name="Ancient Scarab" direction="2" spawntime="60" x="-6" y="5"/>
+<monster name="Lich" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Lich" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Lich" direction="2" spawntime="60" x="-6" y="-2"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="-5" y="-4"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="6" y="-8"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="5" y="-8"/>
+<monster name="Morguthis" direction="2" spawntime="60" x="-5" y="-6"/>
+<monster name="Thalas" direction="2" spawntime="60" x="-6" y="-6"/>
+<monster name="Dipthrah" direction="2" spawntime="60" x="-7" y="-6"/>
+<monster name="Ashmunrah" direction="2" spawntime="60" x="-7" y="-7"/>
+<monster name="Mahrdis" direction="2" spawntime="60" x="-6" y="-7"/>
+<monster name="Rahemos" direction="2" spawntime="60" x="-6" y="-8"/>
+<monster name="Omruc" direction="2" spawntime="60" x="-5" y="-8"/>
+</spawn>
+<spawn centerx="213" centery="147" centerz="9" radius="5">
+<monster name="Gargoyle" direction="2" spawntime="60" x="2" y="2"/>
+<monster name="Gargoyle" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Gargoyle" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Gargoyle" direction="2" spawntime="60" x="1" y="1"/>
+</spawn>
+<spawn centerx="121" centery="94" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="60" x="4" y="0"/>
+</spawn>
+<spawn centerx="141" centery="89" centerz="5" radius="5">
+<monster name="Black Knight" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Black Knight" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="141" centery="89" centerz="4" radius="5">
+<monster name="Warlock" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="164" centery="81" centerz="7" radius="5">
+<monster name="Minotaur" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Minotaur" direction="2" spawntime="60" x="-3" y="-2"/>
+</spawn>
+<spawn centerx="193" centery="25" centerz="7" radius="3">
+<monster name="Pig" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Pig" direction="2" spawntime="60" x="-2" y="1"/>
+<monster name="Pig" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="167" centery="117" centerz="7" radius="7">
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="-3"/>
+<monster name="Goblin" direction="2" spawntime="60" x="3" y="-3"/>
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="6"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Goblin" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-2" y="5"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="3" y="1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="3" y="3"/>
+</spawn>
+<spawn centerx="160" centery="122" centerz="7" radius="7">
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-6" y="2"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="160" centery="123" centerz="6" radius="7">
+<monster name="Goblin" direction="2" spawntime="60" x="-5" y="0"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="3" y="-2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Goblin" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="5" y="-3"/>
+</spawn>
+<spawn centerx="168" centery="117" centerz="6" radius="7">
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="5"/>
+<monster name="Goblin" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Goblin" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="2" y="2"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="169" centery="118" centerz="5" radius="7">
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="4"/>
+<monster name="Goblin" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Goblin" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Goblin" direction="2" spawntime="60" x="-1" y="-3"/>
+<monster name="Goblin" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="0" y="5"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="2" y="-3"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Dworc Venomsniper" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Dworc Voodoomaster" direction="2" spawntime="60" x="1" y="4"/>
+<monster name="Dworc Voodoomaster" direction="2" spawntime="60" x="2" y="-5"/>
+</spawn>
+<spawn centerx="109" centery="125" centerz="8" radius="5">
+<monster name="Dragon" direction="2" spawntime="60" x="-3" y="0"/>
+</spawn>
+<spawn centerx="155" centery="44" centerz="7" radius="5">
+<monster name="Parrot" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="190" centery="160" centerz="7" radius="5">
+<monster name="Crocodile" direction="2" spawntime="60" x="4" y="2"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="-2" y="2"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="-2" y="-1"/>
+</spawn>
+<spawn centerx="201" centery="133" centerz="6" radius="9">
+<monster name="Hydra" direction="2" spawntime="60" x="2" y="-8"/>
+<monster name="Hydra" direction="2" spawntime="60" x="-3" y="-4"/>
+<monster name="Hydra" direction="2" spawntime="60" x="5" y="1"/>
+<monster name="Hydra" direction="2" spawntime="60" x="-2" y="1"/>
+</spawn>
+<spawn centerx="240" centery="155" centerz="7" radius="10">
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-5" y="-1"/>
+<monster name="Elephant" direction="2" spawntime="60" x="-4" y="8"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="7" y="1"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="4" y="-2"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-6" y="2"/>
+</spawn>
+<spawn centerx="241" centery="154" centerz="6" radius="10">
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="5" y="2"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="-6" y="3"/>
+<monster name="Lizard Templar" direction="2" spawntime="60" x="7" y="2"/>
+</spawn>
+<spawn centerx="237" centery="155" centerz="5" radius="5">
+<monster name="Bat" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Bat" direction="2" spawntime="60" x="1" y="1"/>
+</spawn>
+<spawn centerx="219" centery="174" centerz="8" radius="8">
+<monster name="Hydra" direction="2" spawntime="60" x="3" y="-5"/>
+</spawn>
+<spawn centerx="206" centery="144" centerz="7" radius="10">
+<monster name="Elephant" direction="2" spawntime="60" x="0" y="4"/>
+<monster name="Spit Nettle" direction="2" spawntime="60" x="-6" y="-3"/>
+<monster name="Spit Nettle" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Elephant" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Elephant" direction="2" spawntime="60" x="0" y="-6"/>
+<monster name="Elephant" direction="2" spawntime="60" x="6" y="1"/>
+</spawn>
+<spawn centerx="192" centery="137" centerz="7" radius="5">
+<monster name="Elephant" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Elephant" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Elephant" direction="2" spawntime="60" x="0" y="-4"/>
+</spawn>
+<spawn centerx="222" centery="168" centerz="7" radius="5">
+<monster name="Merlkin" direction="2" spawntime="60" x="0" y="-4"/>
+<monster name="Merlkin" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Elephant" direction="2" spawntime="60" x="4" y="-3"/>
+</spawn>
+<spawn centerx="207" centery="163" centerz="7" radius="5">
+<monster name="Sibang" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Sibang" direction="2" spawntime="60" x="2" y="2"/>
+<monster name="Elephant" direction="2" spawntime="60" x="-2" y="-2"/>
+<monster name="Sibang" direction="2" spawntime="60" x="4" y="0"/>
+<monster name="Kongra" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Sibang" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Merlkin" direction="2" spawntime="60" x="4" y="3"/>
+</spawn>
+<spawn centerx="216" centery="167" centerz="7" radius="5">
+<monster name="Sibang" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Merlkin" direction="2" spawntime="60" x="-3" y="-3"/>
+<monster name="Kongra" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Merlkin" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Sibang" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="254" centery="154" centerz="7" radius="5">
+<monster name="Tarantula" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-1" y="-4"/>
+</spawn>
+<spawn centerx="253" centery="162" centerz="7" radius="5">
+<monster name="Tarantula" direction="2" spawntime="60" x="2" y="2"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="0" y="-2"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="-4" y="2"/>
+</spawn>
+<spawn centerx="201" centery="156" centerz="7" radius="5">
+<monster name="Elephant" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="4" y="-1"/>
+</spawn>
+<spawn centerx="237" centery="167" centerz="7" radius="5">
+<monster name="Tarantula" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Tarantula" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="221" centery="187" centerz="8" radius="5">
+<monster name="Hydra" direction="2" spawntime="60" x="3" y="1"/>
+<monster name="Hydra" direction="2" spawntime="60" x="1" y="-4"/>
+</spawn>
+<spawn centerx="190" centery="149" centerz="7" radius="5">
+<monster name="Crab" direction="2" spawntime="60" x="1" y="-3"/>
+<monster name="Crab" direction="2" spawntime="60" x="4" y="-3"/>
+<monster name="Crab" direction="2" spawntime="60" x="-2" y="-4"/>
+</spawn>
+<spawn centerx="225" centery="195" centerz="8" radius="5">
+<monster name="Hydra" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Hydra" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Hydra" direction="2" spawntime="60" x="0" y="-2"/>
+</spawn>
+<spawn centerx="152" centery="81" centerz="5" radius="5">
+<monster name="Crocodile" direction="2" spawntime="60" x="-2" y="-1"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Crocodile" direction="2" spawntime="60" x="0" y="4"/>
+</spawn>
+<spawn centerx="91" centery="130" centerz="8" radius="5">
+<monster name="Hero" direction="2" spawntime="60" x="-1" y="0"/>
+<monster name="Hero" direction="2" spawntime="60" x="0" y="-3"/>
+</spawn>
+<spawn centerx="85" centery="116" centerz="8" radius="5">
+<monster name="Necromancer" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="127" centery="78" centerz="6" radius="5">
+<monster name="Cyclops" direction="2" spawntime="60" x="-3" y="-1"/>
+</spawn>
+<spawn centerx="113" centery="90" centerz="5" radius="8">
+<monster name="Stone Golem" direction="2" spawntime="60" x="0" y="8"/>
+<monster name="Stone Golem" direction="2" spawntime="60" x="4" y="3"/>
+<monster name="Stone Golem" direction="2" spawntime="60" x="1" y="-2"/>
+</spawn>
+<spawn centerx="229" centery="31" centerz="7" radius="10">
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="1" y="4"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="8" y="1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="9" y="1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="6" y="6"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="-7" y="1"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="1" y="3"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="8" y="2"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-9" y="-3"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="1" y="0"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="8" y="4"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="4" y="3"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-10" y="0"/>
+</spawn>
+<spawn centerx="252" centery="38" centerz="7" radius="10">
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-6" y="3"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-6" y="-4"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-3" y="-5"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="3" y="8"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="-5" y="-4"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="-6" y="-1"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-7" y="1"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-3" y="-8"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="3" y="-8"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="2" y="-2"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-2" y="9"/>
+<monster name="Polar Bear" direction="2" spawntime="60" x="-4" y="7"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-7" y="6"/>
+</spawn>
+<spawn centerx="253" centery="36" centerz="6" radius="7">
+<monster name="Yeti" direction="2" spawntime="60" x="3" y="5"/>
+<monster name="Yeti" direction="2" spawntime="60" x="4" y="-3"/>
+</spawn>
+<spawn centerx="242" centery="36" centerz="8" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="255" centery="44" centerz="8" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="1" y="0"/>
+</spawn>
+<spawn centerx="243" centery="22" centerz="8" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="262" centery="28" centerz="8" radius="5">
+<monster name="Yeti" direction="2" spawntime="60" x="1" y="1"/>
+</spawn>
+<spawn centerx="133" centery="63" centerz="8" radius="7">
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="4" y="-5"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-2" y="-1"/>
+</spawn>
+<spawn centerx="144" centery="69" centerz="8" radius="7">
+<monster name="Rotworm" direction="2" spawntime="60" x="-7" y="0"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="-1"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-2" y="-5"/>
+</spawn>
+<spawn centerx="151" centery="61" centerz="8" radius="8">
+<monster name="Rotworm" direction="2" spawntime="60" x="-5" y="-3"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="4"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="7" y="-2"/>
+</spawn>
+<spawn centerx="163" centery="65" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="-2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-3" y="0"/>
+</spawn>
+<spawn centerx="120" centery="63" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-5" y="0"/>
+</spawn>
+<spawn centerx="116" centery="74" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="-4"/>
+</spawn>
+<spawn centerx="107" centery="75" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="3" y="0"/>
+</spawn>
+<spawn centerx="104" centery="69" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="2" y="-1"/>
+</spawn>
+<spawn centerx="113" centery="67" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-2" y="0"/>
+</spawn>
+<spawn centerx="97" centery="74" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="1"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="-3"/>
+</spawn>
+<spawn centerx="96" centery="62" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="2" y="4"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="0"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="-3"/>
+</spawn>
+<spawn centerx="108" centery="62" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-2" y="0"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="4" y="-3"/>
+</spawn>
+<spawn centerx="112" centery="53" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-2" y="0"/>
+</spawn>
+<spawn centerx="101" centery="52" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="4" y="0"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="-4" y="-3"/>
+</spawn>
+<spawn centerx="97" centery="45" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="3" y="-2"/>
+</spawn>
+<spawn centerx="95" centery="38" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="103" centery="37" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="1"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="4" y="1"/>
+</spawn>
+<spawn centerx="108" centery="45" centerz="8" radius="5">
+<monster name="Rotworm" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Rotworm" direction="2" spawntime="60" x="0" y="-2"/>
+</spawn>
+<spawn centerx="204" centery="28" centerz="8" radius="5">
+<monster name="Winter Wolf" direction="2" spawntime="60" x="3" y="-1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="3" y="1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-3" y="1"/>
+<monster name="Winter Wolf" direction="2" spawntime="60" x="-3" y="2"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="5" y="0"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-3" y="-1"/>
+<monster name="Frost Troll" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="32" centery="108" centerz="7" radius="5">
+<monster name="Elder Beholder" direction="2" spawntime="60" x="2" y="-3"/>
+<monster name="Elder Beholder" direction="2" spawntime="60" x="-2" y="2"/>
+</spawn>
+<spawn centerx="30" centery="117" centerz="7" radius="5">
+<monster name="Hydra" direction="2" spawntime="60" x="-1" y="2"/>
+<monster name="Kongra" direction="2" spawntime="60" x="-3" y="3"/>
+<monster name="Kongra" direction="2" spawntime="60" x="3" y="2"/>
+</spawn>
+<spawn centerx="33" centery="125" centerz="7" radius="5">
+<monster name="Kongra" direction="2" spawntime="60" x="-4" y="-3"/>
+<monster name="Kongra" direction="2" spawntime="60" x="-4" y="2"/>
+<monster name="Kongra" direction="2" spawntime="60" x="0" y="5"/>
+</spawn>
+<spawn centerx="40" centery="127" centerz="7" radius="5">
+<monster name="Deathslicer" direction="2" spawntime="60" x="2" y="3"/>
+<monster name="Deathslicer" direction="2" spawntime="60" x="2" y="-1"/>
+<monster name="Kongra" direction="2" spawntime="60" x="-2" y="-3"/>
+</spawn>
+<spawn centerx="134" centery="99" centerz="8" radius="8">
+<monster name="Ghoul" direction="2" spawntime="60" x="-7" y="-2"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="-1" y="-2"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="4" y="1"/>
+<monster name="Ghoul" direction="2" spawntime="60" x="7" y="-2"/>
+</spawn>
+<spawn centerx="147" centery="85" centerz="8" radius="12">
+<monster name="Vampire" direction="2" spawntime="60" x="-3" y="-4"/>
+<monster name="Fire Devil" direction="2" spawntime="60" x="-2" y="4"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="12" y="0"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="9" y="-1"/>
+<monster name="Fire Elemental" direction="2" spawntime="60" x="5" y="0"/>
+</spawn>
+<spawn centerx="247" centery="99" centerz="7" radius="10">
+<monster name="Scarab" direction="2" spawntime="60" x="0" y="-10"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-6" y="-4"/>
+<monster name="Scarab" direction="2" spawntime="60" x="4" y="-6"/>
+<monster name="Scarab" direction="2" spawntime="60" x="8" y="1"/>
+<monster name="Scarab" direction="2" spawntime="60" x="1" y="7"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-7" y="3"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-10" y="0"/>
+</spawn>
+<spawn centerx="231" centery="113" centerz="7" radius="10">
+<monster name="Scarab" direction="2" spawntime="60" x="1" y="6"/>
+<monster name="Scarab" direction="2" spawntime="60" x="8" y="2"/>
+<monster name="Scarab" direction="2" spawntime="60" x="6" y="-5"/>
+<monster name="Scarab" direction="2" spawntime="60" x="0" y="-1"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-4" y="-5"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-6" y="3"/>
+<monster name="Scarab" direction="2" spawntime="60" x="0" y="-10"/>
+</spawn>
+<spawn centerx="241" centery="81" centerz="7" radius="9">
+<monster name="Scarab" direction="2" spawntime="60" x="-5" y="2"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-6" y="-4"/>
+<monster name="Scarab" direction="2" spawntime="60" x="-1" y="6"/>
+<monster name="Scarab" direction="2" spawntime="60" x="0" y="-5"/>
+<monster name="Scarab" direction="2" spawntime="60" x="4" y="-1"/>
+</spawn>
+<spawn centerx="227" centery="84" centerz="7" radius="6">
+<monster name="Lion" direction="2" spawntime="60" x="-3" y="4"/>
+<monster name="Lion" direction="2" spawntime="60" x="-2" y="-4"/>
+<monster name="Hyaena" direction="2" spawntime="60" x="3" y="-1"/>
+</spawn>
+<spawn centerx="182" centery="99" centerz="8" radius="5">
+<monster name="Behemoth" direction="2" spawntime="60" x="-1" y="-1"/>
+<monster name="Behemoth" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="68" centery="194" centerz="7" radius="5">
+<monster name="Skeleton" direction="2" spawntime="60" x="-1" y="-1"/>
+</spawn>
+<spawn centerx="67" centery="203" centerz="7" radius="5">
+<monster name="Skeleton" direction="2" spawntime="60" x="-3" y="-4"/>
+</spawn>
+<spawn centerx="75" centery="200" centerz="7" radius="5">
+<monster name="Rabbit" direction="2" spawntime="60" x="2" y="3"/>
+</spawn>
+<spawn centerx="76" centery="191" centerz="7" radius="5">
+<monster name="Skeleton" direction="2" spawntime="60" x="-3" y="-1"/>
+</spawn>
+<spawn centerx="89" centery="194" centerz="7" radius="5">
+<monster name="Wolf" direction="2" spawntime="60" x="2" y="0"/>
+<monster name="Wolf" direction="2" spawntime="60" x="0" y="-1"/>
+</spawn>
+<spawn centerx="90" centery="200" centerz="7" radius="5">
+<monster name="Wolf" direction="2" spawntime="60" x="2" y="1"/>
+<monster name="Wolf" direction="2" spawntime="60" x="-2" y="-1"/>
+</spawn>
+<spawn centerx="90" centery="194" centerz="6" radius="5">
+<monster name="Wolf" direction="2" spawntime="60" x="3" y="2"/>
+<monster name="Wolf" direction="2" spawntime="60" x="-1" y="-2"/>
+</spawn>
+<spawn centerx="91" centery="202" centerz="6" radius="5">
+<monster name="Wolf" direction="2" spawntime="60" x="-2" y="-2"/>
+</spawn>
+<spawn centerx="82" centery="186" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="2" y="0"/>
+</spawn>
+<spawn centerx="75" centery="188" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="1" y="3"/>
+</spawn>
+<spawn centerx="76" centery="198" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Rat" direction="2" spawntime="60" x="5" y="0"/>
+</spawn>
+<spawn centerx="83" centery="198" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="0" y="-4"/>
+</spawn>
+<spawn centerx="93" centery="198" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="-4" y="0"/>
+<monster name="Rat" direction="2" spawntime="60" x="2" y="-1"/>
+</spawn>
+<spawn centerx="89" centery="192" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="1" y="-1"/>
+</spawn>
+<spawn centerx="95" centery="187" centerz="8" radius="5">
+<monster name="Cave Rat" direction="2" spawntime="60" x="4" y="-3"/>
+<monster name="Rat" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="89" centery="179" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="-2" y="-4"/>
+<monster name="Rat" direction="2" spawntime="60" x="-3" y="1"/>
+</spawn>
+<spawn centerx="76" centery="177" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Rat" direction="2" spawntime="60" x="4" y="-2"/>
+<monster name="Rat" direction="2" spawntime="60" x="0" y="5"/>
+</spawn>
+<spawn centerx="86" centery="167" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="0" y="1"/>
+</spawn>
+<spawn centerx="95" centery="176" centerz="8" radius="5">
+<monster name="Rat" direction="2" spawntime="60" x="0" y="3"/>
+</spawn>
+<spawn centerx="101" centery="178" centerz="8" radius="5">
+<monster name="Cave Rat" direction="2" spawntime="60" x="4" y="2"/>
+</spawn>
+<spawn centerx="110" centery="184" centerz="8" radius="5">
+<monster name="Cave Rat" direction="2" spawntime="60" x="-1" y="1"/>
+</spawn>
+<spawn centerx="37" centery="54" centerz="8" radius="5">
+<monster name="Demon Skeleton" direction="2" spawntime="60" x="0" y="0"/>
+</spawn>
+<spawn centerx="70" centery="211" centerz="7" radius="5">
+<monster name="Rabbit" direction="2" spawntime="60" x="-4" y="1"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="-4" y="-2"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="3" y="-4"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="3" y="4"/>
+</spawn>
+<spawn centerx="86" centery="219" centerz="7" radius="5">
+<monster name="Rabbit" direction="2" spawntime="60" x="-4" y="3"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="0" y="1"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="4" y="-2"/>
+</spawn>
+<spawn centerx="82" centery="193" centerz="7" radius="5">
+<monster name="Rabbit" direction="2" spawntime="60" x="-1" y="-4"/>
+<monster name="Rabbit" direction="2" spawntime="60" x="2" y="2"/>
+</spawn>
+</spawns>

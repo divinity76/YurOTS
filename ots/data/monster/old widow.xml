@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<monster name="Old Widow" level="14" maglevel="60" experience="2800" pushable="0" armor="41" defense="42" canpushitems="1" staticattack="50" changetarget="200" speed="290">
+	<health now="8230" max="8230"/>
+	<look type="38" corpse="2857"/>
+	<combat targetdistance="1" runonhealth="0"/>
+      <blood color="30" effect="16" splash="4"/>
+
+<attacks>
+	<attack type="melee" mindamage="260" maxdamage="650" probability="100"/>
+	<attack type="rune" name="old widow pox" exhaustion="500" cycleticks="6000" probability="65"/>
+	<attack type="instant" name="gs_haste" exhaustion="500" cycleticks="8000" probability="85"/>
+	<attack type="instant" name="exura" exhaustion="500" cycleticks="6000" probability="60"/> 
+</attacks>
+
+<defenses>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="invisible"/>
+	<defense immunity="drunk"/>
+</defenses>
+
+<loot>
+ 	<item id="2148" countmax="50" chance1="100000" chancemax="0"/>
+ 	<item id="2463" chance="4000"/>
+ 	<item id="2171" chance="1533"/>
+ 	<item id="2459" chance="20000"/>
+
+ 	<item id="1987" chance="50000">
+ 	<inside>
+ 	<item id="2148" countmax="50" chance1="100000" chancemax="0"/>
+ 	<item id="2476" chance="1766"/>
+ 	<item id="2477" chance="1533"/>
+ 	<item id="2478" chance="10000"/>
+ 	<item id="2169" chance="800"/>
+ 	</inside>
+ 	</item>
+</loot>
+
+<summons maxSummons="2">
+ 	<summon name="Giant Spider" chance="500"/>
+</summons>
+
+</monster>

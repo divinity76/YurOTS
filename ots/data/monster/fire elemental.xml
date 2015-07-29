@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<monster name="Fire Elemental" level="20" maglevel="30" experience="220" pushable="0" armor="15" defense="15" canpushitems="1" staticattack="50" changetarget="200" speed="190">
+	<health now="280" max="280"/>
+	<look type="49" head="20" body="30" legs="40" feet="50" corpse="1492"/>
+	<combat targetdistance="1" runonhealth="0"/>
+      <blood color="199" effect="0" splash="255"/>
+
+<attacks>
+	<attack type="melee" mindamage="25" maxdamage="90"/>
+        <attack type="rune" name="soul fire" exhaustion="500" cycleticks="5000" probability="80"/>
+        <attack type="rune" name="fe fireball" exhaustion="500" cycleticks="4000" probability="70"/>
+        <attack type="rune" name="fe fireball" exhaustion="500" cycleticks="12000" probability="95"/>
+        <attack type="rune" name="fe explosion" exhaustion="500" cycleticks="4500" probability="80"/>
+        <attack type="rune" name="fe explosion" exhaustion="500" cycleticks="14000" probability="100"/>
+</attacks>
+
+<defenses>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="invisible"/>
+</defenses>
+
+</monster>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Lector" script="data/npc/scripts/food.lua" access="3">
+ 	<look type="128" head="20" body="100" legs="50" feet="99"/>
+</npc>

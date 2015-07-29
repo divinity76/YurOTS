@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<monster name="Deathslicer" level="20" maglevel="30" experience="0" pushable="1" armor="989" defense="990" canpushitems="1" staticattack="20" changetarget="200" speed="190">
+	<health now="1000" max="1000"/>
+	<look type="102" head="20" body="30" legs="40" feet="50" corpse="2376"/>
+	<combat targetdistance="1" runonhealth="0"/>
+	<blood color="86" effect="9" splash="255"/>
+
+<attacks>
+	<attack type="melee" mindamage="105" maxdamage="555" probability="100"/>
+	<attack type="melee" mindamage="60" maxdamage="120" cycleticks="7000" probability="75"/>
+</attacks>
+
+<defenses>
+	<defense immunity="physical"/>
+	<defense immunity="energy"/>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="paralyze"/>
+	<defense immunity="invisible"/>
+	<defense immunity="drunk"/>
+</defenses>
+
+<loot>
+ 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+ 	<item id="2148" countmax="100" chance1="50000" chancemax="0"/>
+ 	<item id="2152" countmax="10" chance1="6666" chancemax="0"/>
+ 	<item id="2417" chance="33333"/>
+ 	<item id="2641" chance="2000"/>
+</loot>
+</monster>

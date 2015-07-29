@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<monster name="Amazon" level="1" maglevel="30" experience="60" pushable="0" armor="9" defense="13" canpushitems="0" staticattack="50" changetarget="200" speed="172">
+	<health now="110" max="110"/>
+	<look type="137" head="113" body="120" legs="114" feet="132" corpse="3065"/>
+	<combat targetdistance="3" runonhealth="0"/>
+
+<attacks>
+	<attack type="distance" name="throwingknife" mindamage="17" maxdamage="44" cycleticks="2000" probability="60"/>
+</attacks>
+
+<defenses>
+
+</defenses>
+
+<voices>
+	<voice sentence="Your head shall be mine!"/>
+	<voice sentence="Yeeee ha!"/>
+</voices>
+
+ <loot>
+ 	<item id="2148" countmax="21" chance1="100000" chancemax="0"/>
+ 	<item id="2467" chance="5000"/>
+ 	<item id="2385" chance="20000"/>
+ 	<item id="2229" countmax="3" chance1="10000" chancemax="0"/>
+ 	<item id="1987" chance="100000">
+ 	<inside>
+ 	<item id="2385" chance="5000"/>
+	<item id="2050" chance="5000"/>
+ 	<item id="2125" chance="3333"/>
+	<item id="2690" countmax="2" chance1="20000" chancemax="0"/>
+	<item id="2147" countmax="2" chance1="3333" chancemax="0"/>
+ 	<item id="2050" chance="20000"/>
+ 	</inside>
+ 	</item>
+ </loot>
+</monster>

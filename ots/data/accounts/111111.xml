@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<account pass="tibia" type="0" premDays="90">
+ 	<characters>
+ 		<character name="GM Yurez" />
+ 		<character name="Yurez" />
+		<character name="Yurez The Next" />
+ 	</characters>
+</account>

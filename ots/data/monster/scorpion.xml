@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<monster name="Scorpion" level="20" maglevel="30" experience="45" pushable="1" armor="3" defense="7" canpushitems="0" staticattack="50" changetarget="200" speed="150">
+	<health now="45" max="45"/>
+	<look type="43" head="20" body="30" legs="40" feet="50" corpse="2897"/>
+	<combat targetdistance="1" runonhealth="0"/>
+      <blood color="30" effect="16" splash="4"/>
+
+<attacks>
+	<attack type="melee" maxdamage="28" probability="100"/>
+</attacks>
+
+<defenses>
+	<defense immunity="poison"/>
+</defenses>
+
+<loot>
+
+</loot>
+</monster>

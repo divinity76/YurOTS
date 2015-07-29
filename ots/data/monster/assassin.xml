@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<monster name="Assassin" level="20" maglevel="30" experience="105" pushable="0" armor="21" defense="23" canpushitems="1" staticattack="40" changetarget="200" speed="224">
+	<health now="175" max="175"/>
+	<look type="129" head="114" body="114" legs="114" feet="114" corpse="3128"/>
+	<combat targetdistance="1" runonhealth="0"/>
+
+<attacks>
+	<attack type="melee" mindamage="38" maxdamage="78"/>
+	<attack type="distance" name="throwingstar" mindamage="22" maxdamage="47" cycleticks="3000" probability="50"/>
+	<attack type="instant" name="ass_haste" exhaustion="500" cycleticks="3000" probability="30"/>
+</attacks>
+
+<defenses>
+	<defense immunity="poison"/>
+</defenses>
+
+<voices>
+	<voice sentence="You are on my deathlist!"/>
+</voices>
+
+<loot>
+</loot>
+
+</monster>

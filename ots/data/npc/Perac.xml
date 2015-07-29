@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Perac" script="data/npc/scripts/bows.lua" access="3">
+ 	<look type="128" head="66" body="46" legs="2" feet="89"/>
+</npc>

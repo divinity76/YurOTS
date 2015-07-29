@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<npc name="Diamati" script="data/npc/scripts/spells_pally.lua" access="3">
+ 	<look type="132" head="115" body="115" legs="114" feet="115"/>
+</npc>

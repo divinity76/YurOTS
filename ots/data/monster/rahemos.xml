@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<monster name="Rahemos" level="84" maglevel="47" experience="3100" pushable="0" armor="40" defense="41" canpushitems="1" staticattack="50" changetarget="200" speed="300">
+	<health now="6000" max="6000"/>
+	<look type="91" head="20" body="30" legs="40" feet="50" corpse="3034"/>
+	<combat targetdistance="1" runonhealth="100"/>
+<blood color="86" effect="9" splash="255"/>
+
+<attacks>
+	<attack type="melee" mindamage="105" maxdamage="317"/>
+	<attack type="instant" name="exura" exhaustion="500" cycleticks="5000" probability="70"/>
+	<attack type="instant" name="w exevo gran vis lux" exhaustion="500" cycleticks="4000" probability="30"/>
+	<attack type="rune" name="rahemos magic missile" exhaustion="500" cycleticks="7000" probability="52"/>
+	<attack type="rune" name="rahemos magic missile" exhaustion="500" cycleticks="11500" probability="60"/>
+</attacks>
+
+<defenses>
+	<defense immunity="energy"/>
+	<defense immunity="fire"/>
+	<defense immunity="poison"/>
+	<defense immunity="paralyze"/>
+	<defense immunity="drunk"/>
+	<defense immunity="invisible"/>
+</defenses>
+
+<voices>
+	<voice sentence="MY TRESURE! DON'T TAKE IT!!"/>
+	<voice sentence="HOOOOOOHHHSSSS!"/>
+</voices>
+
+<loot>
+</loot>
+
+<summons maxSummons="2">
+ 	<summon name="Demon" chance="400"/>
+</summons>
+
+</monster>
