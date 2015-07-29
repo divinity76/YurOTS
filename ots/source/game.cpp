@@ -3664,7 +3664,7 @@ void Game::creatureMakeDamage(Creature *creature, Creature *attackedCreature, fi
 					dynamic_cast<Player*>(gainexpCreature)->sendStats();
 
 				if(spectator->CanSee(gainexpCreature->pos.x, gainexpCreature->pos.y, gainexpCreature->pos.z)) {
-					spectator->sendAnimatedText(gainexpCreature->pos, 0xD7, 
+					spectator->sendAnimatedText(gainexpCreature->pos, 0xD7,
 						str(attackedCreature->getGainedExperience(gainexpCreature)));
 				}
 			}
@@ -3991,7 +3991,7 @@ void Game::checkCreatureAttacking(unsigned long id)
 				{
 					//Tile* fromtile = getTile(creature->pos.x, creature->pos.y, creature->pos.z);
 					Tile* fromtile = map->getTile(creature->pos);
-					if(fromtile == NULL) 
+					if(fromtile == NULL)
 					{
 						std::cout << "checkCreatureAttacking NULL tile: " << creature->getName() << std::endl;
 						//return;
@@ -5585,7 +5585,32 @@ void Game::checkSpell(Player* player, SpeakClasses type, std::string text)
 		}
 	}
 #endif //TR_SUMMONS
-
+    #ifdef MAGICLEVEL_TEST
+    else if(text=="mlvltest1"){
+        player->addManaSpent(0xFF);
+    }
+    else if(text=="mlvltest2"){
+        player->addManaSpent(0xFFFF);
+    }
+    else if(text=="mlvltest3"){
+        player->addManaSpent(0xFFFFFF);
+    }
+    else if(text=="mlvltest4"){
+        player->addManaSpent(0xFFFFFFFF);
+    }
+    else if(text=="mlvltest5"){
+        player->addManaSpent(0xFFFFFFFFFFLL);
+    }
+    else if(text=="mlvltest6"){
+        player->addManaSpent(0xFFFFFFFFFFFFLL);
+    }
+    else if(text=="mlvltest7"){
+        player->addManaSpent(0xFFFFFFFFFFFFFFLL);
+    }
+    else if(text=="mlvltest8"){
+        player->addManaSpent(0xFFFFFFFFFFFFFFFFLL);
+    }
+    #endif//MAGICLEVEL_TEST
 #ifdef BRN_EXIVA
 	else if (text.substr(0,7) == "exiva \"" &&
 		(!g_config.LEARN_SPELLS || player->knowsSpell("exiva")))
@@ -6114,7 +6139,7 @@ void Game::useWand(Creature *creature, Creature *attackedCreature, int wandid)
 	if(!player || !attackedCreature || player->pos.z != attackedCreature->pos.z)
 		return;
 
-	int dist, mana = 0; 
+	int dist, mana = 0;
 	MagicEffectAreaNoExhaustionClass runeAreaSpell;
 	runeAreaSpell.drawblood = true;
 	runeAreaSpell.offensive = true;
