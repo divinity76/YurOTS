@@ -75,3 +75,7 @@ $RECYCLE.BIN/
 *.lnk
 ots/source/devcpp/otserv.map
 ots/source/devcpp/otserv.layout
+ots\source\devcpp\otserv.map
+ots\source\devcpp\otserv.layout
+ots\\source\\devcpp\\otserv.map
+ots\\source\\devcpp\\otserv.layout
