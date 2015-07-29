@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="otserv" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="YurOTS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DEXCEPTION_TRACER" />
+			<Add option="-DTLM_BUY_SELL" />
+			<Add option="-DTLM_SERVER_SAVE" />
+			<Add option="-DTLM_HOUSE_SYSTEM" />
+			<Add option="-DBDB_UTEVO_LUX" />
+			<Add option="-DWOLV_LOAD_NPC" />
+			<Add option="-DBD_HOUSE_WINDOW" />
+			<Add option="-DTR_ANTI_AFK" />
+			<Add option="-DELEM_VIP_LIST" />
+			<Add option="-DTR_SUMMONS" />
+			<Add option="-DTRS_GM_INVISIBLE" />
+			<Add option="-DTLM_SKULLS_PARTY" />
+			<Add option="-DBRN_EXIVA" />
+			<Add option="-DSD_BURST_ARROW" />
+			<Add option="-DBDB_REPLACE_SPEARS" />
+			<Add option="-DBD_ITEM_LOOK" />
+			<Add option="-DSM_RELOAD_CONFIG" />
+			<Add option="-DJD_DEATH_LIST" />
+			<Add option="-DCT_EXANI_TERA" />
+			<Add option="-DCVS_DAY_CYCLE" />
+			<Add option="-DTJ_MONSTER_BLOOD" />
+			<Add option="-DJD_WANDS" />
+			<Add option="-D__DEBUG_PLAYERS__" />
+			<Add option="-DYUR_CVS_MODS" />
+			<Add option="-DYUR_ICE_RAPIER" />
+			<Add option="-DYUR_AOL" />
+			<Add option="-DYUR_LOGIN_QUEUE" />
+			<Add option="-DYUR_MULTIPLIERS" />
+			<Add option="-DYUR_BOH" />
+			<Add option="-DYUR_NPC_EXT" />
+			<Add option="-DYUR_GUILD_SYSTEM" />
+			<Add option="-DYUR_CMD_EXT" />
+			<Add option="-DYUR_ITEM_EXT" />
+			<Add option="-DYUR_ACT_EXT" />
+			<Add option="-DYUR_NO_MONSTER_HEAL" />
+			<Add option="-DYUR_PVP_ARENA" />
+			<Add option="-DYUR_RINGS_AMULETS" />
+			<Add option="-DYUR_CONFIG_CAP" />
+			<Add option="-DYUR_FIGHT_MODE" />
+			<Add option="-DYUR_READABLES" />
+			<Add option="-DYUR_LEARN_SPELLS" />
+			<Add option="-DYUR_HEAL_EXHAUST" />
+			<Add option="-DYUR_SHUTDOWN" />
+			<Add option="-DYUR_ROOKGARD" />
+			<Add option="-DYUR_LIGHT_ITEM" />
+			<Add option="-DYUR_CLEAN_MAP" />
+			<Add option="-DYUR_GM_LOOK" />
+			<Add option="-DYUR_HIGH_LEVELS" />
+			<Add option="-DYUR_PREMIUM_PROMOTION" />
+			<Add option="-DYUR_INVISIBLE" />
+			<Add option="-DYUR_DRAINS" />
+			<Add option="-DYUR_BUILTIN_AAC" />
+			<Add directory="C:/Dev-Cpp/include/c++/3.4.2" />
+			<Add directory="C:/Dev-Cpp/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-s" />
+			<Add option="-Wl,-Map=otserv.map" />
+			<Add option="C:/Dev-Cpp/bin/libxml2.dll" />
+			<Add option="C:/Dev-Cpp/bin/lua5.dll" />
+			<Add option="C:/Dev-Cpp/bin/lualib5.dll" />
+			<Add library="wsock32" />
+			<Add library="libboost_regex-mgw-mt-s-1_33_1" />
+			<Add directory="C:/Dev-Cpp/lib" />
+		</Linker>
+		<Unit filename="../aac.cpp" />
+		<Unit filename="../aac.h" />
+		<Unit filename="../account.cpp" />
+		<Unit filename="../account.h" />
+		<Unit filename="../actions.cpp" />
+		<Unit filename="../actions.h" />
+		<Unit filename="../allocator.cpp" />
+		<Unit filename="../allocator.h" />
+		<Unit filename="../chat.cpp" />
+		<Unit filename="../chat.h" />
+		<Unit filename="../commands.cpp" />
+		<Unit filename="../commands.h" />
+		<Unit filename="../const76.h" />
+		<Unit filename="../container.cpp" />
+		<Unit filename="../container.h" />
+		<Unit filename="../creature.cpp" />
+		<Unit filename="../creature.h" />
+		<Unit filename="../definitions.h" />
+		<Unit filename="../exception.cpp" />
+		<Unit filename="../exception.h" />
+		<Unit filename="../fileloader.cpp" />
+		<Unit filename="../fileloader.h" />
+		<Unit filename="../game.cpp" />
+		<Unit filename="../game.h" />
+		<Unit filename="../guilds.cpp" />
+		<Unit filename="../guilds.h" />
+		<Unit filename="../houses.cpp" />
+		<Unit filename="../houses.h" />
+		<Unit filename="../ioaccount.cpp" />
+		<Unit filename="../ioaccount.h" />
+		<Unit filename="../ioaccountxml.cpp" />
+		<Unit filename="../ioaccountxml.h" />
+		<Unit filename="../iomap.h" />
+		<Unit filename="../iomapbin.cpp" />
+		<Unit filename="../iomapbin.h" />
+		<Unit filename="../iomapotbm.cpp" />
+		<Unit filename="../iomapotbm.h" />
+		<Unit filename="../iomapxml.cpp" />
+		<Unit filename="../iomapxml.h" />
+		<Unit filename="../ioplayer.cpp" />
+		<Unit filename="../ioplayer.h" />
+		<Unit filename="../ioplayerxml.cpp" />
+		<Unit filename="../ioplayerxml.h" />
+		<Unit filename="../item.cpp" />
+		<Unit filename="../item.h" />
+		<Unit filename="../itemloader.cpp" />
+		<Unit filename="../itemloader.h" />
+		<Unit filename="../items.cpp" />
+		<Unit filename="../items.h" />
+		<Unit filename="../logger.cpp" />
+		<Unit filename="../logger.h" />
+		<Unit filename="../loginqueue.cpp" />
+		<Unit filename="../loginqueue.h" />
+		<Unit filename="../luascript.cpp" />
+		<Unit filename="../luascript.h" />
+		<Unit filename="../magic.cpp" />
+		<Unit filename="../magic.h" />
+		<Unit filename="../map.cpp" />
+		<Unit filename="../map.h" />
+		<Unit filename="../md5.cpp" />
+		<Unit filename="../md5.h" />
+		<Unit filename="../monster.cpp" />
+		<Unit filename="../monster.h" />
+		<Unit filename="../monsters.cpp" />
+		<Unit filename="../monsters.h" />
+		<Unit filename="../networkmessage.cpp" />
+		<Unit filename="../networkmessage.h" />
+		<Unit filename="../npc.cpp" />
+		<Unit filename="../npc.h" />
+		<Unit filename="../otserv.cpp" />
+		<Unit filename="../otsystem.h" />
+		<Unit filename="../player.cpp" />
+		<Unit filename="../player.h" />
+		<Unit filename="../position.cpp" />
+		<Unit filename="../position.h" />
+		<Unit filename="../protocol.cpp" />
+		<Unit filename="../protocol.h" />
+		<Unit filename="../protocol76.cpp" />
+		<Unit filename="../protocol76.h" />
+		<Unit filename="../pvparena.cpp" />
+		<Unit filename="../pvparena.h" />
+		<Unit filename="../readables.cpp" />
+		<Unit filename="../readables.h" />
+		<Unit filename="../safe_atoi.h" />
+		<Unit filename="../scheduler.cpp" />
+		<Unit filename="../scheduler.h" />
+		<Unit filename="../spawn.cpp" />
+		<Unit filename="../spawn.h" />
+		<Unit filename="../spells.cpp" />
+		<Unit filename="../spells.h" />
+		<Unit filename="../status.cpp" />
+		<Unit filename="../status.h" />
+		<Unit filename="../summons.cpp" />
+		<Unit filename="../summons.h" />
+		<Unit filename="../tasks.h" />
+		<Unit filename="../templates.h" />
+		<Unit filename="../texcept.h" />
+		<Unit filename="../thing.cpp" />
+		<Unit filename="../thing.h" />
+		<Unit filename="../tile.cpp" />
+		<Unit filename="../tile.h" />
+		<Unit filename="../tools.cpp" />
+		<Unit filename="../tools.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

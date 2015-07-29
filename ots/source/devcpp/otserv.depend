@@ -1,0 +1,4296 @@
+# depslib dependency file v1.0
+1145210110 source:c:\users\hanshenrik\documents\github\yurots\ots\source\aac.cpp
+	"aac.h"
+	"ioaccount.h"
+	"ioplayer.h"
+	"player.h"
+	<fstream>
+	<sstream>
+	<boost/regex.hpp>
+
+1145143637 c:\users\hanshenrik\documents\github\yurots\ots\source\aac.h
+	<string>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\string
+	<bits/c++config.h>
+	<bits/stringfwd.h>
+	<bits/char_traits.h>
+	<memory>
+	<bits/type_traits.h>
+	<iosfwd>
+	<bits/stl_iterator.h>
+	<bits/stl_function.h>
+	<bits/basic_string.h>
+	<algorithm>
+	<bits/basic_string.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stringfwd.h
+	<bits/c++config.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\char_traits.h
+	<cstring>
+	<bits/stl_algobase.h>
+	<bits/postypes.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cstring
+	<cstddef>
+	<string.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cstddef
+	<stddef.h>
+
+1107041724 c:\dev-cpp\include\stddef.h
+
+1107041724 c:\dev-cpp\include\string.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041724 c:\dev-cpp\include\_mingw.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_algobase.h
+	<bits/c++config.h>
+	<cstring>
+	<climits>
+	<cstdlib>
+	<cstddef>
+	<new>
+	<iosfwd>
+	<bits/stl_pair.h>
+	<bits/type_traits.h>
+	<bits/stl_iterator_base_types.h>
+	<bits/stl_iterator_base_funcs.h>
+	<bits/stl_iterator.h>
+	<bits/concept_check.h>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\climits
+	<limits.h>
+
+1107041724 c:\dev-cpp\include\limits.h
+	<_mingw.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cstdlib
+	<bits/c++config.h>
+	<cstddef>
+	<stdlib.h>
+
+1107041724 c:\dev-cpp\include\stdlib.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\new
+	<cstddef>
+	<exception>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\exception
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\iosfwd
+	<bits/c++config.h>
+	<bits/c++locale.h>
+	<bits/c++io.h>
+	<cctype>
+	<bits/stringfwd.h>
+	<bits/postypes.h>
+	<bits/functexcept.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cctype
+	<bits/c++config.h>
+	<ctype.h>
+
+1107041724 c:\dev-cpp\include\ctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\postypes.h
+	<cwchar>
+	<stdint.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cwchar
+	<bits/c++config.h>
+	<cstddef>
+	<ctime>
+	<wchar.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ctime
+	<cstddef>
+	<time.h>
+
+1107041724 c:\dev-cpp\include\time.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041724 c:\dev-cpp\include\wchar.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<wctype.h>
+	<sys/types.h>
+	<stdint.h>
+
+1107041724 c:\dev-cpp\include\stdarg.h
+
+1107041724 c:\dev-cpp\include\wctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041724 c:\dev-cpp\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1107041724 c:\dev-cpp\include\stdint.h
+	<stddef.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\functexcept.h
+	<exception_defines.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\exception_defines.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_pair.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\type_traits.h
+	<bits/c++config.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_iterator_base_types.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_iterator_base_funcs.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\concept_check.h
+	<bits/c++config.h>
+	<bits/boost_concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\boost_concept_check.h
+	<cstddef>
+	<bits/stl_iterator_base_types.h>
+	<utility>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\utility
+	<bits/c++config.h>
+	<bits/stl_relops.h>
+	<bits/stl_pair.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_relops.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_iterator.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\debug.h
+	<cassert>
+	<stddef.h>
+	<bits/stl_iterator_base_types.h>
+	<bits/type_traits.h>
+	<debug/formatter.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cassert
+	<assert.h>
+
+1107041724 c:\dev-cpp\include\assert.h
+	<_mingw.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\formatter.h
+	<typeinfo>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\typeinfo
+	<exception>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\memory
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_iterator_base_types.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_raw_storage_iter.h>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\allocator.h
+	<bits/c++allocator.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_construct.h
+	<bits/type_traits.h>
+	<new>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_uninitialized.h
+	<cstring>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_raw_storage_iter.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_function.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\basic_string.h
+	<bits/atomicity.h>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\atomicity.h
+	<bits/atomic_word.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\algorithm
+	<bits/stl_algobase.h>
+	<bits/stl_construct.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_algo.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_algo.h
+	<bits/stl_heap.h>
+	<bits/stl_tempbuf.h>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_heap.h
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_tempbuf.h
+	<memory>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\basic_string.tcc
+
+1145126588 c:\users\hanshenrik\documents\github\yurots\ots\source\ioaccount.h
+	<string>
+	"account.h"
+
+1145123406 c:\users\hanshenrik\documents\github\yurots\ots\source\account.h
+	<list>
+	<string>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\list
+	<bits/functexcept.h>
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_list.h>
+	<bits/list.tcc>
+	<debug/list>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_list.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\list.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\list
+	<list>
+	<bits/stl_algo.h>
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\safe_sequence.h
+	<debug/debug.h>
+	<debug/safe_base.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\safe_base.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\safe_iterator.h
+	<bits/stl_pair.h>
+	<debug/debug.h>
+	<debug/formatter.h>
+	<debug/safe_base.h>
+	<bits/cpp_type_traits.h>
+	<debug/safe_iterator.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\cpp_type_traits.h
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\safe_iterator.tcc
+
+1129803812 c:\users\hanshenrik\documents\github\yurots\ots\source\ioplayer.h
+	<string>
+	"player.h"
+
+1145212987 c:\users\hanshenrik\documents\github\yurots\ots\source\player.h
+	"definitions.h"
+	"creature.h"
+	"container.h"
+	<vector>
+	<ctime>
+	<algorithm>
+	"templates.h"
+	"map.h"
+	"houses.h"
+	"guilds.h"
+	"luascript.h"
+
+1122662828 c:\users\hanshenrik\documents\github\yurots\ots\source\definitions.h
+	<stdint.h>
+
+1135805556 c:\users\hanshenrik\documents\github\yurots\ots\source\creature.h
+	"thing.h"
+	"position.h"
+	"container.h"
+	"magic.h"
+	<vector>
+	"templates.h"
+	"luascript.h"
+
+1126391734 c:\users\hanshenrik\documents\github\yurots\ots\source\thing.h
+	"definitions.h"
+	"position.h"
+
+1116440798 c:\users\hanshenrik\documents\github\yurots\ots\source\position.h
+	<stdlib.h>
+	<cmath>
+	<iostream>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cmath
+	<bits/c++config.h>
+	<bits/cpp_type_traits.h>
+	<math.h>
+	<bits/cmath.tcc>
+
+1107041724 c:\dev-cpp\include\math.h
+	<_mingw.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\cmath.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\iostream
+	<bits/c++config.h>
+	<ostream>
+	<istream>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ostream
+	<ios>
+	<bits/ostream.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ios
+	<iosfwd>
+	<exception>
+	<bits/char_traits.h>
+	<cstdio>
+	<bits/localefwd.h>
+	<bits/ios_base.h>
+	<streambuf>
+	<bits/basic_ios.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cstdio
+	<bits/c++config.h>
+	<cstddef>
+	<stdio.h>
+
+1107041724 c:\dev-cpp\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\localefwd.h
+	<bits/c++config.h>
+	<bits/c++locale.h>
+	<iosfwd>
+	<bits/functexcept.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\ios_base.h
+	<bits/atomicity.h>
+	<bits/localefwd.h>
+	<bits/locale_classes.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\locale_classes.h
+	<bits/localefwd.h>
+	<cstring>
+	<string>
+	<bits/atomicity.h>
+	<bits/gthr.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\streambuf
+	<bits/c++config.h>
+	<iosfwd>
+	<bits/localefwd.h>
+	<bits/ios_base.h>
+	<bits/streambuf.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\streambuf.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\basic_ios.h
+	<bits/streambuf_iterator.h>
+	<bits/localefwd.h>
+	<bits/locale_classes.h>
+	<bits/locale_facets.h>
+	<bits/basic_ios.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\streambuf_iterator.h
+	<streambuf>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\locale_facets.h
+	<ctime>
+	<cwctype>
+	<iosfwd>
+	<bits/ios_base.h>
+	<streambuf>
+	<bits/ctype_base.h>
+	<bits/ctype_inline.h>
+	<bits/codecvt.h>
+	<bits/time_members.h>
+	<bits/messages_members.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cwctype
+	<bits/c++config.h>
+	<wctype.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\codecvt.h
+	<bits/codecvt_specializations.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\basic_ios.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\ostream.tcc
+	<locale>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\locale
+	<bits/localefwd.h>
+	<bits/locale_classes.h>
+	<bits/locale_facets.h>
+	<bits/locale_facets.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\locale_facets.tcc
+	<limits>
+	<typeinfo>
+	<bits/streambuf_iterator.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\limits
+	<bits/c++config.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\istream
+	<ios>
+	<limits>
+	<bits/istream.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\istream.tcc
+	<locale>
+	<ostream>
+
+1122662828 c:\users\hanshenrik\documents\github\yurots\ots\source\container.h
+	"item.h"
+
+1135879898 c:\users\hanshenrik\documents\github\yurots\ots\source\item.h
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<iostream>
+	<list>
+	<vector>
+	"thing.h"
+	"items.h"
+
+1422066674 c:\dev-cpp\include\libxml\xmlmemory.h
+	<stdio.h>
+	<libxml/xmlversion.h>
+	<libxml/threads.h>
+	<libxml/globals.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlversion.h
+	<libxml/xmlexports.h>
+	<ansidecl.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlexports.h
+
+1107041714 c:\dev-cpp\include\ansidecl.h
+
+1422066674 c:\dev-cpp\include\libxml\threads.h
+	<libxml/xmlversion.h>
+	<libxml/globals.h>
+
+1422066674 c:\dev-cpp\include\libxml\globals.h
+	<libxml/xmlversion.h>
+	<libxml/parser.h>
+	<libxml/xmlerror.h>
+	<libxml/SAX.h>
+	<libxml/SAX2.h>
+	<libxml/xmlmemory.h>
+	<libxml/threads.h>
+
+1422066674 c:\dev-cpp\include\libxml\parser.h
+	<stdarg.h>
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+	<libxml/dict.h>
+	<libxml/hash.h>
+	<libxml/valid.h>
+	<libxml/entities.h>
+	<libxml/xmlerror.h>
+	<libxml/xmlstring.h>
+	<libxml/encoding.h>
+	<libxml/xmlIO.h>
+	<libxml/globals.h>
+
+1422066674 c:\dev-cpp\include\libxml\tree.h
+	<stdio.h>
+	<libxml/xmlversion.h>
+	<libxml/xmlstring.h>
+	<libxml/xmlregexp.h>
+	<libxml/xmlmemory.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlstring.h
+	<stdarg.h>
+	<libxml/xmlversion.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlregexp.h
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+	<libxml/dict.h>
+
+1422066674 c:\dev-cpp\include\libxml\dict.h
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+
+1422066674 c:\dev-cpp\include\libxml\hash.h
+	<libxml/xmlversion.h>
+	<libxml/parser.h>
+	<libxml/dict.h>
+
+1422066674 c:\dev-cpp\include\libxml\valid.h
+	<libxml/xmlversion.h>
+	<libxml/xmlerror.h>
+	<libxml/tree.h>
+	<libxml/list.h>
+	<libxml/xmlautomata.h>
+	<libxml/xmlregexp.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlerror.h
+	<libxml/parser.h>
+
+1422066674 c:\dev-cpp\include\libxml\list.h
+	<libxml/xmlversion.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlautomata.h
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+	<libxml/xmlregexp.h>
+
+1422066674 c:\dev-cpp\include\libxml\entities.h
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+
+1422066674 c:\dev-cpp\include\libxml\encoding.h
+	<libxml/xmlversion.h>
+	<iconv.h>
+	<libxml/tree.h>
+
+1422066662 c:\dev-cpp\include\iconv.h
+	"iconv.h"
+	<stddef.h>
+	<errno.h>
+
+1107041724 c:\dev-cpp\include\errno.h
+	<_mingw.h>
+
+1422066674 c:\dev-cpp\include\libxml\xmlio.h
+	<stdio.h>
+	<libxml/xmlversion.h>
+	<libxml/globals.h>
+	<libxml/tree.h>
+	<libxml/parser.h>
+	<libxml/encoding.h>
+
+1422066674 c:\dev-cpp\include\libxml\sax.h
+	<stdio.h>
+	<stdlib.h>
+	<libxml/xmlversion.h>
+	<libxml/parser.h>
+	<libxml/xlink.h>
+
+1422066674 c:\dev-cpp\include\libxml\xlink.h
+	<libxml/xmlversion.h>
+	<libxml/tree.h>
+
+1422066674 c:\dev-cpp\include\libxml\sax2.h
+	<stdio.h>
+	<stdlib.h>
+	<libxml/xmlversion.h>
+	<libxml/parser.h>
+	<libxml/xlink.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\vector
+	<bits/functexcept.h>
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_vector.h>
+	<bits/stl_bvector.h>
+	<bits/vector.tcc>
+	<debug/vector>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_vector.h
+	<bits/stl_iterator_base_funcs.h>
+	<bits/functexcept.h>
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_bvector.h
+	<bits/stl_vector.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\vector.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\vector
+	<vector>
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+	<utility>
+
+1135813636 c:\users\hanshenrik\documents\github\yurots\ots\source\items.h
+	<ext/hash_map>
+	<hash_map>
+	<string>
+	"const76.h"
+	"itemloader.h"
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ext\hash_map
+	<ext/hashtable.h>
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ext\hashtable.h
+	<vector>
+	<iterator>
+	<bits/stl_algo.h>
+	<bits/stl_function.h>
+	<ext/hash_fun.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\iterator
+	<bits/c++config.h>
+	<cstddef>
+	<bits/stl_iterator_base_types.h>
+	<bits/stl_iterator_base_funcs.h>
+	<bits/stl_iterator.h>
+	<ostream>
+	<istream>
+	<bits/stream_iterator.h>
+	<bits/streambuf_iterator.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stream_iterator.h
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\ext\hash_fun.h
+	<cstddef>
+
+1136232796 c:\users\hanshenrik\documents\github\yurots\ots\source\const76.h
+
+1135813626 c:\users\hanshenrik\documents\github\yurots\ots\source\itemloader.h
+	"fileloader.h"
+
+1134518788 c:\users\hanshenrik\documents\github\yurots\ots\source\fileloader.h
+	<string>
+	"stdio.h"
+
+1135871490 c:\users\hanshenrik\documents\github\yurots\ots\source\magic.h
+	"position.h"
+	"item.h"
+	<map>
+	"const76.h"
+	"tools.h"
+	"creature.h"
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\map
+	<bits/stl_tree.h>
+	<bits/stl_map.h>
+	<bits/stl_multimap.h>
+	<debug/map>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_tree.h
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_function.h>
+	<bits/cpp_type_traits.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_map.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_multimap.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\map
+	<map>
+	<debug/map.h>
+	<debug/multimap.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\map.h
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+	<utility>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\multimap.h
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+	<utility>
+
+1145133550 c:\users\hanshenrik\documents\github\yurots\ots\source\tools.h
+
+1123239220 c:\users\hanshenrik\documents\github\yurots\ots\source\templates.h
+	<set>
+	<map>
+	"creature.h"
+	"otsystem.h"
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\set
+	<bits/stl_tree.h>
+	<bits/stl_set.h>
+	<bits/stl_multiset.h>
+	<debug/set>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_set.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_multiset.h
+	<bits/concept_check.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\set
+	<set>
+	<debug/set.h>
+	<debug/multiset.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\set.h
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+	<utility>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\multiset.h
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+	<utility>
+
+1143380577 c:\users\hanshenrik\documents\github\yurots\ots\source\otsystem.h
+	"definitions.h"
+	"logger.h"
+	<list>
+	<algorithm>
+	<windows.h>
+	<process.h>
+	<stddef.h>
+	<stdlib.h>
+	<conio.h>
+	<sys/timeb.h>
+	<winsock.h>
+	<pthread.h>
+	<semaphore.h>
+	<time.h>
+	<sys/types.h>
+	<sys/timeb.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<stdint.h>
+	<errno.h>
+
+1137182072 c:\users\hanshenrik\documents\github\yurots\ots\source\logger.h
+	<string>
+	<map>
+
+1107041720 c:\dev-cpp\include\windows.h
+	<winresrc.h>
+	<stdarg.h>
+	<windef.h>
+	<wincon.h>
+	<winbase.h>
+	<wingdi.h>
+	<winuser.h>
+	<winnls.h>
+	<winver.h>
+	<winnetwk.h>
+	<winreg.h>
+	<winsvc.h>
+	<cderr.h>
+	<dde.h>
+	<ddeml.h>
+	<dlgs.h>
+	<imm.h>
+	<lzexpand.h>
+	<mmsystem.h>
+	<nb30.h>
+	<rpc.h>
+	<shellapi.h>
+	<winperf.h>
+	<commdlg.h>
+	<winspool.h>
+	<winsock2.h>
+	<winsock.h>
+	<ole2.h>
+
+1107041720 c:\dev-cpp\include\winresrc.h
+	<winuser.h>
+	<winnt.h>
+	<winver.h>
+	<dde.h>
+	<dlgs.h>
+	<commctrl.h>
+
+1107041720 c:\dev-cpp\include\winuser.h
+
+1107041720 c:\dev-cpp\include\winnt.h
+	<winerror.h>
+	<string.h>
+	<basetsd.h>
+	<pshpack4.h>
+	<poppack.h>
+
+1107041720 c:\dev-cpp\include\winerror.h
+
+1107041720 c:\dev-cpp\include\basetsd.h
+
+1107041720 c:\dev-cpp\include\pshpack4.h
+
+1107041720 c:\dev-cpp\include\poppack.h
+
+1107041720 c:\dev-cpp\include\winver.h
+
+1107041720 c:\dev-cpp\include\dde.h
+
+1107041720 c:\dev-cpp\include\dlgs.h
+
+1107041720 c:\dev-cpp\include\commctrl.h
+	<prsht.h>
+
+1107041720 c:\dev-cpp\include\prsht.h
+
+1107041720 c:\dev-cpp\include\windef.h
+	<winnt.h>
+
+1107041720 c:\dev-cpp\include\wincon.h
+
+1107041720 c:\dev-cpp\include\winbase.h
+
+1107041720 c:\dev-cpp\include\wingdi.h
+
+1107041720 c:\dev-cpp\include\winnls.h
+
+1107041720 c:\dev-cpp\include\winnetwk.h
+
+1107041720 c:\dev-cpp\include\winreg.h
+
+1107041720 c:\dev-cpp\include\winsvc.h
+
+1107041720 c:\dev-cpp\include\cderr.h
+
+1107041720 c:\dev-cpp\include\ddeml.h
+
+1107041720 c:\dev-cpp\include\imm.h
+
+1107041720 c:\dev-cpp\include\lzexpand.h
+
+1107041720 c:\dev-cpp\include\mmsystem.h
+
+1107041720 c:\dev-cpp\include\nb30.h
+
+1107041720 c:\dev-cpp\include\rpc.h
+	<windows.h>
+	<rpcdce.h>
+	<rpcnsi.h>
+	<rpcnterr.h>
+	<winerror.h>
+	<excpt.h>
+
+1107041720 c:\dev-cpp\include\rpcdce.h
+	<basetyps.h>
+	<rpcdcep.h>
+
+1107041720 c:\dev-cpp\include\basetyps.h
+
+1107041720 c:\dev-cpp\include\rpcdcep.h
+
+1107041720 c:\dev-cpp\include\rpcnsi.h
+
+1107041720 c:\dev-cpp\include\rpcnterr.h
+
+1107041724 c:\dev-cpp\include\excpt.h
+	<_mingw.h>
+	<windef.h>
+
+1107041720 c:\dev-cpp\include\shellapi.h
+	<pshpack2.h>
+	<poppack.h>
+
+1107041720 c:\dev-cpp\include\pshpack2.h
+
+1107041720 c:\dev-cpp\include\winperf.h
+
+1107041720 c:\dev-cpp\include\commdlg.h
+	<unknwn.h>
+	<prsht.h>
+
+1107041720 c:\dev-cpp\include\unknwn.h
+	<windows.h>
+	<objfwd.h>
+	<wtypes.h>
+
+1107041720 c:\dev-cpp\include\objfwd.h
+	<basetyps.h>
+
+1107041720 c:\dev-cpp\include\wtypes.h
+	<rpc.h>
+	<rpcndr.h>
+
+1107041720 c:\dev-cpp\include\rpcndr.h
+	<rpcnsip.h>
+	<objfwd.h>
+
+1107041720 c:\dev-cpp\include\rpcnsip.h
+
+1107041720 c:\dev-cpp\include\winspool.h
+
+1107041720 c:\dev-cpp\include\winsock2.h
+	<windows.h>
+
+1107041720 c:\dev-cpp\include\winsock.h
+	<windows.h>
+	<mswsock.h>
+
+1107041720 c:\dev-cpp\include\mswsock.h
+
+1107041720 c:\dev-cpp\include\ole2.h
+	<winerror.h>
+	<objbase.h>
+	<olectlid.h>
+	<oleauto.h>
+	<oleidl.h>
+
+1107041720 c:\dev-cpp\include\objbase.h
+	<rpc.h>
+	<rpcndr.h>
+	<stdlib.h>
+	<basetyps.h>
+	<wtypes.h>
+	<unknwn.h>
+	<objidl.h>
+	<cguid.h>
+
+1107041720 c:\dev-cpp\include\objidl.h
+	<objfwd.h>
+
+1107041720 c:\dev-cpp\include\cguid.h
+
+1107041720 c:\dev-cpp\include\olectlid.h
+
+1107041720 c:\dev-cpp\include\oleauto.h
+	<oaidl.h>
+
+1107041720 c:\dev-cpp\include\oaidl.h
+
+1107041720 c:\dev-cpp\include\oleidl.h
+	<objfwd.h>
+
+1107041724 c:\dev-cpp\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+
+1107041724 c:\dev-cpp\include\conio.h
+	<_mingw.h>
+
+1107041724 c:\dev-cpp\include\sys\timeb.h
+	<_mingw.h>
+	<sys/types.h>
+
+1145127839 c:\users\hanshenrik\documents\github\yurots\ots\source\luascript.h
+	<string>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+
+1422067212 c:\dev-cpp\include\lua.h
+	<stdarg.h>
+	<stddef.h>
+
+1422067212 c:\dev-cpp\include\lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1422067212 c:\dev-cpp\include\lualib.h
+	"lua.h"
+
+1135711770 c:\users\hanshenrik\documents\github\yurots\ots\source\map.h
+	<queue>
+	<bitset>
+	"position.h"
+	"item.h"
+	"creature.h"
+	"magic.h"
+	"tools.h"
+	"tile.h"
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\queue
+	<bits/c++config.h>
+	<bits/functexcept.h>
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_heap.h>
+	<bits/stl_function.h>
+	<deque>
+	<vector>
+	<bits/stl_queue.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\deque
+	<bits/functexcept.h>
+	<bits/stl_algobase.h>
+	<bits/allocator.h>
+	<bits/stl_construct.h>
+	<bits/stl_uninitialized.h>
+	<bits/stl_deque.h>
+	<bits/deque.tcc>
+	<debug/deque>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_deque.h
+	<bits/concept_check.h>
+	<bits/stl_iterator_base_types.h>
+	<bits/stl_iterator_base_funcs.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\deque.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\deque
+	<deque>
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\stl_queue.h
+	<bits/concept_check.h>
+	<debug/debug.h>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bitset
+	<cstddef>
+	<cstring>
+	<limits>
+	<string>
+	<bits/functexcept.h>
+	<ostream>
+	<istream>
+	<debug/bitset>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\debug\bitset
+	<bitset>
+	<debug/safe_sequence.h>
+	<debug/safe_iterator.h>
+
+1135797318 c:\users\hanshenrik\documents\github\yurots\ots\source\tile.h
+	"item.h"
+	"container.h"
+	"magic.h"
+	"definitions.h"
+	"templates.h"
+	"scheduler.h"
+
+1121280582 c:\users\hanshenrik\documents\github\yurots\ots\source\scheduler.h
+	<boost/function.hpp>
+	<boost/bind.hpp>
+	<functional>
+	"otsystem.h"
+
+1422066667 c:\dev-cpp\include\boost\function.hpp
+	<boost/preprocessor/iterate.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/function/detail/prologue.hpp>
+	<boost/function/function0.hpp>
+	<boost/function/function1.hpp>
+	<boost/function/function2.hpp>
+	<boost/function/function3.hpp>
+	<boost/function/function4.hpp>
+	<boost/function/function5.hpp>
+	<boost/function/function6.hpp>
+	<boost/function/function7.hpp>
+	<boost/function/function8.hpp>
+	<boost/function/function9.hpp>
+	<boost/function/function10.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\iterate.hpp
+	<boost/preprocessor/iteration/iterate.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\iteration\iterate.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/array/elem.hpp>
+	<boost/preprocessor/array/size.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/slot/slot.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\arithmetic\dec.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\config\config.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\arithmetic\inc.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\array\elem.hpp
+	<boost/preprocessor/array/data.hpp>
+	<boost/preprocessor/array/size.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\array\data.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\tuple\elem.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\array\size.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\cat.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\slot\slot.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/slot/detail/def.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\slot\detail\def.hpp
+
+1422066668 c:\dev-cpp\include\boost\detail\workaround.hpp
+
+1422066667 c:\dev-cpp\include\boost\function\detail\prologue.hpp
+	<cassert>
+	<algorithm>
+	<boost/throw_exception.hpp>
+	<boost/config.hpp>
+	<boost/function/function_base.hpp>
+	<boost/mem_fn.hpp>
+	<boost/type_traits/is_integral.hpp>
+	<boost/preprocessor/enum.hpp>
+	<boost/preprocessor/enum_params.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/inc.hpp>
+
+1422066667 c:\dev-cpp\include\boost\throw_exception.hpp
+	<boost/config.hpp>
+	<exception>
+
+1422066667 c:\dev-cpp\include\boost\config.hpp
+	<boost/config/select_compiler_config.hpp>
+	<boost/config/select_stdlib_config.hpp>
+	<boost/config/select_platform_config.hpp>
+	<boost/config/suffix.hpp>
+
+1422066668 c:\dev-cpp\include\boost\config\select_compiler_config.hpp
+
+1422066668 c:\dev-cpp\include\boost\config\select_stdlib_config.hpp
+	<utility>
+
+1422066668 c:\dev-cpp\include\boost\config\select_platform_config.hpp
+	<boost/config/posix_features.hpp>
+
+1422066668 c:\dev-cpp\include\boost\config\posix_features.hpp
+	<unistd.h>
+
+1107041724 c:\dev-cpp\include\unistd.h
+	<io.h>
+	<process.h>
+	<getopt.h>
+
+1107041724 c:\dev-cpp\include\io.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1107041724 c:\dev-cpp\include\getopt.h
+
+1422066668 c:\dev-cpp\include\boost\config\suffix.hpp
+	<limits.h>
+	<cstddef>
+	"boost/type.hpp"
+	"boost/non_type.hpp"
+
+1422066667 c:\dev-cpp\include\boost\type.hpp
+
+1422066667 c:\dev-cpp\include\boost\non_type.hpp
+
+1422066667 c:\dev-cpp\include\boost\function\function_base.hpp
+	<stdexcept>
+	<string>
+	<memory>
+	<new>
+	<typeinfo>
+	<boost/config.hpp>
+	<boost/assert.hpp>
+	<boost/type_traits/is_integral.hpp>
+	<boost/type_traits/composite_traits.hpp>
+	<boost/type_traits/is_stateless.hpp>
+	<boost/ref.hpp>
+	<boost/pending/ct_if.hpp>
+	<boost/detail/workaround.hpp>
+	"boost/utility/enable_if.hpp"
+	"boost/mpl/bool.hpp"
+	<boost/function_equal.hpp>
+	<cstring>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\stdexcept
+	<exception>
+	<string>
+
+1422066667 c:\dev-cpp\include\boost\assert.hpp
+	<boost/current_function.hpp>
+	<assert.h>
+
+1422066667 c:\dev-cpp\include\boost\current_function.hpp
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_integral.hpp
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\bool_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/type_traits/integral_constant.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\template_arity_spec.hpp
+	<boost/mpl/int.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/overload_resolution.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\int.hpp
+	<boost/mpl/int_fwd.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\int_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\adl_barrier.hpp
+	<boost/mpl/aux_/config/adl.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\adl.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/intel.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\msvc.hpp
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\intel.hpp
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\gcc.hpp
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\workaround.hpp
+	<boost/detail/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\nttp_decl.hpp
+	<boost/mpl/aux_/config/nttp.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\nttp.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\integral_wrapper.hpp
+	<boost/mpl/integral_c_tag.hpp>
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\integral_c_tag.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\static_constant.hpp
+	<boost/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\static_cast.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\template_arity_fwd.hpp
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\params.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\preprocessor.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\comma_if.hpp
+	<boost/preprocessor/punctuation/comma_if.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\punctuation\comma_if.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/facilities/empty.hpp>
+	<boost/preprocessor/punctuation/comma.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\if.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\iif.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\logical\bool.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\facilities\empty.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\punctuation\comma.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repeat.hpp
+	<boost/preprocessor/repetition/repeat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\repeat.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\debug\error.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\detail\auto_rec.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/dmc/auto_rec.hpp>
+	<boost/preprocessor/control/iif.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\detail\dmc\auto_rec.hpp
+	<boost/preprocessor/control/iif.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\tuple\eat.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\inc.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\lambda.hpp
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\ttp.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\ctps.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\overload_resolution.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\integral_constant.hpp
+	<boost/config.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/integral_c.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\bool.hpp
+	<boost/mpl/bool_fwd.hpp>
+	<boost/mpl/integral_c_tag.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\bool_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\integral_c.hpp
+	<boost/mpl/integral_c_fwd.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\integral_c_fwd.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\lambda_support.hpp
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/int_fwd.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/na_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/tuple/to_list.hpp>
+	<boost/preprocessor/list/for_each_i.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\yes_no.hpp
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/arrays.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\arrays.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\na_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\enum.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\tuple\to_list.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\for_each_i.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/repetition/for.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\adt.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/is_binary.hpp>
+	<boost/preprocessor/logical/compl.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\detail\is_binary.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/detail/check.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\detail\check.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\logical\compl.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\for.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/repetition/detail/edg/for.hpp>
+	<boost/preprocessor/repetition/detail/msvc/for.hpp>
+	<boost/preprocessor/repetition/detail/dmc/for.hpp>
+	<boost/preprocessor/repetition/detail/for.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\detail\edg\for.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\detail\msvc\for.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\detail\dmc\for.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\expr_iif.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\detail\for.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\tuple\rem.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\bool_trait_undef.hpp
+
+1422066668 c:\dev-cpp\include\boost\type_traits\composite_traits.hpp
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/is_enum.hpp"
+	"boost/type_traits/is_member_pointer.hpp"
+	"boost/type_traits/is_member_function_pointer.hpp"
+	"boost/type_traits/is_pointer.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_union.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_array.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/wrap.hpp"
+	<cstddef>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\config.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\yes_no_type.hpp
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\wrap.hpp
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_enum.hpp
+	"boost/type_traits/add_reference.hpp"
+	"boost/type_traits/is_arithmetic.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_convertible.hpp"
+	"boost/type_traits/is_array.hpp"
+	<boost/type_traits/is_function.hpp>
+	"boost/type_traits/config.hpp"
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/is_union.hpp>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\add_reference.hpp
+	"boost/type_traits/is_reference.hpp"
+	"boost/detail/workaround.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_reference.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/wrap.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\type_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\type_trait_undef.hpp
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_arithmetic.hpp
+	"boost/type_traits/is_integral.hpp"
+	"boost/type_traits/is_float.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_float.hpp
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\ice_or.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_convertible.hpp
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/add_reference.hpp"
+	"boost/type_traits/ice.hpp"
+	"boost/type_traits/is_arithmetic.hpp"
+	"boost/type_traits/is_abstract.hpp"
+	"boost/type_traits/is_void.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\ice.hpp
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/detail/ice_not.hpp"
+	"boost/type_traits/detail/ice_eq.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\ice_and.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\ice_not.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\ice_eq.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_abstract.hpp
+	<boost/static_assert.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/is_class.hpp>
+	"boost/type_traits/detail/ice_and.hpp"
+	<boost/type_traits/is_polymorphic.hpp>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066667 c:\dev-cpp\include\boost\static_assert.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_class.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/is_union.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/detail/ice_not.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/is_scalar.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_void.hpp"
+	"boost/type_traits/is_function.hpp"
+	"boost/type_traits/remove_cv.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_union.hpp
+	"boost/type_traits/remove_cv.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\remove_cv.hpp
+	"boost/type_traits/broken_compiler_spec.hpp"
+	"boost/type_traits/detail/cv_traits_impl.hpp"
+	"boost/config.hpp"
+	<cstddef>
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\broken_compiler_spec.hpp
+	"boost/mpl/aux_/lambda_support.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\cv_traits_impl.hpp
+	"boost/config.hpp"
+	"boost/detail/workaround.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\intrinsics.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/is_same.hpp"
+	<type_traits.h>
+	<msl_utility>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_same.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_scalar.hpp
+	"boost/type_traits/is_arithmetic.hpp"
+	"boost/type_traits/is_enum.hpp"
+	"boost/type_traits/is_pointer.hpp"
+	"boost/type_traits/is_member_pointer.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_pointer.hpp
+	"boost/type_traits/is_member_pointer.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/detail/ice_not.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/detail/is_function_ptr_tester.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_member_pointer.hpp
+	"boost/type_traits/config.hpp"
+	"boost/detail/workaround.hpp"
+	"boost/type_traits/is_member_function_pointer.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/detail/is_mem_fun_pointer_tester.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_member_function_pointer.hpp
+	"boost/type_traits/config.hpp"
+	"boost/detail/workaround.hpp"
+	"boost/type_traits/detail/is_mem_fun_pointer_impl.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/is_mem_fun_pointer_tester.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\is_mem_fun_pointer_impl.hpp
+	"boost/config.hpp"
+	"boost/preprocessor/iterate.hpp"
+	"boost/preprocessor/enum_params.hpp"
+	"boost/preprocessor/comma_if.hpp"
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\enum_params.hpp
+	<boost/preprocessor/repetition/enum_params.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\enum_params.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/punctuation/comma_if.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\false_result.hpp
+	"boost/config.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\is_mem_fun_pointer_tester.hpp
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/preprocessor/iterate.hpp"
+	"boost/preprocessor/enum_params.hpp"
+	"boost/preprocessor/comma_if.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\is_function_ptr_tester.hpp
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/preprocessor/iterate.hpp"
+	"boost/preprocessor/enum_params.hpp"
+	"boost/preprocessor/comma_if.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_void.hpp
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_function.hpp
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/is_function_ptr_helper.hpp"
+	"boost/type_traits/detail/is_function_ptr_tester.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\is_function_ptr_helper.hpp
+	"boost/type_traits/config.hpp"
+	"boost/preprocessor/iterate.hpp"
+	"boost/preprocessor/enum_params.hpp"
+	"boost/preprocessor/comma_if.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_polymorphic.hpp
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	<boost/detail/workaround.hpp>
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_stateless.hpp
+	"boost/type_traits/has_trivial_constructor.hpp"
+	"boost/type_traits/has_trivial_copy.hpp"
+	"boost/type_traits/has_trivial_destructor.hpp"
+	"boost/type_traits/is_class.hpp"
+	"boost/type_traits/is_empty.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\has_trivial_constructor.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	"boost/type_traits/is_pod.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_pod.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/is_void.hpp"
+	"boost/type_traits/is_scalar.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	<cstddef>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\has_trivial_copy.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	"boost/type_traits/is_volatile.hpp"
+	"boost/type_traits/is_pod.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/ice_not.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_volatile.hpp
+	"boost/config.hpp"
+	"boost/type_traits/detail/cv_traits_impl.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\has_trivial_destructor.hpp
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	"boost/type_traits/is_pod.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_empty.hpp
+	"boost/type_traits/is_convertible.hpp"
+	"boost/type_traits/detail/ice_or.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/type_traits/intrinsics.hpp"
+	"boost/type_traits/remove_cv.hpp"
+	"boost/type_traits/is_class.hpp"
+	"boost/type_traits/add_reference.hpp"
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_pointer.hpp"
+	"boost/type_traits/is_member_pointer.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/is_void.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/detail/ice_not.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066667 c:\dev-cpp\include\boost\ref.hpp
+	<boost/config.hpp>
+	<boost/utility/addressof.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/type.hpp>
+
+1422066667 c:\dev-cpp\include\boost\utility\addressof.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\pending\ct_if.hpp
+	<boost/config.hpp>
+	<boost/type_traits/integral_constant.hpp>
+
+1422066667 c:\dev-cpp\include\boost\utility\enable_if.hpp
+	"boost/config.hpp"
+
+1422066667 c:\dev-cpp\include\boost\function_equal.hpp
+
+1422066667 c:\dev-cpp\include\boost\mem_fn.hpp
+	<boost/config.hpp>
+	<boost/get_pointer.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_vw.hpp>
+	<boost/bind/mem_fn_vw.hpp>
+	<boost/bind/mem_fn_vw.hpp>
+	<boost/bind/mem_fn_vw.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_template.hpp>
+	<boost/bind/mem_fn_cc.hpp>
+	<boost/bind/mem_fn_cc.hpp>
+	<boost/bind/mem_fn_cc.hpp>
+	<boost/bind/mem_fn_cc.hpp>
+
+1422066667 c:\dev-cpp\include\boost\get_pointer.hpp
+	<memory>
+
+1422066668 c:\dev-cpp\include\boost\bind\mem_fn_template.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\mem_fn_vw.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\mem_fn_cc.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\enum.hpp
+	<boost/preprocessor/repetition/enum.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\enum.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/punctuation/comma_if.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function0.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\detail\maybe_include.hpp
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+	<boost/function/function_template.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function_template.hpp
+	<boost/function/detail/prologue.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function1.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function2.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function3.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function4.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function5.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function6.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function7.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function8.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function9.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\function\function10.hpp
+	<boost/function/detail/maybe_include.hpp>
+
+1422066667 c:\dev-cpp\include\boost\bind.hpp
+	<boost/config.hpp>
+	<boost/ref.hpp>
+	<boost/mem_fn.hpp>
+	<boost/type.hpp>
+	<boost/bind/arg.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/bind/bind_template.hpp>
+	<boost/bind/bind_template.hpp>
+	<boost/bind/bind_template.hpp>
+	<boost/bind/bind_cc.hpp>
+	<boost/bind/bind_cc.hpp>
+	<boost/bind/bind_cc.hpp>
+	<boost/bind/bind_cc.hpp>
+	<boost/bind/bind_mf_cc.hpp>
+	<boost/bind/bind_mf_cc.hpp>
+	<boost/bind/bind_mf_cc.hpp>
+	<boost/bind/bind_mf_cc.hpp>
+	<boost/bind/placeholders.hpp>
+
+1422066668 c:\dev-cpp\include\boost\bind\arg.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\bind_template.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\bind_cc.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\bind_mf_cc.hpp
+
+1422066668 c:\dev-cpp\include\boost\bind\placeholders.hpp
+	<boost/bind/arg.hpp>
+	<boost/config.hpp>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\functional
+	<bits/c++config.h>
+	<cstddef>
+	<bits/stl_function.h>
+
+1129668230 c:\users\hanshenrik\documents\github\yurots\ots\source\houses.h
+	"position.h"
+	"map.h"
+	<string>
+	<vector>
+	<map>
+
+1129210134 c:\users\hanshenrik\documents\github\yurots\ots\source\guilds.h
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<string>
+	<vector>
+	<map>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\fstream
+	<istream>
+	<ostream>
+	<locale>
+	<cstdio>
+	<bits/basic_file.h>
+	<bits/gthr.h>
+	<bits/fstream.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\fstream.tcc
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\sstream
+	<istream>
+	<ostream>
+	<bits/sstream.tcc>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\bits\sstream.tcc
+	<sstream>
+
+1422066667 c:\dev-cpp\include\boost\regex.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\config.hpp
+	<boost/regex/config/borland.hpp>
+	<boost/config.hpp>
+	<stdlib.h>
+	<stddef.h>
+	<wctype.h>
+	<boost/regex/config/cwchar.hpp>
+	<string>
+	<boost/config/auto_link.hpp>
+	<stdexcept>
+	<string>
+	<boost/throw_exception.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\config\borland.hpp
+	<cstring>
+
+1422066667 c:\dev-cpp\include\boost\regex\config\cwchar.hpp
+	<cwchar>
+	<cwctype>
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\config\auto_link.hpp
+	<boost/config.hpp>
+	<boost/version.hpp>
+
+1422066667 c:\dev-cpp\include\boost\version.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex_workaround.hpp>
+	<boost/regex_fwd.hpp>
+	<boost/regex/regex_traits.hpp>
+	<boost/regex/v4/error_type.hpp>
+	<boost/regex/v4/match_flags.hpp>
+	<boost/regex/v4/regex_raw_buffer.hpp>
+	<boost/regex/pattern_except.hpp>
+	<boost/regex/v4/char_regex_traits.hpp>
+	<boost/regex/v4/states.hpp>
+	<boost/regex/v4/regbase.hpp>
+	<boost/regex/v4/iterator_traits.hpp>
+	<boost/regex/v4/basic_regex.hpp>
+	<boost/regex/v4/basic_regex_creator.hpp>
+	<boost/regex/v4/basic_regex_parser.hpp>
+	<boost/regex/v4/sub_match.hpp>
+	<boost/regex/v4/regex_format.hpp>
+	<boost/regex/v4/match_results.hpp>
+	<boost/regex/v4/protected_call.hpp>
+	<boost/regex/v4/perl_matcher.hpp>
+	<boost/regex/v4/instances.hpp>
+	<boost/regex/v4/instances.hpp>
+	<boost/regex/v4/instances.hpp>
+	<boost/regex/v4/regex_match.hpp>
+	<boost/regex/v4/regex_search.hpp>
+	<boost/regex/v4/regex_iterator.hpp>
+	<boost/regex/v4/regex_token_iterator.hpp>
+	<boost/regex/v4/regex_grep.hpp>
+	<boost/regex/v4/regex_replace.hpp>
+	<boost/regex/v4/regex_merge.hpp>
+	<boost/regex/v4/regex_split.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_workaround.hpp
+	<new>
+	<cstring>
+	<cstdlib>
+	<cstddef>
+	<cassert>
+	<cstdio>
+	<string>
+	<stdexcept>
+	<iterator>
+	<algorithm>
+	<iosfwd>
+	<vector>
+	<map>
+	<boost/limits.hpp>
+	<boost/assert.hpp>
+	<boost/cstdint.hpp>
+	<boost/throw_exception.hpp>
+	<boost/scoped_ptr.hpp>
+	<boost/scoped_array.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/mpl/bool_fwd.hpp>
+	<locale>
+
+1422066667 c:\dev-cpp\include\boost\limits.hpp
+	<boost/config.hpp>
+	<boost/detail/limits.hpp>
+	<limits>
+
+1422066668 c:\dev-cpp\include\boost\detail\limits.hpp
+	<climits>
+	<cfloat>
+	<boost/config.hpp>
+	<boost/detail/endian.hpp>
+	<cwchar>
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\cfloat
+	<float.h>
+
+1107041724 c:\dev-cpp\include\float.h
+	<_mingw.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\endian.hpp
+	<endian.h>
+
+1422066667 c:\dev-cpp\include\boost\cstdint.hpp
+	<boost/config.hpp>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<boost/limits.hpp>
+
+1107041724 c:\dev-cpp\include\inttypes.h
+	<_mingw.h>
+	<stdint.h>
+	<stddef.h>
+
+1422066667 c:\dev-cpp\include\boost\scoped_ptr.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/detail/workaround.hpp>
+	<memory>
+
+1422066667 c:\dev-cpp\include\boost\checked_delete.hpp
+
+1422066667 c:\dev-cpp\include\boost\scoped_array.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<cstddef>
+
+1422066667 c:\dev-cpp\include\boost\shared_ptr.hpp
+	<boost/config.hpp>
+	<boost/detail/shared_ptr_nmt.hpp>
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/detail/shared_count.hpp>
+	<boost/detail/workaround.hpp>
+	<memory>
+	<algorithm>
+	<functional>
+	<typeinfo>
+	<iosfwd>
+
+1422066668 c:\dev-cpp\include\boost\detail\shared_ptr_nmt.hpp
+	<boost/assert.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/detail/atomic_count.hpp>
+	<memory>
+	<algorithm>
+	<functional>
+	<new>
+
+1422066668 c:\dev-cpp\include\boost\detail\atomic_count.hpp
+	<boost/config.hpp>
+	<boost/detail/atomic_count_pthreads.hpp>
+	<boost/detail/atomic_count_win32.hpp>
+	<boost/detail/atomic_count_gcc.hpp>
+	<boost/detail/atomic_count_pthreads.hpp>
+
+1422066668 c:\dev-cpp\include\boost\detail\atomic_count_pthreads.hpp
+	<pthread.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\atomic_count_win32.hpp
+	<boost/detail/interlocked.hpp>
+
+1422066668 c:\dev-cpp\include\boost\detail\interlocked.hpp
+	<boost/config.hpp>
+	<windows.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\atomic_count_gcc.hpp
+	<bits/atomicity.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\shared_count.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/throw_exception.hpp>
+	<boost/detail/bad_weak_ptr.hpp>
+	<boost/detail/sp_counted_base.hpp>
+	<boost/detail/sp_counted_impl.hpp>
+	<memory>
+	<functional>
+	<new>
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\bad_weak_ptr.hpp
+	<exception>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base.hpp
+	<boost/config.hpp>
+	<boost/detail/sp_counted_base_nt.hpp>
+	<boost/detail/sp_counted_base_pt.hpp>
+	<boost/detail/sp_counted_base_gcc_x86.hpp>
+	<boost/detail/sp_counted_base_gcc_ia64.hpp>
+	<boost/detail/sp_counted_base_cw_ppc.hpp>
+	<boost/detail/sp_counted_base_gcc_ppc.hpp>
+	<boost/detail/sp_counted_base_w32.hpp>
+	<boost/detail/sp_counted_base_nt.hpp>
+	<boost/detail/sp_counted_base_pt.hpp>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_nt.hpp
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_pt.hpp
+	<typeinfo>
+	<pthread.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_gcc_x86.hpp
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_gcc_ia64.hpp
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_cw_ppc.hpp
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_gcc_ppc.hpp
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_base_w32.hpp
+	<boost/detail/interlocked.hpp>
+	<typeinfo>
+
+1422066668 c:\dev-cpp\include\boost\detail\sp_counted_impl.hpp
+	<boost/config.hpp>
+	<boost/checked_delete.hpp>
+	<boost/detail/sp_counted_base.hpp>
+	<boost/detail/quick_allocator.hpp>
+	<memory>
+	<typeinfo>
+	<cstddef>
+
+1422066668 c:\dev-cpp\include\boost\detail\quick_allocator.hpp
+	<boost/config.hpp>
+	<boost/detail/lightweight_mutex.hpp>
+	<boost/type_traits/type_with_alignment.hpp>
+	<boost/type_traits/alignment_of.hpp>
+	<new>
+	<cstddef>
+
+1422066668 c:\dev-cpp\include\boost\detail\lightweight_mutex.hpp
+	<boost/config.hpp>
+	<boost/detail/lwm_nop.hpp>
+	<boost/detail/lwm_win32_cs.hpp>
+	<boost/detail/lwm_pthreads.hpp>
+
+1422066668 c:\dev-cpp\include\boost\detail\lwm_nop.hpp
+
+1422066668 c:\dev-cpp\include\boost\detail\lwm_win32_cs.hpp
+	<windows.h>
+
+1422066668 c:\dev-cpp\include\boost\detail\lwm_pthreads.hpp
+	<pthread.h>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\type_with_alignment.hpp
+	"boost/mpl/if.hpp"
+	"boost/preprocessor/list/for_each_i.hpp"
+	"boost/preprocessor/tuple/to_list.hpp"
+	"boost/preprocessor/cat.hpp"
+	"boost/preprocessor/list/transform.hpp"
+	"boost/preprocessor/list/append.hpp"
+	"boost/type_traits/alignment_of.hpp"
+	"boost/type_traits/is_pod.hpp"
+	"boost/static_assert.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	<cstddef>
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066667 c:\dev-cpp\include\boost\mpl\if.hpp
+	<boost/mpl/aux_/value_wknd.hpp>
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/config/integral.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\value_wknd.hpp
+	<boost/mpl/aux_/static_cast.hpp>
+	<boost/mpl/aux_/config/integral.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/int.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\integral.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\eti.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\na_spec.hpp
+	<boost/mpl/lambda_fwd.hpp>
+	<boost/mpl/int.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/arity.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/def_params_tail.hpp>
+	<boost/mpl/aux_/lambda_arity_param.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/overload_resolution.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\lambda_fwd.hpp
+	<boost/mpl/void_fwd.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/int.hpp>
+	<boost/mpl/aux_/lambda_arity_param.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/bool.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\void_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\na.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na_fwd.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\lambda_arity_param.hpp
+	<boost/mpl/aux_/config/ttp.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\arity.hpp
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\dtp.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\def_params_tail.hpp
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/logical/and.hpp>
+	<boost/preprocessor/identity.hpp>
+	<boost/preprocessor/empty.hpp>
+	<boost/mpl/aux_/preprocessor/filter_params.hpp>
+	<boost/mpl/aux_/preprocessor/sub.hpp>
+	<boost/preprocessor/arithmetic/add.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\limits\arity.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\logical\and.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/logical/bitand.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\logical\bitand.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\identity.hpp
+	<boost/preprocessor/facilities/identity.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\facilities\identity.hpp
+	<boost/preprocessor/facilities/empty.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\empty.hpp
+	<boost/preprocessor/facilities/empty.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\filter_params.hpp
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\sub.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/mpl/aux_/preprocessor/tuple.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\tuple.hpp
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\arithmetic\sub.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\while.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/fold_left.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+	<boost/preprocessor/logical/bitand.hpp>
+	<boost/preprocessor/control/detail/edg/while.hpp>
+	<boost/preprocessor/control/detail/msvc/while.hpp>
+	<boost/preprocessor/control/detail/dmc/while.hpp>
+	<boost/preprocessor/control/detail/while.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\fold_left.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/detail/edg/fold_left.hpp>
+	<boost/preprocessor/list/detail/dmc/fold_left.hpp>
+	<boost/preprocessor/list/detail/fold_left.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\detail\edg\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\detail\dmc\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\detail\fold_left.hpp
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\fold_right.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/list/detail/edg/fold_right.hpp>
+	<boost/preprocessor/list/detail/fold_right.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\detail\edg\fold_right.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/list/adt.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\detail\fold_right.hpp
+	<boost/preprocessor/list/fold_left.hpp>
+	<boost/preprocessor/list/reverse.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\reverse.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_left.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\detail\edg\while.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\detail\msvc\while.hpp
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\detail\dmc\while.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\detail\while.hpp
+	<boost/preprocessor/control/iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\arithmetic\add.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\transform.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\list\append.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/list/fold_right.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\alignment_of.hpp
+	"boost/config.hpp"
+	<cstddef>
+	"boost/type_traits/detail/size_t_trait_def.hpp"
+	"boost/type_traits/detail/size_t_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\size_t_trait_def.hpp
+	<boost/type_traits/detail/template_arity_spec.hpp>
+	<boost/type_traits/integral_constant.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/size_t.hpp>
+	<cstddef>
+
+1422066667 c:\dev-cpp\include\boost\mpl\size_t.hpp
+	<boost/mpl/size_t_fwd.hpp>
+	<boost/mpl/aux_/integral_wrapper.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\size_t_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/config.hpp>
+	<cstddef>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\detail\size_t_trait_undef.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex_fwd.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex_fwd.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_fwd.hpp
+	<boost/regex/config.hpp>
+	<boost/regex.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\regex_traits.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex_traits.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_traits.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex_workaround.hpp>
+	<boost/regex/v4/syntax_type.hpp>
+	<boost/regex/v4/error_type.hpp>
+	<boost/regex/v4/regex_traits_defaults.hpp>
+	<boost/regex/v4/cpp_regex_traits.hpp>
+	<boost/regex/v4/c_regex_traits.hpp>
+	<boost/regex/v4/w32_regex_traits.hpp>
+	<boost/regex_fwd.hpp>
+	"boost/mpl/has_xxx.hpp"
+	<boost/static_assert.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\syntax_type.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\error_type.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_traits_defaults.hpp
+	<boost/regex/v4/syntax_type.hpp>
+	<boost/regex/v4/error_type.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\cpp_regex_traits.hpp
+	<boost/config.hpp>
+	<boost/regex/pattern_except.hpp>
+	<boost/regex/v4/regex_traits_defaults.hpp>
+	<boost/regex/pending/static_mutex.hpp>
+	<boost/regex/v4/primary_transform.hpp>
+	<boost/regex/pending/object_cache.hpp>
+	<istream>
+	<ios>
+
+1422066667 c:\dev-cpp\include\boost\regex\pattern_except.hpp
+	<boost/regex/config.hpp>
+	<stdexcept>
+	<cstddef>
+	<boost/regex/v4/error_type.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\pending\static_mutex.hpp
+	<boost/config.hpp>
+	<boost/regex/config.hpp>
+	<pthread.h>
+	<boost/cstdint.hpp>
+	<boost/thread/once.hpp>
+	<boost/thread/recursive_mutex.hpp>
+
+1422066668 c:\dev-cpp\include\boost\thread\once.hpp
+	<boost/thread/detail/config.hpp>
+	<pthread.h>
+
+1422066668 c:\dev-cpp\include\boost\thread\detail\config.hpp
+	<boost/config.hpp>
+	<boost/config/requires_threads.hpp>
+	<boost/config/auto_link.hpp>
+
+1422066668 c:\dev-cpp\include\boost\config\requires_threads.hpp
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\thread\recursive_mutex.hpp
+	<boost/thread/detail/config.hpp>
+	<boost/utility.hpp>
+	<boost/thread/detail/lock.hpp>
+	<pthread.h>
+	"scoped_critical_region.hpp"
+
+1422066667 c:\dev-cpp\include\boost\utility.hpp
+	<boost/utility/addressof.hpp>
+	<boost/utility/base_from_member.hpp>
+	<boost/utility/enable_if.hpp>
+	<boost/checked_delete.hpp>
+	<boost/next_prior.hpp>
+	<boost/noncopyable.hpp>
+
+1422066667 c:\dev-cpp\include\boost\utility\base_from_member.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/repetition/enum_binary_params.hpp>
+	<boost/preprocessor/repetition/enum_params.hpp>
+	<boost/preprocessor/repetition/repeat_from_to.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\enum_binary_params.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/punctuation/comma_if.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\repeat_from_to.hpp
+	<boost/preprocessor/arithmetic/add.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/while.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/tuple/rem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\next_prior.hpp
+	<iterator>
+
+1422066667 c:\dev-cpp\include\boost\noncopyable.hpp
+
+1422066668 c:\dev-cpp\include\boost\thread\detail\lock.hpp
+	<boost/thread/detail/config.hpp>
+	<boost/utility.hpp>
+	<boost/thread/exceptions.hpp>
+
+1422066668 c:\dev-cpp\include\boost\thread\exceptions.hpp
+	<boost/thread/detail/config.hpp>
+	<string>
+	<stdexcept>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\primary_transform.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\pending\object_cache.hpp
+	<map>
+	<list>
+	<stdexcept>
+	<string>
+	<boost/config.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/regex/pending/static_mutex.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\c_regex_traits.hpp
+	<boost/regex/config.hpp>
+	<boost/regex/v4/regex_workaround.hpp>
+	<cctype>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\w32_regex_traits.hpp
+	<boost/regex/pattern_except.hpp>
+	<boost/regex/v4/regex_traits_defaults.hpp>
+	<boost/regex/pending/static_mutex.hpp>
+	<boost/regex/v4/primary_transform.hpp>
+	<boost/regex/pending/object_cache.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\has_xxx.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/config/has_xxx.hpp>
+	<boost/mpl/aux_/config/msvc_typename.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/bool.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\type_wrapper.hpp
+	<boost/mpl/aux_/config/ctps.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\has_xxx.hpp
+	<boost/mpl/aux_/config/overload_resolution.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\msvc_typename.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\match_flags.hpp
+	<boost/cstdint.hpp>
+	<boost/detail/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_raw_buffer.hpp
+	<boost/regex/config.hpp>
+	<algorithm>
+	<cstddef>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\char_regex_traits.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\states.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regbase.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\iterator_traits.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\basic_regex.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\basic_regex_creator.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\basic_regex_parser.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\sub_match.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_format.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\match_results.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\protected_call.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\perl_matcher.hpp
+	<boost/regex/v4/iterator_category.hpp>
+	<boost/regex/v4/perl_matcher_recursive.hpp>
+	<boost/regex/v4/perl_matcher_non_recursive.hpp>
+	<boost/regex/v4/perl_matcher_common.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\iterator_category.hpp
+	<iterator>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/is_pointer.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\perl_matcher_recursive.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\perl_matcher_non_recursive.hpp
+	<new>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\perl_matcher_common.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\instances.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_match.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_search.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_iterator.hpp
+	<boost/shared_ptr.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_token_iterator.hpp
+	<boost/shared_ptr.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/static_assert.hpp>
+	<boost/type_traits/is_array.hpp>
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_grep.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_replace.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_merge.hpp
+
+1422066667 c:\dev-cpp\include\boost\regex\v4\regex_split.hpp
+
+1145197525 source:c:\users\hanshenrik\documents\github\yurots\ots\source\account.cpp
+	<algorithm>
+	<functional>
+	<iostream>
+	"definitions.h"
+	"account.h"
+
+1143383521 source:c:\users\hanshenrik\documents\github\yurots\ots\source\actions.cpp
+	"definitions.h"
+	"const76.h"
+	"player.h"
+	"monster.h"
+	"npc.h"
+	"game.h"
+	"item.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"actions.h"
+
+1145121378 c:\users\hanshenrik\documents\github\yurots\ots\source\monster.h
+	"creature.h"
+	"game.h"
+	"tile.h"
+	"templates.h"
+	"monsters.h"
+
+1135906780 c:\users\hanshenrik\documents\github\yurots\ots\source\game.h
+	<queue>
+	<vector>
+	<set>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"spawn.h"
+	"position.h"
+	"item.h"
+	"container.h"
+	"magic.h"
+	"map.h"
+	"templates.h"
+	"loginqueue.h"
+
+1134405328 c:\users\hanshenrik\documents\github\yurots\ots\source\spawn.h
+	"tile.h"
+	"position.h"
+	"monster.h"
+	"templates.h"
+	<vector>
+	<map>
+
+1126987290 c:\users\hanshenrik\documents\github\yurots\ots\source\loginqueue.h
+	<time.h>
+	<list>
+	<iterator>
+	<string>
+
+1135805890 c:\users\hanshenrik\documents\github\yurots\ots\source\monsters.h
+	<string>
+	"creature.h"
+
+1135710202 c:\users\hanshenrik\documents\github\yurots\ots\source\npc.h
+	"creature.h"
+	"game.h"
+	"luascript.h"
+	"templates.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+
+1135792300 c:\users\hanshenrik\documents\github\yurots\ots\source\actions.h
+	"position.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<map>
+	"luascript.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+
+1124746084 source:c:\users\hanshenrik\documents\github\yurots\ots\source\allocator.cpp
+	"otsystem.h"
+	"allocator.h"
+
+1124392222 c:\users\hanshenrik\documents\github\yurots\ots\source\allocator.h
+	<memory>
+	<limits>
+	<cstdlib>
+	<map>
+	<fstream>
+	<ctime>
+	<boost/pool/pool.hpp>
+
+1422066668 c:\dev-cpp\include\boost\pool\pool.hpp
+	<boost/config.hpp>
+	<functional>
+	<new>
+	<cstddef>
+	<cstdlib>
+	<exception>
+	<algorithm>
+	<boost/pool/poolfwd.hpp>
+	<boost/pool/detail/ct_gcd_lcm.hpp>
+	<boost/pool/detail/gcd_lcm.hpp>
+	<boost/pool/simple_segregated_storage.hpp>
+
+1422066668 c:\dev-cpp\include\boost\pool\poolfwd.hpp
+	<boost/config.hpp>
+	<cstddef>
+	<boost/pool/detail/mutex.hpp>
+
+1422066668 c:\dev-cpp\include\boost\pool\detail\mutex.hpp
+	<boost/config.hpp>
+	<unistd.h>
+	<windows.h>
+	<pthread.h>
+
+1422066668 c:\dev-cpp\include\boost\pool\detail\ct_gcd_lcm.hpp
+	<boost/static_assert.hpp>
+	<boost/type_traits/ice.hpp>
+
+1422066668 c:\dev-cpp\include\boost\pool\detail\gcd_lcm.hpp
+
+1422066668 c:\dev-cpp\include\boost\pool\simple_segregated_storage.hpp
+	<functional>
+	<boost/pool/poolfwd.hpp>
+
+1132505286 source:c:\users\hanshenrik\documents\github\yurots\ots\source\chat.cpp
+	"chat.h"
+	"player.h"
+
+1134766696 c:\users\hanshenrik\documents\github\yurots\ots\source\chat.h
+	<map>
+	<list>
+	<string>
+	"const76.h"
+
+1145224944 source:c:\users\hanshenrik\documents\github\yurots\ots\source\commands.cpp
+	<string>
+	<sstream>
+	<fstream>
+	<utility>
+	"commands.h"
+	"player.h"
+	"npc.h"
+	"game.h"
+	"actions.h"
+	"map.h"
+	"status.h"
+	"monsters.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1135957552 c:\users\hanshenrik\documents\github\yurots\ots\source\commands.h
+	<string>
+	<map>
+	"creature.h"
+
+1125653180 c:\users\hanshenrik\documents\github\yurots\ots\source\status.h
+	<string>
+	"otsystem.h"
+	"definitions.h"
+	"networkmessage.h"
+
+1135813652 c:\users\hanshenrik\documents\github\yurots\ots\source\networkmessage.h
+	"definitions.h"
+	"otsystem.h"
+	"const76.h"
+
+1125168284 source:c:\users\hanshenrik\documents\github\yurots\ots\source\container.cpp
+	"container.h"
+
+1135805460 source:c:\users\hanshenrik\documents\github\yurots\ots\source\creature.cpp
+	"definitions.h"
+	<string>
+	<sstream>
+	<algorithm>
+	"game.h"
+	"creature.h"
+	"tile.h"
+	"otsystem.h"
+	"player.h"
+	"luascript.h"
+
+1123239214 source:c:\users\hanshenrik\documents\github\yurots\ots\source\exception.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<ctime>
+	<stdlib.h>
+	<map>
+	"otsystem.h"
+	"exception.h"
+	"excpt.h"
+	"tlhelp32.h"
+
+1107041702 c:\dev-cpp\include\c++\3.4.2\iomanip
+	<bits/c++config.h>
+	<istream>
+	<functional>
+
+1116882042 c:\users\hanshenrik\documents\github\yurots\ots\source\exception.h
+	<map>
+	<string>
+
+1107041720 c:\dev-cpp\include\tlhelp32.h
+
+1143383374 source:c:\users\hanshenrik\documents\github\yurots\ots\source\fileloader.cpp
+	"fileloader.h"
+
+1145121377 source:c:\users\hanshenrik\documents\github\yurots\ots\source\game.cpp
+	"definitions.h"
+	<string>
+	<sstream>
+	<map>
+	<iostream>
+	<fstream>
+	<boost/config.hpp>
+	<boost/bind.hpp>
+	<stdio.h>
+	"otsystem.h"
+	"items.h"
+	"commands.h"
+	"creature.h"
+	"player.h"
+	"monster.h"
+	"npc.h"
+	"game.h"
+	"tile.h"
+	"spells.h"
+	"actions.h"
+	"ioplayer.h"
+	"chat.h"
+	"status.h"
+	"luascript.h"
+	"templates.h"
+	"houses.h"
+	"summons.h"
+	"pvparena.h"
+	<ctype.h>
+	"exception.h"
+
+1134758806 c:\users\hanshenrik\documents\github\yurots\ots\source\spells.h
+	"game.h"
+	"luascript.h"
+	"player.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+
+1127585700 c:\users\hanshenrik\documents\github\yurots\ots\source\summons.h
+	<string>
+	<map>
+
+1135798084 c:\users\hanshenrik\documents\github\yurots\ots\source\pvparena.h
+	"position.h"
+
+1143382903 source:c:\users\hanshenrik\documents\github\yurots\ots\source\guilds.cpp
+	"guilds.h"
+	"player.h"
+	"luascript.h"
+	<algorithm>
+	<locale>
+
+1137199810 source:c:\users\hanshenrik\documents\github\yurots\ots\source\houses.cpp
+	"houses.h"
+	"luascript.h"
+	"game.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<sstream>
+	<algorithm>
+	<boost/tokenizer.hpp>
+
+1422066667 c:\dev-cpp\include\boost\tokenizer.hpp
+	<boost/token_iterator.hpp>
+	<cassert>
+
+1422066667 c:\dev-cpp\include\boost\token_iterator.hpp
+	<boost/iterator/iterator_adaptor.hpp>
+	<boost/iterator/detail/minimum_category.hpp>
+	<boost/token_functions.hpp>
+	<utility>
+	<cassert>
+
+1422066668 c:\dev-cpp\include\boost\iterator\iterator_adaptor.hpp
+	<boost/static_assert.hpp>
+	<boost/iterator.hpp>
+	<boost/detail/iterator.hpp>
+	<boost/iterator/iterator_categories.hpp>
+	<boost/iterator/iterator_facade.hpp>
+	<boost/iterator/detail/enable_if.hpp>
+	<boost/mpl/and.hpp>
+	<boost/mpl/not.hpp>
+	<boost/mpl/or.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/remove_reference.hpp>
+	<boost/type_traits/add_reference.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/iterator/iterator_traits.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066667 c:\dev-cpp\include\boost\iterator.hpp
+	<iterator>
+	<cstddef>
+	<boost/config.hpp>
+
+1422066668 c:\dev-cpp\include\boost\detail\iterator.hpp
+	<boost/config.hpp>
+	<iterator>
+	<boost/type_traits/remove_const.hpp>
+	<boost/type_traits/detail/yes_no_type.hpp>
+	<boost/type_traits/is_pointer.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/remove_pointer.hpp>
+	<boost/type_traits/is_base_and_derived.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/has_xxx.hpp>
+	<cstddef>
+	"boost/type_traits/detail/bool_trait_def.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\remove_const.hpp
+	"boost/type_traits/is_volatile.hpp"
+	"boost/type_traits/broken_compiler_spec.hpp"
+	"boost/type_traits/detail/cv_traits_impl.hpp"
+	"boost/config.hpp"
+	<cstddef>
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\remove_pointer.hpp
+	"boost/type_traits/broken_compiler_spec.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_base_and_derived.hpp
+	"boost/type_traits/is_class.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_convertible.hpp"
+	"boost/type_traits/detail/ice_and.hpp"
+	"boost/type_traits/remove_cv.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\iterator\iterator_categories.hpp
+	<boost/config.hpp>
+	<boost/detail/iterator.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/mpl/eval_if.hpp>
+	<boost/mpl/identity.hpp>
+	<boost/mpl/placeholders.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/static_assert.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\detail\config_def.hpp
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/type_traits/is_convertible.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\eval_if.hpp
+	<boost/mpl/if.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\identity.hpp
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\placeholders.hpp
+	<boost/mpl/arg.hpp>
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\arg.hpp
+	<boost/mpl/arg_fwd.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/na_assert.hpp>
+	<boost/mpl/aux_/arity_spec.hpp>
+	<boost/mpl/aux_/arg_typedef.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\arg_fwd.hpp
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\na_assert.hpp
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/assert.hpp>
+	<boost/static_assert.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\assert.hpp
+	<boost/mpl/not.hpp>
+	<boost/mpl/aux_/value_wknd.hpp>
+	<boost/mpl/aux_/nested_type_wknd.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/adl_barrier.hpp>
+	<boost/mpl/aux_/config/nttp.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\not.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/nested_type_wknd.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\nested_type_wknd.hpp
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\arity_spec.hpp
+	<boost/mpl/int.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/arity.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\arg_typedef.hpp
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\use_preprocessed.hpp
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\include_preprocessed.hpp
+	<boost/mpl/aux_/config/compiler.hpp>
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/stringize.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\compiler.hpp
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/gcc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\stringize.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\default_params.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\detail\config_undef.hpp
+
+1422066668 c:\dev-cpp\include\boost\iterator\iterator_facade.hpp
+	<boost/iterator.hpp>
+	<boost/iterator/interoperable.hpp>
+	<boost/iterator/iterator_traits.hpp>
+	<boost/iterator/detail/facade_iterator_category.hpp>
+	<boost/iterator/detail/enable_if.hpp>
+	<boost/implicit_cast.hpp>
+	<boost/static_assert.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/add_const.hpp>
+	<boost/type_traits/add_pointer.hpp>
+	<boost/type_traits/remove_const.hpp>
+	<boost/type_traits/remove_reference.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/is_pod.hpp>
+	<boost/mpl/eval_if.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/or.hpp>
+	<boost/mpl/and.hpp>
+	<boost/mpl/not.hpp>
+	<boost/mpl/always.hpp>
+	<boost/mpl/apply.hpp>
+	<boost/mpl/identity.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\interoperable.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/or.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\or.hpp
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/nested_type_wknd.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/aux_/logical_op.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\logical_op.hpp
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/nested_type_wknd.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/ext_params.hpp>
+	<boost/mpl/aux_/preprocessor/def_params_tail.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/sub.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/dec.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\ext_params.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/mpl/aux_/preprocessor/filter_params.hpp>
+	<boost/mpl/aux_/preprocessor/sub.hpp>
+	<boost/preprocessor/arithmetic/add.hpp>
+	<boost/preprocessor/arithmetic/sub.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\dec.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\iterator_traits.hpp
+	<boost/detail/iterator.hpp>
+	<boost/detail/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\detail\facade_iterator_category.hpp
+	<boost/iterator/iterator_categories.hpp>
+	<boost/static_assert.hpp>
+	<boost/mpl/or.hpp>
+	<boost/mpl/and.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/eval_if.hpp>
+	<boost/mpl/identity.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/type_traits/is_const.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/detail/indirect_traits.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\and.hpp
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/nested_type_wknd.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/aux_/logical_op.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\is_const.hpp
+	"boost/config.hpp"
+	"boost/type_traits/detail/cv_traits_impl.hpp"
+	<boost/type_traits/is_reference.hpp>
+	"boost/type_traits/is_reference.hpp"
+	"boost/type_traits/is_array.hpp"
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/detail/false_result.hpp"
+	"boost/type_traits/detail/bool_trait_def.hpp"
+	"boost/type_traits/detail/bool_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\detail\indirect_traits.hpp
+	<boost/type_traits/is_function.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/type_traits/is_pointer.hpp>
+	<boost/type_traits/is_class.hpp>
+	<boost/type_traits/is_const.hpp>
+	<boost/type_traits/is_volatile.hpp>
+	<boost/type_traits/is_member_function_pointer.hpp>
+	<boost/type_traits/is_member_pointer.hpp>
+	<boost/type_traits/remove_cv.hpp>
+	<boost/type_traits/remove_reference.hpp>
+	<boost/type_traits/remove_pointer.hpp>
+	<boost/type_traits/detail/ice_and.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/mpl/eval_if.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/and.hpp>
+	<boost/mpl/not.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/detail/is_function_ref_tester.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\remove_reference.hpp
+	"boost/type_traits/broken_compiler_spec.hpp"
+	"boost/config.hpp"
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\detail\is_function_ref_tester.hpp
+	"boost/type_traits/detail/yes_no_type.hpp"
+	"boost/type_traits/config.hpp"
+	"boost/preprocessor/iterate.hpp"
+	"boost/preprocessor/enum_params.hpp"
+	"boost/preprocessor/comma_if.hpp"
+
+1422066668 c:\dev-cpp\include\boost\iterator\detail\enable_if.hpp
+	<boost/detail/workaround.hpp>
+	<boost/mpl/identity.hpp>
+	<boost/iterator/detail/config_def.hpp>
+	<boost/iterator/detail/config_undef.hpp>
+
+1422066667 c:\dev-cpp\include\boost\implicit_cast.hpp
+	<boost/mpl/identity.hpp>
+
+1422066668 c:\dev-cpp\include\boost\type_traits\add_const.hpp
+	"boost/config.hpp"
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066668 c:\dev-cpp\include\boost\type_traits\add_pointer.hpp
+	"boost/type_traits/remove_reference.hpp"
+	"boost/type_traits/detail/type_trait_def.hpp"
+	"boost/type_traits/detail/type_trait_undef.hpp"
+
+1422066667 c:\dev-cpp\include\boost\mpl\always.hpp
+	<boost/mpl/aux_/preprocessor/def_params_tail.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/arity_spec.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\apply.hpp
+	<boost/mpl/apply_fwd.hpp>
+	<boost/mpl/apply_wrap.hpp>
+	<boost/mpl/placeholders.hpp>
+	<boost/mpl/lambda.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/preprocessor/partial_spec_params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/mpl/aux_/count_args.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\apply_fwd.hpp
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\apply_wrap.hpp
+	<boost/mpl/aux_/arity.hpp>
+	<boost/mpl/aux_/has_apply.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/msvc_never_true.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/add.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/logical/and.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/mpl/aux_/msvc_dtw.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\has_apply.hpp
+	<boost/mpl/has_xxx.hpp>
+	<boost/mpl/aux_/config/has_apply.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\has_apply.hpp
+	<boost/mpl/aux_/config/has_xxx.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\msvc_never_true.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\add.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/mpl/aux_/preprocessor/tuple.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/arithmetic/add.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\msvc_dtw.hpp
+	<boost/mpl/aux_/preprocessor/params.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\lambda.hpp
+	<boost/mpl/lambda_fwd.hpp>
+	<boost/mpl/bind.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/full_lambda.hpp>
+	<boost/mpl/aux_/lambda_no_ctps.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\bind.hpp
+	<boost/mpl/bind_fwd.hpp>
+	<boost/mpl/placeholders.hpp>
+	<boost/mpl/next.hpp>
+	<boost/mpl/protect.hpp>
+	<boost/mpl/apply_wrap.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/arity_spec.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/type_traits/is_reference.hpp>
+	<boost/mpl/aux_/config/bind.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/preprocessor/def_params_tail.hpp>
+	<boost/mpl/aux_/preprocessor/partial_spec_params.hpp>
+	<boost/mpl/aux_/preprocessor/ext_params.hpp>
+	<boost/mpl/aux_/preprocessor/repeat.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/add.hpp>
+	<boost/mpl/aux_/config/dmc_ambiguous_ctps.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/mpl/aux_/count_args.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\bind_fwd.hpp
+	<boost/mpl/aux_/na.hpp>
+	<boost/mpl/aux_/config/bind.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/config/dmc_ambiguous_ctps.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\bind.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066668 c:\dev-cpp\include\boost\mpl\aux_\config\dmc_ambiguous_ctps.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\next.hpp
+	<boost/mpl/next_prior.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\next_prior.hpp
+	<boost/mpl/aux_/common_name_wknd.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\common_name_wknd.hpp
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\protect.hpp
+	<boost/mpl/aux_/arity.hpp>
+	<boost/mpl/aux_/config/dtp.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\partial_spec_params.hpp
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/sub.hpp>
+	<boost/preprocessor/comma_if.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\repeat.hpp
+	<boost/mpl/aux_/config/preprocessor.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/repeat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\count_args.hpp
+	<boost/preprocessor/expr_if.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/mpl/aux_/preprocessor/repeat.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/preprocessor/enum_shifted_params.hpp>
+	<boost/preprocessor/repeat.hpp>
+	<boost/preprocessor/inc.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\expr_if.hpp
+	<boost/preprocessor/control/expr_if.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\control\expr_if.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/expr_iif.hpp>
+	<boost/preprocessor/logical/bool.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\enum_shifted_params.hpp
+	<boost/preprocessor/repetition/enum_shifted_params.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\repetition\enum_shifted_params.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/punctuation/comma_if.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\full_lambda.hpp
+	<boost/mpl/lambda_fwd.hpp>
+	<boost/mpl/bind_fwd.hpp>
+	<boost/mpl/protect.hpp>
+	<boost/mpl/quote.hpp>
+	<boost/mpl/arg.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/int_fwd.hpp>
+	<boost/mpl/aux_/template_arity.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/aux_/lambda_arity_param.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/preprocessor/repeat.hpp>
+	<boost/mpl/aux_/config/dmc_ambiguous_ctps.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\quote.hpp
+	<boost/mpl/void.hpp>
+	<boost/mpl/aux_/has_type.hpp>
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\void.hpp
+	<boost/mpl/void_fwd.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\has_type.hpp
+	<boost/mpl/has_xxx.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\template_arity.hpp
+	<boost/mpl/aux_/config/ttp.hpp>
+	<boost/mpl/aux_/config/lambda.hpp>
+	<boost/mpl/aux_/template_arity_fwd.hpp>
+	<boost/mpl/int.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/has_rebind.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/range.hpp>
+	<boost/mpl/aux_/preprocessor/repeat.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/preprocessor/seq/fold_left.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/mpl/aux_/config/eti.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\has_rebind.hpp
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/intel.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/mpl/has_xxx.hpp>
+	<boost/mpl/has_xxx.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/msvc_is_class.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+	<boost/type_traits/is_class.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\msvc_is_class.hpp
+	<boost/mpl/if.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/type_traits/is_reference.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\preprocessor\range.hpp
+	<boost/preprocessor/seq/subseq.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\subseq.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/seq/first_n.hpp>
+	<boost/preprocessor/seq/rest_n.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\first_n.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/seq/detail/split.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\detail\split.hpp
+	<boost/preprocessor/config/config.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\rest_n.hpp
+	<boost/preprocessor/arithmetic/inc.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/facilities/empty.hpp>
+	<boost/preprocessor/seq/detail/split.hpp>
+	<boost/preprocessor/tuple/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\fold_left.hpp
+	<boost/preprocessor/arithmetic/dec.hpp>
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/control/if.hpp>
+	<boost/preprocessor/debug/error.hpp>
+	<boost/preprocessor/detail/auto_rec.hpp>
+	<boost/preprocessor/seq/seq.hpp>
+	<boost/preprocessor/seq/size.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\seq.hpp
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/seq/elem.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\elem.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/facilities/empty.hpp>
+
+1422066667 c:\dev-cpp\include\boost\preprocessor\seq\size.hpp
+	<boost/preprocessor/cat.hpp>
+	<boost/preprocessor/config/config.hpp>
+	<boost/preprocessor/tuple/eat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\aux_\lambda_no_ctps.hpp
+	<boost/mpl/lambda_fwd.hpp>
+	<boost/mpl/bind_fwd.hpp>
+	<boost/mpl/protect.hpp>
+	<boost/mpl/is_placeholder.hpp>
+	<boost/mpl/if.hpp>
+	<boost/mpl/identity.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/na_spec.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+	<boost/mpl/aux_/template_arity.hpp>
+	<boost/mpl/aux_/value_wknd.hpp>
+	<boost/mpl/aux_/config/use_preprocessed.hpp>
+	<boost/mpl/aux_/include_preprocessed.hpp>
+	<boost/mpl/limits/arity.hpp>
+	<boost/mpl/aux_/preprocessor/params.hpp>
+	<boost/mpl/aux_/preprocessor/default_params.hpp>
+	<boost/mpl/aux_/preprocessor/repeat.hpp>
+	<boost/mpl/aux_/preprocessor/enum.hpp>
+	<boost/mpl/aux_/config/msvc.hpp>
+	<boost/mpl/aux_/config/workaround.hpp>
+	<boost/preprocessor/comma_if.hpp>
+	<boost/preprocessor/iterate.hpp>
+	<boost/preprocessor/inc.hpp>
+	<boost/preprocessor/cat.hpp>
+
+1422066667 c:\dev-cpp\include\boost\mpl\is_placeholder.hpp
+	<boost/mpl/arg_fwd.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/aux_/yes_no.hpp>
+	<boost/mpl/aux_/type_wrapper.hpp>
+	<boost/mpl/aux_/nttp_decl.hpp>
+	<boost/mpl/aux_/config/ctps.hpp>
+	<boost/mpl/aux_/config/static_constant.hpp>
+
+1422066668 c:\dev-cpp\include\boost\iterator\detail\minimum_category.hpp
+	<boost/type_traits/is_convertible.hpp>
+	<boost/type_traits/is_same.hpp>
+	<boost/mpl/aux_/lambda_support.hpp>
+
+1422066667 c:\dev-cpp\include\boost\token_functions.hpp
+	<vector>
+	<stdexcept>
+	<cassert>
+	<string>
+	<cctype>
+	<algorithm>
+	<boost/config.hpp>
+	<boost/detail/workaround.hpp>
+	<boost/mpl/if.hpp>
+
+1145128780 source:c:\users\hanshenrik\documents\github\yurots\ots\source\ioaccount.cpp
+	"ioaccount.h"
+	"ioaccountsql.h"
+	"ioaccountxml.h"
+	"luascript.h"
+
+1145127715 c:\users\hanshenrik\documents\github\yurots\ots\source\ioaccountxml.h
+	<string>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"definitions.h"
+	"ioaccount.h"
+
+1145128720 source:c:\users\hanshenrik\documents\github\yurots\ots\source\ioaccountxml.cpp
+	"ioaccountxml.h"
+	<algorithm>
+	<functional>
+	<iostream>
+	<sstream>
+	<string.h>
+	"luascript.h"
+	"tools.h"
+
+1132505294 source:c:\users\hanshenrik\documents\github\yurots\ots\source\iomapbin.cpp
+	"iomapbin.h"
+	"spawn.h"
+	<iostream>
+	<stdlib.h>
+
+1125399192 c:\users\hanshenrik\documents\github\yurots\ots\source\iomapbin.h
+	<string>
+	"iomap.h"
+
+1135712164 c:\users\hanshenrik\documents\github\yurots\ots\source\iomap.h
+	<string>
+	"tile.h"
+	"item.h"
+	"map.h"
+
+1135795942 source:c:\users\hanshenrik\documents\github\yurots\ots\source\iomapotbm.cpp
+	"iomapotbm.h"
+	"map.h"
+	"tile.h"
+	"item.h"
+	"container.h"
+	"fileloader.h"
+	"game.h"
+
+1135712120 c:\users\hanshenrik\documents\github\yurots\ots\source\iomapotbm.h
+	"iomap.h"
+
+1135813624 source:c:\users\hanshenrik\documents\github\yurots\ots\source\iomapxml.cpp
+	"iomapxml.h"
+	"definitions.h"
+	"game.h"
+	<iostream>
+
+1135712136 c:\users\hanshenrik\documents\github\yurots\ots\source\iomapxml.h
+	<string>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"iomap.h"
+
+1134405246 source:c:\users\hanshenrik\documents\github\yurots\ots\source\ioplayer.cpp
+	"ioplayer.h"
+	"ioplayersql.h"
+	"ioplayerxml.h"
+	"luascript.h"
+
+1123359158 c:\users\hanshenrik\documents\github\yurots\ots\source\ioplayerxml.h
+	<string>
+	"ioplayer.h"
+	"player.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1145195154 source:c:\users\hanshenrik\documents\github\yurots\ots\source\ioplayerxml.cpp
+	<sstream>
+	"ioplayer.h"
+	"ioplayerxml.h"
+	"ioaccount.h"
+	"item.h"
+	"luascript.h"
+
+1135880064 source:c:\users\hanshenrik\documents\github\yurots\ots\source\item.cpp
+	"definitions.h"
+	"container.h"
+	"magic.h"
+	"player.h"
+	"tile.h"
+	"actions.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1129980760 source:c:\users\hanshenrik\documents\github\yurots\ots\source\itemloader.cpp
+	"itemloader.h"
+
+1145198108 source:c:\users\hanshenrik\documents\github\yurots\ots\source\items.cpp
+	"definitions.h"
+	"items.h"
+	"luascript.h"
+	"spells.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<iostream>
+
+1132505296 source:c:\users\hanshenrik\documents\github\yurots\ots\source\logger.cpp
+	"logger.h"
+	<iostream>
+
+1143383746 source:c:\users\hanshenrik\documents\github\yurots\ots\source\loginqueue.cpp
+	"loginqueue.h"
+	"luascript.h"
+	"player.h"
+	<iostream>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1145127926 source:c:\users\hanshenrik\documents\github\yurots\ots\source\luascript.cpp
+	<string>
+	<iostream>
+	"luascript.h"
+	"player.h"
+
+1135806464 source:c:\users\hanshenrik\documents\github\yurots\ots\source\magic.cpp
+	"definitions.h"
+	"creature.h"
+	"monster.h"
+	"player.h"
+	"luascript.h"
+	"magic.h"
+
+1135711802 source:c:\users\hanshenrik\documents\github\yurots\ots\source\map.cpp
+	"definitions.h"
+	<string>
+	<sstream>
+	<map>
+	<algorithm>
+	<boost/config.hpp>
+	<boost/bind.hpp>
+	"iomap.h"
+	"iomapsql.h"
+	"iomapxml.h"
+	"iomapotbm.h"
+	"otsystem.h"
+	<stdio.h>
+	"items.h"
+	"map.h"
+	"tile.h"
+	"player.h"
+	"tools.h"
+	"npc.h"
+	"spells.h"
+	"luascript.h"
+	<ctype.h>
+
+1121813844 source:c:\users\hanshenrik\documents\github\yurots\ots\source\md5.cpp
+	<stdio.h>
+	<stdlib.h>
+	"md5.h"
+
+1121809578 c:\users\hanshenrik\documents\github\yurots\ots\source\md5.h
+
+1135879904 source:c:\users\hanshenrik\documents\github\yurots\ots\source\monster.cpp
+	<vector>
+	<string>
+	<sstream>
+	"monster.h"
+	"monsters.h"
+	"spells.h"
+	"player.h"
+
+1135805890 source:c:\users\hanshenrik\documents\github\yurots\ots\source\monsters.cpp
+	"monsters.h"
+	"spells.h"
+	"luascript.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1145118658 source:c:\users\hanshenrik\documents\github\yurots\ots\source\networkmessage.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"networkmessage.h"
+	"item.h"
+	"container.h"
+	"creature.h"
+	"player.h"
+	"position.h"
+
+1145114988 source:c:\users\hanshenrik\documents\github\yurots\ots\source\npc.cpp
+	"definitions.h"
+	<algorithm>
+	<functional>
+	<string>
+	<sstream>
+	<fstream>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"npc.h"
+	"luascript.h"
+	"player.h"
+
+1148811549 source:c:\users\hanshenrik\documents\github\yurots\ots\source\otserv.cpp
+	"definitions.h"
+	<string>
+	<iostream>
+	<iomanip>
+	<fstream>
+	<sstream>
+	<ctime>
+	"otsystem.h"
+	"networkmessage.h"
+	"protocol76.h"
+	<stdlib.h>
+	<time.h>
+	"game.h"
+	"ioaccount.h"
+	"ioplayer.h"
+	"status.h"
+	"spells.h"
+	"monsters.h"
+	"actions.h"
+	"commands.h"
+	"luascript.h"
+	"account.h"
+	"tools.h"
+	"md5.h"
+	"summons.h"
+	"pvparena.h"
+	"readables.h"
+	"aac.h"
+	"allocator.h"
+	<fcntl.h>
+	<arpa/inet.h>
+	<signal.h>
+	<errno.h>
+	"mdump.h"
+	"exception.h"
+	"networkmessage.h"
+
+1134835694 c:\users\hanshenrik\documents\github\yurots\ots\source\protocol76.h
+	"protocol.h"
+	"creature.h"
+	"item.h"
+	"container.h"
+	<string>
+
+1134835694 c:\users\hanshenrik\documents\github\yurots\ots\source\protocol.h
+	"definitions.h"
+	"game.h"
+	<string>
+	"player.h"
+	"houses.h"
+
+1126990402 c:\users\hanshenrik\documents\github\yurots\ots\source\readables.h
+
+1107041724 c:\dev-cpp\include\fcntl.h
+	<_mingw.h>
+	<io.h>
+
+1107041724 c:\dev-cpp\include\signal.h
+	<_mingw.h>
+
+1137180360 c:\users\hanshenrik\documents\github\yurots\ots\source\mdump.h
+	<windows.h>
+	<dbghelp.h>
+	<string>
+
+1107041720 c:\dev-cpp\include\dbghelp.h
+	<imagehlp.h>
+
+1107041720 c:\dev-cpp\include\imagehlp.h
+
+1145221839 source:c:\users\hanshenrik\documents\github\yurots\ots\source\player.cpp
+	"definitions.h"
+	<string>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<boost/tokenizer.hpp>
+	<stdlib.h>
+	"protocol.h"
+	"player.h"
+	"luascript.h"
+	"const76.h"
+	"chat.h"
+	"networkmessage.h"
+
+1114349514 source:c:\users\hanshenrik\documents\github\yurots\ots\source\position.cpp
+	"position.h"
+	<iomanip>
+
+1125168332 source:c:\users\hanshenrik\documents\github\yurots\ots\source\protocol.cpp
+	"definitions.h"
+	"tile.h"
+	"otsystem.h"
+	<string>
+	"protocol.h"
+
+1148813246 source:c:\users\hanshenrik\documents\github\yurots\ots\source\protocol76.cpp
+	"definitions.h"
+	<string>
+	<iostream>
+	<sstream>
+	<time.h>
+	<list>
+	"networkmessage.h"
+	"protocol76.h"
+	"items.h"
+	"tile.h"
+	"creature.h"
+	"player.h"
+	"status.h"
+	"chat.h"
+	<stdio.h>
+	"luascript.h"
+	"otsystem.h"
+	"actions.h"
+	"game.h"
+	"ioplayer.h"
+
+1135798334 source:c:\users\hanshenrik\documents\github\yurots\ots\source\pvparena.cpp
+	"pvparena.h"
+	"game.h"
+	"luascript.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1129995842 source:c:\users\hanshenrik\documents\github\yurots\ots\source\readables.cpp
+	"readables.h"
+	"game.h"
+	"luascript.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1121280582 source:c:\users\hanshenrik\documents\github\yurots\ots\source\scheduler.cpp
+	"scheduler.h"
+
+1135706360 source:c:\users\hanshenrik\documents\github\yurots\ots\source\spawn.cpp
+	"spawn.h"
+	"game.h"
+	"player.h"
+	"npc.h"
+	<mysql++.h>
+	<boost/tokenizer.hpp>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+
+1143381706 source:c:\users\hanshenrik\documents\github\yurots\ots\source\spells.cpp
+	"definitions.h"
+	<algorithm>
+	<functional>
+	<string>
+	<fstream>
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<boost/config.hpp>
+	<boost/bind.hpp>
+	"spells.h"
+
+1148811571 source:c:\users\hanshenrik\documents\github\yurots\ots\source\status.cpp
+	"status.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	"luascript.h"
+	<sstream>
+	"game.h"
+	"networkmessage.h"
+
+1135798808 source:c:\users\hanshenrik\documents\github\yurots\ots\source\summons.cpp
+	"summons.h"
+	"luascript.h"
+	<libxml/xmlmemory.h>
+	<libxml/parser.h>
+	<algorithm>
+
+1126391734 source:c:\users\hanshenrik\documents\github\yurots\ots\source\thing.cpp
+	"thing.h"
+	"tile.h"
+
+1145220100 source:c:\users\hanshenrik\documents\github\yurots\ots\source\tile.cpp
+	"definitions.h"
+	<string>
+	<iostream>
+	"tile.h"
+	"creature.h"
+	"player.h"
+	"luascript.h"
+
+1145202666 source:c:\users\hanshenrik\documents\github\yurots\ots\source\tools.cpp
+	<stdio.h>
+	<stdlib.h>
+	<sys/timeb.h>
+	<string>
+	<cmath>
+	<sstream>
+
