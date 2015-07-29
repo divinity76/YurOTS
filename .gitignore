@@ -74,3 +74,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 ots/source/devcpp/otserv.map
+ots/source/devcpp/otserv.layout
