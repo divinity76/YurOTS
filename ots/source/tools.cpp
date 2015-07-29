@@ -7,7 +7,7 @@
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -43,16 +43,16 @@ bool fileExists(char* filename)
 
 //////////////////////////////////////////////////
 // get a random value between lowest_number and highest_number
-int random_range(int lowest_number, int highest_number)
+int64_t random_range(int64_t lowest_number, int64_t highest_number)
 {
 	if(lowest_number > highest_number){
-		int nTmp = highest_number;
+		int64_t nTmp = highest_number;
 		highest_number = lowest_number;
 		lowest_number = nTmp;
     }
 
     double range = highest_number - lowest_number + 1;
-    return lowest_number + int(range * rand()/(RAND_MAX + 1.0));
+    return lowest_number + int64_t(range * rand()/(RAND_MAX + 1.0));
 }
 
 //////////////////////////////////////////////////
@@ -238,20 +238,8 @@ std::string tickstr(int ticks)
 	return info.str();
 }
 
-std::string str(int value)
-{
-	char buf[64];
-#ifdef USING_VISUAL_2005
-	if (_itoa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return itoa(value, buf, 10);
-#endif //USING_VISUAL_2005
-}
 
-std::string str(long value)
+std::string str(int32_t value)
 {
 	char buf[64];
 #ifdef USING_VISUAL_2005
@@ -264,7 +252,7 @@ std::string str(long value)
 #endif //USING_VISUAL_2005
 }
 
-std::string str(unsigned long value)
+std::string str(uint32_t value)
 {
 	char buf[64];
 #ifdef USING_VISUAL_2005
@@ -277,7 +265,7 @@ std::string str(unsigned long value)
 #endif //USING_VISUAL_2005
 }
 
-std::string str(__int64 value)
+std::string str(int64_t value)
 {
 	char buf[128];
 #ifdef USING_VISUAL_2005
@@ -287,5 +275,17 @@ std::string str(__int64 value)
 		return "";
 #else
 	return _i64toa(value, buf, 10);
+#endif //USING_VISUAL_2005
+}
+std::string str(uint64_t value)
+{
+	char buf[128];
+#ifdef USING_VISUAL_2005
+	if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
+		return buf;
+	else
+		return "";
+#else
+	return _ui64toa(value, buf, 10);
 #endif //USING_VISUAL_2005
 }

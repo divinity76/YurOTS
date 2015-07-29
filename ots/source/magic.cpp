@@ -1,13 +1,13 @@
 //////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
 //////////////////////////////////////////////////////////////////////
-// 
+//
 //////////////////////////////////////////////////////////////////////
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -41,7 +41,7 @@ MagicEffectClass::MagicEffectClass()
 	manaCost = 0;
 	attackType = ATTACK_NONE;
 }
- 
+
 bool MagicEffectClass::isIndirect() const
 {
 	return false;
@@ -52,13 +52,13 @@ bool MagicEffectClass::causeExhaustion(bool hasTarget) const
 	return hasTarget;
 }
 
-int MagicEffectClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 	if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
 		return 0;
 
 	if((!offensive || (target != attacker)) && target->access < g_config.ACCESS_PROTECT) {
-		int damage = (int)random_range(minDamage, maxDamage);
+		int64_t damage = (int64_t)random_range(minDamage, maxDamage);
 
 		if(!offensive)
 #ifdef YUR_NO_MONSTER_HEAL
@@ -66,13 +66,13 @@ int MagicEffectClass::getDamage(Creature *target, const Creature *attacker /*= N
 			const Monster* targetMonster = dynamic_cast<const Monster*>(target);
 
 			if (target != attacker && targetMonster
-	#ifdef TR_SUMMONS 
+	#ifdef TR_SUMMONS
 				&& !targetMonster->isPlayersSummon()
 	#endif //TR_SUMMONS
 				)
 				damage = 0;
 			else
-				damage = -damage;		
+				damage = -damage;
 		}
 #else
 			damage = -damage;
@@ -110,7 +110,7 @@ void MagicEffectClass::getMagicEffect(Player* spectator, const Creature* attacke
 					dynamic_cast<const Player*>(target) && target->access < g_config.ACCESS_PROTECT && attacker->access < g_config.ACCESS_PROTECT) || target->access != 0) {
 						if(offensive && (target->getImmunities() & attackType) == attackType) {
 #ifdef TJ_MONSTER_BLOOD
-							spectator->sendMagicEffect(pos, target->bloodeffect); 
+							spectator->sendMagicEffect(pos, target->bloodeffect);
 #else
 							spectator->sendMagicEffect(pos, NM_ME_BLOCKHIT);
 #endif //TJ_MONSTER_BLOOD
@@ -200,20 +200,20 @@ condition(dmglist)
 
 }
 
-int MagicEffectTargetExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectTargetExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 	if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
 		return 0;
 
 	if((!offensive || (target != attacker)) && target->access < g_config.ACCESS_PROTECT) {
-		
+
 		//target->addMagicDamage(dmgContainer, true);
 
 		bool refresh = true;
 		for(ConditionVec::const_iterator condIt = condition.begin(); condIt != condition.end(); ++condIt) {
 			/*if(condIt == condition.begin()) //skip first
 				continue;*/
-			
+
 			if((condIt->getCondition()->attackType != ATTACK_NONE) &&
 				(target->getImmunities() & condIt->getCondition()->attackType) != condIt->getCondition()->attackType) {
 				target->addCondition(*condIt, refresh);
@@ -221,7 +221,7 @@ int MagicEffectTargetExClass::getDamage(Creature *target, const Creature *attack
 			}
 		}
 
-		int damage = (int)random_range(minDamage, maxDamage);
+		int64_t damage = random_range(minDamage, maxDamage);
 
 		if(!offensive)
 			damage = -damage;
@@ -239,13 +239,13 @@ MagicEffectTargetCreatureCondition::MagicEffectTargetCreatureCondition(const uns
 	//
 }
 
-int MagicEffectTargetCreatureCondition::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectTargetCreatureCondition::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 	if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
 		return 0;
 
 	if(target->access < g_config.ACCESS_PROTECT) {
-		int damage = (int)random_range(minDamage, maxDamage);
+		int64_t damage = random_range(minDamage, maxDamage);
 
 		if(!offensive)
 			damage = -damage;
@@ -384,7 +384,7 @@ void MagicEffectAreaClass::getArea(const Position& rcenterpos, MagicAreaVec& lis
 			}
 			tpos.x += 1;
 		}
-		
+
 		tpos.x -= cols /*18*/;
 		tpos.y += 1;
 	}
@@ -396,7 +396,7 @@ condition(dmglist)
 	//
 }
 
-int MagicEffectAreaExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectAreaExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 	if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
 		return 0;
@@ -416,7 +416,7 @@ int MagicEffectAreaExClass::getDamage(Creature *target, const Creature *attacker
 			}
 		}
 
-		int damage = (int)random_range(minDamage, maxDamage);
+		int64_t damage = random_range(minDamage, maxDamage);
 
 		if(!offensive)
 			damage = -damage;
@@ -441,7 +441,7 @@ MagicEffectAreaGroundClass::~MagicEffectAreaGroundClass()
 	}
 }
 
-int MagicEffectAreaGroundClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectAreaGroundClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 	if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
 		return 0;
@@ -474,8 +474,8 @@ MagicEffectItem::MagicEffectItem(const TransformMap& transformMap)
 	unsigned short type = 0;
 	TransformMap::const_iterator dm = transformMap.begin();
 	if(dm != transformMap.end()) {
-		type = dm->first;		
-	}	
+		type = dm->first;
+	}
 	setID(type);
 	buildCondition();
 }
@@ -491,11 +491,11 @@ bool MagicEffectItem::transform(const MagicEffectItem *rhs)
 long MagicEffectItem::getDecayTime()
 {
 	TransformMap::iterator dm = transformMap.find(getID());
-	
+
 	if(dm != transformMap.end()) {
 		return dm->second.first;
 	}
-	
+
 	return 0;
 }
 
@@ -534,7 +534,7 @@ void MagicEffectItem::buildCondition()
 	}
 }
 
-int MagicEffectItem::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectItem::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 
 	if(target->access < g_config.ACCESS_PROTECT) {
@@ -552,7 +552,7 @@ int MagicEffectItem::getDamage(Creature *target, const Creature *attacker /*= NU
 		}
 
 		const MagicEffectTargetCreatureCondition *magicTargetCondition = getCondition();
-		
+
 		if(magicTargetCondition)
 			return magicTargetCondition->getDamage(target, attacker);
 		else

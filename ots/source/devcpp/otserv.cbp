@@ -8,12 +8,17 @@
 		<Build>
 			<Target title="default">
 				<Option output="YurOTS" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./../../" />
 				<Option object_output="obj" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DMAGICLEVEL_TEST" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-g" />
 			<Add option="-DEXCEPTION_TRACER" />
 			<Add option="-DTLM_BUY_SELL" />
 			<Add option="-DTLM_SERVER_SAVE" />
@@ -21,7 +26,7 @@
 			<Add option="-DBDB_UTEVO_LUX" />
 			<Add option="-DWOLV_LOAD_NPC" />
 			<Add option="-DBD_HOUSE_WINDOW" />
-			<Add option="-DTR_ANTI_AFK" />
+			<Add option="-DTR_ANTI_AFK_DISABLED" />
 			<Add option="-DELEM_VIP_LIST" />
 			<Add option="-DTR_SUMMONS" />
 			<Add option="-DTRS_GM_INVISIBLE" />
@@ -70,7 +75,6 @@
 			<Add directory="C:/Dev-Cpp/include" />
 		</Compiler>
 		<Linker>
-			<Add option="-s" />
 			<Add option="-Wl,-Map=otserv.map" />
 			<Add option="C:/Dev-Cpp/bin/libxml2.dll" />
 			<Add option="C:/Dev-Cpp/bin/lua5.dll" />

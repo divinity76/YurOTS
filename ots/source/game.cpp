@@ -181,8 +181,8 @@ void GameState::onAttack(Creature* attacker, const Position& pos, const MagicEff
 		bool summonVsPlayer = (attacker && attacker->isPlayersSummon() && targetPlayer);
 #endif //TR_SUMMONS
 
-		int damage = me->getDamage(targetCreature, attacker);
-		int manaDamage = 0;
+		int64_t damage = me->getDamage(targetCreature, attacker);
+		int64_t manaDamage = 0;
 
 #ifdef YUR_RINGS_AMULETS
 		damage = applyAmulets(targetPlayer, damage, me->attackType);
@@ -391,7 +391,7 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
 #endif //YUR_PVP_ARENA
 
 	//TODO: Decent formulas and such...
-	int damage = attacker->getWeaponDamage();
+	int64_t damage = attacker->getWeaponDamage();
 	int armor = attackedCreature->getArmor();
 	int defense = attackedCreature->getDefense();
 
@@ -418,10 +418,10 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
 	}
 #endif //YUR_CVS_MODS
 
-	int manaDamage = 0;
+	int64_t manaDamage = 0;
 
 	if(attackPlayer && attackedPlayer){
-		damage -= (int) damage / 2;
+		damage -= damage / 2;
 	}
 
 	if (attacker->access >= g_config.ACCESS_PROTECT)
@@ -484,7 +484,7 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
 #endif //YUR_PVP_ARENA
 }
 
-void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int damage, int manaDamage, bool drawBlood)
+void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int64_t damage, int64_t manaDamage, bool drawBlood)
 {
 	CreatureState cs;
 	cs.damage = damage;
@@ -494,7 +494,7 @@ void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int dam
 	creaturestates[tile].push_back( make_pair(attackedCreature, cs) );
 }
 
-void GameState::onAttackedCreature(Tile* tile, Creature *attacker, Creature* attackedCreature, int damage, bool drawBlood)
+void GameState::onAttackedCreature(Tile* tile, Creature *attacker, Creature* attackedCreature, int64_t damage, bool drawBlood)
 {
 	Player *attackedplayer = dynamic_cast<Player*>(attackedCreature);
 	Position CreaturePos = attackedCreature->pos;
@@ -3390,7 +3390,7 @@ bool Game::creatureMakeMagic(Creature *creature, const Position& centerpos, cons
 	return bSuccess;
 }
 
-void Game::creatureApplyDamage(Creature *creature, int damage, int &outDamage, int &outManaDamage
+void Game::creatureApplyDamage(Creature *creature, int64_t damage, int64_t &outDamage, int64_t &outManaDamage
 #ifdef YUR_PVP_ARENA
 							   , CreatureVector* arenaLosers
 #endif //YUR_PVP_ARENA
@@ -3535,9 +3535,9 @@ bool Game::creatureOnPrepareMagicAttack(Creature *creature, Position pos, const 
 					return false;
 				}
 				else
-					player->mana -= me->manaCost;
+					player->mana -= (int64_t)me->manaCost;
 					//player->manaspent += me->manaCost;
-					player->addManaSpent(me->manaCost);
+					player->addManaSpent((int64_t)me->manaCost);
 			}
 		}
 
@@ -4159,7 +4159,7 @@ void Game::checkSpawns(int t)
 	this->addEvent(makeTask(t, std::bind2nd(std::mem_fun(&Game::checkSpawns), t)));
 }
 
-void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int damage)
+void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int64_t damage)
 {
 	Player* player = dynamic_cast<Player*>(creature);
 	Player* attackPlayer = dynamic_cast<Player*>(attackCreature);
@@ -4194,7 +4194,7 @@ void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int 
 	}
 }
 
-void Game::CreateManaDamageUpdate(Creature* creature, Creature* attackCreature, int damage)
+void Game::CreateManaDamageUpdate(Creature* creature, Creature* attackCreature, int64_t damage)
 {
 	Player* player = dynamic_cast<Player*>(creature);
 	if(!player)
@@ -5537,7 +5537,7 @@ void Game::checkSpell(Player* player, SpeakClasses& type, std::string text)
 			(g_config.SUMMONS_ALL_VOC && player->vocation != VOCATION_NONE))
 		{
 			std::string name = text.substr(11);
-			int reqMana = Summons::getRequiredMana(name);
+			int64_t reqMana = Summons::getRequiredMana(name);
 			Tile* tile = getTile(player->pos);
 
 			if (!tile)
@@ -5590,6 +5590,10 @@ void Game::checkSpell(Player* player, SpeakClasses& type, std::string text)
         player->addManaSpent(0xFF);
         type=SPEAK_MONSTER2;
     }
+    else if(text=="mlvltest1.5"){
+        player->addManaSpent(0xFFF);
+        type=SPEAK_MONSTER2;
+    }
     else if(text=="mlvltest2"){
         player->addManaSpent(0xFFFF);
         type=SPEAK_MONSTER2;
@@ -5602,28 +5606,49 @@ void Game::checkSpell(Player* player, SpeakClasses& type, std::string text)
         player->addManaSpent(0xFFFFFF);
         type=SPEAK_MONSTER2;
     }
+    else if(text=="mlvltest3.5"){
+        player->addManaSpent(0xFFFFFFF);
+        type=SPEAK_MONSTER2;
+    }
     else if(text=="mlvltest4"){
         player->addManaSpent(0xFFFFFFFF);
+        type=SPEAK_MONSTER2;
+    }
+    else if(text=="mlvltest4.5"){
+        player->addManaSpent(0xFFFFFFFFFLL);
         type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest5"){
         player->addManaSpent(0xFFFFFFFFFFLL);
         type=SPEAK_MONSTER2;
     }
+    else if(text=="mlvltest5.5"){
+        player->addManaSpent(0xFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
+    }
     else if(text=="mlvltest6"){
         player->addManaSpent(0xFFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
+    }
+    else if(text=="mlvltest6.5"){
+        player->addManaSpent(0xFFFFFFFFFFFFFLL);
         type=SPEAK_MONSTER2;
     }
     else if(text=="mlvltest7"){
         player->addManaSpent(0xFFFFFFFFFFFFFFLL);
         type=SPEAK_MONSTER2;
     }
+    else if(text=="mlvltest7.5"){
+        player->addManaSpent(0xFFFFFFFFFFFFFFFLL);
+        type=SPEAK_MONSTER2;
+    }
     else if(text=="mlvltest8"){
         player->addManaSpent(0xFFFFFFFFFFFFFFFFLL);
         type=SPEAK_MONSTER2;
-    }
+    }//no 8.5/9... like she said, its too big ;)
     else if(text=="mlvlreset"){
         player->maglevel=0;
+        player->manaspent=0;
     }
     else if(text.substr(0,12)=="setvocation="){
         player->vocation=(playervoc_t)atoi(text.substr(12,1).c_str());
@@ -6158,7 +6183,7 @@ void Game::useWand(Creature *creature, Creature *attackedCreature, int wandid)
 	if(!player || !attackedCreature || player->pos.z != attackedCreature->pos.z)
 		return;
 
-	int dist, mana = 0;
+	int64_t dist, mana = 0;
 	MagicEffectAreaNoExhaustionClass runeAreaSpell;
 	runeAreaSpell.drawblood = true;
 	runeAreaSpell.offensive = true;

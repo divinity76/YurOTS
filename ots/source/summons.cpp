@@ -7,7 +7,7 @@
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -28,7 +28,7 @@ extern LuaScript g_config;
 
 Summons::SummonMap Summons::summons;
 
-int Summons::getRequiredMana(std::string name)
+int64_t Summons::getRequiredMana(std::string name)
 {
 	std::transform(name.begin(), name.end(), name.begin(), (int(*)(int))tolower);
 	SummonMap::iterator iter = summons.find(name);
@@ -51,7 +51,7 @@ bool Summons::Load()
 	xmlNodePtr root, summonNode;
 	root = xmlDocGetRootElement(doc);
 
-	if (xmlStrcmp(root->name, (const xmlChar*)"summons")) 
+	if (xmlStrcmp(root->name, (const xmlChar*)"summons"))
 	{
 		xmlFreeDoc(doc);
 		return false;
@@ -63,7 +63,7 @@ bool Summons::Load()
 		if (strcmp((char*) summonNode->name, "summon") == 0)
 		{
 			std::string name = (const char*)xmlGetProp(summonNode, (const xmlChar *) "name");
-			int reqMana = atoi((const char*)xmlGetProp(summonNode, (const xmlChar *) "mana"));
+			int64_t reqMana = atoll((const char*)xmlGetProp(summonNode, (const xmlChar *) "mana"));
 			std::transform(name.begin(), name.end(), name.begin(), (int(*)(int))tolower);
 			summons[name] = reqMana;
 		}
@@ -71,6 +71,6 @@ bool Summons::Load()
 	}
 
 	xmlFreeDoc(doc);
-	return true;	
+	return true;
 }
 #endif //TR_SUMMONS

@@ -133,7 +133,7 @@ public:
 	const std::string& getName() const {return name;};
 	fight_t getFightType(){return fighttype;};
 
-	int mana, manamax;
+	int64_t mana, manamax;
 
 	//damage per hit
 	int damage;

@@ -1,13 +1,13 @@
 //////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
 //////////////////////////////////////////////////////////////////////
-// 
+//
 //////////////////////////////////////////////////////////////////////
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -54,7 +54,7 @@ enum attacktype_t {
 /*
 MagicEffectClass
 |
-|	
+|
 |----->	MagicEffectTargetClass : public MagicEffectClass
 |       |
 |       |-----> MagicEffectTargetEx : public MagicEffectTargetClass //ie. soul fire
@@ -63,7 +63,7 @@ MagicEffectClass
 |       |
 |       |-----> MagicEffectTargetGroundClass //ie. m-wall, wild growth
 |								(Holds a MagicEffectItem*)
-|       
+|
 |-----> MagicEffectAreaClass : public MagicEffectClass //ie. gfb
 |       |
 |       |-----> MagicEffectAreaExClass : public MagicEffectAreaClass //ie. poison storm
@@ -83,11 +83,11 @@ class MagicEffectClass {
 public:
 	MagicEffectClass();
 	virtual ~MagicEffectClass() {};
-	
+
 	virtual bool isIndirect() const;
 	virtual bool causeExhaustion(bool hasTarget) const;
 
-	virtual int getDamage(Creature* target, const Creature* attacker = NULL) const;
+	virtual int64_t getDamage(Creature* target, const Creature* attacker = NULL) const;
 
 	virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
 		const Position& pos, int damage, bool isPz, bool isBlocking) const;
@@ -108,7 +108,7 @@ public:
 	int maxDamage;
 	bool offensive;
 	bool drawblood; //causes blood splashes
-	long manaCost;
+	double manaCost;
 
 	attacktype_t attackType;
 
@@ -126,7 +126,7 @@ public:
 
 	virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
 		const Position& pos, int damage, bool isPz, bool isBlocking) const;
-	
+
 	virtual void getDistanceShoot(Player* spectator, const Creature* attacker, const Position& to,
 		bool hasTarget) const;
 
@@ -154,7 +154,7 @@ public:
 		return false;
 	}
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const;
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 	virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
 		const Position& pos, int damage, bool isPz, bool isBlocking) const;
@@ -167,7 +167,7 @@ public:
 
 	const unsigned long getOwnerID() const {return ownerid;}
 	void setOwnerID(unsigned long owner) { ownerid=owner;}
-	
+
 
 protected:
 	unsigned long ownerid;
@@ -222,7 +222,7 @@ public:
 	MagicEffectTargetExClass(const ConditionVec& condition);
 	virtual ~MagicEffectTargetExClass() {};
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const;
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 protected:
 	ConditionVec condition;
@@ -238,7 +238,7 @@ public:
 		//std::cout << "Magic: useThing() " << this << std::endl;
 		useCount++;
 	};
-	
+
 	virtual void releaseThing() {
 		//std::cout << "Magic: releaseThing() " << this << std::endl;
 		useCount--;
@@ -246,7 +246,7 @@ public:
 		if (useCount <= 0)
 			delete this;
 	};
-	
+
 	const MagicEffectTargetCreatureCondition* getCondition() const;
 
 	virtual bool causeExhaustion(bool hasTarget) const
@@ -254,12 +254,12 @@ public:
 		return false;
 	}
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const;
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 	virtual Item* decay();
 	bool transform(const MagicEffectItem *rhs);
 	long getDecayTime();
-	
+
 protected:
 	int useCount;
 	void buildCondition();
@@ -278,7 +278,7 @@ public:
 		return true;
 	}
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const
 	{
 		return 0;
 	}
@@ -318,7 +318,7 @@ public:
 
 	unsigned char direction;
 	unsigned char areaEffect;
-	
+
 	std::vector< std::vector<unsigned char> > areaVec;
 };
 
@@ -329,7 +329,7 @@ public:
 	MagicEffectAreaExClass(const ConditionVec& dmglist);
 	virtual ~MagicEffectAreaExClass() {};
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const;
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 protected:
 	ConditionVec condition;
@@ -342,10 +342,10 @@ public:
 	MagicEffectAreaGroundClass(MagicEffectItem* fieldItem);
 	virtual ~MagicEffectAreaGroundClass();
 
-	virtual int getDamage(Creature *target, const Creature *attacker = NULL) const;
+	virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 	virtual MagicEffectItem* getMagicItem(const Creature* attacker, bool isPz, bool isBlocking) const;
-	
+
 protected:
 	MagicEffectItem* magicItem;
 };

@@ -117,7 +117,7 @@ Creature::~Creature()
 }
 
 #ifdef YUR_PVP_ARENA
-void Creature::drainHealth(int damage, CreatureVector* arenaLosers)
+void Creature::drainHealth(int64_t damage, CreatureVector* arenaLosers)
 {
 	if (arenaLosers && damage >= health)
 	{
@@ -134,7 +134,7 @@ void Creature::drainHealth(int damage)
 }
 #endif //YUR_PVP_ARENA
 
-void Creature::drainMana(int damage)
+void Creature::drainMana(int64_t damage)
 {
 	mana -= min(mana, damage);
 }

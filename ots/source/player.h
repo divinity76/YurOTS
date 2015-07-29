@@ -163,9 +163,9 @@ public:
 	inline StorageMap::const_iterator getStorageIteratorEnd() const {return storageMap.end();}
 
 	int getLevel() const {return level;}
-	int getHealth() const {return health;}
-	int getMana() const {return mana;}
-	int getMagicLevel() const {return maglevel;}
+	int64_t getHealth() const {return health;}
+	int64_t getMana() const {return mana;}
+	int64_t getMagicLevel() const {return maglevel;}
 	playersex_t getSex() {return sex;}
 	bool gainManaTick();
 	bool gainHealthTick();
@@ -175,8 +175,8 @@ public:
 	unsigned long getGuildId() const {return guildId;};
 
 
-	int getPlayerInfo(playerinfo_t playerinfo) const;
-	int getSkill(skills_t skilltype, skillsid_t skillinfo) const;
+	int64_t getPlayerInfo(playerinfo_t playerinfo) const;
+	int64_t getSkill(skills_t skilltype, skillsid_t skillinfo) const;
 	std::string getSkillName(int skillid);
 	void addSkillTry(int skilltry);
 	void addSkillShieldTry(int skilltry);
@@ -209,9 +209,9 @@ public:
 	Item* getItem(int pos) const;
 	Item* GetDistWeapon() const;
 
-	void addManaSpent(unsigned long spent);
+	void addManaSpent(uint64_t spent);
 	void addExp(exp_t exp);
-	virtual int getWeaponDamage() const;
+	virtual int64_t getWeaponDamage() const;
 	virtual int getArmor() const;
 	virtual int getDefense() const;
 	unsigned long getMoney();
@@ -371,7 +371,7 @@ public:
 
 #ifdef YUR_CMD_EXT
 	exp_t getExpForNextLevel();
-	unsigned long getManaForNextMLevel();
+	uint64_t getManaForNextMLevel();
 #endif //YUR_CMD_EXT
 
 #ifdef YUR_LOGIN_QUEUE
@@ -519,7 +519,7 @@ protected:
 	static int WEAPON_MUL[5];
 	static int DIST_MUL[5];
 	static int SHIELD_MUL[5];
-	static int MANA_MUL[5];
+	static int64_t MANA_MUL[5];
 #endif //YUR_MULTIPLIERS
 */
 #ifdef YUR_RINGS_AMULETS
@@ -575,17 +575,17 @@ protected:
 	//reminder: 0 = None, 1 = Sorcerer, 2 = Druid, 3 = Paladin, 4 = Knight
 	static int CapGain[5];          //for level advances
 	static int ManaGain[5];
-	static int HPGain[5];
+	static int64_t HPGain[5];
 #endif //CVS_GAINS_MULS
 
-	static const int gainManaVector[5][2];
-	static const int gainHealthVector[5][2];
+	static const int64_t gainManaVector[5][2];
+	static const int64_t gainHealthVector[5][2];
 	unsigned short manaTick;
 	unsigned short healthTick;
 
 #ifdef YUR_PREMIUM_PROMOTION
-	static const int promotedGainManaVector[5][2];
-	static const int promotedGainHealthVector[5][2];
+	static const int64_t promotedGainManaVector[5][2];
+	static const int64_t promotedGainHealthVector[5][2];
 #endif //YUR_PREMIUM_PROMOTION
 
 	unsigned char level_percent;
@@ -615,10 +615,10 @@ protected:
 		int level;
 		double freeCapacity;
 		//int cap;
-		int mana;
-		int manamax;
-		int manaspent;
-		int maglevel;
+		int64_t mana;
+		int64_t manamax;
+		int64_t manaspent;
+		int64_t maglevel;
 	};
 
 	SentStats lastSentStats;
@@ -652,7 +652,7 @@ protected:
 	unsigned int getReqSkillTries (int skill, int level, playervoc_t voc);
 
 	//for magic level advances
-	unsigned int getReqMana(int maglevel, playervoc_t voc);
+	uint64_t getReqMana(int64_t maglevel, playervoc_t voc);
 
 	friend OTSYS_THREAD_RETURN ConnectionHandler(void *dat);
 

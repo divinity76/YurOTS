@@ -72,12 +72,12 @@ public:
 	virtual int getArmor() const;
 	virtual int getDefense() const;
 	virtual const std::string& getName() const;
-	
+
 	virtual void setMaster(Creature* creature);
 	bool isSummon() {return (getMaster() != NULL);}
 	virtual void onAttack();
 	static unsigned long getRandom();
-	
+
 private:
 	Game* game;
 	std::list<Position> route;
@@ -88,7 +88,7 @@ private:
 	Position moveToPos;
 	bool hasLostMaster;
 	MonsterType *mType;
-	
+
 	void doMoveTo(int dx, int dy);
 	int getCurrentDistanceToTarget(const Position &target);
 	int getTargetDistance();
@@ -117,7 +117,7 @@ protected:
 
 	virtual fight_t getFightType() {return curPhysicalAttack->fighttype;};
 	virtual subfight_t getSubFightType()  {return curPhysicalAttack->disttype;}
-	virtual int getWeaponDamage() const;
+	virtual int64_t getWeaponDamage() const;
 
 	void onCreatureEnter(const Creature *creature, bool canReach = true);
 	void onCreatureLeave(const Creature *creature);
@@ -127,7 +127,7 @@ protected:
 	bool validateDistanceAttack(const Position &pos);
 	bool monsterMoveItem(Item* item, int radius);
 	bool isCreatureAttackable(const Creature* creature);
-	
+
 	virtual exp_t getLostExperience();
 
 	virtual void dropLoot(Container *corpse);
@@ -143,7 +143,7 @@ protected:
 
 	virtual bool isAttackable() const { return true; };
 	virtual bool isPushable() const;
-	
+
 	virtual int onThink(int& newThinkTicks);
 	virtual void setAttackedCreature(const Creature* creature);
 

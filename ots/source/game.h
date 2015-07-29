@@ -69,8 +69,8 @@ public:
 	CreatureState() {};
 	~CreatureState() {};
 
-	int damage;
-	int manaDamage;
+	int64_t damage;
+	int64_t manaDamage;
 	bool drawBlood;
 	std::vector<Creature*> attackerlist;
 };
@@ -95,8 +95,8 @@ public:
 	const SpectatorVec& getSpectators() {return spectatorlist;}
 
 protected:
-	void addCreatureState(Tile* tile, Creature* attackedCreature, int damage, int manaDamage, bool drawBlood);
-	void onAttackedCreature(Tile* tile, Creature* attacker, Creature* attackedCreature, int damage, bool drawBlood);
+	void addCreatureState(Tile* tile, Creature* attackedCreature, int64_t damage, int64_t manaDamage, bool drawBlood);
+	void onAttackedCreature(Tile* tile, Creature* attacker, Creature* attackedCreature, int64_t damage, bool drawBlood);
 	Game *game;
 
 #ifdef YUR_PVP_ARENA
@@ -440,14 +440,14 @@ protected:
 		* Change the players hitpoints
 		* Return: the mana damage and the actual hitpoint loss
 		*/
-	void creatureApplyDamage(Creature *creature, int damage, int &outDamage, int &outManaDamage
+	void creatureApplyDamage(Creature *creature, int64_t damage, int64_t &outDamage, int64_t &outManaDamage
 #ifdef YUR_PVP_ARENA
 		, CreatureVector*
 #endif //YUR_PVP_ARENA
 		);
 
-	void CreateDamageUpdate(Creature* player, Creature* attackCreature, int damage);
-	void CreateManaDamageUpdate(Creature* player, Creature* attackCreature, int damage);
+	void CreateDamageUpdate(Creature* player, Creature* attackCreature, int64_t damage);
+	void CreateManaDamageUpdate(Creature* player, Creature* attackCreature, int64_t damage);
 	void getSpectators(const Range& range, SpectatorVec& list);
 
 	OTSYS_THREAD_LOCKVAR eventLock;

@@ -728,7 +728,7 @@ bool Commands::showExpForLvl(Creature* c, const std::string &cmd, const std::str
 
 	if (player)
 	{
-		std::string msg = std::string("You need ") + str(player->getExpForNextLevel()) + 
+		std::string msg = std::string("You need ") + str(player->getExpForNextLevel()) +
 			std::string(" experience points to gain level.");
 		player->sendTextMessage(MSG_BLUE_TEXT, msg.c_str());
 	}
@@ -741,7 +741,7 @@ bool Commands::showManaForLvl(Creature* c, const std::string &cmd, const std::st
 
 	if (player)
 	{
-		std::string msg = std::string("You need to spent ") + str((int)player->getManaForNextMLevel()) + 
+		std::string msg = std::string("You need to spent ") + str(player->getManaForNextMLevel()) +
 			std::string(" mana to gain magic level.");
 		player->sendTextMessage(MSG_BLUE_TEXT, msg.c_str());
 	}
@@ -765,7 +765,7 @@ bool Commands::report(Creature* c, const std::string &cmd, const std::string &pa
 #else
 		strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M", localtime(&ticks));
 #endif //USING_VISUAL_2005
-		
+
 		std::ofstream out("report.log", std::ios::app);
 		out << '[' << buf << "] " << player->getName() << ": " << param << std::endl;
 		out.close();
@@ -977,7 +977,7 @@ bool Commands::gmInvisible(Creature* c, const std::string &cmd, const std::strin
 		for(SpectatorVec::iterator it = list.begin(); it != list.end(); ++it)
 			if((*it) != player && (*it)->access == 0)
 				(*it)->onCreatureDisappear(player, osp, true);
-	
+
 		player->sendTextMessage(MSG_INFO, "You are invisible.");
 		game->creatureBroadcastTileUpdated(player->pos);
 	}
@@ -1010,7 +1010,7 @@ bool Commands::showFrags(Creature* c, const std::string &cmd, const std::string 
 	if (player)
 	{
 		std::ostringstream info;
-		info << "You have " << player->skullKills 
+		info << "You have " << player->skullKills
 			<< " unjustified kills. You will lose a frag in " << tickstr(player->absolveTicks) << '.' << std::ends;
 		player->sendTextMessage(MSG_BLUE_TEXT, info.str().c_str());
 	}
@@ -1058,7 +1058,7 @@ bool Commands::cleanMap(Creature* c, const std::string &cmd, const std::string &
 		timer();
 		long count = game->cleanMap();
 		double sec = timer();
-		
+
 		info << "Clean completed. Collected " << count << (count==1? " item." : " items.") << std::ends;
 		player->sendTextMessage(MSG_BLUE_TEXT, info.str().c_str());
 

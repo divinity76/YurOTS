@@ -57,17 +57,17 @@ int LuaScript::OpenFile(const char *filename)
 	CAP_GAIN[VOCATION_PALADIN] = atoi(getGlobalStringField("capgain", VOCATION_PALADIN + 1, "20").c_str());
 	CAP_GAIN[VOCATION_KNIGHT] = atoi(getGlobalStringField("capgain", VOCATION_KNIGHT + 1, "25").c_str());
 
-	MANA_GAIN[VOCATION_NONE] = atoi(getGlobalStringField("managain", VOCATION_NONE + 1, "5").c_str());
-	MANA_GAIN[VOCATION_SORCERER] = atoi(getGlobalStringField("managain", VOCATION_SORCERER + 1, "30").c_str());
-	MANA_GAIN[VOCATION_DRUID] = atoi(getGlobalStringField("managain", VOCATION_DRUID + 1, "30").c_str());
-	MANA_GAIN[VOCATION_PALADIN] = atoi(getGlobalStringField("managain", VOCATION_PALADIN + 1, "15").c_str());
-	MANA_GAIN[VOCATION_KNIGHT] = atoi(getGlobalStringField("managain", VOCATION_KNIGHT + 1, "5").c_str());
+	MANA_GAIN[VOCATION_NONE] = atoll(getGlobalStringField("managain", VOCATION_NONE + 1, "5").c_str());
+	MANA_GAIN[VOCATION_SORCERER] = atoll(getGlobalStringField("managain", VOCATION_SORCERER + 1, "30").c_str());
+	MANA_GAIN[VOCATION_DRUID] = atoll(getGlobalStringField("managain", VOCATION_DRUID + 1, "30").c_str());
+	MANA_GAIN[VOCATION_PALADIN] = atoll(getGlobalStringField("managain", VOCATION_PALADIN + 1, "15").c_str());
+	MANA_GAIN[VOCATION_KNIGHT] = atoll(getGlobalStringField("managain", VOCATION_KNIGHT + 1, "5").c_str());
 
-	HP_GAIN[VOCATION_NONE] = atoi(getGlobalStringField("hpgain", VOCATION_NONE + 1, "5").c_str());
-	HP_GAIN[VOCATION_SORCERER] = atoi(getGlobalStringField("hpgain", VOCATION_SORCERER + 1, "5").c_str());
-	HP_GAIN[VOCATION_DRUID] = atoi(getGlobalStringField("hpgain", VOCATION_DRUID + 1, "5").c_str());
-	HP_GAIN[VOCATION_PALADIN] = atoi(getGlobalStringField("hpgain", VOCATION_PALADIN + 1, "10").c_str());
-	HP_GAIN[VOCATION_KNIGHT] = atoi(getGlobalStringField("hpgain", VOCATION_KNIGHT + 1, "15").c_str());
+	HP_GAIN[VOCATION_NONE] = atoll(getGlobalStringField("hpgain", VOCATION_NONE + 1, "5").c_str());
+	HP_GAIN[VOCATION_SORCERER] = atoll(getGlobalStringField("hpgain", VOCATION_SORCERER + 1, "5").c_str());
+	HP_GAIN[VOCATION_DRUID] = atoll(getGlobalStringField("hpgain", VOCATION_DRUID + 1, "5").c_str());
+	HP_GAIN[VOCATION_PALADIN] = atoll(getGlobalStringField("hpgain", VOCATION_PALADIN + 1, "10").c_str());
+	HP_GAIN[VOCATION_KNIGHT] = atoll(getGlobalStringField("hpgain", VOCATION_KNIGHT + 1, "15").c_str());
 
 	WEAPON_MUL[VOCATION_NONE] = atoi(getGlobalStringField("weaponmul", VOCATION_NONE+1, "1").c_str());
 	WEAPON_MUL[VOCATION_SORCERER] = atoi(getGlobalStringField("weaponmul", VOCATION_SORCERER+1, "1").c_str());
@@ -87,11 +87,11 @@ int LuaScript::OpenFile(const char *filename)
 	SHIELD_MUL[VOCATION_PALADIN] = atoi(getGlobalStringField("shieldmul", VOCATION_PALADIN+1, "1").c_str());
 	SHIELD_MUL[VOCATION_KNIGHT] = atoi(getGlobalStringField("shieldmul", VOCATION_KNIGHT+1, "1").c_str());
 
-	MANA_MUL[VOCATION_NONE] = atoi(getGlobalStringField("manamul", VOCATION_NONE+1, "1").c_str());
-	MANA_MUL[VOCATION_SORCERER] = atoi(getGlobalStringField("manamul", VOCATION_SORCERER+1, "1").c_str());
-	MANA_MUL[VOCATION_DRUID] = atoi(getGlobalStringField("manamul", VOCATION_DRUID+1, "1").c_str());
-	MANA_MUL[VOCATION_PALADIN] = atoi(getGlobalStringField("manamul", VOCATION_PALADIN+1, "1").c_str());
-	MANA_MUL[VOCATION_KNIGHT] = atoi(getGlobalStringField("manamul", VOCATION_KNIGHT+1, "1").c_str());
+	MANA_MUL[VOCATION_NONE] = atoll(getGlobalStringField("manamul", VOCATION_NONE+1, "1").c_str());
+	MANA_MUL[VOCATION_SORCERER] = atoll(getGlobalStringField("manamul", VOCATION_SORCERER+1, "1").c_str());
+	MANA_MUL[VOCATION_DRUID] = atoll(getGlobalStringField("manamul", VOCATION_DRUID+1, "1").c_str());
+	MANA_MUL[VOCATION_PALADIN] = atoll(getGlobalStringField("manamul", VOCATION_PALADIN+1, "1").c_str());
+	MANA_MUL[VOCATION_KNIGHT] = atoll(getGlobalStringField("manamul", VOCATION_KNIGHT+1, "1").c_str());
 #endif //YUR_MULTIPLIERS
 
 #ifdef TR_ANTI_AFK
@@ -153,7 +153,7 @@ int LuaScript::OpenFile(const char *filename)
 	PROMOTED_VOCATIONS[VOCATION_DRUID] = getGlobalStringField("promoted_vocations",VOCATION_DRUID);
 
 	DIE_PERCENT_EXP = atoi(getGlobalStringField("diepercent",1,"7").c_str());
-	DIE_PERCENT_MANA = atoi(getGlobalStringField("diepercent",2,"7").c_str());
+	DIE_PERCENT_MANA = atoll(getGlobalStringField("diepercent",2,"7").c_str());
 	DIE_PERCENT_SKILL = atoi(getGlobalStringField("diepercent",3,"7").c_str());
 	DIE_PERCENT_EQ = atoi(getGlobalStringField("diepercent",4,"7").c_str());
 	DIE_PERCENT_BP = atoi(getGlobalStringField("diepercent",5,"100").c_str());
@@ -178,17 +178,17 @@ int LuaScript::OpenFile(const char *filename)
 #endif //JD_DEATH_LIST
 
 #ifdef JD_WANDS
-	MANA_SNAKEBITE = atoi(getGlobalStringField("rodmana", 1, "2").c_str());
-	MANA_MOONLIGHT = atoi(getGlobalStringField("rodmana", 2, "3").c_str());
-	MANA_VOLCANIC = atoi(getGlobalStringField("rodmana", 3, "5").c_str());
-	MANA_QUAGMIRE = atoi(getGlobalStringField("rodmana", 4, "8").c_str());
-	MANA_TEMPEST = atoi(getGlobalStringField("rodmana", 5, "13").c_str());
+	MANA_SNAKEBITE = atoll(getGlobalStringField("rodmana", 1, "2").c_str());
+	MANA_MOONLIGHT = atoll(getGlobalStringField("rodmana", 2, "3").c_str());
+	MANA_VOLCANIC = atoll(getGlobalStringField("rodmana", 3, "5").c_str());
+	MANA_QUAGMIRE = atoll(getGlobalStringField("rodmana", 4, "8").c_str());
+	MANA_TEMPEST = atoll(getGlobalStringField("rodmana", 5, "13").c_str());
 
-	MANA_VORTEX = atoi(getGlobalStringField("wandmana", 1, "2").c_str());
-	MANA_DRAGONBREATH = atoi(getGlobalStringField("wandmana", 2, "3").c_str());
-	MANA_PLAGUE = atoi(getGlobalStringField("wandmana", 3, "5").c_str());
-	MANA_COSMIC = atoi(getGlobalStringField("wandmana", 4, "8").c_str());
-	MANA_INFERNO = atoi(getGlobalStringField("wandmana", 5, "13").c_str());
+	MANA_VORTEX = atoll(getGlobalStringField("wandmana", 1, "2").c_str());
+	MANA_DRAGONBREATH = atoll(getGlobalStringField("wandmana", 2, "3").c_str());
+	MANA_PLAGUE = atoll(getGlobalStringField("wandmana", 3, "5").c_str());
+	MANA_COSMIC = atoll(getGlobalStringField("wandmana", 4, "8").c_str());
+	MANA_INFERNO = atoll(getGlobalStringField("wandmana", 5, "13").c_str());
 
 	RANGE_SNAKEBITE = atoi(getGlobalStringField("rodrange", 1, "4").c_str());
 	RANGE_MOONLIGHT = atoi(getGlobalStringField("rodrange", 2, "3").c_str());

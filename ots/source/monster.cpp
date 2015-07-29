@@ -1126,7 +1126,7 @@ std::string	Monster::getDescription(bool self) const
 	return str;
 }
 
-int Monster::getWeaponDamage() const
+int64_t Monster::getWeaponDamage() const
 {
 	if(curPhysicalAttack != NULL)
 		return random_range(curPhysicalAttack->minWeapondamage, curPhysicalAttack->maxWeapondamage);

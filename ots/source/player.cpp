@@ -30,6 +30,7 @@
 using namespace std;
 
 #include <stdlib.h>
+#include <time.h>       /* time_t, struct tm, difftime, time, mktime */
 
 #include "protocol.h"
 #include "player.h"
@@ -48,17 +49,17 @@ extern Chat g_chat;
 AutoList<Player> Player::listPlayer;
 
 #ifdef YUR_PREMIUM_PROMOTION
-const int Player::promotedGainManaVector[5][2] = {{6,1},{2,1},{2,1},{3,1},{6,1}};
-const int Player::promotedGainHealthVector[5][2] = {{6,1},{6,1},{6,1},{3,1},{2,1}};
+const int64_t Player::promotedGainManaVector[5][2] = {{6,1},{2,1},{2,1},{3,1},{6,1}};
+const int64_t Player::promotedGainHealthVector[5][2] = {{6,1},{6,1},{6,1},{3,1},{2,1}};
 #endif //YUR_PREMIUM_PROMOTION
 
-const int Player::gainManaVector[5][2] = {{6,1},{3,1},{3,1},{4,1},{6,1}};
-const int Player::gainHealthVector[5][2] = {{6,1},{6,1},{6,1},{4,1},{3,1}};
+const int64_t Player::gainManaVector[5][2] = {{6,1},{3,1},{3,1},{4,1},{6,1}};
+const int64_t Player::gainHealthVector[5][2] = {{6,1},{6,1},{6,1},{4,1},{3,1}};
 
 #ifdef CVS_GAINS_MULS
 int Player::CapGain[5] = {10, 10, 10, 20, 25};
-int Player::ManaGain[5] = {5, 30, 30, 15, 5};
-int Player::HPGain[5] = {5, 5, 5, 10, 15};
+int64_t Player::ManaGain[5] = {5, 30, 30, 15, 5};
+int64_t Player::HPGain[5] = {5, 5, 5, 10, 15};
 #endif //CVS_GAINS_MULS
 
 Player::Player(const std::string& name, Protocol *p) :
@@ -303,7 +304,7 @@ Item* Player::getItem(int pos) const
 	return NULL;
 }
 
-int Player::getWeaponDamage() const
+int64_t Player::getWeaponDamage() const
 {
 	double mul = 1.0;
 #ifdef YUR_FIGHT_MODE
@@ -372,7 +373,7 @@ int Player::getWeaponDamage() const
 		damagemax = 2*mul*getSkill(SKILL_FIST,SKILL_LEVEL) + 5;
 
 	// return it
-	return 1+(int)(damagemax*rand()/(RAND_MAX+1.0));
+	return 1+(int64_t)(damagemax*rand()/(RAND_MAX+1.0));
 }
 
 int Player::getArmor() const
@@ -1033,7 +1034,7 @@ void Player::addSkillShieldTry(int skilltry){
 	}
 }
 
-int Player::getPlayerInfo(playerinfo_t playerinfo) const
+int64_t Player::getPlayerInfo(playerinfo_t playerinfo) const
 {
 	switch(playerinfo) {
 		case PLAYERINFO_LEVEL: return level; break;
@@ -1053,7 +1054,7 @@ int Player::getPlayerInfo(playerinfo_t playerinfo) const
 	return 0;
 }
 
-int Player::getSkill(skills_t skilltype, skillsid_t skillinfo) const
+int64_t Player::getSkill(skills_t skilltype, skillsid_t skillinfo) const
 {
 #ifdef YUR_RINGS_AMULETS
 	if (skillinfo == SKILL_LEVEL && items[SLOT_RING])
@@ -1134,13 +1135,12 @@ void Player::addSkillTryInternal(int skilltry,int skill){
 }
 
 
-unsigned int Player::getReqMana(int maglevel, playervoc_t voc) {
+uint64_t Player::getReqMana(int64_t maglevel, playervoc_t voc) {
   //ATTENTION: MAKE SURE THAT CHARS HAVE REASONABLE MAGIC LEVELS. ESPECIALY KNIGHTS!!!!!!!!!!!
-  float ManaMultiplier[5] = { 1.0f, 1.1f, 1.1f, 1.4f, 3};
+  double ManaMultiplier[5] = { 1.0, 1.1, 1.1, 1.4, 3.0};
 
 	//will calculate required mana for a magic level
-  unsigned int reqMana = (unsigned int) ( 400 * pow(ManaMultiplier[(int)voc], maglevel-1) );
-
+  uint64_t reqMana = (uint64_t)( 400 * std::pow(double(ManaMultiplier[voc]), double(maglevel-1)));
 	if (reqMana % 20 < 10) //CIP must have been bored when they invented this odd rounding
     reqMana = reqMana - (reqMana % 20);
   else
@@ -1807,7 +1807,7 @@ void Player::onTeleport(const Creature *creature, const Position *oldPos, unsign
   client->sendThingMove(creature, creature,oldPos, oldstackpos, true, 1, 1);
 }
 
-void Player::addManaSpent(unsigned long spent){
+void Player::addManaSpent(uint64_t spent){
 	if(spent == 0)
 		return;
 
@@ -1817,12 +1817,16 @@ void Player::addManaSpent(unsigned long spent){
 
 	this->manaspent += spent;
 	//Magic Level Advance
-	int reqMana = this->getReqMana(this->maglevel+1, this->vocation);
+	int64_t reqMana = this->getReqMana(this->maglevel+1, this->vocation);
 	if (this->access < g_config.ACCESS_PROTECT && this->manaspent >= reqMana) {
 		this->manaspent -= reqMana;
 		this->maglevel++;
 		std::stringstream MaglvMsg;
-		MaglvMsg << "You advanced from magic level " << (this->maglevel - 1) << " to magic level " << this->maglevel << ".";
+		  time_t timer;
+		  static time_t previous_timer=0;
+          time(&timer);  /* get current time; same as: timer = time(NULL)  */
+		MaglvMsg << timer-previous_timer << "You advanced from magic level " << (this->maglevel - 1) << " to magic level " << this->maglevel << ".";
+		previous_timer=timer;
 		this->sendTextMessage(MSG_ADVANCE, MaglvMsg.str().c_str());
 		this->sendStats();
 	}
@@ -1860,15 +1864,15 @@ unsigned long Player::getIP() const
 void Player::die()
 {
 	//Magic Level downgrade
-	unsigned long sumMana = 0;
-	long lostMana = 0;
-	for (int i = 1; i <= maglevel; i++) {              //sum up all the mana
+	uint64_t sumMana = 0;
+	int64_t lostMana = 0;
+	for (int64_t i = 1; i <= maglevel; i++) {              //sum up all the mana
 		sumMana += getReqMana(i, vocation);
 	}
 
 	sumMana += manaspent;
 
-	lostMana = (long)(sumMana * g_config.DIE_PERCENT_MANA/100.0);   //player loses 10% of all spent mana when he dies
+	lostMana = (int64_t)(sumMana * g_config.DIE_PERCENT_MANA/100.0);   //player loses 10% of all spent mana when he dies
 
     while(lostMana > manaspent){
 		lostMana -= manaspent;
@@ -1973,7 +1977,7 @@ void Player::kickPlayer()
 
 bool Player::gainManaTick()
 {
-	int add;
+	int64_t add;
 	manaTick++;
 	if(vocation >= 0 && vocation < 5)
 	{
@@ -2593,8 +2597,8 @@ void Player::notAfk()
 
 void Player::checkAfk(int thinkTicks)
 {
-	if (idleTime < g_config.KICK_TIME)		
-		idleTime += thinkTicks;		
+	if (idleTime < g_config.KICK_TIME)
+		idleTime += thinkTicks;
 
 	if (idleTime < g_config.KICK_TIME && idleTime > (g_config.KICK_TIME - 60000) && !warned)	// send warning for kick (1 min)
 	{
@@ -2647,7 +2651,7 @@ exp_t Player::getExpForNextLevel()
 	return getExpForLv(level + 1) - experience;
 }
 
-unsigned long Player::getManaForNextMLevel()
+uint64_t Player::getManaForNextMLevel()
 {
 	return getReqMana(maglevel+1, vocation) - manaspent;
 }
@@ -2816,8 +2820,8 @@ void Player::checkLightItem(int /*thinkTics*/)
 	if (lightItemNow != lightItem)
 	{
 		if (Item::items[lightItem].lightLevel != Item::items[lightItemNow].lightLevel)
-			g_game.creatureChangeLight(this, 0, 
-				Item::items[lightItemNow].lightLevel, 
+			g_game.creatureChangeLight(this, 0,
+				Item::items[lightItemNow].lightLevel,
 				Item::items[lightItemNow].lightColor);
 
 		lightItem = lightItemNow;
