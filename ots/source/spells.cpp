@@ -283,6 +283,7 @@ int SpellScript::registerFunctions(){
 	lua_register(luaState, "doTargetExMagic", SpellScript::luaActionDoTargetExSpell);
 	lua_register(luaState, "doTargetGroundMagic", SpellScript::luaActionDoTargetGroundSpell);
 	lua_register(luaState, "doAreaMagic", SpellScript::luaActionDoAreaSpell);
+	lua_register(luaState, "doAreaAnimation", SpellScript::luaActionDoAreaAnimation);
 	lua_register(luaState, "doAreaExMagic", SpellScript::luaActionDoAreaExSpell);
 	lua_register(luaState, "doAreaGroundMagic", SpellScript::luaActionDoAreaGroundSpell);
 
@@ -537,6 +538,49 @@ int SpellScript::luaActionDoTargetGroundSpell(lua_State *L)
 }
 
 int SpellScript::luaActionDoAreaSpell(lua_State *L)
+{
+	MagicEffectAreaClass magicArea;
+	internalGetMagicEffect(L, magicArea);
+
+	internalGetArea(L, magicArea);
+
+	bool needDirection = (bool)(lua_toboolean(L, -1) > 0);
+	lua_pop(L,1);
+
+	Position centerpos;
+	internalGetPosition(L, centerpos);
+
+	Spell* spell = getSpell(L);
+  magicArea.manaCost = spell->getMana();
+
+	Creature* creature = spell->game->getCreatureByID((unsigned long)lua_tonumber(L, -1));
+	lua_pop(L,1);
+	if(!creature){
+		lua_pushboolean(L, false);
+		return 1;
+	}
+
+	if(needDirection){
+		switch(creature->getDirection()) {
+			case NORTH: magicArea.direction = 1; break;
+			case WEST: magicArea.direction = 2; break;
+			case EAST: magicArea.direction = 3; break;
+			case SOUTH: magicArea.direction = 4; break;
+		};
+	}
+  else {
+		magicArea.direction = 1;
+	}
+    RuneSpell* runeSpell = dynamic_cast<RuneSpell*>(spell);
+    bool isSuccess;
+    if(runeSpell)
+    isSuccess = spell->game->creatureThrowRune(creature, centerpos, magicArea);
+    else
+	isSuccess = spell->game->creatureCastSpell(creature, centerpos, magicArea);
+	lua_pushboolean(L, isSuccess);
+	return 1;
+}
+int SpellScript::luaActionDoAreaAnimation(lua_State *L)
 {
 	MagicEffectAreaClass magicArea;
 	internalGetMagicEffect(L, magicArea);

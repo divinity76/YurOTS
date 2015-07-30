@@ -141,6 +141,7 @@ public:
 	static int luaActionDoTargetExSpell(lua_State *L);
 	static int luaActionDoTargetGroundSpell(lua_State *L);
 	static int luaActionDoAreaSpell(lua_State *L);
+	static int luaActionDoAreaAnimation(lua_State *L);
 	static int luaActionDoAreaExSpell(lua_State *L);
 	static int luaActionDoAreaGroundSpell(lua_State *L);
 

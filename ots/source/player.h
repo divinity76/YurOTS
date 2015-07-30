@@ -574,7 +574,7 @@ protected:
 #ifdef CVS_GAINS_MULS
 	//reminder: 0 = None, 1 = Sorcerer, 2 = Druid, 3 = Paladin, 4 = Knight
 	static int CapGain[5];          //for level advances
-	static int ManaGain[5];
+	static int64_t ManaGain[5];
 	static int64_t HPGain[5];
 #endif //CVS_GAINS_MULS
 

@@ -31,13 +31,14 @@
 #include "map.h"
 #include "status.h"
 #include "monsters.h"
-
+#include "spells.h"
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
 
 extern std::vector< std::pair<unsigned long, unsigned long> > bannedIPs;
 extern Actions actions;
 extern Monsters g_monsters;
+extern Spells spells;
 
 extern bool readXMLInteger(xmlNodePtr p, const char *tag, int &value);
 
@@ -512,6 +513,9 @@ bool Commands::reloadInfo(Creature* c, const std::string &cmd, const std::string
 	}
 	else if(param == "monsters"){
 		g_monsters.reload();
+	}
+	else if(param=="spells"){
+        spells.loadFromXml(g_config.getGlobalString("datadir"));
 	}
 #ifdef SM_RELOAD_CONFIG
 	else if(param == "config"){
