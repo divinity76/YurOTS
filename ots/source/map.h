@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_MAP_H
 #define __OTSERV_MAP_H
 

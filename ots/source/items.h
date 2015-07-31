@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_ITEMS_H
 #define __OTSERV_ITEMS_H
 

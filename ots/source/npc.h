@@ -1,4 +1,3 @@
-
 #ifndef __npc_h_
 #define __npc_h_
 

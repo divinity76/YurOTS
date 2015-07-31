@@ -2400,42 +2400,43 @@ void Player::kickPlayer()
 
 bool Player::gainManaTick()
 {
-	int add;
-	manaTick++;
-	if(vocation >= 0 && vocation < 5)
-	{
+    int add;
+    manaTick++;
+    if(vocation >= 0 && vocation < 5)
+    {
 #ifdef YUR_PREMIUM_PROMOTION
-		if (promoted)
-		{
-			if(manaTick < promotedGainManaVector[vocation][0])
-				return false;
-			else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_BACKPACK] && (items[SLOT_BACKPACK]->getID()!= ITEM_MAGIC_BACKPACK || items[SLOT_BACKPACK]->getID() != ITEM_MAGIC_BACKPACK))
+        if (promoted)
+        {
+            if(manaTick < promotedGainManaVector[vocation][0])
                 return false;
-		else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_SOFT_BOOTS || items[SLOT_FEET]->getID() != ITEM_SOFT_BOOTS))
+            else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_BACKPACK] && (items[SLOT_BACKPACK]->getID()!= ITEM_MAGIC_BACKPACK || items[SLOT_BACKPACK]->getID() != ITEM_MAGIC_BACKPACK))
                 return false;
-                		else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_KLAP_BOOTS || items[SLOT_FEET]->getID() != ITEM_KLAP_BOOTS))
+            else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_SOFT_BOOTS || items[SLOT_FEET]->getID() != ITEM_SOFT_BOOTS))
                 return false;
-			manaTick = 0;
-			add = promotedGainManaVector[vocation][1];
-		}
-		else
+            else if (healthTick < (promotedGainHealthVector[vocation][0] - ((promotedGainHealthVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_KLAP_BOOTS || items[SLOT_FEET]->getID() != ITEM_KLAP_BOOTS))
+                return false;
+            manaTick = 0;
+            add = promotedGainManaVector[vocation][1];
+        }
+        else
 #endif //YUR_PREMIUM_PROMOTION
-		{
-			if(manaTick < gainManaVector[vocation][0])
-				return false;
-	            else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_BACKPACK] && (items[SLOT_BACKPACK]->getID()!= ITEM_MAGIC_BACKPACK || items[SLOT_BACKPACK]->getID() != ITEM_MAGIC_BACKPACK))
-                 return false;
-			else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_SOFT_BOOTS || items[SLOT_FEET]->getID() != ITEM_SOFT_BOOTS))
-                 return false;
-                 			else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_KLAP_BOOTS || items[SLOT_FEET]->getID() != ITEM_KLAP_BOOTS))
-                 return false;
-			manaTick = 0;
-			add = gainManaVector[vocation][1];
-		}
-	}
-	else{
-		add = 5;
-	}
+        {
+            if(manaTick < gainManaVector[vocation][0])
+                return false;
+            else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_BACKPACK] && (items[SLOT_BACKPACK]->getID()!= ITEM_MAGIC_BACKPACK || items[SLOT_BACKPACK]->getID() != ITEM_MAGIC_BACKPACK))
+                return false;
+            else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_SOFT_BOOTS || items[SLOT_FEET]->getID() != ITEM_SOFT_BOOTS))
+                return false;
+            else if (manaTick < (gainManaVector[vocation][0] - ((gainManaVector[vocation][0] * 25) / 100)) && items[SLOT_FEET] && (items[SLOT_FEET]->getID()!= ITEM_KLAP_BOOTS || items[SLOT_FEET]->getID() != ITEM_KLAP_BOOTS))
+                return false;
+            manaTick = 0;
+            add = gainManaVector[vocation][1];
+        }
+    }
+    else
+    {
+        add = 5;
+    }
 
     if(vocation != 0)
         mana += min(add * g_config.MANA_TICK_MUL, manamax - mana);
@@ -3117,11 +3118,11 @@ void Player::notAfk()
 
 void Player::checkAfk(int32_t thinkTicks)
 {
-/*#ifdef HUCZU_NOLOGOUT_TILE
-    Tile *tile = g_game.map->getTile(this->pos);
-    if(tile && tile->isNoLogout())
-        return;
-#endif*/
+    /*#ifdef HUCZU_NOLOGOUT_TILE
+        Tile *tile = g_game.map->getTile(this->pos);
+        if(tile && tile->isNoLogout())
+            return;
+    #endif*/
     if (idleTime < g_config.KICK_TIME)
         idleTime += thinkTicks;
 
@@ -3275,7 +3276,7 @@ void Player::checkRing(int32_t thinkTics)
         mana += min(g_config.SOFTMANA, manamax - mana);
         health += min(g_config.SOFTHEALTH, healthmax - health);
     }
-        if(items[SLOT_FEET] && items[SLOT_FEET]->getID() == ITEM_KLAP_BOOTS)
+    if(items[SLOT_FEET] && items[SLOT_FEET]->getID() == ITEM_KLAP_BOOTS)
     {
         mana += min(g_config.SOFTMANA, manamax - mana);
         health += min(g_config.SOFTHEALTH, healthmax - health);
@@ -3590,7 +3591,7 @@ void Player::mcCheck()
         {
             *(uint32_t*)&ip = (*it).second->getIP();
             info << lol->getName() << " oraz " << this->getName() << " IP: " <<
-            (uint32_t)ip[0] << "." << (uint32_t)ip[1] << "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
+                 (uint32_t)ip[0] << "." << (uint32_t)ip[1] << "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
             g_game.creatureSendToSpecialChannel(this, SPEAK_CHANNEL_O, info.str().c_str(), 0x01, "MC Checker", false);
             break;
         }

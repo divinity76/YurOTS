@@ -1,4 +1,3 @@
-
 #include "position.h"
 #include <iomanip>
 
@@ -29,7 +28,7 @@ std::ostream& operator<<(std::ostream& os, const Direction& dir)
         os << "Poludnie";
         break;
 
-        //diagonal
+    //diagonal
     case SOUTHWEST:
         os << "Poludniowo-Zachodni";
         break;

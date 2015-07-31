@@ -1,4 +1,3 @@
-
 //#include "preheaders.h"
 
 #include <algorithm>
@@ -803,7 +802,7 @@ int32_t NpcScript::luaBuyActionId(lua_State *L)
                 player->addItemek(itemid, count, actionid);
                 mynpc->doSay("Prosze.");
             }
-             else
+            else
                 mynpc->doSay("Sorry, nie masz wystarczajacej ilosci pieniedzy.");
         }
         else

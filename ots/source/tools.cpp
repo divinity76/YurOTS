@@ -1,4 +1,3 @@
-
 //#include "preheaders.h"
 #include "definitions.h"
 #include <string>

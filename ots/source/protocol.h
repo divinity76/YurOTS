@@ -1,4 +1,3 @@
-
 #ifndef __PROTOCOL_H__
 #define __PROTOCOL_H__
 
@@ -149,8 +148,8 @@ public:
     virtual void sendViolationChannel(Player* gm) = 0;  // gm opens violations
 #endif
     virtual void sendVIP(uint32_t guid, const std::string &name, bool isOnline) = 0;
-	virtual void sendVIPLogIn(unsigned long guid) = 0;
-	virtual void sendVIPLogOut(unsigned long guid) = 0;
+    virtual void sendVIPLogIn(unsigned long guid) = 0;
+    virtual void sendVIPLogOut(unsigned long guid) = 0;
     virtual void reinitializeProtocol(SOCKET s) = 0;
 
 protected:

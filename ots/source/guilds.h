@@ -1,4 +1,3 @@
-
 #ifndef __GUILD__
 #define __GUILD__
 #include "otsystem.h"

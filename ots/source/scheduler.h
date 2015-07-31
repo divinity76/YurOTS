@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_SCHEDULER_H
 #define __OTSERV_SCHEDULER_H
 

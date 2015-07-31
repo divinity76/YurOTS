@@ -1,4 +1,3 @@
-
 #ifndef __NETWORK_MESSAGE_H__
 #define __NETWORK_MESSAGE_H__
 

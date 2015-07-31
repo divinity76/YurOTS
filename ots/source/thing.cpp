@@ -1,4 +1,3 @@
-
 #include "thing.h"
 #include "tile.h"
 

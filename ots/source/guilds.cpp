@@ -1,4 +1,3 @@
-
 #include "guilds.h"
 #include "database.h"
 #include "game.h"

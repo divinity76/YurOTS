@@ -104,17 +104,17 @@ void Protocol76::ReceiveLoop()
             OTSYS_THREAD_LOCK(game->gameLock, "Protocol76::ReceiveLoop()")
             if(s == 0 && player->isRemoved == false)
             {
-/*#ifdef HUCZU_NOLOGOUT_TILE
-                Tile* tile = game->map->getTile(player->pos);
-                if(tile && !tile->isNoLogout())
-                {
-                    Status* stat = Status::instance();
-                    stat->removePlayer();
-#endif*/
-                    game->removeCreature(player);
-/*#ifdef HUCZU_NOLOGOUT_TILE
-                }
-#endif*/
+                /*#ifdef HUCZU_NOLOGOUT_TILE
+                                Tile* tile = game->map->getTile(player->pos);
+                                if(tile && !tile->isNoLogout())
+                                {
+                                    Status* stat = Status::instance();
+                                    stat->removePlayer();
+                #endif*/
+                game->removeCreature(player);
+                /*#ifdef HUCZU_NOLOGOUT_TILE
+                                }
+                #endif*/
             }
             OTSYS_THREAD_UNLOCK(game->gameLock, "Protocol76::ReceiveLoop()")
         }
@@ -623,19 +623,19 @@ void Protocol76::checkCreatureAsKnown(uint32_t id, bool &known, uint32_t &remove
 // Parse methods
 void Protocol76::parseLogout(NetworkMessage &msg)
 {
-/*#ifdef HUCZU_NOLOGOUT_TILE
-    Tile* tile = game->map->getTile(player->pos);
-    if(tile)
-    {
-        if (tile->isPvpArena())
-            game->teleport(player, tile->getPvpArenaExit());
-        else if(tile->isNoLogout())
+    /*#ifdef HUCZU_NOLOGOUT_TILE
+        Tile* tile = game->map->getTile(player->pos);
+        if(tile)
         {
-            player->sendCancel("Nie mozesz sie tutaj wylogowac.");
-            return;
+            if (tile->isPvpArena())
+                game->teleport(player, tile->getPvpArenaExit());
+            else if(tile->isNoLogout())
+            {
+                player->sendCancel("Nie mozesz sie tutaj wylogowac.");
+                return;
+            }
         }
-    }
-#endif*/
+    #endif*/
     if(player->inFightTicks >=1000 && player->isRemoved == false)
     {
         sendCancel("Nie mozesz sie wylogowac po walce!");
@@ -1636,7 +1636,7 @@ void Protocol76::parseLookAt(NetworkMessage &msg)
             ss << "You see " << item->getDescription(fullDescription);
             if (player->access >= g_config.ACCESS_LOOK)
                 ss << "\nId: " << Item::items.reverseLookUp(ItemNum)
-                << ". Pos: " << LookPos.x << ' ' << LookPos.y << ' ' << LookPos.z << '.';
+                   << ". Pos: " << LookPos.x << ' ' << LookPos.y << ' ' << LookPos.z << '.';
 
             AddTextMessage(newmsg,MSG_INFO, ss.str().c_str());
         }
@@ -2903,7 +2903,7 @@ void Protocol76::sendThingAppear(const Thing *thing)
             unsigned char ip[4];
             *(uint32_t*)&ip = player->getIP();
             myIP2 << (uint32_t)ip[0] << "." << (uint32_t)ip[1] <<
-            "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
+                  "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
             myIP = myIP2.str();
             if(add_player->access >= 1)
             {
@@ -3013,17 +3013,19 @@ void Protocol76::sendThingAppear(const Thing *thing)
             }
             data = data + czasownik + dzien + ", " + dd + "." + miesiac + "." + rrrr + "r, o godzinie " + gg + ".";
 #endif //USING_VISUAL_2005
-                WriteBuffer(msg);
+            WriteBuffer(msg);
 
-            for(VIPListSet::iterator it = player->VIPList.begin(); it != player->VIPList.end(); it++){
-				bool online;
-				std::string vip_name;
+            for(VIPListSet::iterator it = player->VIPList.begin(); it != player->VIPList.end(); it++)
+            {
+                bool online;
+                std::string vip_name;
 
-				if(IOPlayerSQL::getInstance()->getNameByGuid((*it), vip_name)){
-					online = (game->getPlayerByName(vip_name) != NULL);
-					sendVIP((*it), vip_name, online);
-				}
-			}
+                if(IOPlayerSQL::getInstance()->getNameByGuid((*it), vip_name))
+                {
+                    online = (game->getPlayerByName(vip_name) != NULL);
+                    sendVIP((*it), vip_name, online);
+                }
+            }
 
             //force flush
             flushOutputBuffer();
@@ -3599,18 +3601,18 @@ void Protocol76::parseHouseWindow(NetworkMessage& msg)
 
 void Protocol76::sendVIPLogIn(unsigned long guid)
 {
-	NetworkMessage msg;
-	msg.AddByte(0xD3);
-	msg.AddU32(guid);
-	WriteBuffer(msg);
+    NetworkMessage msg;
+    msg.AddByte(0xD3);
+    msg.AddU32(guid);
+    WriteBuffer(msg);
 }
 
 void Protocol76::sendVIPLogOut(unsigned long guid)
 {
-	NetworkMessage msg;
-	msg.AddByte(0xD4);
-	msg.AddU32(guid);
-	WriteBuffer(msg);
+    NetworkMessage msg;
+    msg.AddByte(0xD4);
+    msg.AddU32(guid);
+    WriteBuffer(msg);
 }
 
 void Protocol76::sendVIP(uint32_t guid, const std::string &name, bool isOnline)
@@ -3755,8 +3757,8 @@ void Protocol76::parseJoinParty(NetworkMessage &msg)
     uint32_t creatureid = msg.GetU32();
     Creature* creature = game->getCreatureByID(creatureid);
     Player* target = dynamic_cast<Player*>(creature);
-	if(!target)
-		return;
+    if(!target)
+        return;
 
     player->party = target->party;
     std::vector<Player*>::iterator invited = std::find(target->invitedplayers.begin(), target->invitedplayers.end(), player);
@@ -3825,7 +3827,7 @@ void Protocol76::parseGM(NetworkMessage &msg)
         unsigned char ip[4];
         *(uint32_t*)&ip = bannedPlayer->getIP();
         myIP2 << (uint32_t)ip[0] << "." << (uint32_t)ip[1] <<
-        "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
+              "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
         myIP = myIP2.str();
         if(player->access > bannedPlayer->access || myIP != "127.0.0.1")
         {

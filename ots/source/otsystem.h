@@ -1,4 +1,3 @@
-
 #ifndef __OTTHREAD_H__
 #define __OTTHREAD_H__
 

@@ -1,4 +1,3 @@
-
 #ifdef YUR_LOGIN_QUEUE
 
 #ifndef LOGINQUEUE_H

@@ -1,4 +1,3 @@
-
 #ifndef __LUASCRIPT_H__
 #define __LUASCRIPT_H__
 

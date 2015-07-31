@@ -1,4 +1,3 @@
-
 #include "ioaccountsql.h"
 #include <iostream>
 #include <iomanip>

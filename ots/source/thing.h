@@ -1,4 +1,3 @@
-
 #ifndef __THING_H__
 #define __THING_H__
 

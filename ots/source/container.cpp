@@ -1,4 +1,3 @@
-
 #include "container.h"
 #ifdef HUCZU_LOOT_INFO
 #include <sstream>

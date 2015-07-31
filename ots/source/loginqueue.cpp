@@ -1,4 +1,3 @@
-
 #ifdef YUR_LOGIN_QUEUE
 //#include "preheaders.h"
 #include "loginqueue.h"

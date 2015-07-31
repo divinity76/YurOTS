@@ -1,4 +1,3 @@
-
 #include "itemloader.h"
 
 int32_t ItemLoader::setProps(attribute_t attr, void* data, datasize_t size)

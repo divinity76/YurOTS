@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_IOPLAYERSQL_H__
 #define __OTSERV_IOPLAYERSQL_H__
 

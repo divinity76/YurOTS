@@ -1,4 +1,3 @@
-
 //#include "preheaders.h"
 #include <sstream>
 
@@ -363,11 +362,15 @@ bool Actions::UseItem(Player* player, const Position &pos,const unsigned char st
     }
 #endif //TLM_HOUSE_SYSTEM
 
-    if(item->getOwner() != "" && player->getName() != item->getOwner() && (player->party == 0 || game->getPlayerByName(item->getOwner())->party == 0 || player->party != game->getPlayerByName(item->getOwner())->party)){
+    if(item->getOwner() != "" && player->getName() != item->getOwner() && (player->party == 0 || game->getPlayerByName(item->getOwner())->party == 0 || player->party != game->getPlayerByName(item->getOwner())->party))
+    {
         std::stringstream info;
-        if(item->getOwnerTime() > g_config.OWNER_TIME){
+        if(item->getOwnerTime() > g_config.OWNER_TIME)
+        {
             info << "Nie jestes wlascicielem. Poczekaj 1 sekunde.";
-        }else{
+        }
+        else
+        {
             info << "Nie jestes wlascicielem. Poczekaj " << item->getOwnerTime() << (item->getOwnerTime()>4?" sekund.":(item->getOwnerTime()>1?" sekundy.":(item->getOwnerTime()>0?" sekunde.":" sekund.")));
         }
         player->sendCancel(info.str().c_str());
@@ -1124,8 +1127,8 @@ int32_t ActionScript::registerFunctions()
     lua_register(luaState, "doPlayerSetVocation", ActionScript::luaActionDoPlayerSetVocation);
     //doPlayerRemoveItem(cid,itemid,count)
     lua_register(luaState, "doPlayerRemoveItem", ActionScript::luaActionDoPlayerRemoveItem);
-	//getSlotItem(cid,slot)
-	lua_register(luaState, "getSlotItem", ActionScript::luaActionGetPlayerSlotItem);
+    //getSlotItem(cid,slot)
+    lua_register(luaState, "getSlotItem", ActionScript::luaActionGetPlayerSlotItem);
     //doPlayerSetDrunk(cid,time)
     lua_register(luaState, "doPlayerSetDrunk", ActionScript::luaActionDoPlayerSetDrunk);
     //getCreatureName(cid)
@@ -2562,44 +2565,48 @@ int32_t ActionScript::luaActionDoSetItemUniqueID(lua_State *L)
 int32_t ActionScript::luaActionIsPlayer(lua_State *L)
 {
     //isPlayer(cid)
-     uint32_t cid = (uint32_t)internalGetNumber(L);
-     ActionScript *action = getActionScript(L);
-     lua_pushboolean(L, action->GetPlayerByUID(cid) ? true : false);
-     return 1;
+    uint32_t cid = (uint32_t)internalGetNumber(L);
+    ActionScript *action = getActionScript(L);
+    lua_pushboolean(L, action->GetPlayerByUID(cid) ? true : false);
+    return 1;
 }
 
 int32_t ActionScript::luaActionIsMonster(lua_State *L)
 {
     //isMonster(cid)
-     uint32_t cid = (uint32_t)internalGetNumber(L);
-     ActionScript *action = getActionScript(L);
-     lua_pushboolean(L, action->GetMonsterByUID(cid) ? true : false);
-     return 1;
+    uint32_t cid = (uint32_t)internalGetNumber(L);
+    ActionScript *action = getActionScript(L);
+    lua_pushboolean(L, action->GetMonsterByUID(cid) ? true : false);
+    return 1;
 }
 
 int32_t ActionScript::luaActionGetPlayerSlotItem(lua_State *L)
 {
-	//getSlotItem(cid,slot)
-	int32_t slot = (int32_t)internalGetNumber(L);
-	uint32_t cid = (uint32_t)internalGetNumber(L);
+    //getSlotItem(cid,slot)
+    int32_t slot = (int32_t)internalGetNumber(L);
+    uint32_t cid = (uint32_t)internalGetNumber(L);
 
     ActionScript *action = getActionScript(L);
-   	const KnownThing* tmp = action->GetPlayerByUID(cid);
-	Player *player = (Player*)(tmp->thing);
+    const KnownThing* tmp = action->GetPlayerByUID(cid);
+    Player *player = (Player*)(tmp->thing);
 
-	if(player){
-		if(player->items[slot]){
-			lua_pushnumber(L, player->items[slot]->getID());
-		}
-		else{
-			lua_pushnumber(L, 0);
-		}
-	}
-	else{
-		std::cout << "luaGetPlayerSlotItem: Player not found" << std::endl;
-		lua_pushnumber(L, -1);
-	}
-	return 1;
+    if(player)
+    {
+        if(player->items[slot])
+        {
+            lua_pushnumber(L, player->items[slot]->getID());
+        }
+        else
+        {
+            lua_pushnumber(L, 0);
+        }
+    }
+    else
+    {
+        std::cout << "luaGetPlayerSlotItem: Player not found" << std::endl;
+        lua_pushnumber(L, -1);
+    }
+    return 1;
 }
 
 int32_t ActionScript::luaActionGetCreatureName(lua_State *L)
@@ -2610,13 +2617,15 @@ int32_t ActionScript::luaActionGetCreatureName(lua_State *L)
     ActionScript *action = getActionScript(L);
 
     const KnownThing* tmp = action->GetThingByUID(cid);
-    if(tmp->type != thingTypeItem){
+    if(tmp->type != thingTypeItem)
+    {
         Creature *c = dynamic_cast<Creature*>(tmp->thing);
         if(c)
-          lua_pushstring(L, c->getName().c_str());
+            lua_pushstring(L, c->getName().c_str());
         return 1;
     }
-    else{
+    else
+    {
         lua_pushnumber(L, -1);
         std::cout << "getCreatureName: creature not found" << std::endl;
         return 1;

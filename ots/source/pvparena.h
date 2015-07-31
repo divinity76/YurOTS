@@ -1,4 +1,3 @@
-
 #ifdef YUR_PVP_ARENA
 
 #ifndef PVPARENA_H

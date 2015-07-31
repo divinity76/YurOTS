@@ -145,8 +145,8 @@ bool Commands::loadFromDB()
         {
             if(it->second->loaded == false)
                 std::cout << "Uwaga! Zapomniales ustawic access dla komendy " << it->first << std::endl;
-        //register command tag in game
-        game->addCommandTag(it->first.substr(0,1));
+            //register command tag in game
+            game->addCommandTag(it->first.substr(0,1));
         }
     }
     return this->loaded;
@@ -574,14 +574,14 @@ bool Commands::getInfo(Creature* c, const std::string &cmd, const std::string &p
         }
         *(uint32_t*)&ip = paramPlayer->lastip;
         info << "Nick:   " << paramPlayer->getName() << std::endl <<
-        "Account: " << paramPlayer->getAccount()<< std::endl <<
-        "Access: " << paramPlayer->access << std::endl <<
-        "Poziom:  " << paramPlayer->getPlayerInfo(PLAYERINFO_LEVEL) << std::endl <<
-        "Magpoziom: " << paramPlayer->getPlayerInfo(PLAYERINFO_MAGICLEVEL) << std::endl <<
-        "Money: " << paramPlayer->getMoney()/1000000 << "sc" << std::endl <<
-        "Pozycja:" << paramPlayer->pos << std::endl <<
-        "IP: " << (uint32_t)ip[0] << "." << (uint32_t)ip[1] <<
-        "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
+             "Account: " << paramPlayer->getAccount()<< std::endl <<
+             "Access: " << paramPlayer->access << std::endl <<
+             "Poziom:  " << paramPlayer->getPlayerInfo(PLAYERINFO_LEVEL) << std::endl <<
+             "Magpoziom: " << paramPlayer->getPlayerInfo(PLAYERINFO_MAGICLEVEL) << std::endl <<
+             "Money: " << paramPlayer->getMoney()/1000000 << "sc" << std::endl <<
+             "Pozycja:" << paramPlayer->pos << std::endl <<
+             "IP: " << (uint32_t)ip[0] << "." << (uint32_t)ip[1] <<
+             "." << (uint32_t)ip[2] << "." << (uint32_t)ip[3];
         player->sendTextMessage(MSG_BLUE_TEXT,info.str().c_str());
     }
     else
@@ -841,7 +841,7 @@ bool Commands::showUptime(Creature* c, const std::string &cmd, const std::string
 
         std::stringstream msg;
         msg << "Server has been running for " << h << (h != 1? " hours " : " hour ") <<
-        m << (m != 1? " minutes " : " minute ") << s << (s != 1? " seconds. " : " second.") << std::ends;
+            m << (m != 1? " minutes " : " minute ") << s << (s != 1? " seconds. " : " second.") << std::ends;
 
         player->sendTextMessage(MSG_BLUE_TEXT, msg.str().c_str());
     }
@@ -980,7 +980,7 @@ bool Commands::PokazFragi(Creature* c, const std::string &cmd, const std::string
         {
             std::ostringstream info;
             info << "You have " << player->skullKills
-            << " unjustified kills. You will lose a frag in " << tickstr(player->absolveTicks) << ".";
+                 << " unjustified kills. You will lose a frag in " << tickstr(player->absolveTicks) << ".";
             player->sendTextMessage(MSG_BLUE_TEXT, info.str().c_str());
             player->mmo += 5;
             return true;
@@ -1469,26 +1469,26 @@ bool Commands::doladowanie(Creature* c, const std::string &cmd, const std::strin
             int32_t id_uslugi = atoi(usluga.c_str());
             switch(id_uslugi)
             {
-                case 1:
-                    usluga = "2096";
-                    ilosc_punktow = 30;
-                    break;
-                case 2:
-                    usluga = "2097";
-                    ilosc_punktow = 70;
-                    break;
-                case 3:
-                    usluga = "2098";
-                    ilosc_punktow = 120;
-                    break;
-                case 4:
-                    usluga = "2099";
-                    ilosc_punktow = 250;
-                    break;
-                case 5:
-                    usluga = "2100";
-                    ilosc_punktow = 350;
-                    break;
+            case 1:
+                usluga = "2096";
+                ilosc_punktow = 30;
+                break;
+            case 2:
+                usluga = "2097";
+                ilosc_punktow = 70;
+                break;
+            case 3:
+                usluga = "2098";
+                ilosc_punktow = 120;
+                break;
+            case 4:
+                usluga = "2099";
+                ilosc_punktow = 250;
+                break;
+            case 5:
+                usluga = "2100";
+                ilosc_punktow = 350;
+                break;
             }
         }
         if(player)

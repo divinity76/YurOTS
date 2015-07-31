@@ -1,4 +1,3 @@
-
 #ifdef YUR_PVP_ARENA
 //#include "preheaders.h"
 #include "pvparena.h"

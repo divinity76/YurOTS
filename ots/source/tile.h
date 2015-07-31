@@ -1,4 +1,3 @@
-
 #ifndef __TILE_H__
 #define __TILE_H__
 
@@ -31,9 +30,9 @@ public:
         pz     = false;
         splash = NULL;
         ground = NULL;
-/*#ifdef HUCZU_NOLOGOUT_TILE
-        noLogout = false;
-#endif*/
+        /*#ifdef HUCZU_NOLOGOUT_TILE
+                noLogout = false;
+        #endif*/
 #ifdef TLM_HOUSE_SYSTEM
         house = NULL;
 #endif //TLM_HOUSE_SYSTEM
@@ -92,10 +91,10 @@ public:
 
     bool isPz() const;
     void setPz();
-/*#ifdef HUCZU_NOLOGOUT_TILE
-    bool isNoLogout() const;
-    void setNoLogout();
-#endif*/
+    /*#ifdef HUCZU_NOLOGOUT_TILE
+        bool isNoLogout() const;
+        void setNoLogout();
+    #endif*/
     bool hasItem(uint32_t id) const;
 
     bool floorChange() const;
@@ -105,9 +104,9 @@ public:
     std::string getDescription() const;
 protected:
     bool pz;
-/*#ifdef HUCZU_NOLOGOUT_TILE
-    bool noLogout;
-#endif*/
+    /*#ifdef HUCZU_NOLOGOUT_TILE
+        bool noLogout;
+    #endif*/
 #ifdef TLM_HOUSE_SYSTEM
     House* house;
 #endif //TLM_HOUSE_SYSTEM

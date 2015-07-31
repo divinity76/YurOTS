@@ -190,15 +190,15 @@ public:
         for(it = poolsStats.begin(); it != poolsStats.end(); ++it)
         {
             output << (int32_t)(it->first) << " alloc: " << (int32_t)(it->second->allocations) <<
-            " dealloc: " << (int32_t)(it->second->deallocations) <<
-            " unused: " << (int32_t)(it->second->unused);
+                   " dealloc: " << (int32_t)(it->second->deallocations) <<
+                   " unused: " << (int32_t)(it->second->unused);
             if(it->second->allocations != 0 && it->first != 0)
             {
                 output << " avg: " << (int32_t)((it->first) - (it->second->unused)/(it->second->allocations)) <<
-                " %unused: " << (int32_t)((it->second->unused)*100/(it->second->allocations)/(it->first));
+                       " %unused: " << (int32_t)((it->second->unused)*100/(it->second->allocations)/(it->first));
             }
             output << " N: " << ((int32_t)(it->second->allocations) - (int32_t)(it->second->deallocations)) <<
-            std::endl;
+                   std::endl;
         }
         output << std::endl;
         output.close();
@@ -262,7 +262,7 @@ private:
     const PoolManager& operator=(const PoolManager&);
 
     typedef std::map<size_t, boost::pool<boost::default_user_allocator_malloc_free >*, std::less<size_t >,
-    dummyallocator<std::pair<const size_t, boost::pool<boost::default_user_allocator_malloc_free>* > > > Pools;
+            dummyallocator<std::pair<const size_t, boost::pool<boost::default_user_allocator_malloc_free>* > > > Pools;
 
     Pools pools;
 #ifdef __OTSERV_ALLOCATOR_STATS__
@@ -273,7 +273,7 @@ private:
         int32_t unused;
     };
     typedef std::map<size_t, t_PoolStats*, std::less<size_t >,
-    dummyallocator<std::pair<const size_t, t_PoolStats* > > > PoolsStats;
+            dummyallocator<std::pair<const size_t, t_PoolStats* > > > PoolsStats;
     PoolsStats poolsStats;
 #endif
     OTSYS_THREAD_LOCKVAR poolLock;

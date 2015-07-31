@@ -1,4 +1,3 @@
-
 #ifndef __CONST76_H__
 #define __CONST76_H__
 
@@ -287,10 +286,10 @@ enum item_t
 #ifdef HUCZU_AMULET
     ITEM_TYMERIA_AMULET         = 2131,
 #endif
-	ITEM_MAGIC_BACKPACK         = 2000,
-	ITEM_ASTEL_SHIELD           = 3973,
-	ITEM_FEATHER_LEGS           = 2648,
-	ITEM_DIAMOND_RING           = 2121,
+    ITEM_MAGIC_BACKPACK         = 2000,
+    ITEM_ASTEL_SHIELD           = 3973,
+    ITEM_FEATHER_LEGS           = 2648,
+    ITEM_DIAMOND_RING           = 2121,
 };
 
 enum skull_t

@@ -1,4 +1,3 @@
-
 #ifndef __TEMPLATES_H__
 #define __TEMPLATES_H__
 

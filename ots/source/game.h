@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_GAME_H
 #define __OTSERV_GAME_H
 
@@ -538,7 +537,8 @@ protected:
     std::list<decayBlock*> decayVector;
 
     void startOwner(Item* item, Player* player);
-    struct ownerBlock{
+    struct ownerBlock
+    {
         int32_t ownerTime;
         std::list<Item*> ownerItems;
     };

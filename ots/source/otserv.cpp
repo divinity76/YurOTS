@@ -577,9 +577,9 @@ OTSYS_THREAD_RETURN ConnectionHandler(void *dat)
                             isLocked = false;
 
                             protocol->ReceiveLoop();
-/*#ifdef HUCZU_NOLOGOUT_TILE
-                            //stat->removePlayer();
-#else*/
+                            /*#ifdef HUCZU_NOLOGOUT_TILE
+                                                        //stat->removePlayer();
+                            #else*/
                             stat->removePlayer();
 //#endif
                         }

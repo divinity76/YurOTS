@@ -1,4 +1,3 @@
-
 #ifndef __spells_h_
 #define __spells_h_
 

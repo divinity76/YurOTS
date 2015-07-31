@@ -1,4 +1,3 @@
-
 #include "scheduler.h"
 
 SchedulerTask* makeTask(boost::function1<void, Game*> f)

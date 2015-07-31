@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_STATUS_H
 #define __OTSERV_STATUS_H
 

@@ -463,7 +463,7 @@ bool IOPlayerSQL::savePlayer(Player* player)
         ++runningID;
 
         streamitems << player->getGUID() <<"," << slotid << ","<< runningID <<","<< parentid <<"," << item->getID()<<","<< (int32_t)item->getItemCountOrSubtype() << "," <<
-        (int32_t)item->getActionId()<< "," << item->getCharges() << "," << item->getTime() << "," << item->getUniqueId() << "," << db->escapeString(item->getText()) << "," << db->escapeString(item->getWriter()) << "," << db->escapeString(item->getSpecialDescription());
+                    (int32_t)item->getActionId()<< "," << item->getCharges() << "," << item->getTime() << "," << item->getUniqueId() << "," << db->escapeString(item->getText()) << "," << db->escapeString(item->getWriter()) << "," << db->escapeString(item->getSpecialDescription());
 
         topcontainer = dynamic_cast<Container*>(item);
         if(topcontainer)
@@ -493,7 +493,7 @@ bool IOPlayerSQL::savePlayer(Player* player)
             }
 
             streamitems << player->getGUID() <<"," << 0 << ","<< runningID <<","<< parentid <<"," << (*it)->getID()<<","<< (int32_t)(*it)->getItemCountOrSubtype() << "," <<
-            (int32_t)(*it)->getActionId() << "," << (*it)->getCharges() << "," << (*it)->getTime() << "," << (*it)->getUniqueId() << "," << db->escapeString((*it)->getText()) << "," << db->escapeString((*it)->getWriter()) << "," << db->escapeString((*it)->getSpecialDescription());
+                        (int32_t)(*it)->getActionId() << "," << (*it)->getCharges() << "," << (*it)->getTime() << "," << (*it)->getUniqueId() << "," << db->escapeString((*it)->getText()) << "," << db->escapeString((*it)->getWriter()) << "," << db->escapeString((*it)->getSpecialDescription());
             if(!query_insert.addRow(streamitems.str().c_str()))
                 return false;
             streamitems.str("");
@@ -525,7 +525,7 @@ bool IOPlayerSQL::savePlayer(Player* player)
         ++runningID;
 
         streamitems << player->getGUID() <<"," << dit->first << ","<< runningID <<","<< parentid <<"," << item->getID()<<"," << (int32_t)item->getItemCountOrSubtype() << "," <<
-        (int32_t)item->getActionId() << "," << item->getCharges() << "," << item->getTime() << "," << item->getUniqueId() << "," << db->escapeString(item->getText()) << "," << db->escapeString(item->getWriter()) << "," << db->escapeString(item->getSpecialDescription());
+                    (int32_t)item->getActionId() << "," << item->getCharges() << "," << item->getTime() << "," << item->getUniqueId() << "," << db->escapeString(item->getText()) << "," << db->escapeString(item->getWriter()) << "," << db->escapeString(item->getSpecialDescription());
 
         topcontainer = dynamic_cast<Container*>(item);
         if(topcontainer)
@@ -554,7 +554,7 @@ bool IOPlayerSQL::savePlayer(Player* player)
             }
 
             streamitems << player->getGUID() << "," << 0 << "," << runningID << "," << parentid << "," << (*it)->getID()<< "," << (int32_t)(*it)->getItemCountOrSubtype() << "," <<
-            (int32_t)(*it)->getActionId() << "," << (*it)->getCharges() << "," << (*it)->getTime() << "," << (*it)->getUniqueId() << "," <<  db->escapeString((*it)->getText()) << "," << db->escapeString((*it)->getWriter()) << "," << db->escapeString((*it)->getSpecialDescription());
+                        (int32_t)(*it)->getActionId() << "," << (*it)->getCharges() << "," << (*it)->getTime() << "," << (*it)->getUniqueId() << "," <<  db->escapeString((*it)->getText()) << "," << db->escapeString((*it)->getWriter()) << "," << db->escapeString((*it)->getSpecialDescription());
             if(!query_insert.addRow(streamitems.str().c_str()))
                 return false;
             streamitems.str("");
@@ -787,11 +787,11 @@ bool IOPlayerSQL::resetGuildInformation(uint32_t guid)
 
 bool IOPlayerSQL::updateOnlineStatus(uint32_t guid, bool login)
 {
-	Database* db = Database::getInstance();
-	DBQuery query;
+    Database* db = Database::getInstance();
+    DBQuery query;
 
-	uint16_t value = login;
+    uint16_t value = login;
 
-	query << "UPDATE `players` SET `online` = " << value << " WHERE `id` = " << guid << db->getUpdateLimiter();
-	return db->executeQuery(query.str());
+    query << "UPDATE `players` SET `online` = " << value << " WHERE `id` = " << guid << db->getUpdateLimiter();
+    return db->executeQuery(query.str());
 }

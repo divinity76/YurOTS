@@ -187,7 +187,7 @@ std::string House::getDescription() const
 {
     std::stringstream doortext;
     doortext << "You see a door.\n Dom '" << name << "'.\n " <<
-    (owner.empty()? "Nikt nie" : owner) << " jest wlascicielem tego domu.";
+             (owner.empty()? "Nikt nie" : owner) << " jest wlascicielem tego domu.";
     if (owner.empty())
     {
         int32_t price = g_config.PRICE_FOR_SQM * getHouseSQM(name);

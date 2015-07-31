@@ -1,4 +1,3 @@
-
 #ifndef __monster_h_
 #define __monster_h_
 

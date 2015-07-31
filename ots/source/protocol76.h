@@ -1,4 +1,3 @@
-
 #ifndef tprot76_h
 #define tprot76_h
 
@@ -219,8 +218,8 @@ private:
 
     //VIP methods
     virtual void sendVIP(uint32_t guid, const std::string &name, bool isOnline);
-	virtual void sendVIPLogIn(unsigned long guid);
-	virtual void sendVIPLogOut(unsigned long guid);
+    virtual void sendVIPLogIn(unsigned long guid);
+    virtual void sendVIPLogOut(unsigned long guid);
     void parseAddVip(NetworkMessage &msg);
     void parseRemVip(NetworkMessage &msg);
 

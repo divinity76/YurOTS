@@ -32,9 +32,9 @@ typedef uint32_t flags_t;
 enum tile_flags_t
 {
     TILE_PZ = 1,
-/*#ifdef HUCZU_NOLOGOUT_TILE
-    TILE_NOLOGOUT = 1 << 3,
-#endif*/
+    /*#ifdef HUCZU_NOLOGOUT_TILE
+        TILE_NOLOGOUT = 1 << 3,
+    #endif*/
 };
 
 enum OTBM_NodeTypes_t
@@ -248,10 +248,10 @@ bool IOMapOTBM::loadMap(Map* map, std::string identifier)
 
                                 if(flags & TILE_PZ)
                                     tile->setPz();
-/*#ifdef HUCZU_NOLOGOUT_TILE
-                                if(flags & TILE_NOLOGOUT)
-                                    tile->setNoLogout();
-#endif*/
+                                /*#ifdef HUCZU_NOLOGOUT_TILE
+                                                                if(flags & TILE_NOLOGOUT)
+                                                                    tile->setNoLogout();
+                                #endif*/
                                 break;
                             case OTBM_ATTR_ITEM:
                                 Item* item;

@@ -1,4 +1,3 @@
-
 #ifndef __creature_h
 #define __creature_h
 

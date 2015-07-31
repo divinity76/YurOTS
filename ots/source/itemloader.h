@@ -1,4 +1,3 @@
-
 #ifndef __OTSERV_ITEMLOADER_H__
 #define __OTSERV_ITEMLOADER_H__
 

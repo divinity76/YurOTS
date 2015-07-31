@@ -1,4 +1,3 @@
-
 #ifndef __player_h_
 #define __player_h_
 
@@ -513,8 +512,8 @@ public:
     bool addVIP(uint32_t _guid, std::string &name, bool isOnline, bool internal = false);
     void sendVipLogin(std::string vipname);
     void sendVipLogout(std::string vipname);
-	void notifyLogIn(Player* player);
-	void notifyLogOut(Player* player);
+    void notifyLogIn(Player* player);
+    void notifyLogOut(Player* player);
     std::string vip[MAX_VIPS];
 
 #ifdef YUR_BOH

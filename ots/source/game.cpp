@@ -924,10 +924,10 @@ OTSYS_THREAD_RETURN Game::monitorThread(void *p)
         for(it = OTSYS_THREAD_LOCK_CLASS::loglist.begin(); it != OTSYS_THREAD_LOCK_CLASS::loglist.end(); ++it)
         {
             *outdriver << (it->lock ? "lock - " : "unlock - ") << it->str
-            << " threadid: " << it->threadid
-            << " time: " << it->time
-            << " ptr: " << it->mutexaddr
-            << std::endl;
+                       << " threadid: " << it->threadid
+                       << " time: " << it->time
+                       << " ptr: " << it->mutexaddr
+                       << std::endl;
         }
 
         *outdriver << "*****************************************************" << std::endl;
@@ -5730,40 +5730,50 @@ bool Game::playerUseItemEx(Player *player, const Position& posFrom,const unsigne
     if(item)
     {
 #ifdef __MIZIAK_SUPERMANAS__
-            if(item->getID() == 2006 && (int(item->getFluidType()) == 5 || int(item->getFluidType()) == 0)){
-                 if(int(item->getFluidType()) == 0){
-                     player->sendCancel("It is empty.");
-                     return false;
-                 }else{
-                     if(item->pos.x == 0xFFFF){
-                            player->sendCancel("You can only use this item in your equipment.");
-                            return false;
-                     }else if(item->getActionId() > 0){
-                        Player* target = dynamic_cast<Player*>(getThing(posTo, stack_to, player));
-                        if(!target){
-                            player->sendCancel("You can only use this item on players.");
-                            return false;
-                        }
+        if(item->getID() == 2006 && (int(item->getFluidType()) == 5 || int(item->getFluidType()) == 0))
+        {
+            if(int(item->getFluidType()) == 0)
+            {
+                player->sendCancel("It is empty.");
+                return false;
+            }
+            else
+            {
+                if(item->pos.x == 0xFFFF)
+                {
+                    player->sendCancel("You can only use this item in your equipment.");
+                    return false;
+                }
+                else if(item->getActionId() > 0)
+                {
+                    Player* target = dynamic_cast<Player*>(getThing(posTo, stack_to, player));
+                    if(!target)
+                    {
+                        player->sendCancel("You can only use this item on players.");
+                        return false;
+                    }
 
                     int32_t minMana = (int32_t)(((player->level*g_config.MANAS_MIN_LVL)+(player->maglevel*g_config.MANAS_MIN_MLVL))*g_config.MANAS_MIN_LO);
                     int32_t maxMana = (int32_t)(((player->level*g_config.MANAS_MAX_LVL)+(player->maglevel*g_config.MANAS_MAX_MLVL))*g_config.MANAS_MAX_HI);
                     int32_t addmana = random_range(g_config.MANAS_MIN_MANA, g_config.MANAS_MAX_MANA);
-                        target->mana = std::min(target->manamax,target->mana+addmana);
-                        target->sendStats();
-                        item->setItemCountOrSubtype(0);
-                        this->sendUpdateThing(player,posFrom,item,stack_from);
-                        if(item->getActionId() != 1)
-                           this->addEvent(makeTask((g_config.MANAS_EXHAUSTED*1000), boost::bind(&Game::fullManas, this, item, player, posFrom, stack_from)));
-                        item->setActionId(item->getActionId()-1);
-                        this->sendMagicEffectToSpectors(target->pos, NM_ME_MAGIC_ENERGIE);
-                        this->creatureSay(player,SPEAK_MONSTER2,"Manaaa...");
-                        return true;
-                     }else{
-                        player->sendCancel("It is empty.");
-                        return false;
-                     }
-                  }
+                    target->mana = std::min(target->manamax,target->mana+addmana);
+                    target->sendStats();
+                    item->setItemCountOrSubtype(0);
+                    this->sendUpdateThing(player,posFrom,item,stack_from);
+                    if(item->getActionId() != 1)
+                        this->addEvent(makeTask((g_config.MANAS_EXHAUSTED*1000), boost::bind(&Game::fullManas, this, item, player, posFrom, stack_from)));
+                    item->setActionId(item->getActionId()-1);
+                    this->sendMagicEffectToSpectors(target->pos, NM_ME_MAGIC_ENERGIE);
+                    this->creatureSay(player,SPEAK_MONSTER2,"Manaaa...");
+                    return true;
+                }
+                else
+                {
+                    player->sendCancel("It is empty.");
+                    return false;
+                }
             }
+        }
 #endif //__MIZIAK_SUPERMANAS__
         //Runes
         std::map<uint16_t, Spell*>::iterator sit = spells.getAllRuneSpells()->find(item->getID());
@@ -9442,9 +9452,9 @@ void Game::checkNapisy()
         getSpectators(Range(position, true), list);
         for(SpectatorVec::iterator it = list.begin(); it != list.end(); ++it)
         {
-          Player *p = dynamic_cast<Player*>(*it);
-          if(p)
-            p->sendAnimatedText(position, sit->second.kolor, sit->second.text);
+            Player *p = dynamic_cast<Player*>(*it);
+            if(p)
+                p->sendAnimatedText(position, sit->second.kolor, sit->second.text);
         }
     }
 }

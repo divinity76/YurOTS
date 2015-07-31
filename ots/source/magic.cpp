@@ -1,4 +1,3 @@
-
 //#include "preheaders.h"
 #include "creature.h"
 #include "monster.h"
