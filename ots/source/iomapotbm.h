@@ -7,7 +7,7 @@
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -23,20 +23,21 @@
 
 #include "iomap.h"
 
-class IOMapOTBM : public IOMap{
+class IOMapOTBM : public IOMap
+{
 public:
-	IOMapOTBM(){};
-	~IOMapOTBM(){};
-	virtual char* getSourceDescription(){ return "OTBM"; };
-	/** Load the map from an OTBM file
-	  * \param map Pointer to the Map
-	  * \param identifier Name of the OTBM-File to load
-	  * \returns Whether map load was successful*/
-	bool loadMap(Map* map, std::string identifier);
+    IOMapOTBM() {};
+    ~IOMapOTBM() {};
+    //virtual char* getSourceDescription(){ return "OTBM"; };
+    /** Load the map from an OTBM file
+      * \param map Pointer to the Map
+      * \param identifier Name of the OTBM-File to load
+      * \returns Whether map load was successful*/
+    bool loadMap(Map* map, std::string identifier);
 
 private:
-	Item* unserializaItemAttr(PropStream &propStream);
-	Item* unserializaItemNode(FileLoader* f, NODE node);
+    Item* unserializaItemAttr(PropStream &propStream);
+    Item* unserializaItemNode(FileLoader* f, NODE node);
 };
 
 

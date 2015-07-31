@@ -1,309 +1,383 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-// Guilds by Yurez
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
-#ifdef YUR_GUILD_SYSTEM
+
 #include "guilds.h"
-#include "player.h"
-#include "luascript.h"
-#include <algorithm>
-#include <locale>
+#include "database.h"
+#include "game.h"
+#include "const76.h"
 
+extern Game g_game;
 extern LuaScript g_config;
-extern xmlMutexPtr xmlmutex;
-std::vector<Guilds::Guild*> Guilds::guilds;
-unsigned long Guilds::Guild::counter = 0x10;
 
-Guilds::Guild::Guild(std::string name)
+bool Guild::getGuildId(uint32_t& id, const std::string& name)
 {
-	gid = counter++;
-	gname = name;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `id` FROM `guilds` WHERE `name` " << db->getStringComparison() << db->escapeString(name) << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    id = result->getDataInt("id");
+    result->free();
+    return true;
 }
 
-void Guilds::Guild::addMember(std::string name, gstat_t status, std::string rank, std::string nick)
+bool Guild::getGuildById(std::string& name, uint32_t id)
 {
-	Member m = { status, name, rank, nick };
-	members.push_back(m);
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `name` FROM `guilds` WHERE `id` = " << id << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    name = result->getDataString("name");
+    result->free();
+    return true;
 }
 
-std::string Guilds::Guild::getName() const
+bool Guild::swapGuildIdToOwner(uint32_t& value)
 {
-	return gname;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `ownerid` FROM `guilds` WHERE `id` = " << value << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    value = result->getDataInt("ownerid");
+    result->free();
+    return true;
 }
 
-gstat_t Guilds::Guild::getGuildStatus(std::string name) const
+bool Guild::guildExists(uint32_t guild)
 {
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-			return members[i].status;
-	return GUILD_NONE;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `id` FROM `guilds` WHERE `id` = " << guild << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    result->free();
+    return true;
 }
 
-bool Guilds::Guild::setGuildStatus(std::string name, gstat_t status)
+uint32_t Guild::getRankIdByName(uint32_t guild, const std::string& name)
 {
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-		{
-			members[i].status = status;
-			return true;
-		}
-	return false;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " << guild << " AND `name` " << db->getStringComparison() << db->escapeString(name) << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return 0;
+
+    const uint32_t id = result->getDataInt("id");
+    result->free();
+    return id;
 }
 
-void Guilds::Guild::setGuildInfo(std::string name, gstat_t status, std::string rank)
+uint32_t Guild::getRankIdByLevel(uint32_t guild, GuildLevel_t level)
 {
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-		{
-			members[i].status = status;
-			members[i].rank = rank;
-			return;
-		}
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	addMember(name, status, rank, "");
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " << guild << " AND `level` = " << level << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return 0;
+
+    const uint32_t id = result->getDataInt("id");
+    result->free();
+    return id;
 }
 
-bool Guilds::Guild::clearGuildInfo(std::string name)
+bool Guild::getRankEx(uint32_t& id, std::string& name, uint32_t guild, GuildLevel_t level)
 {
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-		{
-			members.erase(members.begin()+i);
-			return true;
-		}
-	return false;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `id`, `name` FROM `guild_ranks` WHERE `guild_id` = " << guild << " AND `level` = " << level;
+    if(id)
+        query << " AND `id` = " << id;
+
+    query << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    name = result->getDataString("name");
+    if(!id)
+        id = result->getDataInt("id");
+
+    result->free();
+    return true;
 }
 
-bool Guilds::Guild::setGuildNick(std::string name, std::string nick)
+std::string Guild::getRank(uint32_t guid)
 {
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-		{
-			members[i].nick = nick;
-			return true;
-		}
-	return false;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `guild_ranks`.`name` FROM `players`, `guild_ranks` WHERE `players`.`id` = " << guid << " AND `guild_ranks`.`id` = `players`.`rank_id` LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return "";
+
+    const std::string name = result->getDataString("name");
+    result->free();
+    return name;
 }
 
-bool Guilds::Guild::reloadGuildInfo(Player* player)
+bool Guild::changeRank(uint32_t guild, const std::string& oldName, const std::string& newName)
 {
-	std::string name = player->getName();
-	for (size_t i = 0; i < members.size(); i++)
-		if (members[i].name == name)
-		{
-			player->setGuildInfo(members[i].status, gid, gname, members[i].rank, members[i].nick);
-			return true;
-		}
-	return false;
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " << guild << " AND `name` " << db->getStringComparison() << db->escapeString(oldName) << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    const uint32_t id = result->getDataInt("id");
+    result->free();
+
+    query.str("");
+    query << "UPDATE `guild_ranks` SET `name` = " << db->escapeString(newName) << " WHERE `id` = " << id << db->getUpdateLimiter();
+    if(!db->executeQuery(query.str()))
+        return false;
+
+    for(AutoList<Player>::listiterator it = Player::listPlayer.list.begin(); it != Player::listPlayer.list.end(); ++it)
+    {
+        if(it->second->getRankId() == id)
+            it->second->setRankName(newName);
+    }
+
+    return true;
 }
 
-void Guilds::Guild::save(xmlNodePtr guildNode)
+bool Guild::createGuild(Player* player)
 {
-	xmlNodePtr memberNode;
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	for (size_t i = 0; i < members.size(); i++)
-	{
-		memberNode = xmlNewNode(NULL, (const xmlChar*)"member");
-		xmlSetProp(memberNode, (const xmlChar*) "status", (const xmlChar*)str(members[i].status).c_str());
-		xmlSetProp(memberNode, (const xmlChar*) "name", (const xmlChar*)members[i].name.c_str());
-		xmlSetProp(memberNode, (const xmlChar*) "rank", (const xmlChar*)members[i].rank.c_str());
-		xmlSetProp(memberNode, (const xmlChar*) "nick", (const xmlChar*)members[i].nick.c_str());
-		xmlAddChild(guildNode, memberNode);
-	}
+    DBQuery query;
+    query << "INSERT INTO `guilds` (`id`, `name`, `ownerid`, `creationdata`, `motd`) VALUES (NULL, " << db->escapeString(player->getGuildName()) << ", " << player->getGUID() << ", " << time(NULL) << ", 'Your guild has been successfully created, to view all available commands type: !commands. If you would like to remove this message use !cleanmotd and to set new motd use !setmotd text.')";
+    if(!db->executeQuery(query.str()))
+        return false;
+
+    query.str("");
+    query << "SELECT `id` FROM `guilds` WHERE `ownerid` = " << player->getGUID() << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    const uint32_t guildId = result->getDataInt("id");
+    result->free();
+    return joinGuild(player, guildId, true);
 }
 
-bool Guilds::Load()
+bool Guild::joinGuild(Player* player, uint32_t guildId, bool creation/* = false*/)
 {
-	std::string file = g_config.getGlobalString("datadir") + "guilds.xml";
-	xmlDocPtr doc;
-	xmlMutexLock(xmlmutex);
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	doc = xmlParseFile(file.c_str());
-	if (!doc)
-		return false;
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " << guildId << " AND `level` = " << (creation ? "3" : "1") << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
 
-	xmlNodePtr root, guildNode, memberNode;
-	root = xmlDocGetRootElement(doc);
-	if (xmlStrcmp(root->name, (const xmlChar*)"guilds")) 
-	{
-		xmlFreeDoc(doc);
-		xmlMutexUnlock(xmlmutex);
-		return false;
-	}
+    const uint32_t rankId = result->getDataInt("id");
+    result->free();
 
-	guildNode = root->children;
-	while (guildNode)
-	{
-		if (strcmp((char*) guildNode->name, "guild") == 0)
-		{
-			std::string name = (const char*)xmlGetProp(guildNode, (const xmlChar *) "name");
-			Guild* guild = new Guild(name);
+    std::string guildName;
+    if(!creation)
+    {
+        query.str("");
+        query << "SELECT `name` FROM `guilds` WHERE `id` = " << guildId << " LIMIT 1";
+        if(!(result = db->storeQuery(query.str())))
+            return false;
 
-			memberNode = guildNode->children;
-			while (memberNode)
-			{
-				if (strcmp((char*) memberNode->name, "member") == 0)
-				{
-					gstat_t status = (gstat_t)atoi((const char*)xmlGetProp(memberNode, (const xmlChar *) "status"));
-					std::string name = (const char*)xmlGetProp(memberNode, (const xmlChar *) "name");
-					std::string rank = (const char*)xmlGetProp(memberNode, (const xmlChar *) "rank");
+        guildName = result->getDataString("name");
+        result->free();
+    }
 
-					std::string nick;
-					const char* tmp = (const char*)xmlGetProp(memberNode, (const xmlChar *) "nick");
-					if (tmp)
-						nick = std::string(tmp);
-					else
-						nick = (const char*)xmlGetProp(memberNode, (const xmlChar *) "title");	// old
-					
-					guild->addMember(name, status, rank, nick);
-				}
-				memberNode = memberNode->next;
-			}
+    query.str("");
+    query << "UPDATE `players` SET `rank_id` = " << rankId << " WHERE `id` = " << player->getGUID() << db->getUpdateLimiter();
+    if(!db->executeQuery(query.str()))
+        return false;
 
-			guilds.push_back(guild);
-		}
-		guildNode = guildNode->next;
-	}
+    player->setGuildId(guildId);
+    GuildLevel_t level = GUILD_MEMBER;
+    if(!creation)
+        player->setGuildName(guildName);
+    else
+        level = GUILD_LEADER;
 
-	xmlFreeDoc(doc);
-	xmlMutexUnlock(xmlmutex);
-	return true;	
+    player->setGuildLevel(level, rankId);
+    player->invitedToGuildsList.clear();
+    return true;
 }
 
-bool Guilds::Save()
+bool Guild::disbandGuild(uint32_t guildId)
 {
-	std::string file = g_config.getGlobalString("datadir") + "guilds.xml";
-	xmlDocPtr doc;
-	xmlMutexLock(xmlmutex);
+    Database* db = Database::getInstance();
 
-	xmlNodePtr root, guildNode;
-	doc = xmlNewDoc((const xmlChar*)"1.0");
+    DBQuery query;
+    query << "UPDATE `players` SET `rank_id` = '' AND `guildnick` = '' WHERE `rank_id` = " << getRankIdByLevel(guildId, GUILD_LEADER) << " OR rank_id = " << getRankIdByLevel(guildId, GUILD_VICE) << " OR rank_id = " << getRankIdByLevel(guildId, GUILD_MEMBER);
+    if(!db->executeQuery(query.str()))
+        return false;
 
-	doc->children = xmlNewDocNode(doc, NULL, (const xmlChar*)"guilds", NULL);
-    root = doc->children;
+    for(AutoList<Player>::listiterator it = Player::listPlayer.list.begin(); it != Player::listPlayer.list.end(); ++it)
+    {
+        if(it->second->getGuildId() == guildId)
+            it->second->leaveGuild();
+    }
 
-	for (size_t i = 0; i < guilds.size(); i++)
-	{
-		guildNode = xmlNewNode(NULL, (const xmlChar*)"guild");
-		xmlSetProp(guildNode, (const xmlChar*) "name", (const xmlChar*)guilds[i]->getName().c_str());
-		guilds[i]->save(guildNode);
-		xmlAddChild(root, guildNode);
-	}
+    query.str("");
+    query << "DELETE FROM `guilds` WHERE `id` = " << guildId << " LIMIT 1";
+    if(!db->executeQuery(query.str()))
+        return false;
 
-	if (xmlSaveFile(file.c_str(), doc))
-	{
-		xmlFreeDoc(doc);
-		xmlMutexUnlock(xmlmutex);
-		return true;
-	}
-	else
-	{
-		xmlFreeDoc(doc);
-		xmlMutexUnlock(xmlmutex);
-		std::cout << "Failed to save " << file << std::endl;
-		return false;
-	}
+    query.str("");
+    query << "DELETE FROM `guild_invites` WHERE `guild_id` = " << guildId;
+    if(!db->executeQuery(query.str()))
+        return false;
+
+    query.str("");
+    query << "DELETE FROM `guild_ranks` WHERE `guild_id` = " << guildId;
+    return db->executeQuery(query.str());
 }
 
-bool Guilds::AddNewGuild(std::string gname)
+bool Guild::hasGuild(uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->getName() == gname)
-			return false;
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	guilds.push_back(new Guild(gname));
-	return true;
+    DBQuery query;
+    query << "SELECT `rank_id` FROM `players` WHERE `id` = " << guid << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    const bool ret = result->getDataInt("rank_id") != 0;
+    result->free();
+    return ret;
 }
 
-void Guilds::DeleteGuild(std::string gname)
+bool Guild::isInvited(uint32_t guild, uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->getName() == gname)
-		{
-			delete guilds[i];
-			guilds.erase(guilds.begin()+i);
-			return;
-		}
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	throw std::runtime_error("Guilds: DeleteGuild: guild not found");
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_invites` WHERE `player_id` = " << guid << " AND `guild_id`= " << guild << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    result->free();
+    return true;
 }
 
-std::string Guilds::GetGuildName(std::string name)
+bool Guild::invitePlayer(uint32_t guild, uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->getGuildStatus(name) != GUILD_NONE)
-			return guilds[i]->getName();
-	return "";
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "INSERT INTO `guild_invites` (`player_id`, `guild_id`) VALUES ('" << guid << "', '" << guild << "')";
+    return db->executeQuery(query.str());
 }
 
-gstat_t Guilds::GetGuildStatus(std::string name)
+bool Guild::revokeInvite(uint32_t guild, uint32_t guid)
 {
-	gstat_t status = GUILD_NONE;
-	for (size_t i = 0; i < guilds.size(); i++)
-		if ((status = guilds[i]->getGuildStatus(name)) != GUILD_NONE)
-			break;
-	return status;
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "DELETE FROM `guild_invites` WHERE `player_id` = " << guid << " AND `guild_id` = " << guild;
+    return db->executeQuery(query.str());
 }
 
-void Guilds::SetGuildStatus(std::string name, gstat_t status)
+uint32_t Guild::getGuildId(uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->setGuildStatus(name, status))
-			return;
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	throw std::runtime_error("Guilds: SetGuildStatus: player does not belong to any guild");
+    DBQuery query;
+    query << "SELECT `guild_ranks`.`guild_id` FROM `players`, `guild_ranks` WHERE `players`.`id` = " << guid << " AND `guild_ranks`.`id` = `players`.`rank_id` LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return 0;
+
+    const uint32_t guildId = result->getDataInt("guild_id");
+    result->free();
+    return guildId;
 }
 
-void Guilds::SetGuildInfo(std::string name, gstat_t status, std::string rank, std::string gname)
+GuildLevel_t Guild::getGuildLevel(uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->getName() == gname)
-		{
-			guilds[i]->setGuildInfo(name, status, rank);
-			return;
-		}
-	throw std::runtime_error("Guilds: SetGuildInfo: guild not found");
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `guild_ranks`.`level` FROM `players`, `guild_ranks` WHERE `players`.`id` = " << guid << " AND `guild_ranks`.`id` = `players`.`rank_id` LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return GUILD_NONE;
+
+    const GuildLevel_t level = (GuildLevel_t)result->getDataInt("level");
+    result->free();
+    return level;
 }
 
-void Guilds::ClearGuildInfo(std::string name)
+bool Guild::setGuildLevel(uint32_t guid, GuildLevel_t level)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->clearGuildInfo(name))
-			return;
+    Database* db = Database::getInstance();
+    DBResult* result;
 
-	throw std::runtime_error("Guilds: ClearGuildInfo: player does not belong to any guild");
+    DBQuery query;
+    query << "SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " << getGuildId(guid) << " AND `level` = " << level << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return false;
+
+    query.str("");
+    query << "UPDATE `players` SET `rank_id` = " << result->getDataInt("id") << " WHERE `id` = " << guid << db->getUpdateLimiter();
+    result->free();
+    return db->executeQuery(query.str());
 }
 
-void Guilds::SetGuildNick(std::string name, std::string nick)
+bool Guild::updateOwnerId(uint32_t guild, uint32_t guid)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->setGuildNick(name, nick))
-			return;
-
-	throw std::runtime_error("Guilds: SetGuildTitle: player does not belong to any guild");
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "UPDATE `guilds` SET `ownerid` = " << guid << " WHERE `id` = " << guild << db->getUpdateLimiter();
+    return db->executeQuery(query.str());
 }
 
-void Guilds::ReloadGuildInfo(Player* player)
+bool Guild::setGuildNick(uint32_t guid, const std::string& nick)
 {
-	for (size_t i = 0; i < guilds.size(); i++)
-		if (guilds[i]->reloadGuildInfo(player))
-			return;
-
-	player->setGuildInfo(GUILD_NONE, 0, "", "", "");
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "UPDATE `players` SET `guildnick` = " << db->escapeString(nick) << " WHERE `id` = " << guid << db->getUpdateLimiter();
+    return db->executeQuery(query.str());
 }
-#endif //YUR_GUILD_SYSTEM
+
+bool Guild::setMotd(uint32_t guild, const std::string& newMessage)
+{
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "UPDATE `guilds` SET `motd` = " << db->escapeString(newMessage) << " WHERE `id` = " << guild << db->getUpdateLimiter();
+    return db->executeQuery(query.str());
+}
+
+std::string Guild::getMotd(uint32_t guild)
+{
+    Database* db = Database::getInstance();
+    DBResult* result;
+
+    DBQuery query;
+    query << "SELECT `motd` FROM `guilds` WHERE `id` = " << guild << " LIMIT 1";
+    if(!(result = db->storeQuery(query.str())))
+        return "";
+
+    const std::string motd = result->getDataString("motd");
+    result->free();
+    return motd;
+}

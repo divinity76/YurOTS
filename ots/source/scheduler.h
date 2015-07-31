@@ -1,23 +1,3 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-// Scheduler-Objects for OpenTibia
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
-
 
 #ifndef __OTSERV_SCHEDULER_H
 #define __OTSERV_SCHEDULER_H
@@ -29,68 +9,77 @@
 
 class Game;
 
-class SchedulerTask {
+class SchedulerTask
+{
 public:
-	SchedulerTask() {
-		_eventid = 0;
-		_cycle = 0;
-  }
+    SchedulerTask()
+    {
+        _eventid = 0;
+        _cycle = 0;
+    }
+    virtual ~SchedulerTask() { };
+    // definition to make sure lower cycles end up front
+    // in the priority_queue used in the scheduler
+    inline bool operator<(const SchedulerTask& other) const
+    {
+        return getCycle() > other.getCycle();
+    }
 
-	virtual ~SchedulerTask() { };
+    virtual void operator()(Game* arg) = 0;
 
-	// definition to make sure lower cycles end up front
-	// in the priority_queue used in the scheduler
-	inline bool operator<(const SchedulerTask& other) const {
-		return getCycle() > other.getCycle();
-	}
+    virtual void setEventId(uint32_t id)
+    {
+        _eventid = id;
+    }
 
-	virtual void operator()(Game* arg) = 0;
+    inline uint32_t getEventId() const
+    {
+        return _eventid;
+    }
 
-	virtual void setEventId(unsigned long id) {
-		_eventid = id;
-	}
+    virtual void setTicks(const __int64 ticks)
+    {
+        _cycle = OTSYS_TIME() + ticks;
+    }
 
-	inline unsigned long getEventId() const {
-		return _eventid;
-	}
-
-	virtual void setTicks(const __int64 ticks) {
-		_cycle = OTSYS_TIME() + ticks;
-	}
-
-	inline __int64 getCycle() const {
-		return _cycle;
-	}
+    inline __int64 getCycle() const
+    {
+        return _cycle;
+    }
 
 protected:
-	unsigned long _eventid;
-	__int64 _cycle;
+    uint32_t _eventid;
+    __int64 _cycle;
 };
 
-class TSchedulerTask : public SchedulerTask {
+class TSchedulerTask : public SchedulerTask
+{
 public:
-	TSchedulerTask(boost::function1<void, Game*> f) : _f(f) {
-	}
+    TSchedulerTask(boost::function1<void, Game*> f) : _f(f)
+    {
+    }
 
-	virtual void operator()(Game* arg) {
-		_f(arg);
-	}
+    virtual void operator()(Game* arg)
+    {
+        _f(arg);
+    }
 
-	virtual ~TSchedulerTask() { }
+    virtual ~TSchedulerTask() { }
 
 protected:
-	boost::function1<void, Game*> _f;
+    boost::function1<void, Game*> _f;
 };
 
 SchedulerTask* makeTask(boost::function1<void, Game*> f);
 SchedulerTask* makeTask(__int64 ticks, boost::function1<void, Game*> f);
 
 
-class lessSchedTask : public std::binary_function<SchedulerTask*, SchedulerTask*, bool> {
+class lessSchedTask : public std::binary_function<SchedulerTask*, SchedulerTask*, bool>
+{
 public:
-	bool operator()(SchedulerTask*& t1, SchedulerTask*& t2) {
-		return *t1 < *t2;
-	}
+    bool operator()(SchedulerTask*& t1, SchedulerTask*& t2)
+    {
+        return *t1 < *t2;
+    }
 };
-
 #endif

@@ -1,40 +1,30 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-//
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
-
 
 #ifndef __OTSERV_TOOLS_H
 #define __OTSERV_TOOLS_H
 
+#include <libxml/parser.h>
+#include "otsystem.h"
+typedef std::vector<std::string> StringVec;
 
-bool fileExists(char* filename);
-int64_t random_range(int64_t lowest_number, int64_t highest_number);
-void hexdump(unsigned char *_data, int _len);
+bool fileExists(const char* filename);
+//float box_muller(float m, float s);
+int32_t random_range(int32_t lowest_number, int32_t highest_number);
+uint32_t rand24b();
+void hexdump(unsigned char *_data, int32_t _len);
 char upchar(char c);
+uint32_t getIPSocket(SOCKET s);
 void upper(char *upstr, char *str);
-void upper(char *upstr, char *str, int n);
-int safe_atoi(const char* str);
+void upper(char *upstr, char *str, int32_t n);
+int32_t safe_atoi(const char* str);
 double timer();
 std::string article(const std::string& name);
-std::string tickstr(int ticks);
-std::string str(int32_t  value);
-std::string str(uint32_t value);
-std::string str(int64_t value);
-std::string str(uint64_t value);
+std::string tickstr(int32_t ticks);
+void toLowerCaseString(std::string& source);
+bool readXMLInteger(xmlNodePtr node, const char* tag, int32_t &value);
+bool readXMLString(xmlNodePtr node, const char* tag, std::string& value);
+std::string trimString(std::string& str);
+bool isLowercaseLetter(char character);
+bool isUppercaseLetter(char character);
+bool isValidName(std::string text, bool forceUppercaseOnFirstLetter = true);
+StringVec explodeString(const std::string& string, const std::string& separator);
 #endif

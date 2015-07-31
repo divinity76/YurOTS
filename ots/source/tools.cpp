@@ -1,65 +1,102 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-// Various functions.
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/timeb.h>
+//#include "preheaders.h"
+#include "definitions.h"
 #include <string>
 #include <cmath>
 #include <sstream>
+#include "tools.h"
 
-bool fileExists(char* filename)
+
+bool fileExists(const char* filename)
 {
 #ifdef USING_VISUAL_2005
-	FILE *f = NULL;
-	fopen_s(&f, filename, "rb");
+    FILE *f = NULL;
+    fopen_s(&f, filename, "rb");
 #else
-	FILE *f = fopen(filename, "rb");
+    FILE *f = fopen(filename, "rb");
 #endif //USING_VISUAL_2005
 
-	bool exists = (f != NULL);
-	if (f != NULL)
-		fclose(f);
+    bool exists = (f != NULL);
+    if (f != NULL)
+        fclose(f);
 
-	return exists;
+    return exists;
 }
+
+uint32_t rand24b()
+{
+    return ((rand() << 12) ^ (rand())) & (0xFFFFFF);
+}
+/*
+float box_muller(float m, float s)
+{
+	// normal random variate generator
+	// mean m, standard deviation s
+	float x1, x2, w, y1;
+	static float y2;
+
+	static bool useLast = false;
+	if(useLast) // use value from previous call
+	{
+		y1 = y2;
+		useLast = false;
+		return (m + y1 * s);
+	}
+
+	do
+	{
+		double r1 = (((float)(rand()) / RAND_MAX));
+		double r2 = (((float)(rand()) / RAND_MAX));
+
+		x1 = 2.0 * r1 - 1.0;
+		x2 = 2.0 * r2 - 1.0;
+		w = x1 * x1 + x2 * x2;
+	}
+	while(w >= 1.0);
+	w = sqrt((-2.0 * log(w)) / w);
+
+	y1 = x1 * w;
+	y2 = x2 * w;
+
+	useLast = true;
+	return (m + y1 * s);
+}*/
 
 //////////////////////////////////////////////////
 // get a random value between lowest_number and highest_number
-int64_t random_range(int64_t lowest_number, int64_t highest_number)
+int32_t random_range(int32_t lowestNumber, int32_t highestNumber)
+{
+    if(highestNumber == lowestNumber)
+        return lowestNumber;
+
+    if(lowestNumber > highestNumber)
+        std::swap(lowestNumber, highestNumber);
+
+    return (lowestNumber + ((int32_t)rand24b() % (highestNumber - lowestNumber + 1)));
+}
+
+
+
+/*
+int32_t random_range(int32_t lowest_number, int32_t highest_number)
 {
 	if(lowest_number > highest_number){
-		int64_t nTmp = highest_number;
+		int32_t nTmp = highest_number;
 		highest_number = lowest_number;
 		lowest_number = nTmp;
     }
 
     double range = highest_number - lowest_number + 1;
-    return lowest_number + int64_t(range * rand()/(RAND_MAX + 1.0));
-}
+    return lowest_number + int32_t(range * rand()/(RAND_MAX + 1.0));
+}*/
 
 //////////////////////////////////////////////////
 // dump a part of the memory to stderr.
-void hexdump(unsigned char *_data, int _len) {
-    int i;
-    for (; _len > 0; _data += 16, _len -= 16) {
+void hexdump(unsigned char *_data, int32_t _len)
+{
+    int32_t i;
+    for (; _len > 0; _data += 16, _len -= 16)
+    {
         for (i = 0; i < 16 && i < _len; i++)
             fprintf(stderr, "%02x ", _data[i]);
         for (; i < 16; i++)
@@ -79,7 +116,8 @@ void hexdump(unsigned char *_data, int _len) {
 // The called function must be of type void *fn(void *).
 // You can use the pointer to the function for anything you want to.
 // Return: a thread handle.
-pthread_t *detach(void *(*_fn)(void *), void *_arg) {
+pthread_t *detach(void *(*_fn)(void *), void *_arg)
+{
     pthread_t *thread = new pthread_t();
     if (pthread_create(thread, NULL, _fn, _arg))
         perror("pthread");
@@ -89,7 +127,8 @@ pthread_t *detach(void *(*_fn)(void *), void *_arg) {
 
 //////////////////////////////////////////////////
 // Upcase a char.
-char upchar(char c) {
+char upchar(char c)
+{
     if (c >= 'a' && c <= 'z')
         return c - 'a' + 'A';
     else if (c == 'à')
@@ -158,9 +197,27 @@ char upchar(char c) {
         return c;
 }
 
+uint32_t getIPSocket(SOCKET s)
+{
+    sockaddr_in sain;
+    socklen_t salen = sizeof(sockaddr_in);
+
+    if(getpeername(s, (sockaddr*)&sain, &salen) == 0)
+    {
+#if defined WIN32 || defined __WINDOWS__
+        return sain.sin_addr.S_un.S_addr;
+#else
+        return sain.sin_addr.s_addr;
+#endif
+    }
+
+    return 0;
+}
+
 //////////////////////////////////////////////////
 // Upcase a 0-terminated string.
-void upper(char *upstr, char *str) {
+void upper(char *upstr, char *str)
+{
     for (; *str; str++, upstr++)
         *upstr = upchar(*str);
     *upstr = '\0';
@@ -169,123 +226,194 @@ void upper(char *upstr, char *str) {
 
 //////////////////////////////////////////////////
 // Upcase a 0-terminated string, but at most n chars.
-void upper(char *upstr, char *str, int n) {
+void upper(char *upstr, char *str, int32_t n)
+{
     for (; *str && n; str++, upstr++, n--)
         *upstr = upchar(*str);
     if (n) *upstr = '\0';
 }
 
-int safe_atoi(const char* str)
+int32_t safe_atoi(const char* str)
 {
-	if (str)
-		return atoi(str);
-	else
-		return 0;
+    if (str)
+        return atoi(str);
+    else
+        return 0;
 }
 
 double timer()
 {
-	static bool running = false;
-	static _timeb start, end;
+    static bool running = false;
+    static _timeb start, end;
 
-	if (!running)
-	{
+    if (!running)
+    {
 #ifdef USING_VISUAL_2005
-		_ftime_s(&start);
+        _ftime_s(&start);
 #else
-		_ftime(&start);
+        _ftime(&start);
 #endif //USING_VISUAL_2005
-		running = true;
-		return 0.0;
-	}
-	else
-	{
+        running = true;
+        return 0.0;
+    }
+    else
+    {
 #ifdef USING_VISUAL_2005
-		_ftime_s(&end);
+        _ftime_s(&end);
 #else
-		_ftime(&end);
+        _ftime(&end);
 #endif //USING_VISUAL_2005
-		running = false;
-		return (end.time-start.time)+(end.millitm-start.millitm)/1000.0;
-	}
+        running = false;
+        return (end.time-start.time)+(end.millitm-start.millitm)/1000.0;
+    }
 }
 
 std::string article(const std::string& name)
 {
-	if (name.empty())
-		return name;
+    if (name.empty())
+        return name;
 
-	switch (upchar(name[0]))
-	{
-	case 'A':
-	case 'E':
-	case 'I':
-	case 'O':
-	case 'U':
-		return std::string("an ") + name;
-	default:
-		return std::string("a ") + name;
-	}
+    switch (upchar(name[0]))
+    {
+    case 'A':
+    case 'E':
+    case 'I':
+    case 'O':
+    case 'U':
+        return std::string("an ") + name;
+    default:
+        return std::string("a ") + name;
+    }
 }
 
-std::string tickstr(int ticks)
+std::string tickstr(int32_t ticks)
 {
-	int hours = (int)floor(double(ticks)/(3600000.0));
-	int minutes = (int)ceil((double(ticks) - double(hours)*3600000.0)/(60000.0));
+    int32_t hours = (int32_t)floor(double(ticks)/(3600000.0));
+    int32_t minutes = (int32_t)ceil((double(ticks) - double(hours)*3600000.0)/(60000.0));
 
-	std::ostringstream info;
-	info << hours << (hours==1? " hour " : " hours ") << minutes << (minutes==1? " minute" :" minutes");
-	return info.str();
+    std::ostringstream info;
+    info << hours << (hours==1? " hour " : " hours ") << minutes << (minutes==1? " minute" :" minutes");
+    return info.str();
 }
 
-
-std::string str(int32_t value)
+void toLowerCaseString(std::string& source)
 {
-	char buf[64];
-#ifdef USING_VISUAL_2005
-	if (_ltoa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return ltoa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    std::transform(source.begin(), source.end(), source.begin(), tolower);
 }
 
-std::string str(uint32_t value)
+bool readXMLInteger(xmlNodePtr node, const char* tag, int32_t &value)
 {
-	char buf[64];
-#ifdef USING_VISUAL_2005
-	if (_ultoa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return _ultoa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    char* nodeValue = (char*)xmlGetProp(node, (xmlChar*)tag);
+    if(!nodeValue)
+        return false;
+
+    value = atoi(nodeValue);
+    xmlFreeOTSERV(nodeValue);
+    return true;
 }
 
-std::string str(int64_t value)
+bool readXMLString(xmlNodePtr node, const char* tag, std::string& value)
 {
-	char buf[128];
-#ifdef USING_VISUAL_2005
-	if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return _i64toa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    char* nodeValue = (char*)xmlGetProp(node, (xmlChar*)tag);
+    if(!nodeValue)
+        return false;
+
+    value = nodeValue;
+    xmlFreeOTSERV(nodeValue);
+    return true;
 }
-std::string str(uint64_t value)
+
+std::string trimString(std::string& str)
 {
-	char buf[128];
-#ifdef USING_VISUAL_2005
-	if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return _ui64toa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    str.erase(str.find_last_not_of(" ") + 1);
+    return str.erase(0, str.find_first_not_of(" "));
+}
+
+StringVec explodeString(const std::string& string, const std::string& separator)
+{
+    StringVec returnVector;
+    size_t start = 0, end = 0;
+    while((end = string.find(separator, start)) != std::string::npos)
+    {
+        returnVector.push_back(string.substr(start, end - start));
+        start = end + separator.size();
+    }
+
+    returnVector.push_back(string.substr(start));
+    return returnVector;
+}
+
+bool isLowercaseLetter(char character)
+{
+    return (character >= 97 && character <= 122);
+}
+
+bool isUppercaseLetter(char character)
+{
+    return (character >= 65 && character <= 90);
+}
+
+bool isValidName(std::string text, bool forceUppercaseOnFirstLetter/* = true*/)
+{
+    uint32_t textLength = text.length(), lenBeforeSpace = 1, lenBeforeQuote = 1, lenBeforeDash = 1, repeatedCharacter = 0;
+    char lastChar = 32;
+    if(forceUppercaseOnFirstLetter)
+    {
+        if(!isUppercaseLetter(text[0]))
+            return false;
+    }
+    else if(!isLowercaseLetter(text[0]) && !isUppercaseLetter(text[0]))
+        return false;
+
+    for(uint32_t size = 1; size < textLength; size++)
+    {
+        if(text[size] != 32)
+        {
+            lenBeforeSpace++;
+
+            if(text[size] != 39)
+                lenBeforeQuote++;
+            else
+            {
+                if(lenBeforeQuote <= 1 || size == textLength - 1 || text[size + 1] == 32)
+                    return false;
+
+                lenBeforeQuote = 0;
+            }
+
+            if(text[size] != 45)
+                lenBeforeDash++;
+            else
+            {
+                if(lenBeforeDash <= 1 || size == textLength - 1 || text[size + 1] == 32)
+                    return false;
+
+                lenBeforeDash = 0;
+            }
+
+            if(text[size] == lastChar)
+            {
+                repeatedCharacter++;
+                if(repeatedCharacter > 2)
+                    return false;
+            }
+            else
+                repeatedCharacter = 0;
+
+            lastChar = text[size];
+        }
+        else
+        {
+            if(lenBeforeSpace <= 1 || size == textLength - 1 || text[size + 1] == 32)
+                return false;
+
+            lenBeforeSpace = lenBeforeQuote = lenBeforeDash = 0;
+        }
+
+        if(!(isLowercaseLetter(text[size]) || text[size] == 32 || text[size] == 39 || text[size] == 45
+                || (isUppercaseLetter(text[size]) && text[size - 1] == 32)))
+            return false;
+    }
+
+    return true;
 }

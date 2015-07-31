@@ -1,23 +1,3 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-// class which takes care of all data which must get saved in the player
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
-
 
 #ifndef __LUASCRIPT_H__
 #define __LUASCRIPT_H__
@@ -33,152 +13,233 @@ extern "C"
 extern "C" struct lua_State;
 
 #ifdef YUR_HIGH_LEVELS
-typedef __int64 exp_t;
+typedef int64_t exp_t;
 #else
-typedef unsigned long exp_t;
+typedef uint32_t exp_t;
 #endif //YUR_HIGH_LEVELS
 
 class LuaScript
 {
 public:
-	LuaScript();
-	~LuaScript();
+    LuaScript();
+    ~LuaScript();
 
-#ifdef YUR_MULTIPLIERS
-	exp_t EXP_MUL;
-	exp_t EXP_MUL_PVP;
-	int64_t HEALTH_TICK_MUL;
-	int64_t MANA_TICK_MUL;
-	int64_t CAP_GAIN[5];
-	int64_t MANA_GAIN[5];
-	int64_t HP_GAIN[5];
-	int WEAPON_MUL[5];
-	int SHIELD_MUL[5];
-	int DIST_MUL[5];
-	int64_t MANA_MUL[5];
-#endif //YUR_MULTIPLIERS
+#ifdef __MIZIAK_SUPERMANAS__
+    int32_t MANAS_EXHAUSTED;
+#endif //__MIZIAK_SUPERMANAS__
+    int32_t MAX_PLAYERS;
+    bool GM_MSG;
 
-#ifdef TR_ANTI_AFK
-	int KICK_TIME;
-#endif //TR_ANTI_AFK
 
-#ifdef YUR_LEARN_SPELLS
-	bool LEARN_SPELLS;
-#endif //YUR_LEARN_SPELLS
+    exp_t EXP_ROOK;
+    exp_t EXP_MUL;
+    exp_t EXP_MUL_PVP;
 
+    int32_t HEALTH_TICK_MUL;
+    int32_t MANA_TICK_MUL;
+    int32_t HEALTH_TICK_MUL_ROOK;
+    int32_t MANA_TICK_MUL_ROOK;
+    int32_t CAP_GAIN[5];
+    int32_t MANA_GAIN[5];
+    int32_t HP_GAIN[5];
+    int32_t WEAPON_MUL[5];
+    int32_t SHIELD_MUL[5];
+    int32_t DIST_MUL[5];
+    int32_t MANA_MUL[5];
+    int32_t SOFTMANA;
+    int32_t SOFTHEALTH;
+    int32_t KICK_TIME;
+    int32_t DROP_RATE;
 #ifdef TLM_HOUSE_SYSTEM
-	int ACCESS_HOUSE;
-	int MAX_HOUSE_TILE_ITEMS;
+    int32_t ACCESS_HOUSE;
+    int32_t MAX_HOUSE_TILE_ITEMS;
 #endif //TLM_HOUSE_SYSTEM
 
-#ifdef TR_SUMMONS
-	bool  SUMMONS_ALL_VOC;
-	size_t MAX_SUMMONS;
-#endif //TR_SUMMONS
+#ifdef HUCZU_SKULLS
+    int32_t HIT_TIME;
+    int32_t WHITE_TIME;
+    int32_t RED_TIME;
+    int32_t FRAG_TIME;
+    int32_t RED_UNJUST;
+    int32_t BAN_UNJUST;
+#endif //HUCZU_SKULLS
+    int32_t SQL_PORT;
+    int32_t MYSQL_READ_TIMEOUT;
+    int32_t MYSQL_WRITE_TIMEOUT;
+    int32_t SQL_KEEPALIVE;
+    int32_t GUILD_FORM_LEVEL;
 
-#ifdef TLM_SKULLS_PARTY
-	int HIT_TIME;
-	int WHITE_TIME;
-	int RED_TIME;
-	int FRAG_TIME;
-	int RED_UNJUST;
-	int BAN_UNJUST;
-#endif //TLM_SKULLS_PARTY
+    double BURST_DMG_LVL;
+    double BURST_DMG_MLVL;
+    double BURST_DMG_LO;
+    double BURST_DMG_HI;
 
-#ifdef SD_BURST_ARROW
-	double BURST_DMG_LVL;
-	double BURST_DMG_MLVL;
-	double BURST_DMG_LO;
-	double BURST_DMG_HI;
-#endif //SD_BURST_ARROW
+    double GOLD_DMG_LVL;
+    double GOLD_DMG_MLVL;
+    double GOLD_DMG_LO;
+    double GOLD_DMG_HI;
 
-#ifdef YUR_CONFIG_CAP
-	bool CAP_SYSTEM;
-#endif //YUR_CONFIG_CAP
+    double SILVER_DMG_LVL;
+    double SILVER_DMG_MLVL;
+    double SILVER_DMG_LO;
+    double SILVER_DMG_HI;
 
-#ifdef BDB_REPLACE_SPEARS
-	int SPEAR_LOSE_CHANCE;
-#endif //BDB_REPLACE_SPEARS
+    double NO_VOCATION_SPEED;
+    double SORCERER_SPEED;
+    double DRUID_SPEED;
+    double PALADIN_SPEED;
+    double KNIGHT_SPEED;
+
+    bool CAP_SYSTEM;
+    bool ENDING_AMMO;
+    int32_t SPEAR_LOSE_CHANCE;
 
 #ifdef YUR_PREMIUM_PROMOTION
-	bool FREE_PREMMY;
-	bool QUEUE_PREMMY;
+    bool FREE_PREMMY;
+    bool QUEUE_PREMMY;
 #endif //YUR_PREMIUM_PROMOTION
 
 #ifdef YUR_CVS_MODS
-	std::string VOCATIONS[5];
-	std::string PROMOTED_VOCATIONS[5];
-	int DIE_PERCENT_EXP;
-	int64_t DIE_PERCENT_MANA;
-	int DIE_PERCENT_SKILL;
-	int DIE_PERCENT_EQ;
-	int DIE_PERCENT_BP;
-	long PZ_LOCKED;
-	long EXHAUSTED;
-	long EXHAUSTED_ADD;
-	long EXHAUSTED_HEAL;
-	int ACCESS_PROTECT;
-	int ACCESS_REMOTE;
-	int ACCESS_TALK;
-	int ACCESS_ENTER;
-	int ACCESS_LOOK;
-	int MAX_DEPOT_ITEMS;
-	std::string DATA_DIR;
+    std::string VOCATIONS[5];
+    std::string PROMOTED_VOCATIONS[6];
+    int32_t DIE_PERCENT_EXP;
+    int32_t DIE_PERCENT_MANA;
+    int32_t DIE_PERCENT_SKILL;
+    int32_t DIE_PERCENT_EQ;
+    int32_t DIE_PERCENT_BP;
+    int32_t PZ_LOCKED;
+    int32_t EXHAUSTED;
+    int32_t EXHAUSTED_ADD;
+    int32_t EXHAUSTED_HEAL;
+    int32_t ACCESS_PROTECT;
+    int32_t ACCESS_REMOTE;
+    int32_t ACCESS_TALK;
+    int32_t ACCESS_ENTER;
+    int32_t ACCESS_LOOK;
+    std::string DATA_DIR;
 #endif //YUR_CVS_MODS
 
-#ifdef JD_DEATH_LIST
-	size_t MAX_DEATH_ENTRIES;
-#endif //JD_DEATH_LIST
+#ifdef TR_SUMMONS
+    bool SUMMONS_ALL_VOC;
+    size_t MAX_SUMMONS;
+#endif //TR_SUMMONS
 
-#ifdef JD_WANDS
-	int64_t MANA_SNAKEBITE;
-	int64_t MANA_MOONLIGHT;
-	int64_t MANA_VOLCANIC;
-	int64_t MANA_QUAGMIRE;
-	int64_t MANA_TEMPEST;
+    size_t MAX_DEATH_ENTRIES;
 
-	int64_t MANA_VORTEX;
-	int64_t MANA_DRAGONBREATH;
-	int64_t MANA_PLAGUE;
-	int64_t MANA_COSMIC;
-	int64_t MANA_INFERNO;
+    int32_t MANA_SNAKEBITE;
+    int32_t MANA_MOONLIGHT;
+    int32_t MANA_VOLCANIC;
+    int32_t MANA_QUAGMIRE;
+    int32_t MANA_TEMPEST;
 
-	int RANGE_SNAKEBITE;
-	int RANGE_MOONLIGHT;
-	int RANGE_VOLCANIC;
-	int RANGE_QUAGMIRE;
-	int RANGE_TEMPEST;
+    int32_t MANA_VORTEX;
+    int32_t MANA_DRAGONBREATH;
+    int32_t MANA_PLAGUE;
+    int32_t MANA_COSMIC;
+    int32_t MANA_INFERNO;
 
-	int RANGE_VORTEX;
-	int RANGE_DRAGONBREATH;
-	int RANGE_PLAGUE;
-	int RANGE_COSMIC;
-	int RANGE_INFERNO;
-#endif //JD_WANDS
+    int32_t SANDALY;
+    int32_t BLUE_ROBE;
+    int32_t MYSTIC_TURBAN;
+    int32_t TRIBAL_SET_INCR;
+    int32_t TRIBAL_SET_DECR;
+    int32_t SHIELD;
+    int32_t ASTEL_SHIELD;
+    int32_t FEATHER_LEGS;
+    int32_t DIAMOND_RING;
+    int32_t DIAMOND_RING_MANA;
+    int32_t DIAMOND_RING_HP;
+    int32_t PANDEMKA;
+#ifdef HUCZU_AMULET
+    int32_t TYMERIA_AMULET_INCR;
+    int32_t TYMERIA_AMULET_DESC;
+#endif
+    int32_t MANAS_MIN_LVL;
+    int32_t MANAS_MIN_MLVL;
+    int32_t MANAS_MIN_LO;
 
-#ifdef YUR_BUILTIN_AAC
-	bool ACCMAKER;
-	bool ACCMAKER_ROOK;
-#endif //YUR_BUILTIN_AAC
+    int32_t MANAS_MAX_LVL;
+    int32_t MANAS_MAX_MLVL;
+    int32_t MANAS_MAX_HI;
 
-  int OpenFile(const char* file);
-  int getField (const char *key);
-  void LuaScript::setField (const char *index, int value);
-  //static version
-  static int getField (lua_State *L , const char *key);
-  static void setField (lua_State *L, const char *index, int val);
-  // get a global string
-  std::string getGlobalString(std::string var, const std::string &defString = "");
-  int getGlobalNumber(std::string var, const int defNum = 0);
-  std::string getGlobalStringField (std::string var, const int key, const std::string &defString = "");
-  // set a var to a val
-  int setGlobalString(std::string var, std::string val);
-  int setGlobalNumber(std::string var, int val);
+    int32_t MAGIC_BACKPACK_HP;
+    int32_t MAGIC_BACKPACK_MP;
+    int32_t MAGIC_BACKPACK;
+
+    int32_t RANGE_SNAKEBITE;
+    int32_t RANGE_MOONLIGHT;
+    int32_t RANGE_VOLCANIC;
+    int32_t RANGE_QUAGMIRE;
+    int32_t RANGE_TEMPEST;
+
+    int32_t RANGE_VORTEX;
+    int32_t RANGE_DRAGONBREATH;
+    int32_t RANGE_PLAGUE;
+    int32_t RANGE_COSMIC;
+    int32_t RANGE_INFERNO;
+    int32_t LIFE_RING_ZYCIE;
+    int32_t LIFE_RING_MANA;
+    int32_t ROH_ZYCIE;
+    int32_t ROH_MANA;
+    int32_t MAX_HOUSES;
+    int32_t HOUSE_LVL_ROOK;
+    int32_t HOUSE_LVL;
+    int32_t PRICE_FOR_SQM;
+    int32_t AUTO_SAVE;
+    int32_t AUTO_CLEAN;
+    int32_t AUTO_RESTART;
+    int32_t PK_BANDAYS;
+    int32_t SUSPEND_TIME_MAX;
+    int32_t SUSPEND_IP_TRIES;
+    int32_t PORT;
+    int32_t MAX_DEPOTITEMS_PREMMY;
+    int32_t MAX_DEPOTITEMS_FREE;
+    int32_t ODLEGLOSC_OD_DEPO;
+    int32_t FIRST_ATTACK;
+    int32_t OWNER_TIME;
+
+    std::string SUSPEND_MSG;
+    std::string MOTD;
+    std::string WORLD_NAME;
+    std::string PRIORYTET;
+    std::string WORLD_TYPE;
+    std::string MAP_PATH;
+    std::string IP;
+    std::string SERVER_NAME;
+    std::string LOGIN_MSG;
+    std::string SQL_DB;
+    std::string SQL_HOST;
+    std::string SQL_USER;
+    std::string SQL_PASS;
+    std::string LOAD_NPC;
+
+    bool BANMSG;
+    bool OPTIMIZE_DB_AT_STARTUP;
+    bool STAGE_EXP;
+#ifdef HUCZU_PAY_SYSTEM
+    bool PAY_SYSTEM;
+    int32_t HOMEPAY_USR_ID;
+#endif
+    double DIE_PERCENT_SL;
+
+    int32_t OpenFile(const char* file);
+    int32_t getField (const char *key);
+    void setField (const char *index, int32_t value);
+    //static version
+    static int32_t getField (lua_State *L , const char *key);
+    static void setField (lua_State *L, const char *index, int32_t val);
+    // get a global string
+    bool getGlobalBool(std::string var, bool _default = false);
+    double getGlobalDouble(std::string var, const double defNum = 0);
+    std::string getGlobalString(std::string var, const std::string &defString = "");
+    int32_t getGlobalNumber(std::string var, const int32_t defNum = 0);
+    std::string getGlobalStringField (std::string var, const int32_t key, const std::string &defString = "");
+    // set a var to a val
+    int32_t setGlobalString(std::string var, std::string val);
+    int32_t setGlobalNumber(std::string var, int32_t val);
 
 protected:
-	std::string luaFile;   // the file we represent
-	lua_State*  luaState;  // our lua state
+    std::string luaFile;   // the file we represent
+    lua_State*  luaState;  // our lua state
 };
-
-
 #endif  // #ifndef __LUASCRIPT_H__

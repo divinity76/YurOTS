@@ -83,9 +83,6 @@
 			<Add library="wsock32" />
 			<Add directory="C:/Dev-Cpp/lib" />
 		</Linker>
-		<Unit filename="../aac.cpp" />
-		<Unit filename="../aac.h" />
-		<Unit filename="../account.cpp" />
 		<Unit filename="../account.h" />
 		<Unit filename="../actions.cpp" />
 		<Unit filename="../actions.h" />
@@ -100,9 +97,13 @@
 		<Unit filename="../container.h" />
 		<Unit filename="../creature.cpp" />
 		<Unit filename="../creature.h" />
+		<Unit filename="../database.cpp" />
+		<Unit filename="../database.h" />
+		<Unit filename="../databasemanager.cpp" />
+		<Unit filename="../databasemanager.h" />
+		<Unit filename="../databasemysql.cpp" />
+		<Unit filename="../databasemysql.h" />
 		<Unit filename="../definitions.h" />
-		<Unit filename="../exception.cpp" />
-		<Unit filename="../exception.h" />
 		<Unit filename="../fileloader.cpp" />
 		<Unit filename="../fileloader.h" />
 		<Unit filename="../game.cpp" />
@@ -111,21 +112,13 @@
 		<Unit filename="../guilds.h" />
 		<Unit filename="../houses.cpp" />
 		<Unit filename="../houses.h" />
-		<Unit filename="../ioaccount.cpp" />
-		<Unit filename="../ioaccount.h" />
-		<Unit filename="../ioaccountxml.cpp" />
-		<Unit filename="../ioaccountxml.h" />
+		<Unit filename="../ioaccountsql.cpp" />
+		<Unit filename="../ioaccountsql.h" />
 		<Unit filename="../iomap.h" />
-		<Unit filename="../iomapbin.cpp" />
-		<Unit filename="../iomapbin.h" />
 		<Unit filename="../iomapotbm.cpp" />
 		<Unit filename="../iomapotbm.h" />
-		<Unit filename="../iomapxml.cpp" />
-		<Unit filename="../iomapxml.h" />
-		<Unit filename="../ioplayer.cpp" />
-		<Unit filename="../ioplayer.h" />
-		<Unit filename="../ioplayerxml.cpp" />
-		<Unit filename="../ioplayerxml.h" />
+		<Unit filename="../ioplayersql.cpp" />
+		<Unit filename="../ioplayersql.h" />
 		<Unit filename="../item.cpp" />
 		<Unit filename="../item.h" />
 		<Unit filename="../itemloader.cpp" />
@@ -142,8 +135,6 @@
 		<Unit filename="../magic.h" />
 		<Unit filename="../map.cpp" />
 		<Unit filename="../map.h" />
-		<Unit filename="../md5.cpp" />
-		<Unit filename="../md5.h" />
 		<Unit filename="../monster.cpp" />
 		<Unit filename="../monster.h" />
 		<Unit filename="../monsters.cpp" />
@@ -158,15 +149,13 @@
 		<Unit filename="../player.h" />
 		<Unit filename="../position.cpp" />
 		<Unit filename="../position.h" />
+		<Unit filename="../preheaders.h" />
 		<Unit filename="../protocol.cpp" />
 		<Unit filename="../protocol.h" />
 		<Unit filename="../protocol76.cpp" />
 		<Unit filename="../protocol76.h" />
 		<Unit filename="../pvparena.cpp" />
 		<Unit filename="../pvparena.h" />
-		<Unit filename="../readables.cpp" />
-		<Unit filename="../readables.h" />
-		<Unit filename="../safe_atoi.h" />
 		<Unit filename="../scheduler.cpp" />
 		<Unit filename="../scheduler.h" />
 		<Unit filename="../spawn.cpp" />
@@ -177,15 +166,17 @@
 		<Unit filename="../status.h" />
 		<Unit filename="../summons.cpp" />
 		<Unit filename="../summons.h" />
-		<Unit filename="../tasks.h" />
+		<Unit filename="../task.cpp" />
+		<Unit filename="../task.h" />
 		<Unit filename="../templates.h" />
-		<Unit filename="../texcept.h" />
 		<Unit filename="../thing.cpp" />
 		<Unit filename="../thing.h" />
 		<Unit filename="../tile.cpp" />
 		<Unit filename="../tile.h" />
 		<Unit filename="../tools.cpp" />
 		<Unit filename="../tools.h" />
+		<Unit filename="../town.cpp" />
+		<Unit filename="../town.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

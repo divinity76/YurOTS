@@ -7,7 +7,7 @@
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
 // of the License, or (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -26,52 +26,55 @@
 //normal new/delete
 void* operator new(size_t bytes)
 {
-	return PoolManager::getInstance().allocate(bytes);
+    return PoolManager::getInstance().allocate(bytes);
 }
 
 void* operator new[](size_t bytes)
 {
-	return PoolManager::getInstance().allocate(bytes);
+    return PoolManager::getInstance().allocate(bytes);
 }
 
 void operator delete(void *p)
 {
-	PoolManager::getInstance().deallocate(p);
+    PoolManager::getInstance().deallocate(p);
 }
 
-void operator delete[](void *p){
-	PoolManager::getInstance().deallocate(p);
+void operator delete[](void *p)
+{
+    PoolManager::getInstance().deallocate(p);
 }
 
 //dummy new/delete operators
-void* operator new(size_t bytes, int dummy)
+void* operator new(size_t bytes, int32_t dummy)
 {
-	return malloc(bytes);
+    return malloc(bytes);
 }
 #ifdef _MSC_VER
-void* operator new[](size_t bytes, int dummy)
+void* operator new[](size_t bytes, int32_t dummy)
 {
-	return malloc(bytes);
+    return malloc(bytes);
 }
 
-void operator delete(void* p, int dummy)
+void operator delete(void* p, int32_t dummy)
 {
-	std::free(p);
+    std::free(p);
 }
 
-void operator delete[](void* p, int dummy)
+void operator delete[](void* p, int32_t dummy)
 {
-	std::free(p);
+    std::free(p);
 }
 #endif
 
 #ifdef __OTSERV_ALLOCATOR_STATS__
-OTSYS_THREAD_RETURN allocatorStatsThread(void *a){
-	while(1){
-		OTSYS_SLEEP(30000);
-		PoolManager::getInstance().dumpStats();
-		//PoolManager::getInstance().releaseMemory();
-	}
+OTSYS_THREAD_RETURN allocatorStatsThread(void *a)
+{
+    while(1)
+    {
+        OTSYS_SLEEP(30000);
+        PoolManager::getInstance().dumpStats();
+        //PoolManager::getInstance().releaseMemory();
+    }
 }
 #endif
 

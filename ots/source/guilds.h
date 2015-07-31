@@ -1,88 +1,53 @@
-//////////////////////////////////////////////////////////////////////
-// OpenTibia - an opensource roleplaying game
-//////////////////////////////////////////////////////////////////////
-// Guilds by Yurez
-//////////////////////////////////////////////////////////////////////
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software Foundation,
-// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-//////////////////////////////////////////////////////////////////////
-#ifdef YUR_GUILD_SYSTEM
 
-#ifndef GUILDS_H
-#define GUILDS_H
-#include <libxml/xmlmemory.h>
-#include <libxml/parser.h>
-#include <string>
-#include <vector>
-#include <map>
-class Player;
+#ifndef __GUILD__
+#define __GUILD__
+#include "otsystem.h"
 
-enum gstat_t {
-	GUILD_NONE,
-	GUILD_INVITED,
-	GUILD_MEMBER,
-	GUILD_VICE,
-	GUILD_LEADER
-};
-
-class Guilds
+#include "player.h"
+class Guild
 {
-private:
-	class Guild
-	{
-	private:
-		struct Member
-		{
-			gstat_t status;
-			std::string name;
-			std::string rank;
-			std::string nick;
-		};
-		unsigned long gid;
-		static unsigned long counter;
-		std::string gname;
-		std::vector<Member> members;
-
-	public:
-		Guild(std::string name);
-		void save(xmlNodePtr guildNode);
-		std::string getName() const;
-		void addMember(std::string name, gstat_t status, std::string rank, std::string nick);
-		gstat_t getGuildStatus(std::string name) const;
-		bool setGuildStatus(std::string name, gstat_t status);
-		void setGuildInfo(std::string name, gstat_t status, std::string rank);
-		bool clearGuildInfo(std::string name);
-		bool setGuildNick(std::string name, std::string nick);
-		bool reloadGuildInfo(Player* player);
-	};
-
-	static std::vector<Guild*> guilds;
-
 public:
-	static bool Load();
-	static bool Save();
-	static bool AddNewGuild(std::string gname);
-	static void DeleteGuild(std::string gname);
-	static std::string GetGuildName(std::string name);
-	static gstat_t GetGuildStatus(std::string name);
-	static void SetGuildStatus(std::string name, gstat_t status);
-	static void SetGuildInfo(std::string name, gstat_t status, std::string rank, std::string gname);
-	static void ClearGuildInfo(std::string name);
-	static void SetGuildNick(std::string name, std::string nick);
-	static void ReloadGuildInfo(Player* player);
+    virtual ~Guild() {}
+    static Guild* getInstance()
+    {
+        static Guild instance;
+        return &instance;
+    }
+
+    bool guildExists(uint32_t guild);
+    bool createGuild(Player* player);
+    bool disbandGuild(uint32_t guild);
+
+    std::string getMotd(uint32_t guild);
+    bool setMotd(uint32_t guild, const std::string& newMessage);
+
+    GuildLevel_t getGuildLevel(uint32_t guid);
+    bool setGuildLevel(uint32_t guid, GuildLevel_t level);
+
+    bool invitePlayer(uint32_t gulid, uint32_t guid);
+    bool revokeInvite(uint32_t guild, uint32_t guid);
+    bool joinGuild(Player* player, uint32_t guildId, bool creation = false);
+
+    std::string getRank(uint32_t guid);
+    bool changeRank(uint32_t guild, const std::string& oldName, const std::string& newName);
+
+    bool hasGuild(uint32_t guid);
+    bool isInvited(uint32_t guild, uint32_t guid);
+
+    bool getGuildId(uint32_t& id, const std::string& name);
+    bool getGuildById(std::string& name, uint32_t id);
+
+    uint32_t getRankIdByLevel(uint32_t guild, GuildLevel_t level);
+    uint32_t getRankIdByName(uint32_t guild, const std::string& name);
+    bool getRankEx(uint32_t& id, std::string& name, uint32_t guild, GuildLevel_t level);
+
+    uint32_t getGuildId(uint32_t guid);
+    bool setGuildNick(uint32_t guid, const std::string& nick);
+
+    bool swapGuildIdToOwner(uint32_t& value);
+    bool updateOwnerId(uint32_t guild, uint32_t guid);
+
+private:
+    Guild() {}
 };
-
-#endif //GUILDS_H
-
-#endif //YUR_GUILD_SYSTEM
+#endif

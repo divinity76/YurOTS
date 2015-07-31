@@ -27,11 +27,11 @@
 class Summons
 {
 private:
-	typedef std::map<std::string, int> SummonMap;
-	static SummonMap summons;
+    typedef std::map<std::string, int32_t> SummonMap;
+    static SummonMap summons;
 public:
-	static bool Load();
-	static int64_t getRequiredMana(std::string name);
+    static bool Load();
+    static int32_t getRequiredMana(std::string name);
 };
 
 #endif //SUMMONS_H
