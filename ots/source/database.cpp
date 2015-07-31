@@ -3,7 +3,7 @@
 #include "database.h"
 #include "databasemysql.h"
 
-boost::recursive_mutex DBQuery::databaseLock;
+//boost::recursive_mutex DBQuery::databaseLock;
 Database* _Database::_instance = NULL;
 
 Database* _Database::getInstance()

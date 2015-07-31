@@ -5861,9 +5861,9 @@ bool Game::useHotkey(Player* player, int32_t itemid, int32_t count)
                         player->mana = std::min(player->manamax,player->mana+addmana);
                         player->sendStats();
                         hot->setItemCountOrSubtype(0);
-                        sendUpdateThing(player,player->pos,hot, NULL);
+                        sendUpdateThing(player,player->pos,hot, 0);
                         if(hot->getActionId() != 1)
-                            player->eventManas = addEvent(makeTask((g_config.MANAS_EXHAUSTED*1000), boost::bind(&Game::fullManas, this, hot, player, player->pos, NULL)));
+                            player->eventManas = addEvent(makeTask((g_config.MANAS_EXHAUSTED*1000), boost::bind(&Game::fullManas, this, hot, player, player->pos, 0)));
                         hot->setActionId(hot->getActionId()-1);
                         sendMagicEffectToSpectors(player->pos, NM_ME_MAGIC_ENERGIE);
                         creatureSay(player,SPEAK_MONSTER1,addManaKomunikat.str().c_str());

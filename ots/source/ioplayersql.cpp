@@ -162,7 +162,7 @@ bool IOPlayerSQL::loadPlayer(Player* player, std::string name)
         //now iterate over the skills
         do
         {
-            uint16_t skillId = result->getDataInt("skillid");
+            int16_t skillId = result->getDataInt("skillid");
             if(skillId < SKILL_FIST || skillId > SKILL_FISH)
                 continue;
 

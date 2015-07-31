@@ -16,7 +16,10 @@
 		</Build>
 		<Compiler>
 			<Add option="-g" />
-			<Add option="-D__LINUX__" />
+			<Add option="-ggdb" />
+			<Add option="-Winvalid-pch" />
+			<Add option='-include &quot;./../preheaders.h&quot;' />
+			<Add option="-D__LINUX__DISABLED" />
 			<Add option="-DHUCZU_PVP" />
 			<Add option="-DHUCZU_SKULLS" />
 			<Add option="-DHUCZU_RECORD" />
@@ -28,7 +31,7 @@
 			<Add option="-DHUCZU_PARCEL_SYSTEM" />
 			<Add option="-DHUCZU_BAN_SYSTEM" />
 			<Add option="-DHUCZU_STAGE_EXP" />
-			<Add option="-DHUCZU_PAY_SYSTEM" />
+			<Add option="-DHUCZU_PAY_SYSTEM_DISABLED" />
 			<Add option="-DHUCZU_NAPISY" />
 			<Add option="-D__MIZIAK_SUPERMANAS__" />
 			<Add option="-D__MIZIAK_CREATURESCRIPTS__" />
@@ -46,7 +49,8 @@
 			<Add option="-DTLM_HOUSE_SYSTEM" />
 			<Add option="-DTRS_GM_INVISIBLE" />
 			<Add option="-DCVS_DAY_CYCLE" />
-			<Add option="-DFIXY -DTR_SUMMONS" />
+			<Add option="-DFIXY" />
+			<Add option="-DTR_SUMMONS" />
 			<Add directory="C:/Dev-Cpp/include/c++/3.4.2" />
 			<Add directory="C:/Dev-Cpp/include" />
 		</Compiler>
@@ -56,9 +60,7 @@
 			<Add option="C:/Dev-Cpp/bin/lua5.dll" />
 			<Add option="C:/Dev-Cpp/bin/lualib5.dll" />
 			<Add option="-llibboost_regex-mgw-mt-s-1_33_1" />
-			<Add option="-Winvalid-pch" />
-			<Add option='-include &quot;preheaders.h&quot;' />
-			<Add option="-lmysqlclient" />
+			<Add option="-lmysql" />
 			<Add library="wsock32" />
 			<Add directory="C:/Dev-Cpp/lib" />
 		</Linker>

@@ -1,10 +1,10 @@
 #ifndef __OTSERV_TOOLS_H
 #define __OTSERV_TOOLS_H
-
+#include <string>
+#include <vector>
 #include <libxml/parser.h>
 #include "otsystem.h"
 typedef std::vector<std::string> StringVec;
-
 bool fileExists(const char* filename);
 //float box_muller(float m, float s);
 int32_t random_range(int32_t lowest_number, int32_t highest_number);

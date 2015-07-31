@@ -261,16 +261,16 @@ class DBQuery : public std::stringstream
 public:
     DBQuery()
     {
-        databaseLock.lock();
+//        databaseLock.lock();
     }
     virtual ~DBQuery()
     {
         str("");
-        databaseLock.unlock();
+//        databaseLock.unlock();
     }
 
 protected:
-    static boost::recursive_mutex databaseLock;
+//    static boost::recursive_mutex databaseLock;
 };
 
 /**

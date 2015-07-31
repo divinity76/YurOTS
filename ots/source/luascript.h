@@ -25,6 +25,8 @@ public:
 
 #ifdef __MIZIAK_SUPERMANAS__
     int32_t MANAS_EXHAUSTED;
+    int32_t MANAS_MIN_MANA;
+    int32_t MANAS_MAX_MANA;
 #endif //__MIZIAK_SUPERMANAS__
     int32_t MAX_PLAYERS;
     bool GM_MSG;
