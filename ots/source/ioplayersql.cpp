@@ -53,7 +53,7 @@ bool IOPlayerSQL::loadPlayer(Player* player, std::string name)
         player->level_percent = 0;
 
 
-    player->maglevel = result->getDataInt("maglevel");
+    player->maglevel = result->getDataLong("maglevel");
     player->vocation =((playervoc_t)result->getDataInt("vocation"));
     player->access = result->getDataInt("access");
     player->frags = result->getDataInt("frags");
@@ -65,8 +65,8 @@ bool IOPlayerSQL::loadPlayer(Player* player, std::string name)
     player->banned = result->getDataInt("banned");
     player->max_depot_items = result->getDataInt("maxdepotitems");
     player->lastLoginSaved = result->getDataLong("lastlogin");
-    player->mana = result->getDataInt("mana");
-    player->manamax = result->getDataInt("manamax");
+    player->mana = result->getDataLong("mana");
+    player->manamax = result->getDataLong("manamax");
     uint64_t manaSpent = result->getDataLong("manaspent");
     uint64_t nextManaCount = player->getReqMana(player->maglevel + 1, player->vocation);
     if(manaSpent > nextManaCount)
@@ -75,11 +75,11 @@ bool IOPlayerSQL::loadPlayer(Player* player, std::string name)
     player->manaspent = manaSpent;
 
     player->maglevel_percent  = (unsigned char)(100*(player->manaspent/(1.*player->getReqMana(player->maglevel+1, player->vocation))));
-    player->health = result->getDataInt("health");
+    player->health = result->getDataLong("health");
     if(player->health <= 0)
         player->health = 100;
 
-    player->healthmax = result->getDataInt("healthmax");
+    player->healthmax = result->getDataLong("healthmax");
     if(player->healthmax <= 0)
         player->healthmax = 100;
 

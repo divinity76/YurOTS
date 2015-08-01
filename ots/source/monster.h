@@ -66,8 +66,8 @@ public:
             delete this;
     };
 
-    virtual int32_t getArmor() const;
-    virtual int32_t getDefense() const;
+    virtual int64_t getArmor() const;
+    virtual int64_t getDefense() const;
     virtual const std::string& getName() const;
 
     virtual void setMaster(Creature* creature);
@@ -123,7 +123,7 @@ protected:
     {
         return curPhysicalAttack->disttype;
     }
-    virtual int32_t getWeaponDamage() const;
+    virtual int64_t getWeaponDamage() const;
 
     void onCreatureEnter(const Creature *creature, bool canReach = true);
     void onCreatureLeave(const Creature *creature);

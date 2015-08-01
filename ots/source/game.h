@@ -49,8 +49,8 @@ public:
     CreatureState() {};
     ~CreatureState() {};
 
-    int32_t damage;
-    int32_t manaDamage;
+    int64_t damage;
+    int64_t manaDamage;
     bool drawBlood;
     std::vector<Creature*> attackerlist;
 };
@@ -94,15 +94,15 @@ public:
     }
 
 protected:
-    void addCreatureState(Tile* tile, Creature* attackedCreature, int32_t damage, int32_t manaDamage, bool drawBlood);
-    void onAttackedCreature(Tile* tile, Creature* attacker, Creature* attackedCreature, int32_t damage, bool drawBlood);
+    void addCreatureState(Tile* tile, Creature* attackedCreature, int64_t damage, int64_t manaDamage, bool drawBlood);
+    void onAttackedCreature(Tile* tile, Creature* attacker, Creature* attackedCreature, int64_t damage, bool drawBlood);
     Game *game;
 
 #ifdef YUR_PVP_ARENA
     bool isPvpArena(Creature* c);
 #endif //YUR_PVP_ARENA
 #ifdef YUR_RINGS_AMULETS
-    int32_t applyAmulets(Player* player, int32_t damage, attacktype_t atype);
+    int64_t applyAmulets(Player* player, int64_t damage, attacktype_t atype);
 #endif //YUR_RINGS_AMULETS
 
     SpectatorVec spectatorlist;
@@ -405,8 +405,8 @@ public:
     int32_t cleanMap();
     void autocleanMap(int32_t seconds);
     void beforeClean();
-    void CreateCondition(Creature* creature, Creature* target, unsigned char animationColor, unsigned char damageEffect, unsigned char hitEffect, attacktype_t attackType, bool offensive, int32_t maxDamage, int32_t minDamage, int32_t ticks, int32_t count);
-    void doFieldDamage(Creature* creature, unsigned char animationColor, unsigned char damageEffect,  unsigned char hitEffect, attacktype_t attackType, bool offensive, int32_t damage);
+    void CreateCondition(Creature* creature, Creature* target, unsigned char animationColor, unsigned char damageEffect, unsigned char hitEffect, attacktype_t attackType, bool offensive, int64_t maxDamage, int64_t minDamage, int32_t ticks, int32_t count);
+    void doFieldDamage(Creature* creature, unsigned char animationColor, unsigned char damageEffect,  unsigned char hitEffect, attacktype_t attackType, bool offensive, int64_t damage);
     Creature* getCreatureByPosition(int32_t x, int32_t y, int32_t z);
     void useWand(Creature *creature, Creature *attackedCreature, int32_t wandid);
     void checkSpell(Player* player, SpeakClasses type, std::string text);
@@ -497,14 +497,14 @@ protected:
     	* Change the players hitpoints
     	* Return: the mana damage and the actual hitpoint loss
     	*/
-    void creatureApplyDamage(Creature *creature, int32_t damage, int32_t &outDamage, int32_t &outManaDamage
+    void creatureApplyDamage(Creature *creature, int64_t damage, int64_t &outDamage, int64_t &outManaDamage
 #ifdef YUR_PVP_ARENA
                              , CreatureVector*
 #endif //YUR_PVP_ARENA
                             );
 
-    void CreateDamageUpdate(Creature* player, Creature* attackCreature, int32_t damage);
-    void CreateManaDamageUpdate(Creature* player, Creature* attackCreature, int32_t damage);
+    void CreateDamageUpdate(Creature* player, Creature* attackCreature, int64_t damage);
+    void CreateManaDamageUpdate(Creature* player, Creature* attackCreature, int64_t damage);
 
 
     OTSYS_THREAD_LOCKVAR eventLock;

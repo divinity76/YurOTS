@@ -85,8 +85,8 @@ public:
     fight_t fighttype;
     subfight_t disttype;
 
-    int32_t minWeapondamage;
-    int32_t maxWeapondamage;
+    int64_t minWeapondamage;
+    int64_t maxWeapondamage;
 };
 
 #define CHANCE_MAX  100000
@@ -131,8 +131,8 @@ public:
 
     std::string name;
     exp_t experience;
-    int32_t armor;
-    int32_t defense;
+    int64_t armor;
+    int64_t defense;
     bool hasDistanceAttack;
     bool canPushItems;
     uint32_t staticLook;
@@ -140,13 +140,13 @@ public:
     uint16_t changeTargetChance;
     int32_t maxSummons;
     int32_t targetDistance;
-    int32_t runAwayHealth;
+    int64_t runAwayHealth;
     bool pushable;
     int32_t base_speed;
     int32_t level;
-    int32_t maglevel;
-    int32_t health;
-    int32_t health_max;
+    int64_t maglevel;
+    int64_t health;
+    int64_t health_max;
     int32_t lookhead, lookbody, looklegs, lookfeet, looktype, lookcorpse, lookmaster;
     int32_t immunities;
 

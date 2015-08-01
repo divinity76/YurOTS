@@ -28,7 +28,7 @@ extern LuaScript g_config;
 
 Summons::SummonMap Summons::summons;
 
-int32_t Summons::getRequiredMana(std::string name)
+int64_t Summons::getRequiredMana(std::string name)
 {
     toLowerCaseString(name);
     SummonMap::iterator iter = summons.find(name);
@@ -63,7 +63,7 @@ bool Summons::Load()
         if (strcmp((char*) summonNode->name, "summon") == 0)
         {
             std::string name = (const char*)xmlGetProp(summonNode, (const xmlChar *) "name");
-            int32_t reqMana = atoi((const char*)xmlGetProp(summonNode, (const xmlChar *) "mana"));
+            int64_t reqMana = atoll((const char*)xmlGetProp(summonNode, (const xmlChar *) "mana"));
             toLowerCaseString(name);
             summons[name] = reqMana;
         }

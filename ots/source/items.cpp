@@ -507,8 +507,8 @@ int32_t Items::loadFromOtb(std::string file)
                         if(datalen != sizeof(uint16_t))
                             return ERROR_INVALID_FORMAT;
 
-                        memcpy(&iType->runeMagLevel, p, sizeof(uint16_t));
-
+                        //memcpy(&iType->runeMagLevel, p, sizeof(uint16_t));
+                        iType->runeMagLevel=*((int16_t*)p);
                         break;
                     }
                     case ITEM_ATTR_MAGFIELDTYPE:

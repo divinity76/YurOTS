@@ -48,7 +48,7 @@ public:
     bool SayTalk(Player*, std::string);
 #endif //__MIZIAK_TALKACTIONS__
 #ifdef __MIZIAK_CREATURESCRIPTS__
-    bool creatureEvent(std::string, Player*, Creature*, Item*, int32_t[]);
+    bool creatureEvent(std::string, Player*, Creature*, Item*, int64_t[]);
 #endif //__MIZIAK_CREATURESCRIPTS__
     bool luaWalk(Player* player, const Position &pos, //CHANGE onWalk
                  const uint16_t itemid, const uint32_t itemuid, const uint32_t itemaid);

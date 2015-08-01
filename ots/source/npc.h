@@ -119,11 +119,11 @@ public:
         return fighttype;
     };
 
-    int32_t mana, manamax;
+    int64_t mana, manamax;
     int32_t eventTalk;
 
     //damage per hit
-    int32_t damage;
+    int64_t damage;
 
     fight_t fighttype;
 

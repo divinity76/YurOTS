@@ -172,12 +172,12 @@ public:
     };
 
 #ifdef YUR_PVP_ARENA
-    virtual void drainHealth(int32_t, CreatureVector* arenaLosers);
+    virtual void drainHealth(int64_t, CreatureVector* arenaLosers);
 #else
-    virtual void drainHealth(int32_t);
+    virtual void drainHealth(int64_t);
 #endif //YUR_PVP_ARENA
 
-    virtual void drainMana(int32_t);
+    virtual void drainMana(int64_t);
     virtual void die() {};
     virtual std::string getDescription(bool self = false) const;
     virtual void setAttackedCreature(const Creature* creature);
@@ -192,15 +192,15 @@ public:
     virtual void addSummon(Creature *creature);
     virtual void removeSummon(Creature *creature);
 
-    virtual int32_t getWeaponDamage() const
+    virtual int64_t getWeaponDamage() const
     {
-        return 1+(int32_t)(10.0*rand()/(RAND_MAX+1.0));
+        return 1+(int64_t)(10.0*rand()/(RAND_MAX+1.0));
     }
-    virtual int32_t getArmor() const
+    virtual int64_t getArmor() const
     {
         return 0;
     }
-    virtual int32_t getDefense() const
+    virtual int64_t getDefense() const
     {
         return 0;
     }
@@ -245,7 +245,7 @@ public:
     void removeCondition(attacktype_t attackType);
 
     int32_t lookhead, lookbody, looklegs, lookfeet, looktype, lookcorpse, lookmaster;
-    int32_t mana, manamax, manaspent;
+    int64_t mana, manamax, manaspent;
     bool pzLocked;
 
     int32_t inFightTicks, exhaustedTicks;
@@ -256,7 +256,7 @@ public:
     //uint32_t experience;
     Position masterPos;
 
-    int32_t health, healthmax;
+    int64_t health, healthmax;
     uint64_t lastmove;
 
     int32_t bloodcolor;
@@ -303,7 +303,7 @@ public:
     }
 
     int32_t access;		//access level
-    int32_t maglevel;	// magic level
+    int64_t maglevel;	// magic level
     int32_t level;		// level
     int32_t speed;
     int32_t hasteSpeed;
@@ -321,13 +321,13 @@ public:
     virtual void sendCancel(const char *msg) const { };
     //virtual void sendCancelWalk(const char *msg) const { };
 
-    virtual void addInflictedDamage(Creature* attacker, int32_t damage);
+    virtual void addInflictedDamage(Creature* attacker, int64_t damage);
     virtual exp_t getGainedExperience(Creature* attacker);
-    virtual std::vector<int32_t> getInflicatedDamageCreatureList();
+    virtual std::vector<int32_t> getInflicatedDamageCreatureList();//->first is creature ID...
     virtual exp_t getLostExperience();
-    virtual int32_t getInflicatedDamage(Creature* attacker);
-    virtual int32_t getTotalInflictedDamage();
-    virtual int32_t getInflicatedDamage(uint32_t id);
+    virtual int64_t getInflicatedDamage(Creature* attacker);
+    virtual int64_t getTotalInflictedDamage();
+    virtual int64_t getInflicatedDamage(uint32_t id);
 #ifdef TR_SUMMONS
     size_t getSummonCount() const
     {
@@ -365,8 +365,8 @@ protected:
     std::list<Creature*> summons;
 
     Conditions conditions;
-    typedef std::vector< std::pair<uint64_t, int32_t> > DamageList;
-    typedef std::map<int32_t, DamageList > TotalDamageList;
+    typedef std::vector< std::pair<uint64_t, int64_t> > DamageList;//->second is damage.. ->first ? wish i knew...
+    typedef std::map<int32_t, DamageList > TotalDamageList; //->first is creature id..
     TotalDamageList totaldamagelist;
 
 protected:

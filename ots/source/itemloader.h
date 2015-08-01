@@ -157,7 +157,7 @@ struct amuBlock
 
 struct armorBlock
 {
-    uint16_t armor;
+    uint16_t armor;//WARNING: need to be same size as saved by the map editor. do not edit. (unless you want to use a custom map editor)
     double weight;
     uint16_t slot_position;
 };
@@ -209,7 +209,7 @@ struct amuBlock2
 
 struct armorBlock2
 {
-    uint16_t armor;
+    uint16_t armor;//WARNING: NEED TO BE SAME SIZE AS SAVED BY THE MAP EDITOR. DO NOT EDIT SIZE (unless you plan on running a custom map editor..)
     double weight;
     uint16_t slot_position;
 };

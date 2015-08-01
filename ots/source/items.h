@@ -56,7 +56,7 @@ public:
     subfight_t			shootType;
     int32_t							attack;
     int32_t							defence;
-    int32_t							armor;
+    int64_t							armor;
     uint16_t	slot_position;
     uint16_t	decayTo;
     uint16_t	decayTime;
@@ -72,7 +72,7 @@ public:
     bool            useable;
     bool            moveable;
     bool            alwaysOnTop;
-    int32_t             runeMagLevel;
+    int64_t             runeMagLevel;
     bool            pickupable;
     bool            rotable;
     int32_t 			rotateTo;

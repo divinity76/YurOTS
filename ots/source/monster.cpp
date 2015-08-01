@@ -71,12 +71,12 @@ Monster::~Monster()
 
 }
 
-int32_t Monster::getArmor() const
+int64_t Monster::getArmor() const
 {
     return mType->armor;
 }
 
-int32_t Monster::getDefense() const
+int64_t Monster::getDefense() const
 {
     return mType->defense;
 }
@@ -1038,7 +1038,7 @@ void Monster::reThink(bool updateOnlyState /* = true*/)
         //change target
         if(state != STATE_IDLE)
         {
-            uint32_t chanceRand = rand() / (RAND_MAX + 1.0) * 10000;
+            uint32_t chanceRand = uint32_t(rand() / (RAND_MAX + 1.0) * 10000);
             if(mType->changeTargetChance > chanceRand)
             {
                 bool canReach;
@@ -1273,7 +1273,7 @@ std::string	Monster::getDescription(bool self) const
     return str;
 }
 
-int32_t Monster::getWeaponDamage() const
+int64_t Monster::getWeaponDamage() const
 {
     if(curPhysicalAttack != NULL)
         return random_range(curPhysicalAttack->minWeapondamage, curPhysicalAttack->maxWeapondamage);

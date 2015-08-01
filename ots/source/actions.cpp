@@ -534,7 +534,7 @@ bool Actions::SayTalk(Player* player, std::string text)
 #endif //__MIZIAK_TALKACTIONS__
 
 #ifdef __MIZIAK_CREATURESCRIPTS__
-bool Actions::creatureEvent(std::string evt, Player* player, Creature* creature, Item* item, int32_t tab[])
+bool Actions::creatureEvent(std::string evt, Player* player, Creature* creature, Item* item, int64_t tab[])
 {
     bool ret = false;
     for(ActionCreatureMap::iterator it = creatureScriptMap.begin(); it != creatureScriptMap.end(); ++it)
@@ -1255,7 +1255,7 @@ int32_t ActionScript::internalGetPlayerInfo(lua_State *L, ePlayerInfo info)
         PositionEx pos;
         Tile *tile;
         Player *player = (Player*)(tmp->thing);
-        int32_t value;
+        int64_t value;
         switch(info)
         {
         case PlayerInfoAccess:
@@ -1699,7 +1699,7 @@ int32_t ActionScript::luaActionDoPlayerAddSkillTry(lua_State *L)
 int32_t ActionScript::luaActionDoPlayerAddHealth(lua_State *L)
 {
     //doPlayerAddHealth(uid,health)
-    int32_t addhealth = (int32_t)internalGetNumber(L);
+    int64_t addhealth = (int64_t)internalGetNumber(L);
     uint32_t cid = (uint32_t)internalGetNumber(L);
 
     ActionScript *action = getActionScript(L);
@@ -1708,7 +1708,7 @@ int32_t ActionScript::luaActionDoPlayerAddHealth(lua_State *L)
     if(tmp)
     {
         Player *player = (Player*)(tmp->thing);
-        int32_t tmp = player->health + addhealth;
+        int64_t tmp = player->health + addhealth;
         if(tmp <= 0)
         {
             player->health = 1;
@@ -1748,7 +1748,7 @@ int32_t ActionScript::luaActionDoPlayerAddHealth(lua_State *L)
 int32_t ActionScript::luaActionDoPlayerAddMana(lua_State *L)
 {
     //doPlayerAddMana(uid,mana)
-    int32_t addmana = (int32_t)internalGetNumber(L);
+    int64_t addmana = internalGetNumber(L);
     uint32_t cid = (uint32_t)internalGetNumber(L);
 
     ActionScript *action = getActionScript(L);
@@ -2397,8 +2397,8 @@ int32_t ActionScript::luaActionDoCreateCondition(lua_State *L)
 //DoCreateCondition& (creatureid,animationColor,damageEffect,hitEffect,attackType,offensive,maxDamage,minDamage,ticks,count)
     int32_t count = (int32_t)internalGetNumber(L);
     int32_t ticks = (int32_t)internalGetNumber(L);
-    int32_t minDamage = (int32_t)internalGetNumber(L);
-    int32_t maxDamage = (int32_t)internalGetNumber(L);
+    int64_t minDamage = (int64_t)internalGetNumber(L);
+    int64_t maxDamage = (int64_t)internalGetNumber(L);
     bool offensive = (bool)internalGetNumber(L);
     int32_t attacktype = (int32_t)internalGetNumber(L);
     unsigned char hitEffect = (unsigned char)internalGetNumber(L);

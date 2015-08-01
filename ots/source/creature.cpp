@@ -101,7 +101,7 @@ Creature::~Creature()
 }
 
 #ifdef YUR_PVP_ARENA
-void Creature::drainHealth(int32_t damage, CreatureVector* arenaLosers)
+void Creature::drainHealth(int64_t damage, CreatureVector* arenaLosers)
 {
     if (arenaLosers && damage >= health)
     {
@@ -112,13 +112,13 @@ void Creature::drainHealth(int32_t damage, CreatureVector* arenaLosers)
         health -= min(health, damage);
 }
 #else
-void Creature::drainHealth(int32_t damage)
+void Creature::drainHealth(int64_t damage)
 {
     health -= min(health, damage);
 }
 #endif //YUR_PVP_ARENA
 
-void Creature::drainMana(int32_t damage)
+void Creature::drainMana(int64_t damage)
 {
     mana -= min(mana, damage);
 }
@@ -189,7 +189,7 @@ void Creature::addCondition(const CreatureCondition& condition, bool refresh)
     condVec.push_back(condition);
 }
 
-void Creature::addInflictedDamage(Creature* attacker, int32_t damage)
+void Creature::addInflictedDamage(Creature* attacker, int64_t damage)
 {
     if(damage <= 0)
         return;
@@ -209,10 +209,10 @@ exp_t Creature::getLostExperience()
     return 0;
 }
 
-int32_t Creature::getInflicatedDamage(uint32_t id)
+int64_t Creature::getInflicatedDamage(uint32_t id)
 {
-    int32_t ret = 0;
-    std::map<int32_t, DamageList >::const_iterator tdIt = totaldamagelist.find(id);
+    int64_t ret = 0;
+    std::map<int32_t, DamageList >::const_iterator tdIt = totaldamagelist.find(id);//->first is creature id..
     if(tdIt != totaldamagelist.end())
     {
         for(DamageList::const_iterator dlIt = tdIt->second.begin(); dlIt != tdIt->second.end(); ++dlIt)
@@ -224,7 +224,7 @@ int32_t Creature::getInflicatedDamage(uint32_t id)
     return ret;
 }
 
-int32_t Creature::getInflicatedDamage(Creature* attacker)
+int64_t Creature::getInflicatedDamage(Creature* attacker)
 {
     uint32_t id = 0;
     if(attacker)
@@ -235,10 +235,10 @@ int32_t Creature::getInflicatedDamage(Creature* attacker)
     return getInflicatedDamage(id);
 }
 
-int32_t Creature::getTotalInflictedDamage()
+int64_t Creature::getTotalInflictedDamage()
 {
-    int32_t ret = 0;
-    std::map<int32_t, DamageList >::const_iterator tdIt;
+    int64_t ret = 0;
+    std::map<int32_t, DamageList >::const_iterator tdIt;//->first is creature id
     for(tdIt = totaldamagelist.begin(); tdIt != totaldamagelist.end(); ++tdIt)
     {
         ret += getInflicatedDamage(tdIt->first);
@@ -249,22 +249,22 @@ int32_t Creature::getTotalInflictedDamage()
 
 exp_t Creature::getGainedExperience(Creature* attacker)
 {
-    int32_t totaldamage = getTotalInflictedDamage();
-    int32_t attackerdamage = getInflicatedDamage(attacker);
+    int64_t totaldamage = getTotalInflictedDamage();
+    int64_t attackerdamage = getInflicatedDamage(attacker);
     exp_t lostexperience = getLostExperience();
     exp_t gainexperience = 0;
     Player* player = dynamic_cast<Player*>(attacker);
 
     if(attackerdamage > 0 && totaldamage > 0)
     {
-        //gainexperience = (int32_t)std::floor(((double)attackerdamage / totaldamage) * lostexperience);
+        //gainexperience = (exp_t)std::floor(((double)attackerdamage / totaldamage) * lostexperience);
         gainexperience = (exp_t)(attackerdamage * lostexperience / totaldamage);
     }
 
 #ifdef HUCZU_STAGE_EXP
     if(g_config.STAGE_EXP)
     {
-        int32_t multipiler = 0;
+        int64_t multipiler = 0;
         if(player)
         {
             if(!dynamic_cast<Player*>(this))

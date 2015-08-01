@@ -77,7 +77,7 @@ bool GameState::isPvpArena(Creature* c)
 #endif //YUR_PVP_ARENA
 
 #ifdef YUR_RINGS_AMULETS
-int32_t GameState::applyAmulets(Player* player, int32_t damage, attacktype_t atype)
+int64_t GameState::applyAmulets(Player* player, int64_t damage, attacktype_t atype)
 {
     if (!player || atype == ATTACK_NONE)
         return damage;
@@ -166,7 +166,7 @@ int32_t GameState::applyAmulets(Player* player, int32_t damage, attacktype_t aty
             }
         }
     }
-    return (int32_t)newDamage;
+    return (int64_t)newDamage;
 }
 #endif //YUR_RINGS_AMULETS
 
@@ -195,8 +195,8 @@ void GameState::onAttack(Creature* attacker, const Position& pos, const MagicEff
         bool summonVsPlayer = (attacker && attacker->isPlayersSummon() && targetPlayer);
 #endif //TR_SUMMONS
 
-        int32_t damage = me->getDamage(targetCreature, attacker);
-        int32_t manaDamage = 0;
+        int64_t damage = me->getDamage(targetCreature, attacker);
+        int64_t manaDamage = 0;
 
 #ifdef YUR_RINGS_AMULETS
         damage = applyAmulets(targetPlayer, damage, me->attackType);
@@ -233,44 +233,44 @@ void GameState::onAttack(Creature* attacker, const Position& pos, const MagicEff
                 if(attackPlayer->getItem(SLOT_HEAD) && attackPlayer->getItem(SLOT_HEAD)->getID() == ITEM_MYSTICTURBAN)
                 {
                     double newdamage = (double)damage*g_config.MYSTIC_TURBAN/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
                 if(attackPlayer->getItem(SLOT_ARMOR) && attackPlayer->getItem(SLOT_ARMOR)->getID() == ITEM_BLUEROBE)
                 {
                     double newdamage = (double)damage*g_config.BLUE_ROBE/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
                 if(attackPlayer->getItem(SLOT_HEAD) && attackPlayer->getItem(SLOT_HEAD)->getID() == ITEM_TRIBAL_HELMET && attackPlayer->getItem(SLOT_ARMOR) && attackPlayer->getItem(SLOT_ARMOR)->getID() == ITEM_TRIBAL_ARMOR && attackPlayer->getItem(SLOT_LEGS) && attackPlayer->getItem(SLOT_LEGS)->getID() == ITEM_TRIBAL_LEGS)
                 {
                     double newdamage = (double)damage*g_config.TRIBAL_SET_INCR/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
                 if(attackPlayer->getItem(SLOT_FEET) && attackPlayer->getItem(SLOT_FEET)->getID() == ITEM_SANDALY)
                 {
                     double newdamage = (double)damage*g_config.SANDALY/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
                 if(attackPlayer->getItem(SLOT_LEGS) && attackPlayer->getItem(SLOT_LEGS)->getID() == ITEM_FEATHER_LEGS)
                 {
                     double newdamage = (double)damage*g_config.FEATHER_LEGS/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
 #ifdef HUCZU_AMULET
                 if(attackPlayer->getItem(SLOT_NECKLACE) && attackPlayer->getItem(SLOT_NECKLACE)->getID() == ITEM_TYMERIA_AMULET && attackPlayer->getItem(SLOT_NECKLACE)->getCharges() > 0)
                 {
                     double newdamage = (double)damage*g_config.TYMERIA_AMULET_INCR/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
 #endif
                 if(attackPlayer->getItem(SLOT_BACKPACK) && attackPlayer->getItem(SLOT_BACKPACK)->getID() == ITEM_MAGIC_BACKPACK)
                 {
                     double newdamage = (double)damage*g_config.MAGIC_BACKPACK/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
                 if(attackPlayer->getItem(SLOT_RING) && attackPlayer->getItem(SLOT_RING)->getID() == ITEM_DIAMOND_RING)
                 {
                     double newdamage = (double)damage*g_config.DIAMOND_RING/100.0;
-                    damage += (int32_t)newdamage;
+                    damage += (int64_t)newdamage;
                 }
 
             }
@@ -486,9 +486,9 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
 #endif //YUR_PVP_ARENA
 
     //TODO: Decent formulas and such...
-    int32_t damage = attacker->getWeaponDamage();
-    int32_t armor = attackedCreature->getArmor();
-    int32_t defense = attackedCreature->getDefense();
+    int64_t damage = attacker->getWeaponDamage();
+    int64_t armor = attackedCreature->getArmor();
+    int64_t defense = attackedCreature->getDefense();
 
     Player* attackPlayer = dynamic_cast<Player*>(attacker);
     Player* attackedPlayer = dynamic_cast<Player*>(attackedCreature);
@@ -502,8 +502,8 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
     if (probability * damage < defense * 1000)
         damage = 0;
     else
-        damage -= (int32_t)(damage*(armor/100.0)*(rand()/(RAND_MAX+1.0))) + armor;
-    //damage -= (int32_t)((armor)*(rand()/(RAND_MAX+1.0))) + armor;	// wik's
+        damage -= (int64_t)(damage*(armor/100.0)*(rand()/(RAND_MAX+1.0))) + armor;
+    //damage -= (int64_t)((armor)*(rand()/(RAND_MAX+1.0))) + armor;	// wik's
 #else
     if(probability * damage < defense * 10000)
         damage = 0;
@@ -513,11 +513,11 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
     }
 #endif //YUR_CVS_MODS
 
-    int32_t manaDamage = 0;
+    int64_t manaDamage = 0;
 
     if(attackPlayer && attackedPlayer)
     {
-        damage -= (int32_t) damage / 2;
+        damage -= (int64_t) damage / 2;
     }
 
     /*if (attacker->access >= g_config.ACCESS_PROTECT)
@@ -580,7 +580,7 @@ void GameState::onAttack(Creature* attacker, const Position& pos, Creature* atta
 #endif //YUR_PVP_ARENA
 }
 
-void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int32_t damage, int32_t manaDamage, bool drawBlood)
+void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int64_t damage, int64_t manaDamage, bool drawBlood)
 {
     CreatureState cs;
     cs.damage = damage;
@@ -590,7 +590,7 @@ void GameState::addCreatureState(Tile* tile, Creature* attackedCreature, int32_t
     creaturestates[tile].push_back( make_pair(attackedCreature, cs) );
 }
 
-void GameState::onAttackedCreature(Tile* tile, Creature *attacker, Creature* attackedCreature, int32_t damage, bool drawBlood)
+void GameState::onAttackedCreature(Tile* tile, Creature *attacker, Creature* attackedCreature, int64_t damage, bool drawBlood)
 {
     Player *attackedplayer = dynamic_cast<Player*>(attackedCreature);
     Player* atakujacy = dynamic_cast<Player*>(attacker);
@@ -4419,7 +4419,7 @@ bool Game::creatureMakeMagic(Creature *creature, const Position& centerpos, cons
     return bSuccess;
 }
 
-void Game::creatureApplyDamage(Creature *creature, int32_t damage, int32_t &outDamage, int32_t &outManaDamage
+void Game::creatureApplyDamage(Creature *creature, int64_t damage, int64_t &outDamage, int64_t &outManaDamage
 #ifdef YUR_PVP_ARENA
                                , CreatureVector* arenaLosers
 #endif //YUR_PVP_ARENA
@@ -4468,7 +4468,7 @@ void Game::creatureApplyDamage(Creature *creature, int32_t damage, int32_t &outD
     }
     else
     {
-        int32_t newhealth = creature->health - damage;
+        int64_t newhealth = creature->health - damage;
         if(newhealth > creature->healthmax)
             newhealth = creature->healthmax;
 
@@ -5558,7 +5558,7 @@ void Game::checkSpawns(int32_t t)
     this->addEvent(makeTask(t, std::bind2nd(std::mem_fun(&Game::checkSpawns), t)));
 }
 
-void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int32_t damage)
+void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int64_t damage)
 {
     Player* player = dynamic_cast<Player*>(creature);
     Player* attackPlayer = dynamic_cast<Player*>(attackCreature);
@@ -5596,7 +5596,7 @@ void Game::CreateDamageUpdate(Creature* creature, Creature* attackCreature, int3
     }
 }
 
-void Game::CreateManaDamageUpdate(Creature* creature, Creature* attackCreature, int32_t damage)
+void Game::CreateManaDamageUpdate(Creature* creature, Creature* attackCreature, int64_t damage)
 {
     Player* player = dynamic_cast<Player*>(creature);
     Player* attackPlayer = dynamic_cast<Player*>(attackCreature);
@@ -5753,9 +5753,9 @@ bool Game::playerUseItemEx(Player *player, const Position& posFrom,const unsigne
                         return false;
                     }
 
-                    int32_t minMana = (int32_t)(((player->level*g_config.MANAS_MIN_LVL)+(player->maglevel*g_config.MANAS_MIN_MLVL))*g_config.MANAS_MIN_LO);
-                    int32_t maxMana = (int32_t)(((player->level*g_config.MANAS_MAX_LVL)+(player->maglevel*g_config.MANAS_MAX_MLVL))*g_config.MANAS_MAX_HI);
-                    int32_t addmana = random_range(g_config.MANAS_MIN_MANA, g_config.MANAS_MAX_MANA);
+                    int64_t minMana = (int64_t)(((player->level*g_config.MANAS_MIN_LVL)+(player->maglevel*g_config.MANAS_MIN_MLVL))*g_config.MANAS_MIN_LO);
+                    int64_t maxMana = (int64_t)(((player->level*g_config.MANAS_MAX_LVL)+(player->maglevel*g_config.MANAS_MAX_MLVL))*g_config.MANAS_MAX_HI);
+                    int64_t addmana = random_range(g_config.MANAS_MIN_MANA, g_config.MANAS_MAX_MANA);
                     target->mana = std::min(target->manamax,target->mana+addmana);
                     target->sendStats();
                     item->setItemCountOrSubtype(0);
@@ -5853,9 +5853,9 @@ bool Game::useHotkey(Player* player, int32_t itemid, int32_t count)
                 {
                     if(hot->getActionId() > 0)
                     {
-                        int32_t minMana = (int32_t)(((player->level*g_config.MANAS_MIN_LVL)+(player->maglevel*g_config.MANAS_MIN_MLVL))*g_config.MANAS_MIN_LO);
-                        int32_t maxMana = (int32_t)(((player->level*g_config.MANAS_MAX_LVL)+(player->maglevel*g_config.MANAS_MAX_MLVL))*g_config.MANAS_MAX_HI);
-                        int32_t addmana = random_range(minMana, maxMana);
+                        int64_t minMana = (int64_t)(((player->level*g_config.MANAS_MIN_LVL)+(player->maglevel*g_config.MANAS_MIN_MLVL))*g_config.MANAS_MIN_LO);
+                        int64_t maxMana = (int64_t)(((player->level*g_config.MANAS_MAX_LVL)+(player->maglevel*g_config.MANAS_MAX_MLVL))*g_config.MANAS_MAX_HI);
+                        int64_t addmana = random_range(minMana, maxMana);
                         std::stringstream addManaKomunikat;
                         addManaKomunikat << addmana;
                         player->mana = std::min(player->manamax,player->mana+addmana);
@@ -5886,11 +5886,11 @@ bool Game::useHotkey(Player* player, int32_t itemid, int32_t count)
                     me.animationColor = COLOR_GREEN;
                     me.offensive = false;
                     me.drawblood = false;
-                    me.minDamage = int32_t((player->level * 2 + player->maglevel * 3) * 2.2);
+                    me.minDamage = int64_t((player->level * 2 + player->maglevel * 3) * 2.2);
                     if(me.minDamage < 250)
                         me.minDamage = 250;
 
-                    me.maxDamage = int32_t((player->level * 2 + player->maglevel * 3) * 3);
+                    me.maxDamage = int64_t((player->level * 2 + player->maglevel * 3) * 3);
                     if(me.maxDamage < 250)
                         me.maxDamage = 250;
 
@@ -7436,7 +7436,7 @@ void Game::checkSpell(Player* player, SpeakClasses type, std::string text)
                 (g_config.SUMMONS_ALL_VOC && player->vocation != VOCATION_NONE))
         {
             std::string name = text.substr(11);
-            int32_t reqMana = Summons::getRequiredMana(name);
+            int64_t reqMana = Summons::getRequiredMana(name);
             Tile* tile = getTile(player->pos);
 
             if (!tile)
@@ -7952,8 +7952,8 @@ void Game::burstArrow(Creature* c, const Position& pos)
 
     /* hard no ? */
     runeAreaSpell.direction = 1;
-    runeAreaSpell.minDamage = int32_t(((c->level*g_config.BURST_DMG_LVL)+(c->maglevel*g_config.BURST_DMG_MLVL))*g_config.BURST_DMG_LO);
-    runeAreaSpell.maxDamage = int32_t(((c->level*g_config.BURST_DMG_LVL)+(c->maglevel*g_config.BURST_DMG_MLVL))*g_config.BURST_DMG_HI);
+    runeAreaSpell.minDamage = int64_t(((c->level*g_config.BURST_DMG_LVL)+(c->maglevel*g_config.BURST_DMG_MLVL))*g_config.BURST_DMG_LO);
+    runeAreaSpell.maxDamage = int64_t(((c->level*g_config.BURST_DMG_LVL)+(c->maglevel*g_config.BURST_DMG_MLVL))*g_config.BURST_DMG_HI);
     creatureThrowRune(c, pos, runeAreaSpell);
 }
 
@@ -8138,7 +8138,7 @@ void Game::useWand(Creature *creature, Creature *attackedCreature, int32_t wandi
     if(!player || !attackedCreature || player->pos.z != attackedCreature->pos.z)
         return;
 
-    int32_t dist, mana = 0;
+    int32_t dist; int64_t mana = 0;
     MagicEffectAreaNoExhaustionClass runeAreaSpell;
     runeAreaSpell.drawblood = true;
     runeAreaSpell.offensive = true;
@@ -8407,7 +8407,7 @@ void Game::banPlayer(Player *player, std::string reason, std::string action, std
 }
 #endif //HUCZU_BAN_SYSTEM
 
-void Game::CreateCondition(Creature* creature, Creature* target, unsigned char animationColor, unsigned char damageEffect, unsigned char hitEffect, attacktype_t attackType, bool offensive, int32_t maxDamage, int32_t minDamage, int32_t ticks, int32_t count)
+void Game::CreateCondition(Creature* creature, Creature* target, unsigned char animationColor, unsigned char damageEffect, unsigned char hitEffect, attacktype_t attackType, bool offensive, int64_t maxDamage, int64_t minDamage, int32_t ticks, int32_t count)
 {
     uint32_t targetID;
     if(target)
@@ -8431,7 +8431,7 @@ void Game::CreateCondition(Creature* creature, Creature* target, unsigned char a
 }
 
 void Game::doFieldDamage(Creature* creature, unsigned char animationColor, unsigned char damageEffect,
-                         unsigned char hitEffect, attacktype_t attackType, bool offensive, int32_t damage)
+                         unsigned char hitEffect, attacktype_t attackType, bool offensive, int64_t damage)
 {
     MagicEffectClass cd;
     cd.animationColor = animationColor;
@@ -9203,8 +9203,8 @@ void Game::goldBolt(Creature* c, const Position& pos)
 
     /* hard no ? */
     runeAreaSpell.direction = 1;
-    runeAreaSpell.minDamage = (int)(((c->level*g_config.GOLD_DMG_LVL)+(c->maglevel*g_config.GOLD_DMG_MLVL))*g_config.GOLD_DMG_LO);
-    runeAreaSpell.maxDamage = (int)(((c->level*g_config.GOLD_DMG_LVL)+(c->maglevel*g_config.GOLD_DMG_MLVL))*g_config.GOLD_DMG_HI);
+    runeAreaSpell.minDamage = (int64_t)(((c->level*g_config.GOLD_DMG_LVL)+(c->maglevel*g_config.GOLD_DMG_MLVL))*g_config.GOLD_DMG_LO);
+    runeAreaSpell.maxDamage = (int64_t)(((c->level*g_config.GOLD_DMG_LVL)+(c->maglevel*g_config.GOLD_DMG_MLVL))*g_config.GOLD_DMG_HI);
     creatureThrowRune(c, pos, runeAreaSpell);
 }
 
@@ -9240,8 +9240,8 @@ void Game::silverWand(Creature* c, const Position& pos)
 
     /* hard no ? */
     runeAreaSpell.direction = 1;
-    runeAreaSpell.minDamage = (int)(((c->level*g_config.SILVER_DMG_LVL)+(c->maglevel*g_config.SILVER_DMG_MLVL))*g_config.SILVER_DMG_LO);
-    runeAreaSpell.maxDamage = (int)(((c->level*g_config.SILVER_DMG_LVL)+(c->maglevel*g_config.SILVER_DMG_MLVL))*g_config.SILVER_DMG_HI);
+    runeAreaSpell.minDamage = (int64_t)(((c->level*g_config.SILVER_DMG_LVL)+(c->maglevel*g_config.SILVER_DMG_MLVL))*g_config.SILVER_DMG_LO);
+    runeAreaSpell.maxDamage = (int64_t)(((c->level*g_config.SILVER_DMG_LVL)+(c->maglevel*g_config.SILVER_DMG_MLVL))*g_config.SILVER_DMG_HI);
     creatureThrowRune(c, pos, runeAreaSpell);
 }
 

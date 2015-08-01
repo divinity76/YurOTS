@@ -3283,7 +3283,7 @@ void Protocol76::AddCreature(NetworkMessage &msg,const Creature *creature, bool 
         msg.AddString(creature->getName());
     }
 
-    msg.AddByte(std::max(1, creature->health*100/creature->healthmax));
+    msg.AddByte(std::max(1LL, creature->health*100/creature->healthmax));
     msg.AddByte((unsigned char)creature->getDirection());
 
     if (creature->looktype > 1000)
@@ -3360,32 +3360,16 @@ void Protocol76::AddPlayerStats(NetworkMessage &msg,const Player *player)
     msg.AddU16(player->getHealth());
     msg.AddU16(player->getPlayerInfo(PLAYERINFO_MAXHEALTH));
     msg.AddU16((uint16_t)std::floor(player->getFreeCapacity()));
-
-#ifdef YUR_HIGH_LEVELS
-    if (player->getPlayerInfo(PLAYERINFO_LEVEL) > 65535)
-    {
-        msg.AddU32(player->getPlayerInfo(PLAYERINFO_LEVEL));
-        msg.AddU16(0);
+    if(player->getExperience()>std::numeric_limits<int32_t>::max()){//YES, MUST BE SIGNED. (bug in tibia 7.6 client, the protocol can take unsigned max, but the client can not. )
+        msg.AddU32(player->getLevel()>std::numeric_limits<int32_t>::max()? 0:player->getLevel());
+    } else {
+        msg.AddU32(player->getExperience());
     }
-    else if (player->getExperience() > 2000000000L)
-    {
-        msg.AddU32(0);
-        msg.AddU16(player->getPlayerInfo(PLAYERINFO_LEVEL));
-    }
-    else
-    {
-        msg.AddU32((uint32_t)player->getExperience());
-        msg.AddU16(player->getPlayerInfo(PLAYERINFO_LEVEL));
-    }
-#else
-    msg.AddU32(player->getExperience());
-    msg.AddU16(player->getPlayerInfo(PLAYERINFO_LEVEL));
-#endif //YUR_HIGH_LEVELS
-
+    msg.AddU16(player->getLevel()>std::numeric_limits<uint16_t>::max()?0:player->getLevel());
     msg.AddByte(player->getPlayerInfo(PLAYERINFO_LEVELPERCENT));
     msg.AddU16(player->getMana());
     msg.AddU16(player->getPlayerInfo(PLAYERINFO_MAXMANA));
-    msg.AddByte(player->getMagicLevel());
+    msg.AddByte(player->getMagicLevel()>std::numeric_limits<uint8_t>::max()?0:player->getMagicLevel());
     msg.AddByte(player->getPlayerInfo(PLAYERINFO_MAGICLEVELPERCENT));
     msg.AddByte(player->getPlayerInfo(PLAYERINFO_SOUL));
 }
@@ -3455,7 +3439,7 @@ void Protocol76::AddCreatureHealth(NetworkMessage &msg,const Creature *creature)
 {
     msg.AddByte(0x8C);
     msg.AddU32(creature->getID());
-    msg.AddByte(std::max(1, creature->health*100/creature->healthmax));
+    msg.AddByte(std::max(1LL, creature->health*100/creature->healthmax));
 }
 
 void Protocol76::AddRemoveThing(NetworkMessage &msg, const Position &pos,unsigned char stackpos)

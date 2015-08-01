@@ -65,10 +65,10 @@ public:
     virtual bool isIndirect() const;
     virtual bool causeExhaustion(bool hasTarget) const;
 
-    virtual int32_t getDamage(Creature* target, const Creature* attacker = NULL) const;
+    virtual int64_t getDamage(Creature* target, const Creature* attacker = NULL) const;
 
     virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                const Position& pos, int32_t damage, bool isPz, bool isBlocking) const;
+                                const Position& pos, int64_t damage, bool isPz, bool isBlocking) const;
 
     virtual void getDistanceShoot(Player* spectator, const Creature* c, const Position& to,
                                   bool hasTarget) const;
@@ -82,11 +82,11 @@ public:
     virtual void FailedToCast(Player* spectator, const Creature* attacker,
                               bool isBlocking, bool hasTarget) const;
 
-    int32_t minDamage;
-    int32_t maxDamage;
+    int64_t minDamage;
+    int64_t maxDamage;
     bool offensive;
     bool drawblood; //causes blood splashes
-    int32_t manaCost;
+    int64_t manaCost;
 
     attacktype_t attackType;
 
@@ -104,7 +104,7 @@ public:
     virtual ~MagicEffectTargetClass() {};
 
     virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                const Position& pos, int32_t damage, bool isPz, bool isBlocking) const;
+                                const Position& pos, int64_t damage, bool isPz, bool isBlocking) const;
 
     virtual void getDistanceShoot(Player* spectator, const Creature* attacker, const Position& to,
                                   bool hasTarget) const;
@@ -133,10 +133,10 @@ public:
         return false;
     }
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const;
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
     virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                const Position& pos, int32_t damage, bool isPz, bool isBlocking) const;
+                                const Position& pos, int64_t damage, bool isPz, bool isBlocking) const;
 
     virtual void getDistanceShoot(const Creature* c, const Position& to,
                                   bool hasTarget) const
@@ -216,7 +216,7 @@ public:
     MagicEffectTargetExClass(const ConditionVec& condition);
     virtual ~MagicEffectTargetExClass() {};
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const;
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 protected:
     ConditionVec condition;
@@ -250,7 +250,7 @@ public:
         return false;
     }
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const;
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
     virtual Item* decay();
     bool transform(const MagicEffectItem *rhs);
@@ -275,13 +275,13 @@ public:
         return true;
     }
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const
     {
         return 0;
     }
 
     virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                const Position& pos, int32_t damage, bool isPz, bool isBlocking) const;
+                                const Position& pos, int64_t damage, bool isPz, bool isBlocking) const;
 
     virtual void getDistanceShoot(Player* spectator, const Creature* attacker, const Position& to,
                                   bool hasTarget) const;
@@ -310,7 +310,7 @@ public:
     }
 
     virtual void getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                const Position& pos, int32_t damage, bool isPz, bool isBlocking) const;
+                                const Position& pos, int64_t damage, bool isPz, bool isBlocking) const;
 
     virtual void getArea(const Position& rcenterpos, MagicAreaVec& list) const;
 
@@ -327,7 +327,7 @@ public:
     MagicEffectAreaExClass(const ConditionVec& dmglist);
     virtual ~MagicEffectAreaExClass() {};
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const;
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
 protected:
     ConditionVec condition;
@@ -340,7 +340,7 @@ public:
     MagicEffectAreaGroundClass(MagicEffectItem* fieldItem);
     virtual ~MagicEffectAreaGroundClass();
 
-    virtual int32_t getDamage(Creature *target, const Creature *attacker = NULL) const;
+    virtual int64_t getDamage(Creature *target, const Creature *attacker = NULL) const;
 
     virtual MagicEffectItem* getMagicItem(const Creature* attacker, bool isPz, bool isBlocking) const;
 

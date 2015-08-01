@@ -62,9 +62,9 @@ public:
     amu_t	getAmuType() const;
     subfight_t getSubfightType() const;
     virtual double getWeight() const;
-    int32_t getAttack() const;
-    int32_t getArmor() const;
-    int32_t getDefense() const;
+    int64_t getAttack() const;
+    int64_t getArmor() const;
+    int64_t getDefense() const;
     int32_t getSlotPosition() const;
     int32_t getRWInfo() const;
     int32_t getWorth() const;

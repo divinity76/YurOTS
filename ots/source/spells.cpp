@@ -16,7 +16,7 @@ bool Spells::loadFromXml(const std::string &datadir)
 {
     std::string name, words;
     bool enabled = false;
-    int32_t vocId, maglv = 0, mana = 0, id = 0, charges = 0;
+    int64_t vocId, maglv = 0, mana = 0, id = 0, charges = 0;
     this->loaded = false;
 
     std::string filename = datadir + "spells/spells.xml";
@@ -86,14 +86,14 @@ bool Spells::loadFromXml(const std::string &datadir)
                     nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"maglv");
                     if(nodeValue)
                     {
-                        maglv = atoi(nodeValue);
+                        maglv = atoll(nodeValue);
                         xmlFreeOTSERV(nodeValue);
                     }
 
                     nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"mana");
                     if(nodeValue)
                     {
-                        mana = atoi(nodeValue);
+                        mana = atoll(nodeValue);
                         xmlFreeOTSERV(nodeValue);
                     }
 
@@ -160,14 +160,14 @@ bool Spells::loadFromXml(const std::string &datadir)
                     nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"maglv");
                     if(nodeValue)
                     {
-                        maglv = atoi(nodeValue);
+                        maglv = atoll(nodeValue);
                         xmlFreeOTSERV(nodeValue);
                     }
 
                     nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"mana");
                     if(nodeValue)
                     {
-                        mana = atoi(nodeValue);
+                        mana = atoll(nodeValue);
                         xmlFreeOTSERV(nodeValue);
                     }
 
@@ -218,7 +218,7 @@ Spells::~Spells()
     }
 }
 
-Spell::Spell(std::string iname, int32_t imagLv, int32_t imana, Game* igame)
+Spell::Spell(std::string iname, int64_t imagLv, int64_t imana, Game* igame)
     :  game(igame), name(iname),magLv(imagLv) , mana(imana)
 {
     this->loaded=false;
@@ -234,7 +234,7 @@ Spell::~Spell()
     }
 }
 
-InstantSpell::InstantSpell(const std::string &datadir, std::string iname, std::string iwords, int32_t magLv, int32_t mana, Game* game)
+InstantSpell::InstantSpell(const std::string &datadir, std::string iname, std::string iwords, int64_t magLv, int64_t mana, Game* game)
     : Spell(iname, magLv, mana, game), words(iwords)
 {
     this->script = new SpellScript(datadir, std::string(datadir + "spells/instant/")+(this->words)+std::string(".lua"), this);
@@ -243,7 +243,7 @@ InstantSpell::InstantSpell(const std::string &datadir, std::string iname, std::s
 }
 
 
-RuneSpell::RuneSpell(const std::string &datadir, std::string iname, uint16_t id, uint16_t charges, int32_t magLv, int32_t mana, Game* game)
+RuneSpell::RuneSpell(const std::string &datadir, std::string iname, uint16_t id, uint16_t charges, int64_t magLv, int64_t mana, Game* game)
     : Spell(iname, magLv, mana, game)
 {
     this->id = id;
@@ -476,11 +476,11 @@ void SpellScript::internalGetMagicEffect(lua_State *L, MagicEffectClass& me)
     lua_pop(L, 1);
 
     lua_next(L, -2);
-    me.minDamage = (int32_t)lua_tonumber(L, -1);
+    me.minDamage = (int64_t)lua_tonumber(L, -1);
     lua_pop(L, 1);
 
     lua_next(L, -2);
-    me.maxDamage = (int32_t)lua_tonumber(L, -1);
+    me.maxDamage = (int64_t)lua_tonumber(L, -1);
     lua_pop(L, 1);
 
     lua_pop(L, 1); // last key

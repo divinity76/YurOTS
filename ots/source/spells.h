@@ -70,7 +70,7 @@ protected:
 class Spell
 {
 public:
-    Spell(std::string name, int32_t magLv, int32_t mana, Game* game);
+    Spell(std::string name, int64_t magLv, int64_t mana, Game* game);
     virtual ~Spell();
 
     Game* game;
@@ -86,18 +86,18 @@ public:
     {
         return name;
     };
-    int32_t getMana()
+    int64_t getMana()
     {
         return mana;
     };
-    int32_t getMagLv()
+    int64_t getMagLv()
     {
         return magLv;
     };
 
 protected:
     std::string name;
-    int32_t magLv, mana;
+    int64_t magLv, mana;
     bool loaded;
     SpellScript* script;
 };
@@ -105,7 +105,7 @@ protected:
 class InstantSpell : public Spell
 {
 public:
-    InstantSpell(const std::string &, std::string name, std::string words, int32_t magLv, int32_t mana, Game* game);
+    InstantSpell(const std::string &, std::string name, std::string words, int64_t magLv, int64_t mana, Game* game);
     std::string getWords()
     {
         return words;
@@ -118,7 +118,7 @@ protected:
 class RuneSpell : public Spell
 {
 public:
-    RuneSpell(const std::string& ,std::string name, uint16_t id, uint16_t charges, int32_t magLv, int32_t mana, Game* game);
+    RuneSpell(const std::string& ,std::string name, uint16_t id, uint16_t charges, int64_t magLv, int64_t mana, Game* game);
 
 protected:
     uint16_t id;

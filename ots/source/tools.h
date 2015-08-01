@@ -7,7 +7,7 @@
 typedef std::vector<std::string> StringVec;
 bool fileExists(const char* filename);
 //float box_muller(float m, float s);
-int32_t random_range(int32_t lowest_number, int32_t highest_number);
+int64_t random_range(int64_t lowest_number, int64_t highest_number);
 uint32_t rand24b();
 void hexdump(unsigned char *_data, int32_t _len);
 char upchar(char c);

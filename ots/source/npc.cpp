@@ -87,7 +87,7 @@ Npc::Npc(const std::string& name , Game* game) :
 
         if(tmp = (char*)xmlGetProp(root, (const xmlChar *)"maglevel"))
         {
-            maglevel = atoi(tmp);
+            maglevel = atoll(tmp);
             xmlFreeOTSERV(tmp);
             //std::cout << maglevel << std::endl;
         }
@@ -103,7 +103,7 @@ Npc::Npc(const std::string& name , Game* game) :
             {
                 if(tmp = (char*)xmlGetProp(p, (const xmlChar *)"now"))
                 {
-                    this->mana = atoi(tmp);
+                    this->mana = atoll(tmp);
                     xmlFreeOTSERV(tmp);
                 }
                 else
@@ -112,7 +112,7 @@ Npc::Npc(const std::string& name , Game* game) :
                 }
                 if(tmp = (char*)xmlGetProp(p, (const xmlChar *)"max"))
                 {
-                    this->manamax = atoi(tmp);
+                    this->manamax = atoll(tmp);
                     xmlFreeOTSERV(tmp);
                 }
                 else
@@ -124,7 +124,7 @@ Npc::Npc(const std::string& name , Game* game) :
             {
                 if(tmp = (char*)xmlGetProp(p, (const xmlChar *)"now"))
                 {
-                    this->health = atoi(tmp);
+                    this->health = atoll(tmp);
                     xmlFreeOTSERV(tmp);
                 }
                 else
@@ -133,7 +133,7 @@ Npc::Npc(const std::string& name , Game* game) :
                 }
                 if(tmp = (char*)xmlGetProp(p, (const xmlChar *)"max"))
                 {
-                    this->healthmax = atoi(tmp);
+                    this->healthmax = atoll(tmp);
                     xmlFreeOTSERV(tmp);
                 }
                 else
@@ -214,7 +214,7 @@ Npc::Npc(const std::string& name , Game* game) :
                     tmp = (char*)xmlGetProp(p, (const xmlChar *)"damage");
                     if(tmp)
                     {
-                        this->damage = atoi(tmp);
+                        this->damage = atoll(tmp);
                         xmlFreeOTSERV(tmp);
                     }
                     else

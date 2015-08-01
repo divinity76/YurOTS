@@ -723,10 +723,9 @@ bool Commands::showManaForLvl(Creature* c, const std::string &cmd, const std::st
         }
         else
         {
-            char buf[128];
-            sprintf(buf,"%ld",(int32_t)player->getManaForNextMLevel());
-            std::string msg = std::string("Potrzebujesz spalic ") + std::string(buf) + std::string(" many do kolejnego poziomu.");
-            player->sendTextMessage(MSG_BLUE_TEXT, msg.c_str());
+            std::stringstream ss;
+            ss << "Potrzebujesz spalic "<< player->getManaForNextMLevel() << " many do kolejnego poziomu.";
+            player->sendTextMessage(MSG_BLUE_TEXT, ss.str().c_str());
             player->mmo += 5;
             return true;
         }

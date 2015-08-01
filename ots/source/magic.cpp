@@ -33,7 +33,7 @@ bool MagicEffectClass::causeExhaustion(bool hasTarget) const
     return hasTarget;
 }
 
-int32_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 
     if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
@@ -41,7 +41,7 @@ int32_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /
 
     if((!offensive || (target != attacker)) && target->access < g_config.ACCESS_PROTECT)
     {
-        int32_t damage = (int32_t)random_range(minDamage, maxDamage);
+        int64_t damage = (int64_t)random_range(minDamage, maxDamage);
 
         if(!offensive)
         {
@@ -72,7 +72,7 @@ int32_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /
 
             if(targetPlayer)
             {
-                damage = (int32_t)floor(damage / 2.0);
+                damage = (int64_t)floor(damage / 2.0);
             }
         }
 
@@ -83,7 +83,7 @@ int32_t MagicEffectClass::getDamage(Creature *target, const Creature *attacker /
 }
 
 void MagicEffectClass::getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-                                      const Position& pos, /*bool hasTarget,*/ int32_t damage, bool isPz, bool isBlocking) const
+                                      const Position& pos, /*bool hasTarget,*/ int64_t damage, bool isPz, bool isBlocking) const
 {
     if(!isBlocking && target != NULL /*hasTarget*/)
     {
@@ -157,7 +157,7 @@ MagicEffectTargetClass::MagicEffectTargetClass()
     //
 }
 void MagicEffectTargetClass::getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-        const Position& pos, int32_t damage, bool isPz, bool isBlocking) const
+        const Position& pos, int64_t damage, bool isPz, bool isBlocking) const
 {
     if(target != NULL)
     {
@@ -194,7 +194,7 @@ MagicEffectTargetExClass::MagicEffectTargetExClass(const ConditionVec& dmglist) 
 
 }
 
-int32_t MagicEffectTargetExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectTargetExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
     if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
         return 0;
@@ -218,7 +218,7 @@ int32_t MagicEffectTargetExClass::getDamage(Creature *target, const Creature *at
             }
         }
 
-        int32_t damage = (int32_t)random_range(minDamage, maxDamage);
+        int64_t damage = random_range(minDamage, maxDamage);
 
         if(!offensive)
             damage = -damage;
@@ -236,14 +236,14 @@ MagicEffectTargetCreatureCondition::MagicEffectTargetCreatureCondition(const uin
     //
 }
 
-int32_t MagicEffectTargetCreatureCondition::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectTargetCreatureCondition::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
     if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
         return 0;
 
     if(target->access < g_config.ACCESS_PROTECT)
     {
-        int32_t damage = (int32_t)random_range(minDamage, maxDamage);
+        int64_t damage = random_range(minDamage, maxDamage);
 
         if(!offensive)
             damage = -damage;
@@ -255,7 +255,7 @@ int32_t MagicEffectTargetCreatureCondition::getDamage(Creature *target, const Cr
 }
 
 void MagicEffectTargetCreatureCondition::getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-        const Position& pos, int32_t damage, bool isPz, bool isBlocking) const
+        const Position& pos, int64_t damage, bool isPz, bool isBlocking) const
 {
     if(target != NULL)
     {
@@ -335,7 +335,7 @@ void MagicEffectTargetGroundClass::FailedToCast(Player* spectator, const Creatur
 }
 
 void MagicEffectTargetGroundClass::getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-        const Position& pos, int32_t damage, bool isPz, bool isBlocking) const
+        const Position& pos, int64_t damage, bool isPz, bool isBlocking) const
 {
     //Default: nothing
 }
@@ -359,7 +359,7 @@ MagicEffectAreaClass::MagicEffectAreaClass()
 }
 
 void MagicEffectAreaClass::getMagicEffect(Player* spectator, const Creature* attacker, const Creature* target,
-        const Position& pos, int32_t damage, bool isPz, bool isBlocking) const
+        const Position& pos, int64_t damage, bool isPz, bool isBlocking) const
 {
     if(target != NULL && target->access < g_config.ACCESS_PROTECT)
     {
@@ -414,7 +414,7 @@ MagicEffectAreaExClass::MagicEffectAreaExClass(const ConditionVec& dmglist) :
     //
 }
 
-int32_t MagicEffectAreaExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectAreaExClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
     if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
         return 0;
@@ -437,7 +437,7 @@ int32_t MagicEffectAreaExClass::getDamage(Creature *target, const Creature *atta
             }
         }
 
-        int32_t damage = (int32_t)random_range(minDamage, maxDamage);
+        int64_t damage = random_range(minDamage, maxDamage);
 
         if(!offensive)
             damage = -damage;
@@ -463,7 +463,7 @@ MagicEffectAreaGroundClass::~MagicEffectAreaGroundClass()
     }
 }
 
-int32_t MagicEffectAreaGroundClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectAreaGroundClass::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
     if((attackType != ATTACK_NONE) && (target->getImmunities() & attackType) == attackType)
         return 0;
@@ -566,7 +566,7 @@ void MagicEffectItem::buildCondition()
     }
 }
 
-int32_t MagicEffectItem::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
+int64_t MagicEffectItem::getDamage(Creature *target, const Creature *attacker /*= NULL*/) const
 {
 
     if(target->access < g_config.ACCESS_PROTECT)

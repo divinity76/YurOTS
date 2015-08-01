@@ -24,9 +24,9 @@ public:
     ~LuaScript();
 
 #ifdef __MIZIAK_SUPERMANAS__
-    int32_t MANAS_EXHAUSTED;
-    int32_t MANAS_MIN_MANA;
-    int32_t MANAS_MAX_MANA;
+    int64_t MANAS_EXHAUSTED;
+    int64_t MANAS_MIN_MANA;
+    int64_t MANAS_MAX_MANA;
 #endif //__MIZIAK_SUPERMANAS__
     int32_t MAX_PLAYERS;
     bool GM_MSG;
@@ -36,19 +36,19 @@ public:
     exp_t EXP_MUL;
     exp_t EXP_MUL_PVP;
 
-    int32_t HEALTH_TICK_MUL;
-    int32_t MANA_TICK_MUL;
-    int32_t HEALTH_TICK_MUL_ROOK;
-    int32_t MANA_TICK_MUL_ROOK;
+    int64_t HEALTH_TICK_MUL;
+    int64_t MANA_TICK_MUL;
+    int64_t HEALTH_TICK_MUL_ROOK;
+    int64_t MANA_TICK_MUL_ROOK;
     int32_t CAP_GAIN[5];
-    int32_t MANA_GAIN[5];
-    int32_t HP_GAIN[5];
+    int64_t MANA_GAIN[5];
+    int64_t HP_GAIN[5];
     int32_t WEAPON_MUL[5];
     int32_t SHIELD_MUL[5];
     int32_t DIST_MUL[5];
-    int32_t MANA_MUL[5];
-    int32_t SOFTMANA;
-    int32_t SOFTHEALTH;
+    int64_t MANA_MUL[5];
+    int64_t SOFTMANA;
+    int64_t SOFTHEALTH;
     int32_t KICK_TIME;
     int32_t DROP_RATE;
 #ifdef TLM_HOUSE_SYSTEM
@@ -104,7 +104,7 @@ public:
     std::string VOCATIONS[5];
     std::string PROMOTED_VOCATIONS[6];
     int32_t DIE_PERCENT_EXP;
-    int32_t DIE_PERCENT_MANA;
+    int64_t DIE_PERCENT_MANA;
     int32_t DIE_PERCENT_SKILL;
     int32_t DIE_PERCENT_EQ;
     int32_t DIE_PERCENT_BP;
@@ -127,17 +127,17 @@ public:
 
     size_t MAX_DEATH_ENTRIES;
 
-    int32_t MANA_SNAKEBITE;
-    int32_t MANA_MOONLIGHT;
-    int32_t MANA_VOLCANIC;
-    int32_t MANA_QUAGMIRE;
-    int32_t MANA_TEMPEST;
+    int64_t MANA_SNAKEBITE;
+    int64_t MANA_MOONLIGHT;
+    int64_t MANA_VOLCANIC;
+    int64_t MANA_QUAGMIRE;
+    int64_t MANA_TEMPEST;
 
-    int32_t MANA_VORTEX;
-    int32_t MANA_DRAGONBREATH;
-    int32_t MANA_PLAGUE;
-    int32_t MANA_COSMIC;
-    int32_t MANA_INFERNO;
+    int64_t MANA_VORTEX;
+    int64_t MANA_DRAGONBREATH;
+    int64_t MANA_PLAGUE;
+    int64_t MANA_COSMIC;
+    int64_t MANA_INFERNO;
 
     int32_t SANDALY;
     int32_t BLUE_ROBE;
@@ -148,23 +148,23 @@ public:
     int32_t ASTEL_SHIELD;
     int32_t FEATHER_LEGS;
     int32_t DIAMOND_RING;
-    int32_t DIAMOND_RING_MANA;
-    int32_t DIAMOND_RING_HP;
+    int64_t DIAMOND_RING_MANA;
+    int64_t DIAMOND_RING_HP;
     int32_t PANDEMKA;
 #ifdef HUCZU_AMULET
     int32_t TYMERIA_AMULET_INCR;
     int32_t TYMERIA_AMULET_DESC;
 #endif
-    int32_t MANAS_MIN_LVL;
-    int32_t MANAS_MIN_MLVL;
-    int32_t MANAS_MIN_LO;
+    int64_t MANAS_MIN_LVL;
+    int64_t MANAS_MIN_MLVL;
+    int64_t MANAS_MIN_LO;
 
-    int32_t MANAS_MAX_LVL;
-    int32_t MANAS_MAX_MLVL;
-    int32_t MANAS_MAX_HI;
+    int64_t MANAS_MAX_LVL;
+    int64_t MANAS_MAX_MLVL;
+    int64_t MANAS_MAX_HI;
 
-    int32_t MAGIC_BACKPACK_HP;
-    int32_t MAGIC_BACKPACK_MP;
+    int64_t MAGIC_BACKPACK_HP;
+    int64_t MAGIC_BACKPACK_MP;
     int32_t MAGIC_BACKPACK;
 
     int32_t RANGE_SNAKEBITE;
@@ -178,10 +178,10 @@ public:
     int32_t RANGE_PLAGUE;
     int32_t RANGE_COSMIC;
     int32_t RANGE_INFERNO;
-    int32_t LIFE_RING_ZYCIE;
-    int32_t LIFE_RING_MANA;
-    int32_t ROH_ZYCIE;
-    int32_t ROH_MANA;
+    int64_t LIFE_RING_ZYCIE;
+    int64_t LIFE_RING_MANA;
+    int64_t ROH_ZYCIE;
+    int64_t ROH_MANA;
     int32_t MAX_HOUSES;
     int32_t HOUSE_LVL_ROOK;
     int32_t HOUSE_LVL;

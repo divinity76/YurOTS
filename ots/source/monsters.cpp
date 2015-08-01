@@ -306,21 +306,21 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
         nodeValue = (char*)xmlGetProp(root, (const xmlChar *)"maglevel");
         if(nodeValue)
         {
-            mType->maglevel = atoi(nodeValue);
+            mType->maglevel = atoll(nodeValue);
             xmlFreeOTSERV(nodeValue);
         }
 
         nodeValue = (char*)xmlGetProp(root, (const xmlChar *)"defense");
         if(nodeValue)
         {
-            mType->defense = atoi(nodeValue);
+            mType->defense = atoll(nodeValue);
             xmlFreeOTSERV(nodeValue);
         }
 
         nodeValue = (char*)xmlGetProp(root, (const xmlChar *)"armor");
         if(nodeValue)
         {
-            mType->armor = atoi(nodeValue);
+            mType->armor = atoll(nodeValue);
             xmlFreeOTSERV(nodeValue);
         }
 
@@ -359,7 +359,7 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
                 nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"now");
                 if(nodeValue)
                 {
-                    mType->health = atoi(nodeValue);
+                    mType->health = atoll(nodeValue);
                     xmlFreeOTSERV(nodeValue);
                 }
                 else
@@ -368,7 +368,7 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
                 nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"max");
                 if(nodeValue)
                 {
-                    mType->health_max = atoi(nodeValue);
+                    mType->health_max = atoll(nodeValue);
                     xmlFreeOTSERV(nodeValue);
                 }
                 else
@@ -415,7 +415,7 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
                 nodeValue = (char*)xmlGetProp(p, (const xmlChar *)"runonhealth");
                 if(nodeValue)
                 {
-                    mType->runAwayHealth = atoi(nodeValue);
+                    mType->runAwayHealth = atoll(nodeValue);
                     xmlFreeOTSERV(nodeValue);
                 }
             }
@@ -515,14 +515,14 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
                             nodeValue = (char*)xmlGetProp(tmp, (const xmlChar *)"mindamage");
                             if(nodeValue)
                             {
-                                physicalattack->minWeapondamage = atoi(nodeValue);
+                                physicalattack->minWeapondamage = atoll(nodeValue);
                                 xmlFreeOTSERV(nodeValue);
                             }
 
                             nodeValue = (char*)xmlGetProp(tmp, (const xmlChar *)"maxdamage");
                             if(nodeValue)
                             {
-                                physicalattack->maxWeapondamage = atoi(nodeValue);
+                                physicalattack->maxWeapondamage = atoll(nodeValue);
                                 xmlFreeOTSERV(nodeValue);
                             }
 
@@ -565,14 +565,14 @@ MonsterType* Monsters::loadMonster(const std::string& file,const std::string& mo
                             nodeValue = (char*)xmlGetProp(tmp, (const xmlChar *)"mindamage");
                             if(nodeValue)
                             {
-                                physicalattack->minWeapondamage = atoi(nodeValue);
+                                physicalattack->minWeapondamage = atoll(nodeValue);
                                 xmlFreeOTSERV(nodeValue);
                             }
 
                             nodeValue = (char*)xmlGetProp(tmp, (const xmlChar *)"maxdamage");
                             if(nodeValue)
                             {
-                                physicalattack->maxWeapondamage = atoi(nodeValue);
+                                physicalattack->maxWeapondamage = atoll(nodeValue);
                                 xmlFreeOTSERV(nodeValue);
                             }
 

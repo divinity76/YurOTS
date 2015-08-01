@@ -63,7 +63,7 @@ float box_muller(float m, float s)
 
 //////////////////////////////////////////////////
 // get a random value between lowest_number and highest_number
-int32_t random_range(int32_t lowestNumber, int32_t highestNumber)
+int64_t random_range(int64_t lowestNumber, int64_t highestNumber)
 {
     if(highestNumber == lowestNumber)
         return lowestNumber;
@@ -71,7 +71,7 @@ int32_t random_range(int32_t lowestNumber, int32_t highestNumber)
     if(lowestNumber > highestNumber)
         std::swap(lowestNumber, highestNumber);
 
-    return (lowestNumber + ((int32_t)rand24b() % (highestNumber - lowestNumber + 1)));
+    return (lowestNumber + ((int64_t)rand24b() % (highestNumber - lowestNumber + 1)));
 }
 
 

@@ -110,7 +110,7 @@ public:
     InvitedToGuildsList invitedToGuildsList;
     uint32_t guildId;
 #ifdef __MIZIAK_SUPERMANAS__
-    uint32_t eventManas;
+    uint64_t eventManas;
     Item* getItemByID(int32_t itemid, int32_t count, bool actionId = false);
     Item* getItemByIDContainer(Container* container, int32_t itemid, int32_t count, bool actionId = false);
 #endif
@@ -268,15 +268,15 @@ public:
     {
         return level;
     }
-    int32_t getHealth() const
+    int64_t getHealth() const
     {
         return health;
     }
-    int32_t getMana() const
+    int64_t getMana() const
     {
         return mana;
     }
-    int32_t getMagicLevel() const
+    int64_t getMagicLevel() const
     {
         return maglevel;
     }
@@ -302,7 +302,7 @@ public:
     };
 
 
-    int32_t getPlayerInfo(playerinfo_t playerinfo) const;
+    int64_t getPlayerInfo(playerinfo_t playerinfo) const;
     int32_t getSkill(skills_t skilltype, skillsid_t skillinfo) const;
     std::string getSkillName(int32_t skillid);
     void addSkillTry(int32_t skilltry);
@@ -350,11 +350,11 @@ public:
     Item* getItem(int32_t pos) const;
     Item* GetDistWeapon() const;
 
-    void addManaSpent(uint32_t spent);
+    void addManaSpent(uint64_t spent);
     void addExp(exp_t exp);
-    virtual int32_t getWeaponDamage() const;
-    virtual int32_t getArmor() const;
-    virtual int32_t getDefense() const;
+    virtual int64_t getWeaponDamage() const;
+    virtual int64_t getArmor() const;
+    virtual int64_t getDefense() const;
     uint32_t getMoney();
     bool substractMoney(uint32_t money);
     bool substractMoneyItem(Item *item, uint32_t money);
@@ -525,7 +525,7 @@ public:
 #endif //YUR_RINGS_AMULETS
 
     exp_t getExpForNextLevel();
-    uint32_t getManaForNextMLevel();
+    uint64_t getManaForNextMLevel();
 
 #ifdef YUR_LOGIN_QUEUE
     int32_t getAccount() const
@@ -675,7 +675,7 @@ protected:
     uint32_t getReqSkillTries (int32_t skill, int32_t level, playervoc_t voc);
 
     //for magic level advances
-    uint32_t getReqMana(int32_t maglevel, playervoc_t voc);
+    uint64_t getReqMana(int64_t maglevel, playervoc_t voc);
     //player advances variables
     uint32_t skills[7][3];
     typedef std::list<Death> DeathList;
@@ -714,18 +714,18 @@ protected:
 #ifdef CVS_GAINS_MULS
     //reminder: 0 = None, 1 = Sorcerer, 2 = Druid, 3 = Paladin, 4 = Knight
     static int32_t CapGain[5];          //for level advances
-    static int32_t ManaGain[5];
-    static int32_t HPGain[5];
+    static int64_t ManaGain[5];
+    static int64_t HPGain[5];
 #endif //CVS_GAINS_MULS
 
-    static const int32_t gainManaVector[5][2];
-    static const int32_t gainHealthVector[5][2];
+    static const int64_t gainManaVector[5][2];
+    static const int64_t gainHealthVector[5][2];
     uint16_t manaTick;
     uint16_t healthTick;
 
 #ifdef YUR_PREMIUM_PROMOTION
-    static const int32_t promotedGainManaVector[5][2];
-    static const int32_t promotedGainHealthVector[5][2];
+    static const int64_t promotedGainManaVector[5][2];
+    static const int64_t promotedGainHealthVector[5][2];
 #endif //YUR_PREMIUM_PROMOTION
 
 
@@ -750,16 +750,16 @@ protected:
     SkillCache SkillAdvanceCache[7][2];
     struct SentStats
     {
-        int32_t health;
-        int32_t healthmax;
+        int64_t health;
+        int64_t healthmax;
         exp_t experience;
         int32_t level;
         double freeCapacity;
         //int32_t cap;
-        int32_t mana;
-        int32_t manamax;
-        int32_t manaspent;
-        int32_t maglevel;
+        int64_t mana;
+        int64_t manamax;
+        int64_t manaspent;
+        int64_t maglevel;
     };
 
     SentStats lastSentStats;

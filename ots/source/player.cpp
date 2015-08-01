@@ -24,16 +24,16 @@ extern Chat g_chat;
 AutoList<Player> Player::listPlayer;
 
 #ifdef YUR_PREMIUM_PROMOTION
-const int32_t Player::promotedGainManaVector[5][2] = {{6,1},{2,1},{2,1},{3,1},{6,1}};
-const int32_t Player::promotedGainHealthVector[5][2] = {{6,1},{6,1},{6,1},{3,1},{2,1}};
+const int64_t Player::promotedGainManaVector[5][2] = {{6,1},{2,1},{2,1},{3,1},{6,1}};
+const int64_t Player::promotedGainHealthVector[5][2] = {{6,1},{6,1},{6,1},{3,1},{2,1}};
 #endif //YUR_PREMIUM_PROMOTION
-const int32_t Player::gainManaVector[5][2] = {{6,1},{3,1},{3,1},{4,1},{6,1}};
-const int32_t Player::gainHealthVector[5][2] = {{6,1},{6,1},{6,1},{4,1},{3,1}};
+const int64_t Player::gainManaVector[5][2] = {{6,1},{3,1},{3,1},{4,1},{6,1}};
+const int64_t Player::gainHealthVector[5][2] = {{6,1},{6,1},{6,1},{4,1},{3,1}};
 
 #ifdef CVS_GAINS_MULS
 int32_t Player::CapGain[5] = {10, 10, 10, 20, 25};
-int32_t Player::ManaGain[5] = {5, 30, 30, 15, 5};
-int32_t Player::HPGain[5] = {5, 5, 5, 10, 15};
+int64_t Player::ManaGain[5] = {5, 30, 30, 15, 5};
+int64_t Player::HPGain[5] = {5, 5, 5, 10, 15};
 #endif //CVS_GAINS_MULS
 
 Player::Player(const std::string& name, Protocol *p) :
@@ -324,7 +324,7 @@ Item* Player::getItem(int32_t pos) const
     return NULL;
 }
 
-int32_t Player::getWeaponDamage() const
+int64_t Player::getWeaponDamage() const
 {
     double mul = 1.0;
     mul = (fightMode==1? 2.0 : (fightMode==2? 1.5 : 1.0));
@@ -375,7 +375,7 @@ int32_t Player::getWeaponDamage() const
                         }
                         if(rand()%100 < hitchance)  //hit
                         {
-                            return 1+(int32_t)(damagemax*rand()/(RAND_MAX+1.0));
+                            return 1+(int64_t)(damagemax*rand()/(RAND_MAX+1.0));
                         }
                         else 	//miss
                         {
@@ -402,12 +402,12 @@ int32_t Player::getWeaponDamage() const
         damagemax = 0.5*mul*getSkill(SKILL_FIST,SKILL_LEVEL) + 1.0;
 
     // return it
-    return 1+(int32_t)(damagemax*rand()/(RAND_MAX+1.0));
+    return 1+(int64_t)(damagemax*rand()/(RAND_MAX+1.0));
 }
 
-int32_t Player::getArmor() const
+int64_t Player::getArmor() const
 {
-    int32_t armor=0;
+    int64_t armor=0;
 
     if(items[SLOT_HEAD])
         armor += items[SLOT_HEAD]->getArmor();
@@ -425,9 +425,9 @@ int32_t Player::getArmor() const
     return armor;
 }
 
-int32_t Player::getDefense() const
+int64_t Player::getDefense() const
 {
-    int32_t defense=0;
+    int64_t defense=0;
 
     if(items[SLOT_LEFT])
     {
@@ -445,13 +445,13 @@ int32_t Player::getDefense() const
     }
     //////////
     if(defense == 0)
-        defense = (int32_t)random_range(0,(int32_t)skills[SKILL_SHIELD][SKILL_LEVEL]);
+        defense = random_range(0,skills[SKILL_SHIELD][SKILL_LEVEL]);
     else
-        defense += (int32_t)random_range(0,(int32_t)skills[SKILL_SHIELD][SKILL_LEVEL]);
+        defense += random_range(0,skills[SKILL_SHIELD][SKILL_LEVEL]);
 
-    defense = int32_t(double(defense) * (fightMode==1? 1.0 : (fightMode==2? 1.5 : 2.0)));
+    defense = int64_t(double(defense) * (fightMode==1? 1.0 : (fightMode==2? 1.5 : 2.0)));
 
-    return random_range(int32_t(defense*0.25), int32_t(1+(int32_t)(defense*rand())/(RAND_MAX+1.0)));
+    return random_range(int64_t(defense*0.25), int64_t(1+(int64_t)(defense*rand())/(RAND_MAX+1.0)));
     ///////////
     //return defense;
 }
@@ -1264,7 +1264,7 @@ void Player::addSkillShieldTry(int32_t skilltry)
     }
 }
 
-int32_t Player::getPlayerInfo(playerinfo_t playerinfo) const
+int64_t Player::getPlayerInfo(playerinfo_t playerinfo) const
 {
     switch(playerinfo)
     {
@@ -1374,7 +1374,7 @@ void Player::addSkillTryInternal(int32_t skilltry,int32_t skill)
     if (skills[skill][SKILL_TRIES] >= getReqSkillTries(skill, (skills[skill][SKILL_LEVEL] + 1), vocation))
     {
 #ifdef __MIZIAK_CREATURESCRIPTS__
-        int32_t tab[] = {skill, skills[skill][SKILL_LEVEL], skills[skill][SKILL_LEVEL]+1};
+        int64_t tab[] = {skill, skills[skill][SKILL_LEVEL], skills[skill][SKILL_LEVEL]+1};
         actions.creatureEvent("advance", this, NULL, NULL, tab);
 #endif //__MIZIAK_CREATURESCRIPTS__
         skills[skill][SKILL_LEVEL]++;
@@ -1399,13 +1399,13 @@ void Player::addSkillTryInternal(int32_t skilltry,int32_t skill)
 }
 
 
-uint32_t Player::getReqMana(int32_t maglevel, playervoc_t voc)
+uint64_t Player::getReqMana(int64_t maglevel, playervoc_t voc)
 {
     //ATTENTION: MAKE SURE THAT CHARS HAVE REASONABLE MAGIC LEVELS. ESPECIALY KNIGHTS!!!!!!!!!!!
-    float ManaMultiplier[5] = { 1.0f, 1.1f, 1.1f, 1.4f, 3};
+    double ManaMultiplier[5] = { 1.0, 1.1, 1.1, 1.4, 3.0};
 
     //will calculate required mana for a magic level
-    uint32_t reqMana = (uint32_t) ( 400 * pow(ManaMultiplier[(int32_t)voc], maglevel-1) );
+    uint64_t reqMana = (uint64_t) ( 400 * pow(double(ManaMultiplier[(int32_t)voc]), double(maglevel-1)) );
 
     if (reqMana % 20 < 10) //CIP must have been bored when they invented this odd rounding
         reqMana = reqMana - (reqMana % 20);
@@ -2198,7 +2198,7 @@ void Player::onTeleport(const Creature *creature, const Position *oldPos, unsign
     client->sendThingMove(creature, creature,oldPos, oldstackpos, true, 1, 1);
 }
 
-void Player::addManaSpent(uint32_t spent)
+void Player::addManaSpent(uint64_t spent)
 {
     if(spent == 0)
         return;
@@ -2209,12 +2209,12 @@ void Player::addManaSpent(uint32_t spent)
 
     this->manaspent += spent;
     //Magic Level Advance
-    int32_t reqMana = this->getReqMana(this->maglevel+1, this->vocation);
+    int64_t reqMana = this->getReqMana(this->maglevel+1, this->vocation);
     if (this->access < g_config.ACCESS_PROTECT && this->manaspent >= reqMana)
     {
         this->manaspent -= reqMana;
 #ifdef __MIZIAK_CREATURESCRIPTS__
-        int32_t tab[] = {7, this->maglevel, this->maglevel+1};
+        int64_t tab[] = {7, this->maglevel, this->maglevel+1};
         actions.creatureEvent("advance", this, NULL, NULL, tab);
 #endif //__MIZIAK_CREATURESCRIPTS__
         this->maglevel++;
@@ -2244,7 +2244,7 @@ void Player::addExp(exp_t exp)
         this->setNormalSpeed();
         g_game.changeSpeed(this->getID(), this->getSpeed());
 #ifdef __MIZIAK_CREATURESCRIPTS__
-        int32_t tab[] = {8, lastLv, level};
+        int64_t tab[] = {8, lastLv, level};
         actions.creatureEvent("advance", this, NULL, NULL, tab);
 #endif //__MIZIAK_CREATURESCRIPTS__
         std::stringstream lvMsg;
@@ -2273,18 +2273,18 @@ void Player::die()
     if(aol)
         return;
     //Magic Level downgrade
-    uint32_t sumMana = 0;
-    int32_t lostMana = 0;
-    for (int32_t i = 1; i <= maglevel; i++)                //sum up all the mana
+    uint64_t sumMana = 0;
+    int64_t lostMana = 0;
+    for (int64_t i = 1; i <= maglevel; i++)                //sum up all the mana
     {
         sumMana += getReqMana(i, vocation);
     }
 
     sumMana += manaspent;
     if (items[SLOT_NECKLACE] && items[SLOT_NECKLACE]->getID() == ITEM_STAR_LIGHT)
-        lostMana = (int32_t)(sumMana * g_config.DIE_PERCENT_SL/100.0);
+        lostMana = (int64_t)(sumMana * g_config.DIE_PERCENT_SL/100.0);
     else
-        lostMana = (int32_t)(sumMana * g_config.DIE_PERCENT_MANA/100.0);   //player loses 10% of all spent mana when he dies
+        lostMana = (int64_t)(sumMana * g_config.DIE_PERCENT_MANA/100.0);   //player loses 10% of all spent mana when he dies
 
     while(lostMana > manaspent)
     {
@@ -2449,7 +2449,7 @@ bool Player::gainManaTick()
 
 bool Player::gainHealthTick()
 {
-    int32_t add;
+    int64_t add;
     healthTick++;
     if(vocation >= 0 && vocation < 5)
     {
@@ -3238,7 +3238,7 @@ exp_t Player::getExpForNextLevel()
     return getExpForLv(level + 1) - experience;
 }
 
-uint32_t Player::getManaForNextMLevel()
+uint64_t Player::getManaForNextMLevel()
 {
     return getReqMana(maglevel+1, vocation) - manaspent;
 }

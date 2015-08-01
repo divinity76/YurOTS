@@ -587,17 +587,17 @@ subfight_t Item::getSubfightType() const
     return items[id].shootType;
 }
 
-int32_t Item::getAttack() const
+int64_t Item::getAttack() const
 {
     return items[id].attack;
 }
 
-int32_t Item::getArmor() const
+int64_t Item::getArmor() const
 {
     return items[id].armor;
 }
 
-int32_t Item::getDefense() const
+int64_t Item::getDefense() const
 {
     return items[id].defence;
 }
@@ -632,17 +632,17 @@ std::string Item::getLootDescription() const
     {
         if(isStackable() && count > 1)
         {
-            s << (int32_t)count << " " << it.name << "s";
+            s << count << " " << it.name << "s";
         }
         else
         {
             if(isWeapon() && (getAttack() || getDefense()))
             {
-                s << article(it.name) << " (Atk:" << (int32_t)getAttack() << " Def:" << (int32_t)getDefense() << ")";
+                s << article(it.name) << " (Atk:" << getAttack() << " Def:" << getDefense() << ")";
             }
             else if(getArmor())
             {
-                s << article(it.name) << " (Arm:"<< (int32_t)getArmor() << ")";
+                s << article(it.name) << " (Arm:"<< getArmor() << ")";
             }
             else if(isSplash())
             {
@@ -718,11 +718,11 @@ std::string Item::getDescription(bool fullDescription) const
             }
             else if(isWeapon() && (getAttack() || getDefense()))
             {
-                s << article(it.name) << " (Atk:" << (int32_t)getAttack() << " Def:" << (int32_t)getDefense() << ")";
+                s << article(it.name) << " (Atk:" << getAttack() << " Def:" << getDefense() << ")";
             }
             else if(getArmor())
             {
-                s << article(it.name) << " (Arm:"<< (int32_t)getArmor() << ")";
+                s << article(it.name) << " (Arm:"<< getArmor() << ")";
             }
             else if(isFluidContainer())
             {
