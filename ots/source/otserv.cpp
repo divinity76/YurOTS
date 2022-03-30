@@ -198,6 +198,7 @@ OTSYS_THREAD_RETURN ConnectionHandler(void *dat)
 	srand((unsigned)time(NULL));
 
 	SOCKET s = *(SOCKET*)dat;
+	free(dat);
 
 	NetworkMessage msg;
 	if (msg.ReadFromSocket(s))
@@ -891,7 +892,14 @@ int main(int argc, char *argv[])
 
 			SOCKET s = accept(listen_socket, NULL, NULL); // accept a new connection
 			if(s > 0){
-				OTSYS_CREATE_THREAD(ConnectionHandler, (void*)&s);
+				SOCKET* s_copy = (SOCKET*) malloc(sizeof(s));
+				if(!s_copy){
+    				    //should only happen when we're about to crash due to out-of-memory anyway...
+				    std::cerr << "malloc failed to allocate memory for socket copy! probably out of memory, a crash is imminent..." << std::endl;
+				    throw std::bad_alloc();
+				}
+				*s_copy = s;
+				OTSYS_CREATE_THREAD(ConnectionHandler, (void*)s_copy);
 			}
 			else{
 					accept_errors++;
