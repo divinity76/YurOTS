@@ -50,13 +50,31 @@ Status::Status(){
 	this->start=OTSYS_TIME();
 }
 
-void Status::addPlayer(){
+void Status::addPlayer(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+	const uint32_t player_ip
+#endif
+){
 	this->playersonline++;
+#ifdef HHB_STATUS_MAX_4_PER_IP
+	this->ip_counts[player_ip] +=1;
+#endif
 	if(playerspeak < playersonline)
 	  playerspeak = playersonline;
 }
-void Status::removePlayer(){
+void Status::removePlayer(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const uint32_t player_ip
+#endif
+){
 	this->playersonline--;
+#ifdef HHB_STATUS_MAX_4_PER_IP
+	this->ip_counts[player_ip] -=1;
+	if(this->ip_counts[player_ip] < 1){
+		// free the ram
+		this->ip_counts.erase(player_ip);
+	}
+#endif
 }
 
 std::string Status::getStatusString(){
@@ -94,7 +112,18 @@ std::string Status::getStatusString(){
 	xmlAddChild(root, p);
 
 	p=xmlNewNode(NULL,(const xmlChar*)"players");
+#ifdef HHB_STATUS_MAX_4_PER_IP
+{
+	size_t otservlist_legal_count = 0;
+	for (const auto& [ip, player_count] : this->ip_counts) {
+        (void)ip;
+		otservlist_legal_count += ( player_count > 4 ? 4 : player_count);
+    }
+	ss << otservlist_legal_count;
+}
+#else
 	ss << this->playersonline;
+#endif
 	xmlSetProp(p, (const xmlChar*) "online", (const xmlChar*)ss.str().c_str());
 	ss.str("");
 	ss << this->playersmax;

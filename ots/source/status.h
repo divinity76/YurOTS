@@ -22,6 +22,9 @@
 #define __OTSERV_STATUS_H
 
 #include <string>
+#ifdef HHB_STATUS_MAX_4_PER_IP
+#include <map>
+#endif
 #include "otsystem.h"
 #include "definitions.h"
 #include "networkmessage.h"
@@ -30,8 +33,16 @@
 class Status{
   public:
   // procs       
-	void addPlayer();
-	void removePlayer();
+	void addPlayer(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const uint32_t player_ip
+#endif
+	);
+	void removePlayer(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const uint32_t player_ip
+#endif
+	);
 	static Status* instance();
 	std::string getStatusString();
 	void getInfo(NetworkMessage &nm);
@@ -54,7 +65,9 @@ class Status{
   private:
 	Status();
 	static Status* _Status;
-
+#ifdef HHB_STATUS_MAX_4_PER_IP
+	std::map<uint32_t,size_t> ip_counts;
+#endif
 	// the stats of our server
 };
 
