@@ -115,10 +115,18 @@ std::string Status::getStatusString(){
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
 	size_t otservlist_legal_count = 0;
+#if __cplusplus >= 201703
+// this only works for >= c++17
 	for (const auto& [ip, player_count] : this->ip_counts) {
         (void)ip;
 		otservlist_legal_count += ( player_count > 4 ? 4 : player_count);
     }
+#else
+// this works on >=c++11
+  for (const auto& n : this->ip_counts) {
+		otservlist_legal_count += ( n.second > 4 ? 4 : n.second);
+  }
+#endif
 	ss << otservlist_legal_count;
 }
 #else
