@@ -112,7 +112,27 @@ std::string Status::getStatusString(){
 	xmlAddChild(root, p);
 
 	p=xmlNewNode(NULL,(const xmlChar*)"players");
+#ifdef HHB_STATUS_MAX_4_PER_IP
+{
+	size_t otservlist_legal_online_count = 0;
+#if __cplusplus >= 201703
+// this only works for >= c++17
+	for (const auto& [ip, player_count] : this->ip_counts) {
+        (void)ip;
+		otservlist_legal_online_count += ( player_count > 4 ? 4 : player_count);
+    }
+#else
+// this works on >=c++11
+  for (const auto& n : this->ip_counts) {
+		otservlist_legal_online_count += ( n.second > 4 ? 4 : n.second);
+  }
+#endif
+	ss << otservlist_legal_online_count;
+	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(this->ip_counts.size()).c_str());
+}
+#else
 	ss << this->playersonline;
+#endif
 	xmlSetProp(p, (const xmlChar*) "online", (const xmlChar*)ss.str().c_str());
 	ss.str("");
 	ss << this->playersmax;
@@ -121,24 +141,6 @@ std::string Status::getStatusString(){
 	ss << this->playerspeak;
 	xmlSetProp(p, (const xmlChar*) "peak", (const xmlChar*)ss.str().c_str());
 	ss.str("");
-#ifdef HHB_STATUS_MAX_4_PER_IP
-{
-	size_t unique = 0;
-#if __cplusplus >= 201703
-// this only works for >= c++17
-	for (const auto& [ip, player_count] : this->ip_counts) {
-        (void)ip;
-		unique += ( player_count > 4 ? 4 : player_count);
-    }
-#else
-// this works on >=c++11
-  for (const auto& n : this->ip_counts) {
-		unique += ( n.second > 4 ? 4 : n.second);
-  }
-#endif
-	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(unique).c_str());
-}
-#endif
 #ifdef YUR_LOGIN_QUEUE
 	ss << this->playerswaiting;
 	xmlSetProp(p, (const xmlChar*) "waiting", (const xmlChar*)ss.str().c_str());
