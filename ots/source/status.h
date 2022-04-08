@@ -24,6 +24,7 @@
 #include <string>
 #ifdef HHB_STATUS_MAX_4_PER_IP
 #include <map>
+#include <shared_mutex>
 #endif
 #include "otsystem.h"
 #include "definitions.h"
@@ -67,6 +68,7 @@ class Status{
 	static Status* _Status;
 #ifdef HHB_STATUS_MAX_4_PER_IP
 	std::map<uint32_t,size_t> ip_counts;
+	std::shared_mutex ip_counts_mutex;	
 #endif
 	// the stats of our server
 };

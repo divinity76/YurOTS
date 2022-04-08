@@ -57,7 +57,10 @@ void Status::addPlayer(
 ){
 	this->playersonline++;
 #ifdef HHB_STATUS_MAX_4_PER_IP
+{
+	std::unique_lock lock(this->ip_counts_mutex);
 	this->ip_counts[player_ip] +=1;
+}
 #endif
 	if(playerspeak < playersonline)
 	  playerspeak = playersonline;
@@ -69,11 +72,14 @@ void Status::removePlayer(
 ){
 	this->playersonline--;
 #ifdef HHB_STATUS_MAX_4_PER_IP
+{
+	std::unique_lock lock(this->ip_counts_mutex);
 	this->ip_counts[player_ip] -=1;
 	if(this->ip_counts[player_ip] < 1){
 		// free the ram
 		this->ip_counts.erase(player_ip);
 	}
+}
 #endif
 }
 
@@ -114,6 +120,7 @@ std::string Status::getStatusString(){
 	p=xmlNewNode(NULL,(const xmlChar*)"players");
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
+	std::shared_lock lock(this->ip_counts_mutex);
 	size_t otservlist_legal_online_count = 0;
 #if __cplusplus >= 201703
 // this only works for >= c++17
