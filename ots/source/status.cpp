@@ -52,14 +52,15 @@ Status::Status(){
 
 void Status::addPlayer(
 #ifdef HHB_STATUS_MAX_4_PER_IP
-	const uint32_t player_ip
+	const uint32_t player_ip,
+	const std::string player_name
 #endif
 ){
 	this->playersonline++;
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
 	std::unique_lock lock(this->ip_counts_mutex);
-	this->ip_counts[player_ip] +=1;
+	this->ip_counts[player_ip][player_name] +=1;
 }
 #endif
 	if(playerspeak < playersonline)
@@ -67,23 +68,31 @@ void Status::addPlayer(
 }
 void Status::removePlayer(
 #ifdef HHB_STATUS_MAX_4_PER_IP
-		const uint32_t player_ip
+		const uint32_t player_ip,
+		const std::string player_name
 #endif
 ){
 	this->playersonline--;
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
 	std::unique_lock lock(this->ip_counts_mutex);
-	this->ip_counts[player_ip] -=1;
-	if(this->ip_counts[player_ip] < 1){
+	this->ip_counts[player_ip][player_name] -=1;
+	if(this->ip_counts[player_ip][player_name] < 1){
 		// free the ram
-		this->ip_counts.erase(player_ip);
+		this->ip_counts[player_ip].erase(player_name);
+		if(this->ip_counts[player_ip].size() < 1){
+			this->ip_counts.erase(player_ip);
+		}
 	}
 }
 #endif
 }
 
-std::string Status::getStatusString(){
+std::string Status::getStatusString(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const bool print_debug_info
+#endif
+){
 	std::string xml;
 
 	std::stringstream ss;
@@ -122,20 +131,23 @@ std::string Status::getStatusString(){
 {
 	std::shared_lock lock(this->ip_counts_mutex);
 	size_t otservlist_legal_online_count = 0;
-#if __cplusplus >= 201703
-// this only works for >= c++17
-	for (const auto& [ip, player_count] : this->ip_counts) {
-        (void)ip;
-		otservlist_legal_online_count += ( player_count > 4 ? 4 : player_count);
+	size_t debug_count=0;
+	for (const auto& [ip, players] : this->ip_counts) {
+		size_t count_for_this_ip = 0;
+		for(const auto& [player, count] : players){
+			count_for_this_ip += count;
+			++debug_count;
+			if(print_debug_info){
+				const std::string debug_name = std::string("debug_")+std::to_string(debug_count);
+				const std::string debug_text = std::string("ip: ")+std::to_string(ip)+std::string(" player: ")+std::string(player)+std::string(" count: ")+std::to_string(count);
+				xmlSetProp(p, (const xmlChar*) debug_name.c_str(), (const xmlChar*)debug_text.c_str());
+			}
+		}
+		otservlist_legal_online_count += (count_for_this_ip > 4 ? 4 : count_for_this_ip);
     }
-#else
-// this works on >=c++11
-  for (const auto& n : this->ip_counts) {
-		otservlist_legal_online_count += ( n.second > 4 ? 4 : n.second);
-  }
-#endif
 	ss << otservlist_legal_online_count;
 	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(this->ip_counts.size()).c_str());
+
 }
 #else
 	ss << this->playersonline;

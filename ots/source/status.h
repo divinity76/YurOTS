@@ -45,7 +45,11 @@ class Status{
 #endif
 	);
 	static Status* instance();
-	std::string getStatusString();
+	std::string getStatusString(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const bool print_debug_info
+#endif
+	);
 	void getInfo(NetworkMessage &nm);
 	bool hasSlot();
 	
@@ -67,7 +71,7 @@ class Status{
 	Status();
 	static Status* _Status;
 #ifdef HHB_STATUS_MAX_4_PER_IP
-	std::map<uint32_t,size_t> ip_counts;
+	std::map<uint32_t,std::map<std::string, size_t>> ip_counts;
 	std::shared_mutex ip_counts_mutex;	
 #endif
 	// the stats of our server
