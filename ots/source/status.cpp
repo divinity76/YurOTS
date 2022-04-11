@@ -76,12 +76,32 @@ void Status::removePlayer(
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
 	std::unique_lock lock(this->ip_counts_mutex);
-	this->ip_counts[player_ip][player_name] -=1;
-	if(this->ip_counts[player_ip][player_name] < 1){
-		// free the ram
-		this->ip_counts[player_ip].erase(player_name);
-		if(this->ip_counts[player_ip].size() < 1){
-			this->ip_counts.erase(player_ip);
+
+	// IN THEORY WE CAN JUST DO: this->ip_counts[player_ip][player_name] -=1;
+	// BUT IT DOESN'T WORK, LEADS TO INTEGER UNDERFLOW AND 999999 PLAYERS AND SHIT,
+	// SO WE HAVE TO DO IT THIS SUPER CAREFUL WAY. (WHY? IDFK!)
+	if(this->ip_counts.count(player_ip) < 1){
+		// this should be impossible, but it does happen anyway, idk why and its confusing as fuk...
+		// do nothing.
+	}else{
+		if(this->ip_counts[player_ip].count(player_name) < 1){
+			// this should be impossible, but it does happen anyway, idk why and its confusing as fuk...
+			// just check if ip is empty to delete and free ram
+			if(this->ip_counts[player_ip].size() == 0){
+				// free ip ram.
+				this->ip_counts.erase(player_ip);
+			}
+		} else {
+			if(this->ip_counts[player_ip][player_name] > 1){
+				this->ip_counts[player_ip][player_name] -=1;
+			} else {
+				// free player_name ram
+				this->ip_counts[player_ip].erase(player_name);
+				if(this->ip_counts[player_ip].size() == 0){
+					// free ip ram.
+					this->ip_counts.erase(player_ip);
+				}
+			}
 		}
 	}
 }
