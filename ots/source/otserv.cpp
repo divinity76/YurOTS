@@ -386,12 +386,7 @@ OTSYS_THREAD_RETURN ConnectionHandler(void *dat)
 #endif //YUR_LOGIN_QUEUE
 						else{
 							Status* stat = Status::instance();
-							stat->addPlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-								player->getIP(),
-								player->getName()
-#endif
-							);
+							stat->addPlayer();
 							player->lastlogin = std::time(NULL);
 							player->lastip = player->getIP();
 							s = 0;            // protocol/player will close socket
@@ -400,12 +395,7 @@ OTSYS_THREAD_RETURN ConnectionHandler(void *dat)
 							isLocked = false;
 
 							protocol->ReceiveLoop();
-							stat->removePlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-								player->getIP(),
-								player->getName()
-#endif
-							);
+							stat->removePlayer();
 						}
 
 						if(player){

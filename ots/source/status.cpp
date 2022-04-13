@@ -50,69 +50,16 @@ Status::Status(){
 	this->start=OTSYS_TIME();
 }
 
-void Status::addPlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-	const uint32_t player_ip,
-	const std::string player_name
-#endif
-){
+void Status::addPlayer(){
 	this->playersonline++;
-#ifdef HHB_STATUS_MAX_4_PER_IP
-{
-	std::unique_lock lock(this->ip_counts_mutex);
-	this->ip_counts[player_ip][player_name] +=1;
-}
-#endif
 	if(playerspeak < playersonline)
 	  playerspeak = playersonline;
 }
-void Status::removePlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-		const uint32_t player_ip,
-		const std::string player_name
-#endif
-){
+void Status::removePlayer(){
 	this->playersonline--;
-#ifdef HHB_STATUS_MAX_4_PER_IP
-{
-	std::unique_lock lock(this->ip_counts_mutex);
-
-	// IN THEORY WE CAN JUST DO: this->ip_counts[player_ip][player_name] -=1;
-	// BUT IT DOESN'T WORK, LEADS TO INTEGER UNDERFLOW AND 999999 PLAYERS AND SHIT,
-	// SO WE HAVE TO DO IT THIS SUPER CAREFUL WAY. (WHY? IDFK!)
-	if(this->ip_counts.count(player_ip) < 1){
-		// this should be impossible, but it does happen anyway, idk why and its confusing as fuk...
-		// do nothing.
-	}else{
-		if(this->ip_counts[player_ip].count(player_name) < 1){
-			// this should be impossible, but it does happen anyway, idk why and its confusing as fuk...
-			// just check if ip is empty to delete and free ram
-			if(this->ip_counts[player_ip].size() == 0){
-				// free ip ram.
-				this->ip_counts.erase(player_ip);
-			}
-		} else {
-			if(this->ip_counts[player_ip][player_name] > 1){
-				this->ip_counts[player_ip][player_name] -=1;
-			} else {
-				// free player_name ram
-				this->ip_counts[player_ip].erase(player_name);
-				if(this->ip_counts[player_ip].size() == 0){
-					// free ip ram.
-					this->ip_counts.erase(player_ip);
-				}
-			}
-		}
-	}
-}
-#endif
 }
 
-std::string Status::getStatusString(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-		const bool print_debug_info
-#endif
-){
+std::string Status::getStatusString(){
 	std::string xml;
 
 	std::stringstream ss;
@@ -149,25 +96,23 @@ std::string Status::getStatusString(
 	p=xmlNewNode(NULL,(const xmlChar*)"players");
 #ifdef HHB_STATUS_MAX_4_PER_IP
 {
-	std::shared_lock lock(this->ip_counts_mutex);
-	size_t otservlist_legal_online_count = 0;
 	size_t debug_count=0;
-	for (const auto& [ip, players] : this->ip_counts) {
-		size_t count_for_this_ip = 0;
-		for(const auto& [player, count] : players){
-			count_for_this_ip += count;
-			++debug_count;
-			if(print_debug_info){
-				const std::string debug_name = std::string("debug_")+std::to_string(debug_count);
-				const std::string debug_text = std::string("ip: ")+std::to_string(ip)+std::string(" player: ")+std::string(player)+std::string(" count: ")+std::to_string(count);
-				xmlSetProp(p, (const xmlChar*) debug_name.c_str(), (const xmlChar*)debug_text.c_str());
-			}
-		}
-		otservlist_legal_online_count += (count_for_this_ip > 4 ? 4 : count_for_this_ip);
-    }
-	ss << otservlist_legal_online_count;
-	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(this->ip_counts.size()).c_str());
+	std::map<uint32_t, size_t> ip_counts;
 
+	AutoList<Player>::listiterator iter = Player::listPlayer.list.begin();
+	while (iter != Player::listPlayer.list.end())
+	{
+		ip_counts[(*iter).second->getIp()]+=1;
+		debug_count += 1;
+		++iter;
+	}
+	size_t otserv_legal_count = 0;
+	for(const auto& [ip, players]: ip_counts){
+		(void)ip;
+		otserv_legal_count += (players > 4 ? 4 : players);
+	}
+	ss << otservlist_legal_online_count;
+	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(ip_counts.size()).c_str());
 }
 #else
 	ss << this->playersonline;

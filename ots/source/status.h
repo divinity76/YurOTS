@@ -22,10 +22,6 @@
 #define __OTSERV_STATUS_H
 
 #include <string>
-#ifdef HHB_STATUS_MAX_4_PER_IP
-#include <map>
-#include <shared_mutex>
-#endif
 #include "otsystem.h"
 #include "definitions.h"
 #include "networkmessage.h"
@@ -34,16 +30,8 @@
 class Status{
   public:
   // procs       
-	void addPlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-		const uint32_t player_ip
-#endif
-	);
-	void removePlayer(
-#ifdef HHB_STATUS_MAX_4_PER_IP
-		const uint32_t player_ip
-#endif
-	);
+	void addPlayer();
+	void removePlayer();
 	static Status* instance();
 	std::string getStatusString(
 #ifdef HHB_STATUS_MAX_4_PER_IP
@@ -70,10 +58,6 @@ class Status{
   private:
 	Status();
 	static Status* _Status;
-#ifdef HHB_STATUS_MAX_4_PER_IP
-	std::map<uint32_t,std::map<std::string, size_t>> ip_counts;
-	std::shared_mutex ip_counts_mutex;	
-#endif
 	// the stats of our server
 };
 
