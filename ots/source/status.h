@@ -33,7 +33,11 @@ class Status{
 	void addPlayer();
 	void removePlayer();
 	static Status* instance();
-	std::string getStatusString();
+	std::string getStatusString(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const bool print_debug_info
+#endif
+	);
 	void getInfo(NetworkMessage &nm);
 	bool hasSlot();
 	
@@ -54,7 +58,6 @@ class Status{
   private:
 	Status();
 	static Status* _Status;
-
 	// the stats of our server
 };
 

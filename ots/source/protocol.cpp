@@ -50,7 +50,28 @@ Protocol::~Protocol()
 	player = NULL;
 	game = NULL;
 }
-
+#ifdef HHB_STATUS_MAX_4_PER_IP
+uint32_t Protocol::getIP()
+{
+	uint32_t ret = 0;
+	sockaddr_in sain;
+	socklen_t salen = sizeof(sockaddr_in);
+	if (getpeername(s, (sockaddr*)&sain, &salen) == 0)
+	{
+#if defined WIN32 || defined __WINDOWS__
+		ret = sain.sin_addr.S_un.S_addr;
+#else
+		ret = sain.sin_addr.s_addr;
+#endif
+	}
+	if(ret == 0){
+		return this->cached_ip;
+	}else {
+		this->cached_ip = ret;
+		return ret;
+	}
+}
+#else
 unsigned long Protocol::getIP() const
 {
 	sockaddr_in sain;
@@ -66,7 +87,7 @@ unsigned long Protocol::getIP() const
 	
 	return 0;
 }
-
+#endif
 void Protocol::setPlayer(Player* p)
 {
 	player = p;

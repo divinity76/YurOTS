@@ -94,7 +94,29 @@ std::string Status::getStatusString(){
 	xmlAddChild(root, p);
 
 	p=xmlNewNode(NULL,(const xmlChar*)"players");
+#ifdef HHB_STATUS_MAX_4_PER_IP
+{
+	size_t debug_count=0;
+	std::map<uint32_t, size_t> ip_counts;
+
+	AutoList<Player>::listiterator iter = Player::listPlayer.list.begin();
+	while (iter != Player::listPlayer.list.end())
+	{
+		ip_counts[(*iter).second->getIp()]+=1;
+		debug_count += 1;
+		++iter;
+	}
+	size_t otserv_legal_count = 0;
+	for(const auto& [ip, players]: ip_counts){
+		(void)ip;
+		otserv_legal_count += (players > 4 ? 4 : players);
+	}
+	ss << otservlist_legal_online_count;
+	xmlSetProp(p, (const xmlChar*) "unique", (const xmlChar*)std::to_string(ip_counts.size()).c_str());
+}
+#else
 	ss << this->playersonline;
+#endif
 	xmlSetProp(p, (const xmlChar*) "online", (const xmlChar*)ss.str().c_str());
 	ss.str("");
 	ss << this->playersmax;

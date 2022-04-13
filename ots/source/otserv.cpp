@@ -412,14 +412,23 @@ OTSYS_THREAD_RETURN ConnectionHandler(void *dat)
 		// Since Cip made 02xx as Tibia protocol,
 		// Lets make FFxx as "our great info protocol" ;P
 		else if (protId == 0xFFFF) {
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		const std::string raw = msg.GetRaw();
+		if(raw == "info" || raw == "info_debug"){
+#else
 			if (msg.GetRaw() == "info"){
+#endif //HHB_STATUS_MAX_4_PER_IP
 				Status* status = Status::instance();
 
 				uint64_t running = (OTSYS_TIME() - status->start)/1000;
 				#ifdef __DEBUG__
 				std::cout << ":: Uptime: " << running << std::endl;
 				#endif
-				std::string str = status->getStatusString();
+				std::string str = status->getStatusString(
+#ifdef HHB_STATUS_MAX_4_PER_IP
+		bool(raw == "info_debug")
+#endif
+				);
 				send(s, str.c_str(), (int)str.size(), 0);
 			}
 		}

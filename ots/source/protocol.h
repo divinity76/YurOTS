@@ -39,8 +39,12 @@ public:
 	virtual ~Protocol();
 
 	void setPlayer(Player* p);
+#ifdef HHB_STATUS_MAX_4_PER_IP
+	uint32_t cached_ip=0;
+	uint32_t getIP();
+#else
 	unsigned long getIP() const;
-
+#endif
 	virtual bool CanSee(int x, int y, int z) const = 0;
 	virtual bool CanSee(const Creature*) const = 0;
 	virtual void sendNetworkMessage(NetworkMessage *msg) = 0;
