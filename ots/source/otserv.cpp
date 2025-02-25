@@ -71,8 +71,8 @@
 	#define ERROR_EINTR EINTR
 
 	/* Comment below line if you want to execute otserv with root user (NOT RECOMMENDED) */
-	#define _NO_ROOT_PERMISSION_
-	#define _HOMEDIR_CONF_
+//	#define _NO_ROOT_PERMISSION_
+//	#define _HOMEDIR_CONF_
 	
 	extern int errno; 
 #endif

@@ -23,6 +23,8 @@
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
 #include <algorithm>
+#include<string.h>
+#include<stdint.h>
 
 extern LuaScript g_config;
 

@@ -35,7 +35,7 @@
 extern LuaScript g_config;
 
 #ifdef YUR_HIGH_LEVELS
-typedef int64_t exp_t;
+typedef uint64_t exp_t;
 #else
 typedef unsigned long exp_t;
 #endif //YUR_HIGH_LEVELS

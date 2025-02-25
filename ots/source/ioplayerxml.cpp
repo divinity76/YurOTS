@@ -26,6 +26,16 @@
 #include "item.h"
 #include "luascript.h"
 
+#ifndef __WIN32__
+static uint64_t _atoi64(const char *str)
+{
+	std::istringstream ss(str);
+	uint64_t i;
+	ss >> i;
+	return i;
+}
+#endif
+
 xmlMutexPtr xmlmutex;
 typedef std::vector<std::string> StringVector;
 extern LuaScript g_config;

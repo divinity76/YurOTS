@@ -25,6 +25,7 @@
 
 #include <list>
 #include <string>
+#include <stdint.h>
 
 //class Player;
 

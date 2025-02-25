@@ -251,14 +251,19 @@ SpellScript::SpellScript(const std::string &datadir, std::string scriptname, Spe
 	this->loaded = false;
 	if(scriptname == "")
 		return;
-	luaState = lua_open();
-	luaopen_loadlib(luaState);
-	luaopen_base(luaState);
-	luaopen_math(luaState);
-	luaopen_string(luaState);
-	luaopen_io(luaState);
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or newer
+    luaState = luaL_newstate();
+    luaL_openlibs(luaState);  // Opens all standard libraries
+    luaL_dofile(luaState, std::string(datadir + "spells/lib/spells.lua").c_str());
+#else  // Lua 5.0
+    luaState = lua_open();
+    luaopen_loadlib(luaState);
+    luaopen_base(luaState);
+    luaopen_math(luaState);
+    luaopen_string(luaState);
+    luaopen_io(luaState);
     lua_dofile(luaState, std::string(datadir + "spells/lib/spells.lua").c_str());
-
+#endif
 #ifdef USING_VISUAL_2005
 	FILE* in = NULL;
 	fopen_s(&in, scriptname.c_str(), "r");
@@ -270,7 +275,11 @@ SpellScript::SpellScript(const std::string &datadir, std::string scriptname, Spe
 		return;
 	else
 		fclose(in);
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or newer
+	luaL_dofile(luaState, scriptname.c_str());
+#else  // Lua 5.0
 	lua_dofile(luaState, scriptname.c_str());
+#endif
 	this->loaded=true;
 	this->spell=spell;
 	this->setGlobalNumber("addressOfSpell", (int)spell);

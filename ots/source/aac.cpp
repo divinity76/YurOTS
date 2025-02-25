@@ -26,6 +26,7 @@
 #include <fstream>
 #include <sstream>
 #include <boost/regex.hpp>
+#include "tools.h"
 
 std::string AccountCreator::process(std::string request)
 {
@@ -52,7 +53,7 @@ std::string AccountCreator::process(std::string request)
 		voc = 0;
 
 		// check if name exists
-	std::ifstream file((g_config.DATA_DIR + "players/" + name + ".xml").c_str());
+	std::ifstream file((g_config.getGlobalString("datadir") + "players/" + name + ".xml").c_str());
 	if (file)
 		return "Sorry, name already in use";
 
@@ -103,7 +104,7 @@ long AccountCreator::uniqueAccountNumber()
 		long num = (a + b*RAND_MAX) % ACCNUM_RANGE + ACCNUM_MIN;
 
 		filename.str("");
-		filename << g_config.DATA_DIR << "accounts/" << num << ".xml" << std::ends;
+		filename << g_config.getGlobalString("datadir") << "accounts/" << num << ".xml" << std::ends;
 		std::ifstream file(filename.str().c_str());
 
 		if (file)	// account already exists

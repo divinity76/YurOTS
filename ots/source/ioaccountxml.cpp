@@ -206,7 +206,7 @@ bool IOAccountXML::saveAccount(const Account& account)
 	}
 
 	std::ostringstream filename;
-	filename << g_config.DATA_DIR << "accounts/" << account.accnumber << ".xml";
+	filename << g_config.getGlobalString("datadir") << "accounts/" << account.accnumber << ".xml";
 	std::string file = filename.str();
 
 	if (xmlSaveFile(file.c_str(), doc))

@@ -27,6 +27,18 @@ extern Spells spells;
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
 
+
+#ifndef __WIN32__
+#include <sstream>
+static uint64_t _atoi64(const char *str)
+{
+	std::istringstream ss(str);
+	uint64_t i;
+	ss >> i;
+	return i;
+}
+#endif
+
 MonsterType::MonsterType()
 {
 	reset();

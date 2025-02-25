@@ -177,8 +177,8 @@ bool LoginQueue::save()
 		iter != Player::listPlayer.list.end(); ++iter)
 	{
 		entryNode = xmlNewNode(NULL, (const xmlChar*)"entry");
-		xmlSetProp(entryNode, (const xmlChar*)"account", (const xmlChar*)str(iter->second->getAccount()).c_str());
-		xmlSetProp(entryNode, (const xmlChar*)"state", (const xmlChar*)str(LOGGED).c_str());
+		xmlSetProp(entryNode, (const xmlChar*)"account", (const xmlChar*)std::to_string(iter->second->getAccount()).c_str());
+		xmlSetProp(entryNode, (const xmlChar*)"state", (const xmlChar*)std::to_string(LOGGED).c_str());
 		xmlAddChild(root, entryNode);
 	}
 
@@ -186,8 +186,8 @@ bool LoginQueue::save()
 	for (LoginTryList::iterator iter = lq.begin(); iter != lq.end(); ++iter)
 	{
 		entryNode = xmlNewNode(NULL, (const xmlChar*)"entry");
-		xmlSetProp(entryNode, (const xmlChar*)"account", (const xmlChar*)str(iter->accountNumber).c_str());
-		xmlSetProp(entryNode, (const xmlChar*)"state", (const xmlChar*)str(iter->state).c_str());
+		xmlSetProp(entryNode, (const xmlChar*)"account", (const xmlChar*)std::to_string(iter->accountNumber).c_str());
+		xmlSetProp(entryNode, (const xmlChar*)"state", (const xmlChar*)std::to_string(iter->state).c_str());
 		xmlAddChild(root, entryNode);
 	}
 

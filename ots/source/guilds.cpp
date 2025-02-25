@@ -119,7 +119,7 @@ void Guilds::Guild::save(xmlNodePtr guildNode)
 	for (size_t i = 0; i < members.size(); i++)
 	{
 		memberNode = xmlNewNode(NULL, (const xmlChar*)"member");
-		xmlSetProp(memberNode, (const xmlChar*) "status", (const xmlChar*)str(members[i].status).c_str());
+		xmlSetProp(memberNode, (const xmlChar*) "status", (const xmlChar*)std::to_string(members[i].status).c_str());
 		xmlSetProp(memberNode, (const xmlChar*) "name", (const xmlChar*)members[i].name.c_str());
 		xmlSetProp(memberNode, (const xmlChar*) "rank", (const xmlChar*)members[i].rank.c_str());
 		xmlSetProp(memberNode, (const xmlChar*) "nick", (const xmlChar*)members[i].nick.c_str());

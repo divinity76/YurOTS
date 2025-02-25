@@ -340,15 +340,19 @@ NpcScript::NpcScript(std::string scriptname, Npc* npc){
 	this->loaded = false;
 	if(scriptname == "")
 		return;
-	luaState = lua_open();
-	luaopen_loadlib(luaState);
-	luaopen_base(luaState);
-	luaopen_math(luaState);
-	luaopen_string(luaState);
-	luaopen_io(luaState);
-
-	std::string datadir = g_config.getGlobalString("datadir");
-    lua_dofile(luaState, std::string(datadir + "npc/scripts/lib/npc.lua").c_str());
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or newer
+    luaState = luaL_newstate();
+    luaL_openlibs(luaState);  // Opens all standard libraries
+    luaL_dofile(luaState, std::string(g_config.getGlobalString("datadir") + "npc/scripts/lib/npc.lua").c_str());
+#else  // Lua 5.0
+    luaState = lua_open();
+    luaopen_loadlib(luaState);
+    luaopen_base(luaState);
+    luaopen_math(luaState);
+    luaopen_string(luaState);
+    luaopen_io(luaState);
+    lua_dofile(luaState, std::string(g_config.getGlobalString("datadir") + "npc/scripts/lib/npc.lua").c_str());
+#endif
 
 #ifdef USING_VISUAL_2005
 	FILE* in = NULL;
@@ -361,7 +365,11 @@ NpcScript::NpcScript(std::string scriptname, Npc* npc){
 		return;
 	else
 		fclose(in);
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or newer
+	luaL_dofile(luaState, scriptname.c_str());
+#else  // Lua 5.0
 	lua_dofile(luaState, scriptname.c_str());
+#endif
 	this->loaded=true;
 	this->npc=npc;
 	this->setGlobalNumber("addressOfNpc", (int)npc);

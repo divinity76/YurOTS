@@ -23,6 +23,7 @@
 #define __LUASCRIPT_H__
 
 #include <string>
+#include <stdint.h>
 extern "C"
 {
 #include <lua.h>
@@ -33,7 +34,7 @@ extern "C"
 extern "C" struct lua_State;
 
 #ifdef YUR_HIGH_LEVELS
-typedef __int64 exp_t;
+typedef uint64_t exp_t;
 #else
 typedef unsigned long exp_t;
 #endif //YUR_HIGH_LEVELS

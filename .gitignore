@@ -1,3 +1,6 @@
+/.vscode/
+/ots/source/devcpp/YurOTS
+/ots/YurOTS
 # Compiled Object files
 *.slo
 *.lo

@@ -29,7 +29,7 @@ extern LuaScript g_config;
 
 bool PvpArena::Load(Game* game)
 {
-	std::string file = g_config.DATA_DIR + "pvparenas.xml";
+	std::string file = g_config.getGlobalString("datadir") + "pvparenas.xml";
 	xmlDocPtr doc;
 
 	doc = xmlParseFile(file.c_str());

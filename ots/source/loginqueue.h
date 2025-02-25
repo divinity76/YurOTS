@@ -25,6 +25,7 @@
 #include <list>
 #include <iterator>
 #include <string>
+#include "tools.h"
 
 struct LoginTry;
 typedef std::list<LoginTry> LoginTryList;

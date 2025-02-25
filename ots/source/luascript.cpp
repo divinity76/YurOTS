@@ -40,13 +40,25 @@ LuaScript::~LuaScript()
 
 int LuaScript::OpenFile(const char *filename)
 {
-	luaState = lua_open();
-
-	if (lua_dofile(luaState, filename))
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or later
+	luaState = luaL_newstate();
+	luaL_openlibs(luaState);  // Opens all standard libraries
+	if(luaL_dofile(luaState, filename)){
+		std::cerr << "Error loading file: " << lua_tostring(luaState, -1) << std::endl;
 		return false;
+	}
+#else  // Lua 5.0
+	luaState = lua_open();
+	if (lua_dofile(luaState, filename))
+	{
+		std::cerr << "Error loading file: " << lua_tostring(luaState, -1) << std::endl;
+		return false;
+	}
+#endif
 
+	return true;
 #ifdef YUR_MULTIPLIERS
-	EXP_MUL = getGlobalNumber("expmul",1);
+	this->EXP_MUL = getGlobalNumber("expmul",1);
 	EXP_MUL_PVP = getGlobalNumber("expmulpvp",1);
 	HEALTH_TICK_MUL = getGlobalNumber("healthtickmul",1);
 	MANA_TICK_MUL = getGlobalNumber("manatickmul",1);

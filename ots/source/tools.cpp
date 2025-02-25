@@ -24,6 +24,18 @@
 #include <string>
 #include <cmath>
 #include <sstream>
+#if __cplusplus >= 201103L  // C++11 or newer
+    #include <chrono>
+#elif defined(_WIN32)  // Windows Pre-C++11
+    #include <sys/timeb.h>
+#else  // POSIX Pre-C++11
+    #include <ctime>
+#endif
+#if defined(_WIN32)
+    #include <cstdlib> // For _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s
+#endif
+#include <stdint.h>
+
 
 bool fileExists(char* filename)
 {
@@ -66,7 +78,7 @@ void hexdump(unsigned char *_data, int _len) {
             fprintf(stderr, "   ");
         fprintf(stderr, " ");
         for (i = 0; i < 16 && i < _len; i++)
-            fprintf(stderr, "%c", (_data[i] & 0x70) < 32 ? '·' : _data[i]);
+            fprintf(stderr, "%c", (_data[i] & 0x70) < 32 ? 'ï¿½' : _data[i]);
         fprintf(stderr, "\n");
     }
 }
@@ -92,68 +104,68 @@ pthread_t *detach(void *(*_fn)(void *), void *_arg) {
 char upchar(char c) {
     if (c >= 'a' && c <= 'z')
         return c - 'a' + 'A';
-    else if (c == 'à')
-        return 'À';
-    else if (c == 'á')
-        return 'Á';
-    else if (c == 'â')
-        return 'Â';
-    else if (c == 'ã')
-        return 'Ã';
-    else if (c == 'ä')
-        return 'Ä';
-    else if (c == 'å')
-        return 'Å';
-    else if (c == 'æ')
-        return 'Æ';
-    else if (c == 'ç')
-        return 'Ç';
-    else if (c == 'è')
-        return 'È';
-    else if (c == 'é')
-        return 'É';
-    else if (c == 'ê')
-        return 'Ê';
-    else if (c == 'ë')
-        return 'Ë';
-    else if (c == 'ì')
-        return 'Ì';
-    else if (c == 'í')
-        return 'Í';
-    else if (c == 'î')
-        return 'Î';
-    else if (c == 'ï')
-        return 'Ï';
-    else if (c == 'ð')
-        return 'Ð';
-    else if (c == 'ñ')
-        return 'Ñ';
-    else if (c == 'ò')
-        return 'Ò';
-    else if (c == 'ó')
-        return 'Ó';
-    else if (c == 'ô')
-        return 'Ô';
-    else if (c == 'õ')
-        return 'Õ';
-    else if (c == 'ö')
-        return 'Ö';
-    else if (c == 'ø')
-        return 'Ø';
-    else if (c == 'ù')
-        return 'Ù';
-    else if (c == 'ú')
-        return 'Ú';
-    else if (c == 'û')
-        return 'Û';
-    else if (c == 'ü')
-        return 'Ü';
-    else if (c == 'ý')
-        return 'Ý';
-    else if (c == 'þ')
-        return 'Þ';
-    else if (c == 'ÿ')
-        return 'ß';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
+    else if (c == 'ï¿½')
+        return 'ï¿½';
     else
         return c;
 }
@@ -183,32 +195,54 @@ int safe_atoi(const char* str)
 		return 0;
 }
 
-double timer()
-{
-	static bool running = false;
-	static _timeb start, end;
+double timer() {
+    static bool running = false;
 
-	if (!running)
-	{
-#ifdef USING_VISUAL_2005
-		_ftime_s(&start);
-#else
-		_ftime(&start);
-#endif //USING_VISUAL_2005
-		running = true;
-		return 0.0;
-	}
-	else
-	{
-#ifdef USING_VISUAL_2005
-		_ftime_s(&end);
-#else
-		_ftime(&end);
-#endif //USING_VISUAL_2005
-		running = false;
-		return (end.time-start.time)+(end.millitm-start.millitm)/1000.0;
-	}
+#if __cplusplus >= 201103L  // C++11+ (Preferred)
+    static double start, end;
+    if (!running) {
+        start = std::chrono::duration_cast<std::chrono::milliseconds>(
+                    std::chrono::system_clock::now().time_since_epoch()).count();
+        running = true;
+        return 0.0;
+    }
+    end = std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::system_clock::now().time_since_epoch()).count();
+    running = false;
+    return (end - start) / 1000.0;
+
+#elif defined(_WIN32)  // Windows Pre-C++11 (Using <sys/timeb.h>)
+    static _timeb start, end;
+    if (!running) {
+    #ifdef USING_VISUAL_2005
+        _ftime_s(&start);
+    #else
+        _ftime(&start);
+    #endif
+        running = true;
+        return 0.0;
+    }
+    #ifdef USING_VISUAL_2005
+        _ftime_s(&end);
+    #else
+        _ftime(&end);
+    #endif
+    running = false;
+    return (end.time - start.time) + (end.millitm - start.millitm) / 1000.0;
+
+#else  // POSIX Pre-C++11 (Using <ctime> with clock())
+    static clock_t start, end;
+    if (!running) {
+        start = clock();
+        running = true;
+        return 0.0;
+    }
+    end = clock();
+    running = false;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
+#endif
 }
+
 
 std::string article(const std::string& name)
 {
@@ -239,53 +273,51 @@ std::string tickstr(int ticks)
 }
 
 
-std::string str(int32_t value)
-{
-	char buf[64];
-#ifdef USING_VISUAL_2005
-	if (_ltoa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
+
+// Convert int64_t to string
+std::string str(int64_t value) {
+#if __cplusplus >= 201103L
+    return std::to_string(value);
+#elif defined(_WIN32)
+    char buf[128];
+    #ifdef USING_VISUAL_2005
+        if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
+            return std::string(buf);
+        else
+            return "";
+    #else
+        return std::string(_i64toa(value, buf, 10));
+    #endif
 #else
-	return ltoa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    std::ostringstream oss;
+    oss << value;
+    return oss.str();
+#endif
 }
 
-std::string str(uint32_t value)
-{
-	char buf[64];
-#ifdef USING_VISUAL_2005
-	if (_ultoa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
+// Convert uint64_t to string
+std::string str(uint64_t value) {
+#if __cplusplus >= 201103L
+    return std::to_string(value);
+#elif defined(_WIN32)
+    char buf[128];
+    #ifdef USING_VISUAL_2005
+        if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
+            return std::string(buf);
+        else
+            return "";
+    #else
+        return std::string(_ui64toa(value, buf, 10));
+    #endif
 #else
-	return _ultoa(value, buf, 10);
-#endif //USING_VISUAL_2005
+    std::ostringstream oss;
+    oss << value;
+    return oss.str();
+#endif
 }
-
-std::string str(int64_t value)
-{
-	char buf[128];
-#ifdef USING_VISUAL_2005
-	if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return _i64toa(value, buf, 10);
-#endif //USING_VISUAL_2005
+std::string str(int32_t value) {
+    return std::to_string(value);
 }
-std::string str(uint64_t value)
-{
-	char buf[128];
-#ifdef USING_VISUAL_2005
-	if (_i64toa_s(value, buf, sizeof(buf), 10) == 0)
-		return buf;
-	else
-		return "";
-#else
-	return _ui64toa(value, buf, 10);
-#endif //USING_VISUAL_2005
+std::string str(uint32_t value) {
+    return std::to_string(value);
 }

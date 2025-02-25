@@ -5265,9 +5265,22 @@ Thing* Game::getThing(const Position &pos,unsigned char stack, Player* player /*
 bool Game::loadNpcs()
 {
 	xmlDocPtr doc;
-	doc = xmlParseFile((g_config.DATA_DIR + "world/npc.xml").c_str());
+	doc = xmlParseFile((g_config.getGlobalString("datadir") + "world/npc.xml").c_str());
 	if (!doc)
-		return false;
+	{
+        const xmlError* err = xmlGetLastError();
+        if (err)
+        {
+            std::cerr << "Error: Failed to parse NPC XML file: '" << g_config.getGlobalString("datadir") + "world/npc.xml'" << std::endl;
+            std::cerr << "LibXML2 Error: " << err->message << std::endl;
+            std::cerr << "Line: " << err->line << " | Code: " << err->code << std::endl;
+        }
+        else
+        {
+            std::cerr << "Error: Failed to parse NPC XML file (Unknown error)" << std::endl;
+        }
+        return false;
+	}
 
 	xmlNodePtr root, npcNode;
 	root = xmlDocGetRootElement(doc);

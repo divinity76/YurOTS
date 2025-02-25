@@ -433,13 +433,20 @@ _player(NULL)
 	lastuid = 0;
 	if(scriptname == "")
 		return;
-	luaState = lua_open();
-	luaopen_loadlib(luaState);
-	luaopen_base(luaState);
-	luaopen_math(luaState);
-	luaopen_string(luaState);
-	luaopen_io(luaState);
+
+#if LUA_VERSION_NUM >= 501  // Lua 5.1 or later
+    luaState = luaL_newstate();
+    luaL_openlibs(luaState);  // Opens all standard libraries
+    luaL_dofile(luaState, std::string(datadir + "actions/lib/actions.lua").c_str());
+#else  // Lua 5.0
+    luaState = lua_open();
+    luaopen_loadlib(luaState);
+    luaopen_base(luaState);
+    luaopen_math(luaState);
+    luaopen_string(luaState);
+    luaopen_io(luaState);
     lua_dofile(luaState, std::string(datadir + "actions/lib/actions.lua").c_str());
+#endif
 
 #ifdef USING_VISUAL_2005
 	FILE* in = NULL;
@@ -453,7 +460,11 @@ _player(NULL)
 	}
 	else
 		fclose(in);
-	lua_dofile(luaState, scriptname.c_str());
+	#if LUA_VERSION_NUM >= 501  // Lua 5.1 or later
+		luaL_dofile(luaState, scriptname.c_str());
+	#else  // Lua 5.0
+		lua_dofile(luaState, scriptname.c_str());
+	#endif
 	this->setGlobalNumber("addressOfActionScript", (int)this);
 	this->loaded = true;
 	this->registerFunctions();

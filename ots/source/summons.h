@@ -23,6 +23,7 @@
 #define SUMMONS_H
 #include <string>
 #include <map>
+#include<stdint.h>
 
 class Summons
 {

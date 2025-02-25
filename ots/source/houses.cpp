@@ -34,7 +34,7 @@ std::vector<House*> Houses::houses;
 House::House(std::string name)
 {
 	this->name = name;
-	file = g_config.DATA_DIR + "houses/" + name + ".xml";
+	file = g_config.getGlobalString("datadir") + "houses/" + name + ".xml";
 }
 
 bool House::load()
@@ -273,7 +273,7 @@ bool Houses::Load(Game* game)
 	if (!LoadHouseItems(game))
 		return false;
 
-	std::string file = g_config.DATA_DIR + "houses.xml";
+	std::string file = g_config.getGlobalString("datadir") + "houses.xml";
 	xmlDocPtr doc;
 	doc = xmlParseFile(file.c_str());
 
@@ -387,7 +387,7 @@ bool Houses::Save(Game* game)
 bool Houses::LoadHouseItems(Game* game)
 {
 	xmlDocPtr doc;
-	doc = xmlParseFile((g_config.DATA_DIR + "houseitems.xml").c_str());
+	doc = xmlParseFile((g_config.getGlobalString("datadir") + "houseitems.xml").c_str());
 
 	if (doc)
 	{
@@ -475,7 +475,7 @@ bool Houses::LoadContainer(xmlNodePtr nodeitem, Container* ccontainer)
 
 bool Houses::SaveHouseItems(Game* game)
 {
-	std::string filename = g_config.DATA_DIR + "houseitems.xml";
+	std::string filename = g_config.getGlobalString("datadir") + "houseitems.xml";
 	std::stringstream sb;
 	   
 	xmlDocPtr doc;
